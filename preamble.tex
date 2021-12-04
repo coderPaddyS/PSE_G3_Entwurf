@@ -1,0 +1,177 @@
+\documentclass{scrreport}
+
+\usepackage[ngerman]{babel}
+\usepackage{hyperref}
+\usepackage[toc]{glossaries}
+
+\newcounter{user_data_end}
+
+\newcommand{\glossaryentry}[3] {
+    \newglossaryentry{#1}{
+        name={#1},
+        plural={#2},
+        description={#3}
+    }
+}
+\newcommand{\aglossaryentry}[4] {
+    \newglossaryentry{#1}{
+        name={#2},
+        plural={#3},
+        description={#4}
+    }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%            Glossar            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\glossaryentry{Public-Key}{Public-Keys}{Ein Public-Key ist der öffentliche Schlüssel eines Kryptographieverfahrens, um gesicherte Kommunikation zu ermöglichen}
+\glossaryentry{Kommandozeile}{Kommandozeilen}{Eine Kommandozeile ist eine textbasierte Benutzeroberfläche, um mit dem Betriebssystem zu interagieren und Befehle und Programme auszuführen}
+\glossaryentry{SSH}{SSH}{\textbf{S}ecure \textbf{SH}ell ist ein kryptographisch gesichertes Protokoll, um sich sicher mit anderen Computern in der \Gls{Kommandozeile} zu verbinden, um diesen zu steuern}
+\glossaryentry{Standardbezeichner}{Standardbezeichner}{Der vom System vorgegebene offizielle Name eines Gebäudes oder Raumes}
+\glossaryentry{URL}{URL}{Uniform Resource Locator - Eine einheitliche Adresse zum Finden von Dateien und Server im Internet oder auf dem Computer}
+\glossaryentry{GPS}{GPS}{Global Positioning System - Ein weltweites System zur Standortermittlung, bis auf ein paar Meter genau}
+\glossaryentry{Benutzerdatum}{Benutzerdaten}{Informationen, die einen Benutzer der App betreffen}
+\glossaryentry{SQL}{SQL}{Sequential Query Language - Eine Sprache um mit einer Datenbank zu kommunizieren}
+\glossaryentry{Benutzer}{Benutzer}{Der Endanwender der Software}
+\glossaryentry{Android}{Android}{Das beliebteste Betriebssystem auf Smartphones, basierend auf dem \href{https://source.android.com/ }{Android Open Source Project}}
+\glossaryentry{Smartphone}{Smartphones}{Ein mobiles Endgerät, welches das heutige pendant des Mobiltelefons ist. Ein Smartphone unterstützt viele Funktionen wie Internetzugang oder Datenaustausch über Bluetooth und NFC. Das Smartphone wird durch Touch-Steuerung bedient}
+\glossaryentry{API-Level}{API-Levels}{Die API-Levels sind Versionen für Softwareentwickler, die bestimme Funktionalitäten einführen oder bei denen Entwicklungsmodelle umgestellt wurden. Mehr dazu auf auf \href{https://apilevels.com/ }{apilevels.com}}
+\glossaryentry{Backend}{Backends}{Eine Software, die im Hintergrund läuft und zumeist die Logik implementiert. Der Nutzer interagiert nicht direkt mit der Hardware und diese versteckt Informationen wie Login-Daten vor dem Nutzer}
+\glossaryentry{VM}{VM}{Eine virtuelle Maschine ist eine allein durch Software simulierte Maschine. Diese hat nichts mit der eigentlichen Maschine zu tun und kann auch ein anderes Betriebssystem haben}
+\glossaryentry{Server}{Server}{Ein Server ist ein großer und leistungsstarker Computer, der zumeist im Gewerbe Einsatz findet. Diese sind ans Internet angebunden und können so angesprochen werden}
+\glossaryentry{Debian}{Debian}{Debian ist eine Linux-Distribution und somit ein Betriebssystem. Mehr dazu auf \href{https://www.debian.org/ }{debian.org}. Die am häufigsten genutzte Version ist Debian 10, auch liebevoll Buster genannt}
+\glossaryentry{Docker}{Docker}{Docker ist ein Werkzeug, mit dem virtuelle Linux-Umgebungen erstellt werden können, um darin Programme von ihrer Umgebung zu trennen. Somit ist es möglich, die Arbeitsumgebung genauestens zu bestimmen}
+\glossaryentry{Java}{Java}{Java ist eine Programmiersprache, die nicht auf eine spezifische Hardware kompiliert, sondern auf einen plattformunabhängigen Code, der von einer Java Virtual Machine auf einem spezifischen Gerät ausgeführt werden kann. Java ist somit eine geeignete Wahl für Plattformübergreifende Entwicklung}
+\glossaryentry{VLU}{VLU}{Eine Virtuelle Linux-Umgebung ist ein auf dem lokalen System erstelltes, aber unabhängiges und abgekoppeltes Linux-System. Durch Trennung des lokalen Systems und der VLU können Nebeneffekte und gegenseitige Einflüsse unterbunden werden}
+\glossaryentry{JVM}{JVM}{Eine Java Virtual Machine ermöglicht es, den von Java erzeugten, plattformunabhängigen Code, auf der aktuellen Plattform auszuführen}
+\glossaryentry{Admin-Panel}{Admin-Panels}{Das Admin-Panel ist eine grafische Oberfläche zur Interaktion mit dem Backend. Dieses ist nur von privilegierten Nutzern, den Administratoren, benutzbar}
+\glossaryentry{HTML5}{HTML5}{HyperText Markup Language 5 ist die fünfte Version einer Skriptsprache, mit dem sich einfach grafische Oberflächen für den Browser erzeugt werden kann. Durch HTML5 kann keine Logik erzeugt werden}
+\glossaryentry{JavaScript}{JavaScript}{JavaScript ist eine Programmiersprache, die primär für Internetseiten genutzt wird, um Logik zu implementieren} 
+\glossaryentry{CSS3}{CSS3}{Cascading Style Sheet 3 ist wie HTML5 eine Skriptsprache, welche allerdings dazu genutzt wird, graphische Oberflächen zu formatieren und zu gestalten. Sie wird primär für Webseiten genutzt} 
+\glossaryentry{HTTPS}{HTTPS}{HyperText Transfer Protocol Secure ist ein Internetprotokoll, welches auf HTTP basiert. Durch HTTP und HTTPS wird der Datenaustausch im Internet ermöglicht. HTTPS ist zusätzlich noch verschlüsselt}
+\glossaryentry{Etagenkartenansicht}{Etagenkartenansichten}{Ansicht, in der die Etagenkarte sichtbar ist und man mit dieser interagieren kann}
+\glossaryentry{Kartenansicht}{Kartenansichten}{Ansicht in der die Karte sichtbar ist und man mit dieser interagieren kann}
+\glossaryentry{Etagenkarte}{Etagenkarten}{Karte mit dem Grundriss einer Etage eines Gebäudes, auf der Räume mit ihren Nummern sichtbar sind}
+\glossaryentry{Karte}{Karten}{Karte auf der Straßennamen und Gebäudenummern von KIT-Gebäuden sichtbar sind}
+\glossaryentry{Administrator}{Administratoren}{Verwalter der App über das Admin-Panel}
+\glossaryentry{Alias}{Aliasse}{Bezeichner für ein Gebäude oder einen Raum, mit Hilfe dessen, statt der Gebäude-/Raumnummer, gesucht werden kann}
+\glossaryentry{KIT}{KIT}{Das Karlsruher Institut für Technologie ist eine primär technische Universität in Karlsruhe. Mehr Informationen auf \href{https://www.kit.edu/ }{kit.edu} } 
+\glossaryentry{global}{global}{Für alle Benutzer der App (mit ausreichenden Berechtigungen) verfügbar}
+\glossaryentry{lokal}{lokal}{Nur auf dem eigenen Endgerät verfügbar beziehungsweise gespeichert}
+\glossaryentry{Theme}{Themes}{Eine Zusammenstellung von in der Benutzeroberfläche verwendeten Farben. Typische Beispiele sind ein Light-Theme (Hellmodus) und ein Dark-Theme (Dunkelmodus)}
+\glossaryentry{ID}{IDs}{Eine eindeutige Identifikationsnummer, die jedem angemeldeten Benutzer zugewiesen wird}
+\glossaryentry{Campus}{Campus}{Campus Süd des Karlsruher Instituts für Technologie}
+\glossaryentry{Routenfindungsfunktion}{Routenfindungsfunktionen}{Algorithmus, mittels dem (die besten) Wege zum Zielort berechnet und auf der Karte angezeigt werden}
+\glossaryentry{API}{APIs}{\dq Eine Programmierschnittstelle, häufig nur kurz API genannt, ist ein Programmteil, der von einem Softwaresystem anderen Programmen zur Anbindung an das System zur Verfügung gestellt wird.\dq{} (Wikipedia)}
+\glossaryentry{Benutzereingabe}{Benutzereingaben}{Wörter und Suchbegriffe, die der Nutzer in ein Textfeld geschrieben und bestätigt hat, sind Benutzereingaben}
+\glossaryentry{XSS}{XSS}{Cross-Site-Scripting, oder kurz XSS, ist das bewusste Einfügen von Textausdrücken, die in anderen Kontexten Befehle ausführen können. Bei bewusster und erfolgreicher Manipluation der Eingabe können Daten und die Kontrolle verloren gehen}
+\aglossaryentry{Endgeraet}{Endgerät}{Endgeräte}{Ein Endgerät ist eine Maschine, die der Empfänger eines Datenaustausches ist und diesen verarbeitet und ausgibt. Ebenfalls kann ein Endgerät Daten als Eingabe von z.B. einem Nutzer sein und diese in einen Datenaustausch weiterverwendet. Für gewöhnlich ist ein Endgerät in direkter Kontrolle und Verwendung eines Benutzers}
+\glossaryentry{Berechtigung}{Berechtigungen}{Eine Berechtigung ist die Erlaubnis auf gewisse Funktionen des mobilen Endgeräts zuzugreifen}
+\glossaryentry{Zugangsdatum}{Zugangsdaten}{Informationen, die benötigt werden, um Zugang auf das System zu bekommen}
+\glossaryentry{Zugang}{Zugänge}{Die Möglichkeit, auf ein System zuzugreifen, in dieses einzusehen und etwas verändern zu können}
+\glossaryentry{Admin-Zugang}{Admin-Zugänge}{Ein Zugang zum System mit privilegierten Rechten, sogenannten Administratorrechten}
+\glossaryentry{Datenbank}{Datenbänke}{Eine Einheit, die Daten speichern, verwalten und wiedergeben kann}
+\glossaryentry{Datenaustausch}{Datenaustausche}{Das Senden und Empfangen von Daten bzw. Information und einer optionalen Antwort}
+\glossaryentry{Reaktionszeit}{Reaktionszeiten}{Die zeitliche Differenz von Erhalt bis zum Absenden bzw. bis zum Verarbeiten eines Ereignisses}
+\glossaryentry{Suchansicht}{Suchansichten}{Eine graphische Übersicht, in der es ein Feld gibt, in das ein Suchbegriff eingegeben werden kann}
+\glossaryentry{Etagenwechsel}{Etagenwechsel}{Die Änderung der Etagenansicht zu einer neuen Etage, nach einer entsprechenden Eingabe}
+\glossaryentry{Login}{Logins}{Der Anmeldevorgang bei einem Dienst}
+\glossaryentry{simultan}{simultan}{gleichzeitig, zeitgleich}
+\glossaryentry{Alias-Vorschlag}{Alias-Vorschläge}{Ein Vorschlag für einen Alias, dessen Erschaffer diesen als offiziellen Alias in der App erwünscht}
+\glossaryentry{Blacklist}{Blacklists}{Eine Liste an verbotenen Wörtern. Alias-Vorschläge, die diese Wörter beinhalten, werden abgelehnt}
+\aglossaryentry{lokale Aenderung}{lokale Änderung}{lokale Änderungen}{Änderungen am Quellcode. Dabei werden nur Stellen der betreffenden logischen Einheit verändert. Andere Stellen bleiben unverändert}
+\glossaryentry{Quellcode}{Quellcode}{Der programmierte Text eines Programmes in von Menschen leicht lesbarer Form}
+\glossaryentry{Icon}{Icons}{Ein grafisches Symbol, meist klein, um etwas Bestimmtes darzustellen}
+\glossaryentry{Ortung}{Ortungen}{Das Bestimmen des aktuellen Standorts}
+\glossaryentry{Zeichenkette}{Zeichenketten}{Eine Folge aus Zeichen, bspw. ein Wort}
+\glossaryentry{Chromium}{Chromium}{Ein Internetbrowser, der als populäre Grundlage vieler anderen Browsern gilt, der Firma Google}
+\glossaryentry{Firefox}{Firefox}{Ein Internetbrowser der Firma Mozilla}
+\glossaryentry{System}{Systeme}{Hier: Ein komplexer Zusammenspiel von Software und Hardware. Zumeist von Maschine zu Maschine unterschiedlich}
+\glossaryentry{Schnittstelle}{Schnittstellen}{Ein definierter Zugriff- und Interaktionspunkt für Entwickler, um Software leichter auf verschiedene Systeme anpassen zu können}
+\glossaryentry{IP-Adresse}{IP-Adressen}{Eine Zeichenkette, die einzelne Endgeräte und Server identifiziert und zur Adressierung von Empfänger und Sender verwendet wird}
+\glossaryentry{Hash}{Hashes}{Die verschlüsselte Form einer Zeichenkette. Lässt sich nur sehr schwer rückgängig machen, verschlüsseln ist jedoch schnell und einfach. Die Verschlüsselung ist konsistent, gleich Eingabe, gleiche Verschlüsselung}
+\glossaryentry{Suchfeld}{Suchfelder}{Ein Textfeld, in dass Suchbegriffe zur Suche von Gebäuden/Räumen eingegeben werden können}
+\glossaryentry{Suchbegriff}{Suchbegriffe}{Eine Zeichenkette, bei der es sich um Aliasse, Gebäudenummern, Raumnummern oder Namen zur Suche von Gebäuden/Räumen handeln kann}
+\glossaryentry{Suchverlauf}{Suchverläufe}{Die Suchbegriffe, die der Benutzer seit der letzen Löschung zum Suchen genutzt hat}
+\glossaryentry{offline}{offline}{Offline bezeichent den Zustand, in dem keine Verbindung zum Internet besteht}
+\glossaryentry{Offlinemodus}{Offlinemodi}{Der Offlinemodus ist der Modus, in dem die Applikation operiert, wenn keine Verbindung zum Internet besteht}
+\glossaryentry{Skript}{Skripte}{Computerprogramm, welches eine festgelegte Reihenfolge an Befehle ausführt}
+\glossaryentry{Emulation}{Emulationen}{Das Simulieren eines Endgerätes oder Betriebssystem in einer virtuellen Maschine auf einem anderen Endgerät}
+\glossaryentry{Espresso}{Espresso}{Eine Android-Testumgebung. Mehr Informationen auf \href{https://developer.android.com/training/testing/espresso/ }{https://developer.android.com/training/testing/espresso/ }}
+\glossaryentry{Fingertranslationsbewegung}{Fingertranslationsbewegungen}{Das Bewegen des Fingers auf dem Bildschirm, ohne den Finger vom Bildschirm anzuheben}
+\aglossaryentry{Hinzufuegefeld}{Hinzufügefeld}{Hinzufügefelder}{Ein Eingabefeld, das zum Erstellen von Aliasse verwendet wird}
+\glossaryentry{statische Analyse}{statische Analysen}{Das Untersuchen eines Dokumentes auf mögliches Verhalten und mögliche beschriebene Zustände, ohne dieses von einem Computer ausführen zu lassen}
+\glossaryentry{Browser}{Browser}{Anwendung die den Zugang  zum Internet ermöglicht}
+\glossaryentry{DOM}{DOM}{Document Object Model - Der Aufbau eines HTML-Dokumentes}
+\glossaryentry{Log}{Logs}{Logbucheintrag - Dokument welches genutzt wird, um Fehler, Warnungen, Zugriffe und ähnliches zu dokumentieren}
+\glossaryentry{systemspezifisch}{systemspezifische}{Befehle einer konkreten Maschine}
+\glossaryentry{Library}{Library}{Eine Bibliothek, die oft genutzte Funktionalität beinhaltet}
+\glossaryentry{HTTP}{HTTP}{HyperText Transfer Protocol - unverschlüsseltes Protokoll zum Datenaustausch im Internet}
+\glossaryentry{Port}{Port}{Eine Nummer, die dem Computer das entsprechende Programm im Datenaustausch angibt. Ein Port kann übers Internet direkt angesprochen werden, wenn dieser offen ist}
+\glossaryentry{Reverse-Proxy}{Reverse-Proxy}{Ein Programm, welches HTTP-Anfragen umleiten kann. Kann ebenfalls den Zugriff einschränken}
+\glossaryentry{Entwurfsmuster}{Entwurfsmuster}{Wiederverwendbare Vorlage zur einfachen Erstellung strukturierten Quellcodes}
+\glossaryentry{Cron}{Cron}{Linux-Befehl der periodisch Skripte ausführt}
+\glossaryentry{Google Play Store}{Google Play Store}{Eine mobile Anwendung zur Installation von Apps, bereitgestellt durch Google}
+
+\makenoidxglossaries
+
+\usepackage{currfile}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\usepackage{titling}
+
+\usepackage{shellesc}
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage[german]{datetime2}
+\usepackage{titling}
+\renewcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+}
+
+\newcommand\concat[2]{
+    #1#2
+}
+
+\newcommand\inprelfile[1] {
+    \input{\relfile{#1}}
+}
+
+\newcommand\relfile[1]{
+    \currfiledir#1
+}
+
+\newcommand\relimgfile[1]{
+    \currfiledir images/#1
+}
+
+\newcommand\relcodefile[1]{
+    \currfiledir listings/#1
+}
+
+\newcommand{\inprelimg}[2][]{
+    \includegraphics[#1]{\relimgfile{#2}}
+}
+
+\newcommand\inprelmod[1]{
+    \input{\relfile{#1/main.tex}}
+}
+
+\newcommand\inpmod[1]{
+    \input{\concat{Kapitel/#1/}{main.tex}}
+}
+
+\newcommand{\mermaid}[3][width=10cm]{
+    % \ShellEscape{mmdc -i #2.mmd -o #3.png}
+    \includegraphics[#1]{#3.pdf}
+}
+
+\newcommand{\relmermaid}[2][width=10cm] {
+    \mermaid[#1]{\currfiledir mermaid/#2}{\currfiledir uml/#2}
+}
