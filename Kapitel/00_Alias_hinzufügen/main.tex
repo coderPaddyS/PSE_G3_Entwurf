@@ -1,0 +1,16 @@
+\newpage
+\section{Alias Hinzufügen}
+
+\subsection{lokales Hinzufügen}
+
+Für das Hinzufügen von Alias und Abfragen in einer lokalen Datenbank eignet sich SQL. Hierbei werden
+ein SQL-Helper und eine Datenbank benötigt. In der Datenbank müssen der Name und das zugehörige Gebäude und ggf. 
+der Raum dazu hinterlegt werden. Es müssen funktionalitäten zum Erstellen, Finden únd Löschen von Aliassen zur Verfügung stehen.
+Es sollte zwischen offiziellen Einträgen und Aliassen unterschieden werden, da offizielle nicht gelöscht werden können sollen.
+
+\subsection{globales Hinzufügen}
+
+Hierfür wird eine remote SQL-Datenbank erfordert. Der Zugriff auf diese sollte über einen Webservice (PHP) erfolgen.
+Die App auf den Geräten der Nutzer sollte mit der remote DB synchronisiert werden. Hierfür würde sich das SyncAdapter framework
+von Android eignen. Sucht der Nutzer in der Applikationen nach etwas, sollte zuerst die lokale Datenbank dursucht werden und 
+erst im Anschluss, wenn das Ziel noch nicht gefunden wurde, die remote Datenbank.
