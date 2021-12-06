@@ -7,3 +7,8 @@
 [https://github.com/g00glen00b/whoiswho-graphql](https://github.com/g00glen00b/whoiswho-graphql) \
 [https://www.marcobehler.com/guides/spring-security](https://www.marcobehler.com/guides/spring-security) \
 [https://www.devglan.com/spring-security/securing-spring-boot-admin](https://www.devglan.com/spring-security/securing-spring-boot-admin) \
+
+## OpenID Connect
+https://auth0.com/blog/id-token-access-token-what-is-the-difference/
+https://openid.github.io/AppAuth-Android/
+https://connect2id.com/learn/openid-connect
