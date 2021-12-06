@@ -1,0 +1,21 @@
+\subsection{Kartenmodul}
+\paragraph{Ziel}
+Anzeigen der Karte. Interaktionen mit der Karte.
+\paragraph{Beschreibung}
+Das Karten-Modul zeigt die Karte an und bietet alle Karteninteraktionen bereit.
+Dies ist das Anzeigen der Karte (inklusive Etagenkarte), alle Interaktionen mit der Karte (ausgenommen Informationen zu Objekt anzeigen) und die Ortungsfunktion.
+Bei all diesen Funktionen nutzt das Kartenmodul eine Karten-API.
+\paragraph{Beteiligung an Funktionalen Anforderungen}
+/FA10/ Kartenfunktion, /FA20/ Etagenkarteninteraktion, /FA30/ Ortungsfunktion
+\paragraph{Bereitgestellte Daten und Aufrufe}
+\begin{enumerate}
+    \item Methode: Fokussieren (mittig auf Bildschirm ausrichten und heranzoomen) eines gegebenen Kartenobjektes.
+\end{enumerate}
+\paragraph{Benötigte Daten und Aufrufe}
+\begin{enumerate}
+    \item Straßen- und Etagenkarte.
+    \item Letzter Standort bevor App beendet wurde
+    \item Methode: Informationsansicht zu einem Objekt zu öffnen.
+\end{enumerate}
+\paragraph{Sonstiges}
+Benutzt Karten-API. Benötigt Standortzugriff.

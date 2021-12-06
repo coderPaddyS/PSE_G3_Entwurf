@@ -1,0 +1,28 @@
+\subsection{Anmeldung (View)}
+\paragraph{Ziel}
+Bereitstellung der GUI für die Anmeldefunktion.
+\paragraph{Beschreibung}
+Das Modul stellt die graphische Visualisierung der Anmeldefunktion bereit.
+Dies beinhaltet insbesondere:
+\begin{enumerate}
+    \item Anmeldeplattformen auswählen.
+    \item Datenschutz anzeigen lassen (das Anzeigen selbst geschieht in einem anderen Modul).
+    \item Datenschutz akzeptieren.
+    \item Eingabefelder für die Anmeldeparameter anzeigen (zur Anmeldeplattform passende Anzahl, Label, Typ).
+    \item Eingabe bestätigen.
+    \item Ergebnis über Erfolg der Anmeldung anzeigen.
+\end{enumerate}
+Die Anmeldefunktion kann in jedem Schritt abgebrochen werden.
+\paragraph{Beteiligung an Funktionalen Anforderungen}
+/FA60/ Anmeldefunktion
+\paragraph{Bereitgestellte Daten und Aufrufe}
+
+\paragraph{Benötigte Daten und Aufrufe}
+\begin{enumerate}
+    \item Liste der verfügbaren Anmeldeplattformen.
+    \item Einzugebende Parameter für eine bestimmte Anmeldeplattformen (inklusive Anzahl, Label, Typ).
+    \item Methode: Datenschutz in Textanzeige anzeigen.
+    \item Methode: Anmeldung mit Benutzereingaben durchführen, Ergebnis wird zurückgegeben.
+\end{enumerate}
+\paragraph{Sonstiges}
+Dieses Modul benutzt die Standard-Tastatur des Endgerätes.

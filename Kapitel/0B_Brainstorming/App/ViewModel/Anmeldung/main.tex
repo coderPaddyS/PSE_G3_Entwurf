@@ -1,0 +1,23 @@
+\subsection{Anmeldung (ViewModel)}
+\paragraph{Ziel}
+Verarbeiten und durchführen der Anmeldung.
+\paragraph{Beschreibung}
+Dieses Modul verarbeitet die Eingabe der Anmeldung und führt die Anmeldung durch. Dabei wird eine API verwendet.
+Das Modul stellt das Format der zur Anmeldung benötigten Parameter bereit.
+Das Modul ist dafür verantwortlich zu prüfen, ob der Benutzer schon angemeldet ist oder nicht.
+\paragraph{Beteiligung an Funktionalen Anforderungen}
+/FA60/ Anmeldefunktion
+\paragraph{Bereitgestellte Daten und Aufrufe}
+\begin{enumerate}
+    \item Liste der verfügbaren Anmeldeplattformen.
+    \item Einzugebende Parameter für eine bestimmte Anmeldeplattformen (inklusive Anzahl, Label, Typ).
+    \item Methode: Anmeldung mit Benutzereingaben durchführen, Ergebnis wird zurückgegeben.
+\end{enumerate}
+\paragraph{Benötigte Daten und Aufrufe}
+\begin{enumerate}
+    \item Liste aller unterstützen Anmeldeplattformen.
+    \item Einzugebende Parameter für eine bestimmte Anmeldeplattformen (inklusive Anzahl, Label, Typ).
+    \item Anmeldestatus lesen und schreiben
+\end{enumerate}
+\paragraph{Sonstiges}
+Nutzt eine API zur Anmeldung.

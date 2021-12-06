@@ -1,0 +1,37 @@
+\subsection{Informationsanzeige}
+\paragraph{Ziel}
+Anzeigen und bearbeiten (nur ausgewählte) von Informationen zu einem Kartenobjekt.
+\paragraph{Beschreibung}
+Dieses Modul zeigt Informationen alle verfügbaren Informationen zum ausgewählten Kartenobjekt (Gebäude, Raum) an.
+\subparagraph{Angezeigte Daten}
+\begin{enumerate}
+    \item Nummer, Adresse des Kartenobjekts
+    \item Zugehörige Person, falls es sich um ein Büro handelt
+    \item Lokale und globale Aliasse des Kartenobjekts
+    \item Alias-Vorschläge für das Kartenobjekt
+\end{enumerate}
+\subparagraph{Mögliche Interaktionen}
+\begin{enumerate}
+    \item Der Benutzer kann zu dem Kartenobjekt einen lokalen Alias hinzufügen, oder einen globalen Alias vorschlagen (wenn Benutzer angemeldet ist).
+    \item Der Benutzer kann einen lokalen Alias auswählen und entfernen.
+    \item Der Benutzer kann Alias-Vorschläge bewerten (wenn Benutzer angemeldet ist).
+\end{enumerate}
+\paragraph{Beteiligung an Funktionalen Anforderungen}
+/FA10/ Kartenfunktion, /FA20/ Etagenkarteninteraktion, /FA70/ Alias hinzufügen, /FA80/ Lokale Aliasverwaltung, /FA90/ Alias-Vorschläge bewerten
+\paragraph{Bereitgestellte Daten und Aufrufe}
+\begin{enumerate}
+    \item Aufruf zum Start: zeige die Informationsansicht zu einem gegebenen Kartenobjekt an.
+\end{enumerate}
+\paragraph{Benötigte Daten und Aufrufe}
+\begin{enumerate}
+    \item Daten Nummer, Name, Adresse zu einem Kartenobjekt.
+    \item Datum Person zu einem Büro.
+    \item Daten lokale und globale Aliasse zu einem Kartenobjekt.
+    \item Daten Alias-Vorschläge zum Kartenobjekt.
+    \item Aufruf: Alias in lokale Alias-Datenbank eintragen.
+    \item Aufruf: Alias-Vorschlag einreichen.
+    \item Aufruf: Feedback zu Alias-Vorschlag einreichen.
+    \item Aufruf: Lokalen Alias löschen.
+\end{enumerate}
+\paragraph{Sonstiges}
+Dieses Modul überprüft nicht, ob ein Benutzer angemeldet ist und gewisse Interaktionen durchführen darf.
