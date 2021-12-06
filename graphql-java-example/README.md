@@ -1,6 +1,7 @@
 # GraphQL mit Java-Backend (hier: Jetty)
 Einfach mit `mvn jetty:run` ausführen und unter `http://localhost:8080/graphql?query=%7BallLinks%7Burl%7D%7D` die `Query` ausführen.
 Beispiel von [HowToGraphQL](https://www.howtographql.com/graphql-java/0-introduction/) Tutorial
+[Moderne Version](https://www.graphql-java.com/tutorials/getting-started-with-spring-boot/)
 
 # Andere Ressourcen
 [GraphQL-Java](https://www.graphql-java.com/) \
