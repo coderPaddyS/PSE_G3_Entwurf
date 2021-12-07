@@ -25,10 +25,12 @@ Nichtsdestotrotz, folgendes ist zu unterstützen:
         1. Nach jedem ausgeführten Suchen des Benutzers muss die eingegebene Zeichenkette in dem `content provider` gespeichert werden.
 1. Der Benutzer kann eine Zeichenkette eintippen.
     1. Während dem Eintippen und sobald der erste Zeichen eingetippt wurde, sind Vorschläge anzuzeigen, die den Benutzer bei der Vervollständigung seiner gewünschten Eingabe unterstützen.
-        1. Hierfür könnte `GraphQL` benutzt werden, um mit der Datenbank auf dem Server zu kommunizieren, die die zulässigen Gebäudenummer, Gebäudenummer und Raumnummer, Name von Personen (wenn nach deren Büro gesucht wird) und globale als auch lokale Aliasse speichert.
-        1. Ein `Content Provider` könnte dann am besten auch implementiert werden, der Zugriff auf die Datenbank mittels `GraphQL` hat (muss dann auch in dem Manifest eingetragen werden) [3].
-        1. Die `searchable configuration` muss den `content provider` berücksichtigen [(Quelle zum Nachlesen)](#https://developer.android.com/guide/topics/search/adding-custom-suggestions).
-        1. Der Typ von `Intent`, der gesendet werden soll, wenn der Benutzer einen Vorschlag auswählt, muss deklariert werden.
-    1. Hierfür ist wichtig, dass die Architektur Model-View-ViewModel verwendet wird, um Wiederwendbarkeit zu ermöglichen bei gleichzeitigem Aktualisieren der Eingabe des Benutzers (Weitergabe von Benutzerinteraktion, View) und dies behandelt (Logik, Model).
- 
- ## TODO: FERTIG SCHREIBEN
+        1. Hierfür ist zum einen die Kommunikation mit der Datenbank auf dem Server wichtig, zum anderen ist eine lokale Datenbank auf dem Smartphone des Benutzers ebenfalls wichtig - die Suchfunktion soll nämlich auch offline möglich sein.
+            1. Um mit der Datenbank auf dem Server zu kommunizieren, könnte `GraphQL` benutzt werden, die die zulässigen Gebäudenummer, Gebäudenummer und Raumnummer, Name von Personen (wenn nach deren Büro gesucht wird) und globale als auch lokale Aliasse speichert.
+                1. Ein `Content Provider` könnte dann am besten auch implementiert werden, der Zugriff auf die Datenbank mittels `GraphQL` hat (muss dann auch in dem Manifest eingetragen werden) [(Quelle zum Nachlesen)](#https://developer.android.com/guide/topics/search/adding-custom-suggestions).
+                1. Die `searchable configuration` muss den `content provider` berücksichtigen.
+                1. Der Typ von `Intent`, der gesendet werden soll, wenn der Benutzer einen Vorschlag auswählt, muss deklariert werden.
+            1. Um die Datenbank auf dem Smartphone des Benutzers zu erstellen, könnte möglicherweise `Room` verwendet werden [(Quelle zum Nachlesen)](#https://developer.android.com/training/data-storage/room). Um die Daten der lokalen Datenbank insbesondere aber auch aktualisiert zu halten, soll die lokale Datenbank mit der Datenbank auf dem Server kommunizieren können (bzw. die Datenbank auf dem Server abonnieren, um über Aktualisierungen informiert zu sein, Model-View-ViewModel).
+        1. Die Namen der Personen, nach deren Büroraum man suchen kann, sind auf dem Server zu speichern.
+    1. Hierfür ist wichtig, dass die Architektur Model-View-ViewModel (MVVM) verwendet wird, um Wiederwendbarkeit zu ermöglichen bei gleichzeitigem Aktualisieren der Eingabe des Benutzers (Weitergabe von Benutzerinteraktion, View) und dies behandelt (Logik, Model).
+    
