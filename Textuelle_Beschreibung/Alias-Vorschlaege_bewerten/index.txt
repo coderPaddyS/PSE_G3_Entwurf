@@ -1,0 +1,20 @@
+Alias-Vorschläge bewerten:
+Vorbedingung: Benutzer ist angemeldet und online.
+Der Benutzer wählt ein Gebäude/Raum aus.
+Die App stellt eine Anfrage an den Server. 
+Es werden die Gebäude-/Raum-ID und die Benutzer-ID übergeben.
+Der Server wählt einen zufälligen Vorschlag aus der Liste der Alias-Vorschläge für den Raum / das Gebäude.
+Der Server prüft, ob der Benutzer diesen Vorschlag schon bewertet hat. 
+Wenn nein füge diesen der Rückgabe-Liste hinzu. 
+Wenn die Liste 3 Elemente enthält wird sie an die App zurück gegeben.
+Wenn die Liste weniger als 3 Elemente enthält wähle anderen Vorschlag und prüfe erneut...
+Wenn alle Alias-Vorschläge durchgegangen wurden gebe die Liste auch mit weniger als 3 Elementen zurück.
+Wenn alle Vorschläge schon bewertet wurden oder es keine gibt, dann wird eine leere Liste zurück gegeben.
+Die App gibt dem Benutzer die Vorschläge aus der übergebenen Liste untereinander an.
+Der Benutzer kann nun jeweils auf das "Positiv-Icon" oder "Negativ-Icon" klicken.
+Nach dieser Aktion wird der jeweilige Vorschlag dem Benutzer nicht länger angezeigt.
+Außerdem wird dem Server der Vorschlag, die Bewertung und die Benutzer-ID gesendet.
+Der Server speichert, dass der Vorschlag von dem Benutzer bewertet wurde und zählt entsprechend der Bewertung den positiven oder negativen Zähler um 1 hoch.
+Die Vorschläge, die der Benutzer nicht bewertet werden nicht gespeichert.
+Wenn die Gebäude-/Rauminformation geschlossen wird und dann wieder geöffnet, werden neue zufällige Vorschläge angezeigt.
+Diese können zufälligerweise (teilweise) mit den nicht bewerten, vorher angezeigten Vorschlägen übereinstimmen.
