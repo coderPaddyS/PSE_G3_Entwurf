@@ -26,9 +26,9 @@ Nichtsdestotrotz, folgendes ist zu unterstützen:
 1. Der Benutzer kann eine Zeichenkette eintippen.
     1. Während dem Eintippen und sobald der erste Zeichen eingetippt wurde, sind Vorschläge anzuzeigen, die den Benutzer bei der Vervollständigung seiner gewünschten Eingabe unterstützen.
         1. Hierfür könnte `GraphQL` benutzt werden, um mit der Datenbank auf dem Server zu kommunizieren, die die zulässigen Gebäudenummer, Gebäudenummer und Raumnummer, Name von Personen (wenn nach deren Büro gesucht wird) und globale als auch lokale Aliasse speichert.
-        1. Ein `Content Provider` könnte dann am besten auch implementiert werden, das Zugriff auf die Datenbank mittels `GraphQL` hat (muss dann auch in dem Manifest eingetragen werden) [3].
+        1. Ein `Content Provider` könnte dann am besten auch implementiert werden, der Zugriff auf die Datenbank mittels `GraphQL` hat (muss dann auch in dem Manifest eingetragen werden) [3].
         1. Die `searchable configuration` muss den `content provider` berücksichtigen [(Quelle zum Nachlesen)](#https://developer.android.com/guide/topics/search/adding-custom-suggestions).
-        1. Der Typ von `Intent`, das gesendet werden soll, wenn der Benutzer einen Vorschlag auswählt, muss deklariert werden.
+        1. Der Typ von `Intent`, der gesendet werden soll, wenn der Benutzer einen Vorschlag auswählt, muss deklariert werden.
     1. Hierfür ist wichtig, dass die Architektur Model-View-ViewModel verwendet wird, um Wiederwendbarkeit zu ermöglichen bei gleichzeitigem Aktualisieren der Eingabe des Benutzers (Weitergabe von Benutzerinteraktion, View) und dies behandelt (Logik, Model).
  
  ## TODO: FERTIG SCHREIBEN
