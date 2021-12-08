@@ -54,8 +54,9 @@ Create „person.graphql“ file in resource folder. This will be the schema.
         \subparagraph{getting started}
         We first need to define the models. -> classes in Model package annotated with @Entity. Meaning this is what type will be in the databsae.\\
         Then we need to define the interface for the db -> create interface in dao.\\
-        Here we have to define methods like insert, delete and so on. Of course we also need an class to implement this interface. This class has to actually implement the functions and add/delete from a DB.\\
-        We will now create a Repository interface and of course a repository class(@Reposittory) that implements the interface. This class has to have references to the 
+        Here we have to define methods like insert, delete and so on. Of course we also need an class to implement this interface. This class has to actually implement the functions and add/delete from a DB
+        (using an entitymanager we have to configure, see link in sql section).\\
+        We will now create a Repository interface/s and of course a repository class/es(@Repository) that implements the interface. This class has to have references to the 
         DAO implementation classes(use @Qualifier). (Note that DAO and repository both are intermediates between DB and buisness logic, but Repository is at a higher level.
         Therefore for example our repository can have references to multiple DAOs))
 
@@ -96,7 +97,8 @@ Create „person.graphql“ file in resource folder. This will be the schema.
         Gives the Interace to the outside world(with REST, here with GraphQL it gives the interface tot he schema.) of how to add/delete and handles exceptions.
         Furthermore we need to resolve the http requests to actual method calls here (which can also be done via annotations. We will add @Requestmapping and @Restcontroller tot he class decleration.
         Also we will autowire a reference to our graphQLService Then we have to define what will be done for different request.
-        For example for a post request we will use @PostMapping with a method that gets the query as a string annotated with @RequestBody as parameter. Here we will get the graphQLservice and execute it. We will return a response entity.
+        For example for a post request we will use @PostMapping with a method that gets the query as a string annotated with @RequestBody as parameter.
+        Here we will get the graphQLservice and execute it. We will return a response entity.
         
 
 
