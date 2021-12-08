@@ -1,0 +1,105 @@
+\includegraphics{\currfiledir Spring_Framework}
+
+\paragraph{Setup}
+    \begin{itemize}
+        \item start.spring.io  --> configure spring boot framework. Here we can select programming language (Java/Kotlin), versions, build management tools(Maven/Gralde), versions, Dependencies etc… \\
+        \item I dont think u can currently add GraphQLs dependency on the setup so we will have to do so manually (2 dependencys: „graphql-spring-boot-starter“ and „graphql-java-tools“\\
+        \item add the mysql database connector dependency
+    \end{itemize}
+
+    \subparagraph{initial Structure}
+        \begin{itemize}
+            \item initialized projekt already has main() in src/main/java/.. to run
+            \item src/main/java/resources contains:
+            \item staic = web-resources for webapps
+            \item templates = templates for your webapp (who wuld've thought)
+            \item application.properties = prop. for app, can be defined for different environments (demo, test, ...) Here we can also define the server-port by simply writing „server.port= (inser port number here)“
+        \end{itemize}
+
+Create packages API, Model, Service, DAO, Repository in java folder
+Create „person.graphql“ file in resource folder. This will be the schema.
+
+\paragraph{Working with Spring}
+
+        \subparagraph{Setting up the schema}
+        \begin{itemize}
+            \item define types in „person.graphql“-> define items and querys
+            \item define schema & add query
+        \end{izemize}
+
+        \subparagraph{setting up the MySQL DB}
+        We will probably use different DBs for different things. Here we will call 3 different DBs().
+        The project packaging structure is very important when dealing with multiple data sources.
+        The data models or entities belonging to a certain datastore must be placed in their unique packages.
+        This packaging strategy also applies to the JPA DAOs.
+
+        As you can see above, we have defined a unique package for each of the models and repositories.
+
+        \includegraphics{\currfiledir file_structure_multiple_DBs}
+
+        We have also created Java configuration files for each of our data sources:
+
+        guru.springframework.multipledatasources.configuration.CardDataSourceConfiguration
+        guru.s pringframework.multipledatasources.configuration.CardHolderDataSourceConfiguration
+        guru.springframework.multipledatasources.configuration.MemberDataSourceConfiguration
+        
+        Each data source configuration file will contain its data source bean definition including the entity manager and transaction manager bean definitions.
+        (It is important to note that during the configuration of multiple data sources, one data source instance must be marked as the primary data source.)
+        Since we are configuring three data sources we need three sets of configurations in the application.propertiesfile.
+        How and what configurations need to be done would be to much for this short summary but are explained in detail here:
+        https://springframework.guru/how-to-configure-multiple-data-sources-in-a-spring-boot-application/
+
+
+
+        \subparagraph{getting started}
+        We first need to define the models. -> classes in Model package annotated with @Entity. Meaning this is what type will be in the databsae.\\
+        Then we need to define the interface for the db -> create interface in dao.\\
+        Here we have to define methods like insert, delete and so on. Of course we also need an class to implement this interface. This class has to actually implement the functions and add/delete from a DB.\\
+        We will now create a Repository interface and of course a repository class(@Reposittory) that implements the interface. This class has to have references to the 
+        DAO implementation classes(use @Qualifier). (Note that DAO and repository both are intermediates between DB and buisness logic, but Repository is at a higher level.
+        Therefore for example our repository can have references to multiple DAOs))
+
+        We will need to create a service and autowire the repository to it (@service). This service contains a private object graphQL, with a public getter. 
+        We need to reference to our schema by creating a resourcewith annotation: @Value(„classpath:books.graphQL“). We will load the schema something like this:
+
+
+        / load schema at application start up
+        
+        @PostConstruct
+        
+        private void loadSchema() throws IOException {        
+        
+        // get the schema
+        
+        File schemaFile = resource.getFile();
+        
+        // parse schema
+        
+        TypeDefinitionRegistry typeRegistry = new SchemaParser().parse(schemaFile);
+        
+        RuntimeWiring wiring = buildRuntimeWiring();
+        
+        
+        GraphQLSchema schema = new SchemaGenerator().makeExecutableSchema(typeRegistry, wiring);
+        
+        graphQL = GraphQL.newGraphQL(schema).build();
+        
+        }
+        Of course now we also need to implement „buildRuntimeWiring()“ using datafetchers, which connects the different types to each other.
+        Then as seen in the code above we need to make it executable and add it to the schema.
+        To create the fetchers we will create a new package in service package and make classes fort he different fetchers implementing „datafetchers“.
+        We will annotate the class with @Component and Autowire a reference tot he interface of a dao(eg „PersonDao“).In the PersonService code we can just autowire them.
+        
+        
+        
+        Now lets take a look at the API (PersonController). This now has a reference to a PersonService which we will also connect with the annotation @Autowired.
+        Gives the Interace to the outside world(with REST, here with GraphQL it gives the interface tot he schema.) of how to add/delete and handles exceptions.
+        Furthermore we need to resolve the http requests to actual method calls here (which can also be done via annotations. We will add @Requestmapping and @Restcontroller tot he class decleration.
+        Also we will autowire a reference to our graphQLService Then we have to define what will be done for different request.
+        For example for a post request we will use @PostMapping with a method that gets the query as a string annotated with @RequestBody as parameter. Here we will get the graphQLservice and execute it. We will return a response entity.
+        
+
+
+        
+
+        
