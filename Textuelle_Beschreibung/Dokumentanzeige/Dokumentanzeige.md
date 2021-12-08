@@ -9,14 +9,14 @@ Ein längerer Text in einfachem Format (muss mind. Überschriften, Links unterst
 #### Format Vorschlag: 
 Warum nehmen wir nicht einfach Markdown. 
 - Markdown ist einfach zu schreiben, zu speichern und hat alle Format
-- Es gibt einige Markdown-libaries, die wir benutzen können, damit ist der Aufwand dann auch sehr gering.
+- Es gibt einige Markdown-Libraries, die wir benutzen können, damit ist der Aufwand dann auch sehr gering.
 
 #### Funktionen
 - Texte, die angezeigt werden können:
     - Datenschutzerklärung
     - Impressum
     - Hilfeseite
-    - evtl. Lizenzen (für verwendete Libaries)
+    - evtl. Lizenzen (für verwendete Libraries)
 - Es gibt einen Zurück-Button. Mit ihm oder durch die Zurück-Funktion des Endgeräts wird die Textanzeige wieder geschlossen. Die App kehrt zur vorherigen Ansicht zurück
 
 Dieses Modul ist zwar sehr schlank, jedoch ergibt die Kapselung Sinn, da z.B. die Datenschutzerklärung sowohl aus den Einstellungen, als auch aus der Anmeldefunktion aufrufbar ist.
@@ -27,4 +27,4 @@ Dieses Modul ist zwar sehr schlank, jedoch ergibt die Kapselung Sinn, da z.B. di
 ## Verwendete Methoden
 
 ## Sonstiges
-Benutzt Markdown-Libary
+Benutzt Markdown-Library
