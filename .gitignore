@@ -323,3 +323,8 @@ TSWLatexianTemp*
 # do not upload the main.pdf
 main.pdf
 main.ist
+
+# No Java builds
+*.class
+
+graphql-java-example/old\ (jetty)/target/*
