@@ -18,3 +18,5 @@ Der Server speichert, dass der Vorschlag von dem Benutzer bewertet wurde und zä
 Die Vorschläge, die der Benutzer nicht bewertet werden nicht gespeichert.
 Wenn die Gebäude-/Rauminformation geschlossen wird und dann wieder geöffnet, werden neue zufällige Vorschläge angezeigt.
 Diese können zufälligerweise (teilweise) mit den nicht bewerten, vorher angezeigten Vorschlägen übereinstimmen.
+
+Änderung: Wert, wie viele gesendet werden wird von App übergeben
