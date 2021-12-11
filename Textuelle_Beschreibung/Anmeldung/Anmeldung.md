@@ -32,7 +32,7 @@ Es ist zu beachten, dass der Benutzer die Anmeldung bei jedem Schritt abbrechen 
 - Der Server schickt dem Nutzer Acces- und Refresh-Token zu. 
 - Bei allen folgenden Request wird der Access-Token mitgeschickt um die Authorisierung überprüfen zu können. Ist das Token abgelaufen, wird eine spezielle Meldung vom Server zurückgeschickt und die App
 schickt eine neue Anfrage mit dem Refresh-Token. Der Server generiert daraus einen neuen Access-Token und schickt diesen zurück. Die App schickt die vorherige Anfrage von selber erneut, sodass der Nutzer davon gar nichts mitbekommt.
-
+- Ist der Refresh Token auch abgelaufen. Dann muss sich der Nutzer erneut anmelden und es werden neue Access- und Refresh-Token generiert.
 #### Modul-Design:
 - Das Modul muss so gestaltet werden, dass es möglich ist, die Anmeldeplattform (z.B. Shibboleth) gegen eine andere (z.B. Google) auszutauschen.
 - Das Modul muss so gestaltet sein, dass es mehrere Anmeldeplattformen geben kann, von denen der Nutzer eine wählen kann
