@@ -52,7 +52,7 @@ Alias A soll gelöscht werden
     - Setze Versionsnummer V auf AV
 - Fertig
 ### Anmerkungen
-- In der lokalen DB-Kopie liegen keine Versionsnummern für die Einträge vor (?) da diese nicht benötigt werden (?)
+- In der lokalen DB-Kopie liegen keine Versionsnummern für die Einträge vor da diese nicht benötigt werden
 
 ## Bereitgestellte Methoden
 - aktualisieren
