@@ -26,7 +26,7 @@ Es ist zu beachten, dass der Benutzer die Anmeldung bei jedem Schritt abbrechen 
 - Die App schickt einen Http-Request mit dem erhaltenen ID-Token an den Server
 - Der Server validiert den ID-Token mittels des Keys
 - Der Server überprüft die Signatur des Tokens 
-- Der Server entnimmt dem Token einen eindeutigen Identifizierer (uuovn)
+- Der Server entnimmt dem Token einen eindeutigen Identifizierer (u-Kürzel)
 - Der Server speichert diesen in der Liste der Nutzer ab falls noch nicht vorhanden(evtl wollen wir das u-Kürzel vlt noch hashen aber das sind eher Implementierungsdetails)
 - Der Server generiert einen Access-Token mittels eines Algorithmus und eines Keys (Algorithmus aus Library wählbar, Key beliebig), dem er den key, der issuer, die Berechtigungen, den usernamen und ein Ablaufdatum hinzufügt. Außerdem wird noch ein Refresh-Token generiert mit deutlich längerer Lebenszeit und ohne die Berechtigungen (ansonsten gleich). Dies geschieht aus Sicherheitsgründen, da ein Access-Token in falschen Händen nicht ewig gelten sollte. Um dem Nutzer zu häufiges Anmelden zu ersparen daher aber der Refresh-Token, mit dem ein neuer Access-Token erhalten werden kann.
 - Der Server schickt dem Nutzer Acces- und Refresh-Token zu. 
