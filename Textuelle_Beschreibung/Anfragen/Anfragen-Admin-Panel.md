@@ -59,13 +59,13 @@ Erfolg
 ### Server sendet
 - Kartenobjektname
 
-## Anfrage MapId
+## Anfrage MapId zu Kartenobjektname
 ### Admin-Panel sendet
 - Kartenobjektname
 ### Server sendet
 - MapId
 
-## Anfrage MapIDs
+## Anfrage alle MapIDs
 ### Admin-Panel sendet
 Anfrage
 ### Server sendet
