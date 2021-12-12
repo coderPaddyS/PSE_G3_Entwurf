@@ -1,7 +1,11 @@
 classDiagram
+direction LR
+
 RuntimeException <|-- TokenExpiredException
 GraphQLMutationResolver <|-- AliasMutation
 GraphQLQueryResolver <|-- AliasQuery
+GraphQLMutationResolver <|-- UserMutation
+GraphQLQueryResolver <|-- UserQuery
 JpaRepository <|-- AliasRepository
 JpaRepository <|-- UserRepository
 webSecurityConfigurerAdapter <|-- SecurityConfig
@@ -43,6 +47,7 @@ Unsecured ..> SecurityGraphQLAspect
 
 AliasQuery <.. AliasSchema
 AliasMutation <.. AliasSchema
+
 
 UserQuery <.. UserSchema    
 UserMutation <.. UserSchema
@@ -174,3 +179,4 @@ class Main {
     @EnableAspectJAutoProxy 
         +main(args)
 }
+
