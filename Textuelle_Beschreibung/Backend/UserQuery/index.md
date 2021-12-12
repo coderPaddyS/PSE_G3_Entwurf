@@ -7,8 +7,12 @@ Mögliche Anfragen sind:
   - Suchen nach einem Kartenobjekt
 Die Klasse hat somit die obigen Anfragen zur Verfügung zu stellen. \
 Dies geschieht durch folgende Methoden (Reihenfolge hier entspricht der obigen Reihenfolge):
-  - `showAliasSuggestions(mapID) : List<aliasSuggestion>`
-  - `searchMapObject(searchString) : mapID`
+  - ```
+    showAliasSuggestions(mapID) : List<aliasSuggestion>
+    ```
+  - ```
+    searchMapObject(searchString) : mapID
+    ```
 Die Klasse hat die Klasse `Unsecured` zu nutzen, um zu bestimmen, dass die Anfragen ausschließlich von einem Benutzer gestellt werden können. \
 Die Klasse hat außerdem die Klasse `GraphQLQueryResolver` zu nutzen. \
 Damit erkennt GraphQL, dass es sich hier um ein `Query` GraphQL Objekt handelt. \
