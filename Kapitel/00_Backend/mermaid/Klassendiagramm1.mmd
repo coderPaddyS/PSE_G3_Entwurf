@@ -1,0 +1,176 @@
+classDiagram
+RuntimeException <|-- TokenExpiredException
+GraphQLMutationResolver <|-- AliasMutation
+GraphQLQueryResolver <|-- AliasQuery
+JpaRepository <|-- AliasRepository
+JpaRepository <|-- UserRepository
+webSecurityConfigurerAdapter <|-- SecurityConfig
+
+
+AliasService <|.. AliasServiceImp
+UserService <|.. UserServiceImp
+
+AliasRepository <-- AliasService
+UserRepository <-- UserService
+
+SecurityGraphQLAspect <.. AdminSecured
+SecurityGraphQLAspect <.. Unsecured
+SecurityGraphQLAspect ..> TokenExpiredException
+
+Alias_Database *-- Alias
+
+User_DB *-- User
+
+AliasMutation --> AliasService
+AliasQuery --> AliasService
+UserMutation --> UserService
+UserQuery --> UserService
+
+Alias_Database <.. AliasDataSourceConfig : Repository accesses and manipulates data
+AliasDataSourceConfig <.. AliasRepository
+User_DB <.. UserDataSourceConfig : Repository accesses and manipulates data
+UserDataSourceConfig <.. UserRepository
+
+AdminSecured <.. AliasSchema
+Unsecured <.. AliasSchema
+AdminSecured <.. UserSchema
+Unsecured <.. UserSchema
+
+Main <.. SecurityConfig : defaul access settings
+
+AdminSecured ..> SecurityGraphQLAspect
+Unsecured ..> SecurityGraphQLAspect
+
+AliasQuery <.. AliasSchema
+AliasMutation <.. AliasSchema
+
+UserQuery <.. UserSchema    
+UserMutation <.. UserSchema
+
+
+class RuntimeException
+
+class TokenExpiredException
+
+
+class AliasService{
+<<interface>>
+}
+
+class AliasServiceImp{
+@Service
+}
+
+class GraphQLMutationResolver 
+
+class AliasMutation{
++addAlias(Alias alias)
+}
+
+class UserMutation
+
+class GraphQLQueryResolver
+
+class UserQuery
+
+class AliasQuery{
++findAllAlias(int MapID)
+}
+
+
+class SecurityConfig{
++configure()
+}
+
+class AdminSecured{
+<<interface>> 
+}
+
+class Unsecured{
+<<interface>> 
+}
+
+class SecurityGraphQLAspect{
+@Aspect
+@Component
+@Order(1)
++doSecurityCheck()
++doAdminSecurityCheck()
+-allGraphQLResolverMethods()
+-isDefinedInApplication()
+-isMethodAnnotatedAsUnsecured()
+-isMethodAnnotatedAsAdminUnsecured()
+-isAuthorized()
+}
+
+
+
+class User{
+username
+Collection<? extends GranedAuthority>
+}
+
+
+class Alias{
+@Entity
+@Data
+@Table
+id
++setProperties()
+}
+
+class AliasDataSourceConfig{ 
+@Configuration
+@EnableTransactionManagement
+@EnableJpaRepsitories
++AliasDataSourceProperties():DataSourceProperties
++AliasDataSourceProperties():DataSource
++AliasEntityManagerFactory(EntityManagerFactoryBuilder builder):LocalContainerEntityManagerFactoryBean 
++AliasTransactionManager(LocalContainerEntityManagerFactoryBean):PlatformTransactionManager 
+}  
+
+class UserDataSourceConfig{ 
+@Configuration
+@EnableTransactionManagement
+@EnableJpaRepsitories
++UserDataSourceProperties():DataSourceProperties
++UserDataSourceProperties():DataSource
++UserEntityManagerFactory(EntityManagerFactoryBuilder builder):LocalContainerEntityManagerFactoryBean 
++UserTransactionManager(LocalContainerEntityManagerFactoryBean):PlatformTransactionManager 
+}
+
+class webSecurityConfigurerAdapter
+
+class JpaRepository
+
+class AliasRepository
+
+class Alias_Database{
+Alias_Database : External_Database
+}
+
+class UserService{
+<<interface>>
+}
+
+class UserServiceImp{
+String authorizationKey
+Algorithm algorithm
++authenticate(HttpServletRequest):HttpServletResponse 
++getUser()
+-addUser()
+}
+
+class UserRepository
+
+class User_DB
+
+
+class AliasSchema
+class UserSchema
+
+class Main {
+    @SpringBootApplication
+    @EnableAspectJAutoProxy 
+        +main(args)
+}

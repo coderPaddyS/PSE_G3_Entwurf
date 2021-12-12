@@ -1,0 +1,72 @@
+classDiagram
+
+
+
+class SecurityGraphQLAspect{
+@Aspect
+@Component
+@Order(1)
++doSecurityCheck()
++doAdminSecurityCheck()
+-allGraphQLResolverMethods()
+-isDefinedInApplication()
+-isMethodAnnotatedAsUnsecured()
+-isMethodAnnotatedAsAdminUnsecured()
+-isAuthorized()
+}
+
+
+class Datafetcher
+
+
+class User{
+username
+Collection<? extends GranedAuthority>
+}
+
+class AliasDatafetcher{
+    +get(DataFetchingEnvironment dataFetchingEnvironment):List~Alias~
+}
+
+class Alias{
+@Entity
+@Data
+@Table
+id
++setProperties()
+}
+
+class AliasDataSourceConfig{ 
+@Configuration
+@EnableTransactionManagement
+@EnableJpaRepsitories
++AliasDataSourceProperties():DataSourceProperties
++AliasDataSourceProperties():DataSource
++AliasEntityManagerFactory(EntityManagerFactoryBuilder builder):LocalContainerEntityManagerFactoryBean 
++memberTransactionManager(LocalContainerEntityManagerFactoryBean):PlatformTransactionManager 
+}
+
+class JpaRepository
+
+class AliasRepository
+
+class Alias_Database{
+Alias_Database : External_Database
+}
+
+class UserService{
+<<interface>>
+}
+
+class UserServiceImp{
+String authorizationKey
+Algorithm algorithm
++authenticate(HttpServletRequest):HttpServletResponse 
++getUser()
+-addUser()
+}
+
+class UserRepository
+
+class User_DB
+
