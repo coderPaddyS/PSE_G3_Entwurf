@@ -76,7 +76,10 @@ class UserMutation
 
 class GraphQLQueryResolver
 
-class UserQuery
+class UserQuery {
+    +showAliasSuggestions(mapID) : List<aliasSuggestion>
+    +searchMapObject(searchString) : mapID
+}
 
 class AliasQuery{
 +findAllAlias(int MapID)
