@@ -111,7 +111,14 @@ class SecurityGraphQLAspect{
 
 
 class User{
-username
+@Entity
+@Getter
+@Setter
+@Data
+@Id
+-id: long
+@Column
+-name: String
 Collection<? extends GranedAuthority>
 }
 
