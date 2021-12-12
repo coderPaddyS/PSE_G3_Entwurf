@@ -118,6 +118,8 @@ Collection<? extends GranedAuthority>
 
 class Alias{
 @Entity
+@Getter
+@Setter
 @Data
 @Table
 @Id
@@ -126,7 +128,6 @@ class Alias{
 - name: String
 @Column
 - mapID
-+setProperties()
 }
 
 class AliasDataSourceConfig{ 
