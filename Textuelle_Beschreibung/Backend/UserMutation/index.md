@@ -6,11 +6,22 @@ Die Klasse dient dazu, sogenannte Mutationen, die ein `Administrator` in Bezug a
 Dabei sind Mutationen Anfragen, die Daten verändern. \
 
 ## Einschränkungen
+
 Um die Mutation tätigen zu können, muss der Anfrager der Mutation demzufolge ein `User` sein. \
 
 ## Methoden
 
-???
+### addAdministrator(name : String) : Boolean
+
+- Parameter
+  - name
+    - der Name des Administrators, der hinzugefügt werden soll
+- Rückgabewert
+  - Boolean
+    - wahr, wenn der gewünschte Administrator erfolgreich hinzugefügt werden konnte, sonst falsch
+- Zweck
+  - ermöglicht das Anlegen eines Administratorzugangs
+
 
 ## Abhängigkeiten
 
