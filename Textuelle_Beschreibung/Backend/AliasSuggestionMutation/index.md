@@ -52,7 +52,7 @@ Um die Mutation tätigen zu können, muss der Anfrager der Mutation ein entweder
 - Die Klasse hat die Klasse `Unsecured` zu nutzen, um zu bestimmen, dass die entsprechenden, oben erwähnten Methoden von einem `User` gestellt werden können.
 - Die Klasse hat außerdem die Klasse `GraphQLMutationResolver` zu nutzen.
   - Damit erkennt GraphQL, dass es sich hier um ein `Mutation` GraphQL Objekt handelt.
-- IMPLEMENTIERUNGSHINWEIS: Des Weiteren ist die Klasse zu dem `SchemaParser` zu hinzufügen.
+- **IMPLEMENTIERUNGSHINWEIS**: Des Weiteren ist die Klasse zu dem `SchemaParser` zu hinzufügen.
   - Dies geschieht auf folgender Weise:
     - ```
       SchemaParser.newParser()
