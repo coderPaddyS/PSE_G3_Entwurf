@@ -34,3 +34,70 @@ Nichtsdestotrotz, folgendes ist zu unterstützen:
         1. Die Namen der Personen, nach deren Büroraum man suchen kann, sind auf dem Server zu speichern.
     1. Hierfür ist wichtig, dass die Architektur Model-View-ViewModel (MVVM) verwendet wird, um Wiederwendbarkeit zu ermöglichen bei gleichzeitigem Aktualisieren der Eingabe des Benutzers (Weitergabe von Benutzerinteraktion, View) und dies behandelt (Logik, Model).
     
+
+```mermaid
+classDiagram
+    class Position {
+        +getPosition() Position
+    }
+
+    class Alias {
+        -String identifier
+        +getIdentifier() String
+    }
+
+    class Person {
+        -String name
+        -Room room
+        +getName() String
+        +getRoom() Room
+    }
+
+    class BuildingNumber {
+        -int firstNumber
+        -int secondNumber
+        +getBuildingNumber() String
+    }
+
+    class Place {
+        -Position position
+        -BuildingNumber buildingNumber
+        -List~Alias~ localAliases
+        -List~Alias~ globalAliases
+        +getPosition() Position
+        +getBuildingNumber() String
+        +getAliases() List~Alias~
+        #addLocalAlias(Alias alias)
+        #addGlobalAlias(Alias alias)
+    }
+
+    class Building {
+        -int amoutLevels
+        -BuildingNumber buildingNumber
+        -List~Room~ rooms
+        +getBuildingNumber() String
+        +getRooms() List~Room~
+    }
+
+    class Room {
+        -Building building
+        -int level
+        -int roomNumber
+        -List~Person~ persons
+        +getBuilding() Building
+        +getLevel() int
+        +getRoomNumber() int
+        +getPersons() List~Person~
+    }
+
+    Place <-- Building
+    Place <-- Room
+    Building o-- Room : ist Teil von
+    Place <|-- BuildingNumber
+    Place <|-- Alias
+    Place <|-- Position
+    Place <|-- Person
+
+
+
+```
