@@ -2,11 +2,11 @@
 
 ## Zweck
 
-Die Klasse dient dazu, Anfragen, die keine Daten verändern und die in Bezug zu einem `User` stehen, zu ermöglichen. \
+Die Klasse dient dazu, Anfragen über `User`, die keine Daten verändern, zu ermöglichen. \
 
 ## Einschränkungen
 
-Um die Anfragen stellen zu können, muss der Anfrager demzufolge ein `Administrator` sein. \
+Um die Anfragen stellen zu können, muss der Anfrager ein `Administrator` sein. \
 
 ## Methoden
 
