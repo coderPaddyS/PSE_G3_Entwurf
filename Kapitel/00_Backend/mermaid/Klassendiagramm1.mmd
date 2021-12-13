@@ -18,7 +18,7 @@ webSecurityConfigurerAdapter <|-- SecurityConfig
 AliasService <|.. AliasServiceImp
 UserService <|.. UserServiceImp
 blackListService <|.. blackListServiceImp
-aliasSuggestion <|.. aliasSuggestionServiceImp
+aliasSuggestionService <|.. aliasSuggestionServiceImp
 
 AliasRepository <-- AliasService
 UserRepository <-- UserService
@@ -31,8 +31,8 @@ SecurityGraphQLAspect <.. Unsecured
 SecurityGraphQLAspect ..> TokenExpiredException
 
 Alias_Database *-- Alias
-
 User_DB *-- User
+aliasSuggestion_DB *-- aliasSuggestion
 
 AliasMutation --> AliasService
 AliasQuery --> AliasService
@@ -179,6 +179,8 @@ class Alias{
 @Column
 -mapID
 }
+
+class aliasSuggestion
 
 class AliasDataSourceConfig{ 
 @Configuration
