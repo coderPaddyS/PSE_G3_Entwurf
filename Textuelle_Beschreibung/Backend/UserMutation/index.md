@@ -7,11 +7,11 @@ Dabei sind Mutationen Anfragen, die Daten verändern. \
 
 ## Einschränkungen
 
-Um die Mutation tätigen zu können, muss der Anfrager der Mutation demzufolge ein `User` sein. \
+Um die Mutation tätigen zu können, muss der Anfrager der Mutation demzufolge ein `Administrator` sein. \
 
 ## Methoden
 
-### addAdministrator(name : String) : Boolean
+### addAdmin(name : String) : Boolean
 
 - Parameter
   - name
@@ -21,6 +21,17 @@ Um die Mutation tätigen zu können, muss der Anfrager der Mutation demzufolge e
     - wahr, wenn der gewünschte Administrator erfolgreich hinzugefügt werden konnte, sonst falsch
 - Zweck
   - ermöglicht das Anlegen eines Administratorzugangs
+
+### removeAdmin(adminID) : Boolean
+
+- Parameter
+  - adminID
+    - die ID des gewünschten Administrators, der gelöscht werden soll
+  - Rückgabewert
+    - Boolean
+      - wahr, wenn der gewünschte Administrator erfolgreich gelöscht werden konnte, sonst falsch
+- Zweck
+  - ermöglicht das Entfernen eines Administratorzugangs
 
 
 ## Abhängigkeiten
