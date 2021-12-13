@@ -6,6 +6,10 @@ GraphQLMutationResolver <|-- AliasMutation
 GraphQLQueryResolver <|-- AliasQuery
 GraphQLMutationResolver <|-- UserMutation
 GraphQLQueryResolver <|-- UserQuery
+GraphQLMutationResolver <|-- BlackListMutation
+GraphQLQueryResolver <|-- BlackListQuery
+GraphQLMutationResolver <|-- AliasSuggestionMutation
+GraphQLQueryResolver <|-- AliasSuggestionQuery
 JpaRepository <|-- AliasRepository
 JpaRepository <|-- UserRepository
 webSecurityConfigurerAdapter <|-- SecurityConfig
@@ -13,9 +17,14 @@ webSecurityConfigurerAdapter <|-- SecurityConfig
 
 AliasService <|.. AliasServiceImp
 UserService <|.. UserServiceImp
+blackListService <|.. blackListServiceImp
+aliasSuggestion <|.. aliasSuggestionServiceImp
 
 AliasRepository <-- AliasService
 UserRepository <-- UserService
+aliasSuggestionRepository <-- aliasSuggestionService
+blackListRepository <-- blackListService
+
 
 SecurityGraphQLAspect <.. AdminSecured
 SecurityGraphQLAspect <.. Unsecured
@@ -29,16 +38,28 @@ AliasMutation --> AliasService
 AliasQuery --> AliasService
 UserMutation --> UserService
 UserQuery --> UserService
+AliasSuggestionQuery --> aliasSuggestionService
+AliasSuggestionMutation --> aliasSuggestionService
+BlackListQuery --> blackListService
+BlackListMutation --> blackListService
 
 Alias_Database <.. AliasDataSourceConfig : Repository accesses and manipulates data
 AliasDataSourceConfig <.. AliasRepository
 User_DB <.. UserDataSourceConfig : Repository accesses and manipulates data
 UserDataSourceConfig <.. UserRepository
+aliasSuggestion_DB <.. aliasSuggestionDataSourceConfig : Repository accesses and manipulates data
+aliasSuggestionDataSourceConfig <.. aliasSuggestionRepository
+blackLiast_DB <.. blackListDataSourceConfig : Repository accesses and manipulates data
+blackListDataSourceConfig <.. blackListRepository
 
-AdminSecured <.. AliasSchema
-Unsecured <.. AliasSchema
-AdminSecured <.. UserSchema
-Unsecured <.. UserSchema
+AdminSecured <.. UserQuery
+Unsecured <.. UserQuery
+AdminSecured <.. UserMutation
+Unsecured <.. UserMutation
+AdminSecured <.. AliasQuery
+Unsecured <.. AliasQuery
+AdminSecured <.. AliasMutation
+Unsecured <.. AliasMutation
 
 Main <.. SecurityConfig : defaul access settings
 
@@ -47,6 +68,11 @@ Unsecured ..> SecurityGraphQLAspect
 
 AliasQuery <.. AliasSchema
 AliasMutation <.. AliasSchema
+BlackListMutation <.. AliasSchema
+BlackListQuery <.. AliasSchema
+AliasSuggestionMutation <.. AliasSchema
+AliasSuggestionQuery <.. AliasSchema
+
 
 
 UserQuery <.. UserSchema    
@@ -73,15 +99,31 @@ class AliasMutation{
 }
 
 class UserMutation {
-    +suggestAlias(mapID)
-    +evaluateAliasSuggestion(aliasSuggestion)
+    login(ID-Token)
 }
 
 class GraphQLQueryResolver
 
 class UserQuery {
-    +showAliasSuggestions(mapID) : List<aliasSuggestion>
+    findUser(name) : User
     +searchMapObject(searchString) : mapID
+}
+
+class AliasSuggestionQuery {
+    +showAliasSuggestions(mapID) : List<aliasSuggestion>
+}
+
+class AliasSuggestionMutation {
+    +suggestAlias(mapID, userName)
+    +evaluateAliasSuggestion(aliasSuggestion, userName)
+}
+
+class BlackListMutation {
+    +addToBlacklist(String)
+}
+
+class BlackListQuery {
+    isBanned(String)
 }
 
 class AliasQuery{
@@ -107,11 +149,6 @@ class SecurityGraphQLAspect{
 @Order(1)
 +doSecurityCheck()
 +doAdminSecurityCheck()
--allGraphQLResolverMethods()
--isDefinedInApplication()
--isMethodAnnotatedAsUnsecured()
--isMethodAnnotatedAsAdminUnsecured()
--isAuthorized()
 }
 
 
@@ -163,6 +200,33 @@ class UserDataSourceConfig{
 +UserTransactionManager(LocalContainerEntityManagerFactoryBean):PlatformTransactionManager 
 }
 
+class blackListDataSourceConfig{ 
+@Configuration
+@EnableTransactionManagement
+@EnableJpaRepsitories
++UserDataSourceProperties():DataSourceProperties
++UserDataSourceProperties():DataSource
++UserEntityManagerFactory(EntityManagerFactoryBuilder builder):LocalContainerEntityManagerFactoryBean 
++UserTransactionManager(LocalContainerEntityManagerFactoryBean):PlatformTransactionManager 
+}
+
+class aliasSuggestionDataSourceConfig{ 
+@Configuration
+@EnableTransactionManagement
+@EnableJpaRepsitories
++UserDataSourceProperties():DataSourceProperties
++UserDataSourceProperties():DataSource
++UserEntityManagerFactory(EntityManagerFactoryBuilder builder):LocalContainerEntityManagerFactoryBean 
++UserTransactionManager(LocalContainerEntityManagerFactoryBean):PlatformTransactionManager 
+}
+
+class blackListService
+class blackListServiceImp
+
+class aliasSuggestionService
+class aliasSuggestionServiceImp
+
+
 class webSecurityConfigurerAdapter
 
 class JpaRepository
@@ -186,8 +250,12 @@ Algorithm algorithm
 }
 
 class UserRepository
+class aliasSuggestionRepository
+class blackListRepository
 
 class User_DB
+class aliasSuggestion_DB
+class blackLiast_DB
 
 
 class AliasSchema
