@@ -72,11 +72,17 @@ class AliasMutation{
 +addAlias(Alias alias)
 }
 
-class UserMutation
+class UserMutation {
+    +suggestAlias(mapID)
+    +evaluateAliasSuggestion(aliasSuggestion)
+}
 
 class GraphQLQueryResolver
 
-class UserQuery
+class UserQuery {
+    +showAliasSuggestions(mapID) : List<aliasSuggestion>
+    +searchMapObject(searchString) : mapID
+}
 
 class AliasQuery{
 +findAllAlias(int MapID)
@@ -111,17 +117,30 @@ class SecurityGraphQLAspect{
 
 
 class User{
-username
+@Entity
+@Getter
+@Setter
+@Data
+@Id
+-id: long
+@Column
+-name: String
 Collection<? extends GranedAuthority>
 }
 
 
 class Alias{
 @Entity
+@Getter
+@Setter
 @Data
 @Table
-id
-+setProperties()
+@Id
+-id: long
+@Column
+-name: String
+@Column
+-mapID
 }
 
 class AliasDataSourceConfig{ 
@@ -179,4 +198,3 @@ class Main {
     @EnableAspectJAutoProxy 
         +main(args)
 }
-
