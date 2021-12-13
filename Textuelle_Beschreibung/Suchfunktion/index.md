@@ -61,11 +61,9 @@ classDiagram
 
     class Place {
         -Position position
-        -BuildingNumber buildingNumber
         -List~Alias~ localAliases
         -List~Alias~ globalAliases
         +getPosition() Position
-        +getBuildingNumber() String
         +getAliases() List~Alias~
         #addLocalAlias(Alias alias)
         #addGlobalAlias(Alias alias)
@@ -90,14 +88,23 @@ classDiagram
         +getPersons() List~Person~
     }
 
-    Place <-- Building
-    Place <-- Room
+
+    Place <|-- Building
+    Place <|-- Room
     Building o-- Room : ist Teil von
-    Place <|-- BuildingNumber
-    Place <|-- Alias
-    Place <|-- Position
-    Place <|-- Person
+    Place <-- BuildingNumber
+    Place <-- Alias
+    Place <-- Position
+    Place <-- Person
 
 
+    class SearchView {
+
+    }
+
+    class Controller {
+        SearchView searchWidget
+        
+    }
 
 ```
