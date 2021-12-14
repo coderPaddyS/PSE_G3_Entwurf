@@ -5,6 +5,7 @@ Kartenobjektname: Eindeutiger Bezeichner für ein Kartenobjekt in menschen-lesba
 
 ## Alias-Vorschläge anzeigen
 ### Admin-Panel sendet
+- Access-Token
 - min. Anzahl positive Bewertungen
 - min. Anzahl negative Bewertungen
 ### Server sendet
@@ -17,6 +18,7 @@ Kartenobjektname: Eindeutiger Bezeichner für ein Kartenobjekt in menschen-lesba
 
 ## Alias-Vorschlag annehmen
 ### Admin-Panel sendet
+- Access-Token
 - MapId
 - Alias-Vorschlag (Name)
 ### Server antwortet
@@ -24,6 +26,7 @@ Erfolg
 
 ## Alias-Vorschlag ablehnen
 ### Admin-Panel sendet
+- Access-Token
 - MapId
 - Alias-Vorschlag (Name)
 ### Server antwortet
@@ -31,52 +34,62 @@ Erfolg
 
 ## Blacklist einsehen
 ### Admin-Panel sendet
-Anfrage
+- Access-Token
 ### Server antwortet
 - Liste von: Blacklist-Einträgen
 
 ## Name auf Blacklist setzen
 ### Admin-Panel sendet
+- Access-Token
 - Name
 ### Server antwortet
 Erfolg
 
 ## Blacklist-Eintrag entfernen
 ### Admin-Panel sendet
+- Access-Token
 - Blacklist-Eintrag
 ### Server antwortet
 Erfolg
 
 ## Aliasse anzeigen
 ### Admin-Panel sendet
+- Access-Token
 - MapId
 ### Server sendet
 - Liste: Alias (Name) [ggf MapId]
 
 ## Anfrage Kartenobjektname
 ### Admin-Panel sendet
+- Access-Token
 - MapId
 ### Server sendet
 - Kartenobjektname
 
 ## Anfrage MapId zu Kartenobjektname
 ### Admin-Panel sendet
+- Access-Token
 - Kartenobjektname
 ### Server sendet
 - MapId
 
 ## Anfrage alle MapIDs
 ### Admin-Panel sendet
-Anfrage
+- Access-Token
 ### Server sendet
 - Liste: MapIds
 
 ## Alias entfernen
 ### Admin-Panel sendet
+- Access-Token
 - MapId
 - Alias (Name)
 ### Server antwortet
 Erfolg
 
 
-## TODO: Anmelden
+## Anmelden
+### Admin-Panel sendet
+- ID-Token
+### Server antwortet
+Erfolg
