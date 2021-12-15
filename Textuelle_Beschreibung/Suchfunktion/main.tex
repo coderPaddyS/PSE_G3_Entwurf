@@ -30,3 +30,18 @@ This methode extractes all keys of the hash map and puts them in a list that is 
 \end{itemize}
 \paragraph*{Rückgabewert}
 list of the search keys
+
+\subsection{getSearchInput}%$$$M
+\paragraph*{Kurzbeschreibung}
+This methode enables user input and returns a valid search key or null.
+\paragraph*{Beschreibung}
+This methode enables the search of buildings and rooms via a String input of an search key in a text field.
+Shows a list of suggestions(the search keys), if available, and allows the user to pick a suggestion or enter the input completely themselves.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item list of all search keys
+\end{itemize}
+\paragraph*{Rückgabewert}
+search key that the user inserted
+\paragraph*{Notizen zur Implementierung}
+Uses a search widget(https://developer.android.com/guide/topics/search/search-dialog#SearchableActivity).
