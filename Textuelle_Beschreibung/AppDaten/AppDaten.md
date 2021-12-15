@@ -1,8 +1,8 @@
 ### Disclaimer: 
 - Dies ist eine Zusammenfassung der in der App gespeicherten Daten aus allen Textuellen Beschreibungen und mündlich besprochenen
-- Dies hier ist KEINE Modellierung der (Basis)Klassen
-- Der Schwerpunkt liegt hier auf den Informationen, die gespeichert werden
-- Man könnte es mit SEHR VIEL VORSICHT aller höchstens als Minimalanforderung für eine Modellierung der Objekte sehen
+- Dies hier ist noch KEINE Modellierung der (Basis)Klassen
+- Dies ist v.a. für die Speicherung im Model
+- Der Schwerpunkt liegt hier auf den Informationen, die gespeichert werden (es könnte bei machen Daten, die hier zusammenstehen, sein, dass verschiedene Teile in verschiedenen Kontexten so verwendet werden, dass man letztendlich immer nur disjunkte Teilmengen davon benutzt)
 
 # Basisobjekte
 ## Kartenobjekte
