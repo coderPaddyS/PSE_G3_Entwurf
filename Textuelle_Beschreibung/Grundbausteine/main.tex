@@ -5,7 +5,8 @@ An alternate identifier for a building or room.
 An alternate identifier for a building or room. 
 With it users can search for buildings without a building number and for rooms without a building number and a room number.
 \paragraph*{Anmerkung}
-Alias can be lokal (user added alias for himself) or global (alias was suggested by a user and added by an admin for all users).
+Alias can be local (user added alias for himself) or global (alias was suggested by a user and added by an admin for all users).
+The aliases are stored local and on the server.
 
 \subsection{getIdentifier}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -24,7 +25,7 @@ An person that has an office in a building.
 \paragraph*{Beschreibung}
 An person that has an office in a building. The name of the person works as an alternate identifier of a room.
 \paragraph*{Anmerkung}
-Person is only stored at the server. (?)
+The persons are only stored at the server. (?)
 
 \subsection{getName}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -35,3 +36,12 @@ This methode returns the full name of the person including the title.
 \end{itemize}
 \paragraph*{Rückgabewert}
 name
+
+
+\section{Position}
+\paragraph*{Kurzbeschreibung}
+The position of a building or room on the map.
+\paragraph*{Beschreibung}
+The position includes the neccessary information to determine the position of a building or room on the map of the application.
+\paragraph*{Anmerkung}
+The positions are stored local and on the server.
