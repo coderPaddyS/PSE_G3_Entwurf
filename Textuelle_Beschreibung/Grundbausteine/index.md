@@ -1,6 +1,7 @@
 ```mermaid
 classDiagram
     class Position {
+        -Unknown(?) position
         +getPosition() Position
     }
 
