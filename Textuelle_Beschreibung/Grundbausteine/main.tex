@@ -11,6 +11,8 @@ The aliases are stored local and on the server.
 \subsection{getIdentifier}%$$$M
 \paragraph*{Kurzbeschreibung}
 This methode returns the identifier of the alias.
+\paragraph*{Beschreibung}
+This methode returns the identifier of the alias.
 \paragraph*{Parameter}
 \begin{itemize}
     \item none
@@ -29,7 +31,9 @@ The persons are only stored at the server. (?)
 
 \subsection{getName}%$$$M
 \paragraph*{Kurzbeschreibung}
-This methode returns the full name of the person including the title.
+This methode returns the full name of the person.
+\paragraph*{Beschreibung}
+This methode returns the full name of the person including the title in the order "title firstname lastname".
 \paragraph*{Parameter}
 \begin{itemize}
     \item none
@@ -45,3 +49,15 @@ The position of a building or room on the map.
 The position includes the neccessary information to determine the position of a building or room on the map of the application.
 \paragraph*{Anmerkung}
 The positions are stored local and on the server.
+
+\subsection{getPosition}%$$$M
+\paragraph*{Kurzbeschreibung}
+This methode returns the position on the map.
+\paragraph*{Beschreibung}
+This methode returns the neccessary information to determine the position of a building or room on the map of the application.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item none
+\end{itemize}
+\paragraph*{Rückgabewert}
+position
