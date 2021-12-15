@@ -13,7 +13,7 @@ Aktualisierung der Kopie der Alias-DB
 
 ## Alias vorschlagen
 ### App sendet
-- UserId (von Vorschlagendem)
+- Access-Token (von Vorschlagendem)
 - Alias (Name)
 - MapId
 
@@ -21,17 +21,22 @@ Aktualisierung der Kopie der Alias-DB
 ### App sendet
 - MapId
 - Anzahl (wie viele Vorschläge maximal angefordert)
-- UserID (da Vorschläge, die bewertet/vorgeschlagen wurden nicht angezeigt werden)
+- Access-Token (da Vorschläge, die bewertet/vorgeschlagen wurden nicht angezeigt werden)
 ### Server sendet
 - Liste aus Aliasse (Name)
 
 ## Alias-Vorschlag bewerten
 ### App sendet
-- UserId
+- Access-Token
 - MapId
 - Alias (Name)
 
 ## 
 
 
-## TODO: Anmeldung
+## Anmeldung/Registrierung
+Überprüfung der Validität des ID-Tokens und Aufnahme des Nutzers in die Datenbank als normaler Nutzer
+### App sendet
+- ID-Token
+### Server sendet
+Erfolg
