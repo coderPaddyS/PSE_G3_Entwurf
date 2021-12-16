@@ -1,4 +1,4 @@
-\subsubsection{\texttt{getAlias(mapID : int, userID : int) : List<Alias> aliases}}%$$$M
+\subsubsection{\texttt{getAlias(mapID : MapID, userID : UserID) : List<Alias> aliases}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Gibt eine Liste der Aliasse des gewünschten Kartenobjekts, die ein bestimmter Benutzer ursprünglich vorgeschlagen hatte, zurück.
 \paragraph*{Beschreibung}
@@ -8,10 +8,10 @@ D.h., durch die Methode erhält man alle Alias-Vorschläge des Benutzers, die be
 Hierfür wird die ID des gewünschten Kartenobjekts und die ID des gewünschten Benutzers übergeben.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapID : int
+    \item mapID : MapID
     		\paragraph*{Beschreibung}
     		Die ID des Kartenobjekts, dessen Aliasse man zurückgegeben haben möchte.
-    	\item userID : int
+    	\item userID : UserID
     		\paragraph*{Beschreibung}
     		Die ID des Benutzers, dessen Aliasse man zurückgegeben haben möchte.
 \end{itemize}
