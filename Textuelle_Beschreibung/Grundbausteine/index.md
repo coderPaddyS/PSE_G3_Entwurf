@@ -15,6 +15,7 @@ classDiagram
     }
 
     class Alias {
+        -boolean local
         -String identifier
         +getIdentifier() String
     }
@@ -43,6 +44,7 @@ classDiagram
     }
 
     class Building {
+        -int mapId
         -Address address
         -int amountLevels
         -BuildingNumber buildingNumber
@@ -53,6 +55,7 @@ classDiagram
     }
 
     class Room {
+        -int mapId
         -Building building
         -int level
         -int roomNumber
