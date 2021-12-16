@@ -27,7 +27,7 @@ An person that has an office in a building.
 \paragraph*{Beschreibung}
 An person that has an office in a building. The name of the person works as an alternate identifier of a room.
 \paragraph*{Anmerkung}
-The persons are only stored at the server. (?)
+The persons are stored local and on the server.
 
 \subsection{getName}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -107,8 +107,20 @@ room number
 
 \section{Building}
 \paragraph*{Kurzbeschreibung}
-A building on the campus.
+A building with rooms.
 \paragraph*{Beschreibung}
-A building on the campus that can be serched for in the app.
+A building with rooms that can be searched for in the app.
 \paragraph*{Anmerkung}
 The buildings are stored local and on the server.
+
+\subsection{getRooms}%$$$M
+\paragraph*{Kurzbeschreibung}
+This methode returns a list of rooms.
+\paragraph*{Beschreibung}
+This methode returns a list of rooms of the building.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item none
+\end{itemize}
+\paragraph*{Rückgabewert}
+list of rooms

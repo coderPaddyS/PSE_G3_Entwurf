@@ -5,6 +5,15 @@ classDiagram
         +getPosition() Position
     }
 
+    class Address {
+        -String street
+        -int streetNumber
+        -int postcode
+        -String city
+        +getStreet() String
+        +getPostcode() String
+    }
+
     class Alias {
         -String identifier
         +getIdentifier() String
@@ -34,9 +43,11 @@ classDiagram
     }
 
     class Building {
+        -Address address
         -int amountLevels
         -BuildingNumber buildingNumber
         -List~Room~ rooms
+        +getAddress() Address
         +getBuildingNumber() String
         +getRooms() List~Room~
     }
@@ -60,5 +71,6 @@ classDiagram
     Place <-- Alias
     Place <-- Position
     Place <-- Person
+    Buildind <-- Address
 
 ```
