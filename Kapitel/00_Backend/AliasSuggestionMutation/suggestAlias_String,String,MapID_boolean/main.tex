@@ -1,0 +1,23 @@
+\subsubsection{\texttt{suggestAlias(aliasSuggestion : String, user : UserID, mapID : MapID) : boolean}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Schlägt den gewünschten Alias vor.
+\paragraph*{Beschreibung}
+Die Methode ermöglicht, dass ein Benutzer einen Alias vorschlagen kann. 
+Hierfür wird die entsprechende Zeichenkette des Alias-Vorschlags und die ID des vorschlagenden Benutzers übergeben.
+Außerdem wird die ID des Kartenobjekts, für das der Alias als Bezeichner vorgeschlagen wird, übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+	\item aliasSuggestion : String
+		\paragraph*{Beschreibung}
+		Der Name, d.h. die Zeichenkette, des gewünschten, zu vorschlagenden Aliasses.
+	\item user : UserID
+		\paragraph*{Beschreibung}
+		Die ID des vorschlagenden Benutzers.
+	\item mapID : MapID
+		\paragraph*{Beschreibung}
+		Die ID des Kartenobjekts, für das der Alias als Bezeichner vorgeschlagen wird.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Wahr, wenn der gewünschte Alias erfolgreich vorgeschlagen werden konnte, ansonsten falsch.
+
+\paragraph*{Notizen zur Implementierung}% optionaler Paragraph; nur stehen lassen, wenn benötigt
