@@ -32,6 +32,8 @@ This methode returns the identifier of the alias.
 \paragraph*{Rückgabewert}
 identifier
 
+\subsection{getMapId}
+
 
 \section{Person}
 \paragraph*{Kurzbeschreibung}
@@ -53,68 +55,7 @@ This methode returns the full name of the person including the title in the orde
 \paragraph*{Rückgabewert}
 name
 
-
-\section{Position}
-\paragraph*{Kurzbeschreibung}
-The position of a building or room on the map.
-\paragraph*{Beschreibung}
-The position includes the neccessary information to determine the position of a building or room on the map of the application.
-\paragraph*{Anmerkung}
-The positions are stored local and on the server.
-
-\subsection{getPosition}%$$$M
-\paragraph*{Kurzbeschreibung}
-This methode returns the position on the map.
-\paragraph*{Beschreibung}
-This methode returns the neccessary information to determine the position of a building or room on the map of the application.
-\paragraph*{Parameter}
-\begin{itemize}
-    \item none
-\end{itemize}
-\paragraph*{Rückgabewert}
-position
-
-
-\section{BuildingNumber}
-\paragraph*{Kurzbeschreibung}
-The number of a building.
-\paragraph*{Beschreibung}
-The number of a building consisting of two integers seperated by a dot: "int1.int2".
-\paragraph*{Anmerkung}
-The building numbers are stored local and on the server.
-
-\subsection{getBuildingNumber}%$$$M
-\paragraph*{Kurzbeschreibung}
-This methode returns the building number of the building.
-\paragraph*{Beschreibung}
-This methode returns the building number of the building as a String consisting of the two integers seperated by a dot.
-\paragraph*{Parameter}
-\begin{itemize}
-    \item none
-\end{itemize}
-\paragraph*{Rückgabewert}
-building number
-
-
-\section{RoomNumber}
-\paragraph*{Kurzbeschreibung}
-The number of a room.
-\paragraph*{Beschreibung}
-The number of a building consisting of an integer.
-\paragraph*{Anmerkung}
-The room numbers are stored local and on the server.
-
-\subsection{getRoomNumber}%$$$M
-\paragraph*{Kurzbeschreibung}
-This methode returns the room number of the room.
-\paragraph*{Beschreibung}
-This methode returns the room number of the room as an integer.
-\paragraph*{Parameter}
-\begin{itemize}
-    \item none
-\end{itemize}
-\paragraph*{Rückgabewert}
-room number
+\subsection{getMapId}
 
 
 \section{Building}
@@ -125,42 +66,6 @@ A building with rooms that can be searched for in the app.
 \paragraph*{Anmerkung}
 The buildings are stored local and on the server.
 
-\subsection{getAddress}%$$$M
-\paragraph*{Kurzbeschreibung}
-This methode returns the address.
-\paragraph*{Beschreibung}
-This methode returns the address of the building.
-\paragraph*{Parameter}
-\begin{itemize}
-    \item none
-\end{itemize}
-\paragraph*{Rückgabewert}
-address
-
-\subsection{getBuildingNumber}%$$$M
-\paragraph*{Kurzbeschreibung}
-This methode returns the building number.
-\paragraph*{Beschreibung}
-This methode returns the building number of the building.
-\paragraph*{Parameter}
-\begin{itemize}
-    \item none
-\end{itemize}
-\paragraph*{Rückgabewert}
-building number
-
-\subsection{getRooms}%$$$M
-\paragraph*{Kurzbeschreibung}
-This methode returns a list of rooms.
-\paragraph*{Beschreibung}
-This methode returns a list of rooms of the building.
-\paragraph*{Parameter}
-\begin{itemize}
-    \item none
-\end{itemize}
-\paragraph*{Rückgabewert}
-list of rooms
-
 
 \section{Room}
 \paragraph*{Kurzbeschreibung}
@@ -170,26 +75,9 @@ A room that can be searched for in the app.
 \paragraph*{Anmerkung}
 The rooms are stored local and on the server.
 
-\subsection{getRoomNumber}%$$$M
-\paragraph*{Kurzbeschreibung}
-This methode returns the room number.
-\paragraph*{Beschreibung}
-This methode returns the room number of the room.
-\paragraph*{Parameter}
-\begin{itemize}
-    \item none
-\end{itemize}
-\paragraph*{Rückgabewert}
-room number
 
-\subsection{getBuilding}%$$$M
-\paragraph*{Kurzbeschreibung}
-This methode returns the building.
-\paragraph*{Beschreibung}
-This methode returns the building the room is in.
-\paragraph*{Parameter}
-\begin{itemize}
-    \item none
-\end{itemize}
-\paragraph*{Rückgabewert}
-building
+\section{MapObject}
+\subsection{getAdditionalData}
+\subsection{getOfficialName}
+\subsection{getMapId}
+\subsection{getGeocoding}
