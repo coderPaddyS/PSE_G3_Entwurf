@@ -1,150 +1,143 @@
+\chapter{Grundbausteine}
+
 \section{Alias}
-\paragraph*{Kurzbeschreibung}
-An alternate identifier for a building or room.
 \paragraph*{Beschreibung}
-An alternate identifier for a building or room. 
-With it users can search for buildings without a building number and for rooms without a building number and a room number.
-\paragraph*{Anmerkung}
-Alias can be local (user added alias for himself) or global (alias was suggested by a user and added by an admin for all users).
-The aliases are stored local and on the server.
+Ein alternativer Bezeichner für ein Kartenobjekt (MapObject), wie beispielsweise ein Raum (Room) oder Gebäude (Building).
+Benutzer können mit diesem nach dem zugehörigen Kartenobjekt suchen alternativ zum offizielen Namen (OfficialName).
+Aliasse können lokal sein (Benutzer hat den Alias selbst für sich hinzugefügt) oder global (Alias wurde von einem Benutzer vorgeschlagen und von einem Admin für alle Benutzer hinzugefügt).
+Die Aliasse werden lokal und auf dem Server gespeichert.
 
 \subsection{isLocal}%$$$M
 \paragraph*{Kurzbeschreibung}
-This methode returns whether the alias is lokal or not.
+Diese Methode gibt zurück, ob der Alias lokal ist.
 \paragraph*{Beschreibung}
-This methode returns whether the alias is lokal(true) or not(false).
+Diese Methode gibt zurück, ob der Alias lokal ist (wahr) oder nicht (falsch).
 \paragraph*{Parameter}
 \begin{itemize}
-    \item none
+    \item keine
 \end{itemize}
 \paragraph*{Rückgabewert}
-whether the alias is lokal
+ob der Alias lokal ist
 
 \subsection{getIdentifier}%$$$M
 \paragraph*{Kurzbeschreibung}
-This methode returns the identifier of the alias.
+Diese Methode gibt den Bezeichner des Alias zurück.
 \paragraph*{Beschreibung}
-This methode returns the identifier of the alias.
+Diese Methode gibt den Bezeichner des Alias zurück.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item none
+    \item keine
 \end{itemize}
 \paragraph*{Rückgabewert}
-identifier
+Bezeichner des Alias
 
 \subsection{getMapId}
 \paragraph*{Kurzbeschreibung}
-This methode returns the mapId of the alias.
+Diese Methode gibt die KartenID des Alias zurück.
 \paragraph*{Beschreibung}
-This methode returns the mapId of the alias.
+Diese Methode gibt die KartenID des Alias zurück.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item none
+    \item keine
 \end{itemize}
 \paragraph*{Rückgabewert}
-mapId
+KartenID des Alias
 
 \section{Person}
-\paragraph*{Kurzbeschreibung}
-An person that has an office in a building.
 \paragraph*{Beschreibung}
-An person that has an office in a building. The name of the person works as an alternate identifier of a room.
+Eine Person, die ein Büro in einem Gebäude hat. Der Name der Person dient als alternativer Identifikator für einen Raum.
 \paragraph*{Anmerkung}
-The persons are stored local and on the server.
+Die Personen werden lokal und auf dem Server gespeichert.
 
 \subsection{getName}%$$$M
 \paragraph*{Kurzbeschreibung}
-This methode returns the full name of the person.
+Diese Methode liefert den vollständigen Namen der Person.
 \paragraph*{Beschreibung}
-This methode returns the full name of the person including the title in the order "title firstname lastname".
+Diese Methode liefert den vollständigen Namen der Person einschließlich des Titels in der Reihenfolge "Titel Vorname Nachname".
 \paragraph*{Parameter}
 \begin{itemize}
-    \item none
+    \item keine
 \end{itemize}
 \paragraph*{Rückgabewert}
-name
+Name der Person
 
 \subsection{getMapId}
 \paragraph*{Kurzbeschreibung}
-This methode returns the mapId of the person.
+Diese Methode gibt die KartenID der Person zurück.
 \paragraph*{Beschreibung}
-This methode returns the mapId of the person.
+Diese Methode gibt die KartenID der Person zurück.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item none
+    \item keine
 \end{itemize}
 \paragraph*{Rückgabewert}
-mapId
+KartenID
 
 \section{Building}
-\paragraph*{Kurzbeschreibung}
-A building with rooms.
 \paragraph*{Beschreibung}
-A building with rooms that can be searched for in the app.
+Ein Gebäude mit Räumen, nach denen in der App gesucht werden kann.
 \paragraph*{Anmerkung}
-The buildings are stored local and on the server.
+Die Gebäude werden lokal und auf dem Server gespeichert.
 
 
 \section{Room}
 \paragraph*{Kurzbeschreibung}
-A room.
+Ein Raum in einem Gebäude.
 \paragraph*{Beschreibung}
-A room that can be searched for in the app.
+Ein Raum in einem Gebäude, nach dem in der App gesucht werden kann.
 \paragraph*{Anmerkung}
-The rooms are stored local and on the server.
+Die Räume werden lokal und auf dem Server gespeichert.
 
 
 \section{MapObject}
 \paragraph*{Kurzbeschreibung}
-A map object.
+Ein Kartenobjekt.
 \paragraph*{Beschreibung}
-A map object that can be searched for in the app.
+Ein Kartenobjekt, nach dem in der App gesucht werden kann.
 \paragraph*{Anmerkung}
-The map objects are stored local and on the server.
+Die Kartenobjekte werden lokal und auf dem Server gespeichert.
 
 \subsection{getAdditionalData}
-This methode returns the additional of the map object.
+Diese Methode gibt die zusätzlichen Daten des Kartenobjekts zurück.
 \paragraph*{Beschreibung}
-This methode returns the additional of the map object.
+Diese Methode gibt die zusätzlichen Daten des Kartenobjekts zurück.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item none
+    \item keine
 \end{itemize}
 \paragraph*{Rückgabewert}
-additional data
+zusätzlichen Daten des Kartenobjekts
 
 \subsection{getOfficialName}
 \paragraph*{Kurzbeschreibung}
-This methode returns the offical name of the map object.
+Diese Methode gibt den offiziellen Namen des Kartenobjekts zurück.
 \paragraph*{Beschreibung}
-This methode returns the offical name of the map object.
+Diese Methode gibt den offiziellen Namen des Kartenobjekts zurück.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item none
+    \item keine
 \end{itemize}
 \paragraph*{Rückgabewert}
-officialName
+offiziellen Namen des Kartenobjekts
 
 \subsection{getMapId}
 \paragraph*{Kurzbeschreibung}
-This methode returns the map id of the map object.
+Diese Methode gibt die KartenID des Kartenobjekts zurück.
 \paragraph*{Beschreibung}
-This methode returns the map id of the map object.
+Diese Methode gibt die KartenID des Kartenobjekts zurück.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item none
+    \item keine
 \end{itemize}
 \paragraph*{Rückgabewert}
-map id
+KartenID des Kartenobjekts
 
 \subsection{getGeocoding}
-\paragraph*{Kurzbeschreibung}
-This methode returns the geocoding of the map object.
 \paragraph*{Beschreibung}
-This methode returns the geocoding of the map object.
+Diese Methode gibt die Geokodierung des Kartenobjekts zurück.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item none
+    \item keine
 \end{itemize}
 \paragraph*{Rückgabewert}
-geocoding
+Geokodierung
