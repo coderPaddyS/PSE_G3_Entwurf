@@ -21,7 +21,7 @@ Shows a list of suggestions(the search keys), if available, and allows the user 
 \paragraph*{Rückgabewert}
 search key that the user inserted
 \paragraph*{Notizen zur Implementierung}
-Uses a search widget(https://developer.android.com/guide/topics/search/search-dialog#SearchableActivity).
+Benutzt eine Instanz von SearchView (https://developer.android.com/guide/topics/search/search-dialog#SearchableActivity).
 
 \subsection{getSearchable}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -35,3 +35,10 @@ This class determines the searchable belonging to the search key and returns it.
 \paragraph*{Rückgabewert}
 searchable
 
+
+\section{Module: SearchView}
+\paragraph*{Kurzbeschreibung}
+Ein Widget, das dem Benutzer eine Benutzeroberfläche bietet, um eine Suchanfrage einzugeben und eine Anfrage an einen Suchanbieter zu senden. 
+Zeigt eine Liste von Suchvorschlägen oder -ergebnissen an, falls verfügbar 
+und ermöglicht es dem Benutzer, einen Vorschlag oder ein Ergebnis auszuwählen.
+Es ist möglich letzte Suchen prorisiert vorzuschlagen, diese Funktion wird auch verwendet.
