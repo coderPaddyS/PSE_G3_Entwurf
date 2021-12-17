@@ -1,39 +1,37 @@
 \section{Search}
-\paragraph*{Kurzbeschreibung}
-This class enables the search of buildings and rooms via a String input in a text field.
 \paragraph*{Beschreibung}
-This class enables the search of buildings and rooms via a String input in a text field, 
-than can be a building number, building number and room number, alias or person.
-Shows a list of suggestions, if available, and allows the user to pick a suggestion or enter the input completely themselves.
+Diese Klasse ermöglicht die Suche nach Gebäuden und Räumen über eine String-Eingabe in einem Textfeld, 
+dies kann eine Gebäudenummer, Gebäudenummer und Raumnummer, ein Alias oder eine Person sein.
+Zeigt eine Liste von Vorschlägen an, falls vorhanden, und ermöglicht es dem Benutzer, einen Vorschlag auszuwählen oder die Eingabe vollständig selbst vorzunehmen.
 \paragraph*{Anmerkung}
-The class is only used local in the application without any connection to the server.
+Die Klasse wird nur lokal in der Anwendung verwendet, ohne jegliche Verbindung zum Server.
 
 \subsection{getSearchInput}%$$$M
 \paragraph*{Kurzbeschreibung}
-This methode enables user input and returns a valid search key or null.
+Diese Methode ermöglicht Benutzereingaben und gibt einen gültigen Suchbegriffe oder Null zurück.
 \paragraph*{Beschreibung}
-This methode enables the search of buildings and rooms via a String input of an search key in a text field.
-Shows a list of suggestions(the search keys), if available, and allows the user to pick a suggestion or enter the input completely themselves.
+Diese Methode ermöglicht die Suche von Gebäuden und Räumen über die Eingabe eines Suchbegriffs in ein Textfeld.
+Zeigt eine Liste von Vorschlägen (die Suchbegriffe), falls vorhanden, und erlaubt dem Benutzer, einen Vorschlag auszuwählen oder die Eingabe vollständig selbst vorzunehmen.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item list of all search keys
+    \item Liste aller Suchbegriffe
 \end{itemize}
 \paragraph*{Rückgabewert}
-search key that the user inserted
+Suchbegriff, den der Benutzer eingegeben hat
 \paragraph*{Notizen zur Implementierung}
 Benutzt eine Instanz von SearchView (https://developer.android.com/guide/topics/search/search-dialog#SearchableActivity).
 
 \subsection{getSearchable}%$$$M
 \paragraph*{Kurzbeschreibung}
-This methode returns the searchable belonging to the search key.
+Diese Methode gibt das zum Suchbegriffe gehörenden Kartenobjekt zurück.
 \paragraph*{Beschreibung}
-This class determines the searchable belonging to the search key and returns it.
+Diese Klasse ermittelt das zu den Suchbegriffen gehörenden Kartenobjekt und gibt dieses zurück.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item search key
+    \item Suchbegriffe
 \end{itemize}
 \paragraph*{Rückgabewert}
-searchable
+Kartenobjekt
 
 
 \section{Module: SearchView}
