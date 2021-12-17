@@ -3,6 +3,9 @@ classDiagram
     class MapId {
     }
 
+    class Geocoding {
+    }
+
     class Alias {
         +isLocal() Boolean
         +getIdentifier() String
