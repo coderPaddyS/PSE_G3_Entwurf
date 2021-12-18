@@ -1,3 +1,5 @@
+\chapter{Suchfunktion}
+
 \section{Search}
 \paragraph*{Beschreibung}
 Diese Klasse ermöglicht die Suche nach Gebäuden und Räumen über eine String-Eingabe in einem Textfeld, 
@@ -14,12 +16,28 @@ Diese Methode ermöglicht die Suche von Gebäuden und Räumen über die Eingabe 
 Zeigt eine Liste von Vorschlägen (die Suchbegriffe), falls vorhanden, und erlaubt dem Benutzer, einen Vorschlag auszuwählen oder die Eingabe vollständig selbst vorzunehmen.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item searchKeys : List<String> Liste aller Suchbegriffe
+    \item keine
 \end{itemize}
 \paragraph*{Rückgabewert}
 String Suchbegriff, den der Benutzer eingegeben hat
 \paragraph*{Notizen zur Implementierung}
 Benutzt eine Instanz von SearchView (https://developer.android.com/guide/topics/search/search-dialog#SearchableActivity).
+Für das Durchsuchen der Daten wird getSuggestions genutzt.
+Die Suchvorschläge werden einem Curser übergeben.
+Dieser wird von einem CurserAdapter adaptiert und die Vorschläge werden so an die Instanz von SearchView gegeben.
+Dort werden die Vorschläge dann dem Benutzer angezeigt.
+
+\subsection{getSuggestions}%$$$M
+\paragraph*{Kurzbeschreibung}
+Diese Methode gibt Suchvorschläge zu der übergebenen Query zurück.
+\paragraph*{Beschreibung}
+Diese Methode gibt Suchvorschläge zu der übergebenen Query aus einer (SQL-)Datenbank, die alle Kartenobjekte inklusive ihrer offiziellen Namen, Aliasse und Personen enthält, zurück.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item query : Query Der Suchbegriff den der benutzer eingegeben hat
+\end{itemize}
+\paragraph*{Rückgabewert}
+? Suchvorschläge, die SQL zurückgegeben wurden
 
 \subsection{getSearchable}%$$$M
 \paragraph*{Kurzbeschreibung}

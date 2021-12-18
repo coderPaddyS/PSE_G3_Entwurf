@@ -33,14 +33,3 @@ Nichtsdestotrotz, folgendes ist zu unterstützen:
             1. Um die Datenbank auf dem Smartphone des Benutzers zu erstellen, könnte möglicherweise `Room` verwendet werden [(Quelle zum Nachlesen)](#https://developer.android.com/training/data-storage/room). Um die Daten der lokalen Datenbank insbesondere aber auch aktualisiert zu halten, soll die lokale Datenbank mit der Datenbank auf dem Server kommunizieren können (bzw. die Datenbank auf dem Server abonnieren, um über Aktualisierungen informiert zu sein, Model-View-ViewModel).
         1. Die Namen der Personen, nach deren Büroraum man suchen kann, sind auf dem Server zu speichern.
     1. Hierfür ist wichtig, dass die Architektur Model-View-ViewModel (MVVM) verwendet wird, um Wiederwendbarkeit zu ermöglichen bei gleichzeitigem Aktualisieren der Eingabe des Benutzers (Weitergabe von Benutzerinteraktion, View) und dies behandelt (Logik, Model).
-
-
-
-    ```mermaid
-    classDiagram
-        Search --> SearchView
-        Search --> Datenbank
-        Cursor <-- Datenbank
-        CursorAdapter --> Cursor
-        SearchView --> CursorAdapter
-    ```
