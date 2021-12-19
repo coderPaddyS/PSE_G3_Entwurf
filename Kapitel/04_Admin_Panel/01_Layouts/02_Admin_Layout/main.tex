@@ -1,0 +1,38 @@
+\subsection{Admin-Layout}
+
+\subsubsection{Desktop}
+\paragraph*{Statischer Aufbau}
+Das Admin-Layout ist in zwei Bereiche untergliedert. Diese sind nebeneinander angeordnet und sind wie folgt:
+
+\subparagraph*{Navigation}
+Die Navigation ist eine vertikale Box mit der Höhe des Sichtbereichs als Höhe.
+Die Navigation ist so breit wie ihr Inhalt und einfarbig.
+Die Navigation beinhaltet für jede Seite, die das Admin-Layout verwendet, ein Verlinkungselement. 
+Diese Verlinkungselemente sind untereinander angeordnet, ausgehend vom obersten Punkt der Navigation.
+Als letzten Eintrag besitzt die Navigation ein Element mit der Aufschrift \dq Logout \dq. Dieser Eintrag befindet sich ganz unten in der Navigation
+
+\subparagraph*{Seiteninhalt}
+Der Seiteninhalt ist eine vertikale Box. Der Seiteninhalt hat eine Mindesthöhe von der Höhe des Sichtbereichs und keine Maximalhöhe.
+Der Seiteninhalt nimmt den restlichen horizontalen Bereich ein, der nicht durch die Navigation beansprucht wird.
+Der Seiteninhalt hat eine einheitliche Hintergrundfarbe.
+Der Seiteninhalt wird durch die Seiten, die das Admin-Layout nutzen, mit Inhalt gefüllt.
+
+\paragraph*{Dynamisches Verhalten}
+Alle Seiten, die auf dem Admin-Layout basieren, stehen nur angemeldeten Administratoren zur Verfügung. 
+Nicht ausreichend autorisierte Benutzer werden auf die Startseite weitergeleitet, wenn diese versuchen, eine solche Seite aufzurufen.
+
+\subparagraph*{Navigation}
+Die Navigation ist zunächst nach links eingeklappt und zeigt keine Inhalte an. Wird über die Navigation gehovert oder auf diese geklickt,
+so klappt sich die Navigation auf ihre volle Größe aus. Die Navigation bleibt ausgeklappt, wenn über eines der Elemente in der Navigation gehovert oder auf eines geklickt wird.
+Wird über ein Element der Navigation gehovert oder geklickt, so wird die Hintergrundfarbe dieses Elementes erhellt und die Schriftfarbe geändert.
+Wird nicht mehr über ein Element der Navigation gehovert oder wird auf ein anderes Element geklickt, so werden Hintergrundfarbe und Schriftfarbe zurückgesetzt.
+Wird auf ein Verlinkungselement geklickt, so wird auf die zugehörige Seite weitergeleitet.
+Wird auf das \dq Logout\dq - Element geklickt, so wird der Nutzer abgemeldet und auf die Startseite weitergeleitet.
+
+\subparagraph*{Seiteninhalt}
+Keines
+
+\paragraph*{Mobil}
+
+\paragraph*{Allgemeines dynamisches Verhalten}
+Ist der Nutzer auf einer Seite, die das Admin-Layout nutzt, nicht angemeldet, so wird er auf die Startseite weitergeleitet.
