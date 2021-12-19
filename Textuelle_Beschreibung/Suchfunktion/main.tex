@@ -1,0 +1,67 @@
+\chapter{Suchfunktion}
+
+\section{Search}
+\paragraph*{Beschreibung}
+Diese Klasse ermöglicht die Suche nach Gebäuden und Räumen über eine query 
+und ermöglicht die Bestimmung des Kartenobjekts zu einem gültigen Suchbegriff, 
+dies kann eine Gebäudenummer, Gebäudenummer und Raumnummer, ein Alias oder eine Person sein.
+Die Klasse gehört zu ViewModel.
+
+\subsection{getSuggestions}%$$$M
+\paragraph*{Kurzbeschreibung}
+Diese Methode gibt Suchvorschläge zu der übergebenen Query zurück.
+\paragraph*{Beschreibung}
+Diese Methode gibt Suchvorschläge zu der übergebenen Query aus einer (SQL-)Datenbank, die alle Kartenobjekte inklusive ihrer offiziellen Namen, Aliasse und Personen enthält, zurück.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item query : Query Der Suchbegriff den der benutzer eingegeben hat
+\end{itemize}
+\paragraph*{Rückgabewert}
+? Suchvorschläge, die SQL zurückgegeben wurden
+
+\subsection{getSearchable}%$$$M
+\paragraph*{Kurzbeschreibung}
+Diese Methode gibt das zum Suchbegriffe gehörenden Kartenobjekt zurück.
+\paragraph*{Beschreibung}
+Diese Klasse ermittelt das zu den Suchbegriffen gehörenden Kartenobjekt und gibt dieses zurück.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item searchKey : String Suchbegriff
+\end{itemize}
+\paragraph*{Rückgabewert}
+MapObject Kartenobjekt zum searchKey
+
+
+\section{SearchInput}
+\paragraph*{Beschreibung}
+Diese Klasse ermöglicht die Eingabe eines Suchbegriffs in ein Textfeld durch den Benutzer, 
+die Anzeige einer Liste von Suchvorschlägen und die Auswahl eines Vorschlages durch den Benutzer, 
+indem er einen Vorschlag auswählt oder die Eingabe vollständig selbst vornimmt.
+Die Klasse gehört zu View.
+
+\subsection{getSearchInput}%$$$M
+\paragraph*{Kurzbeschreibung}
+Diese Methode ermöglicht Benutzereingaben und gibt einen gültigen Suchbegriff oder Null zurück.
+\paragraph*{Beschreibung}
+Diese Methode ermöglicht die Suche von Gebäuden und Räumen über die Eingabe eines Suchbegriffs in ein Textfeld.
+Zeigt eine Liste von Vorschlägen (die Suchbegriffe), falls vorhanden, und erlaubt dem Benutzer, einen Vorschlag auszuwählen oder die Eingabe vollständig selbst vorzunehmen.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item keine
+\end{itemize}
+\paragraph*{Rückgabewert}
+String Suchbegriff, den der Benutzer eingegeben hat
+\paragraph*{Notizen zur Implementierung}
+Benutzt eine Instanz von SearchView (https://developer.android.com/guide/topics/search/search-dialog#SearchableActivity).
+Für das Durchsuchen der Daten wird getSuggestions von Search genutzt.
+Die Suchvorschläge werden einem Curser übergeben.
+Dieser wird von einem CurserAdapter adaptiert und die Vorschläge werden so an die Instanz von SearchView gegeben.
+Dort werden die Vorschläge dann dem Benutzer angezeigt.
+
+
+\section{Bibliothek SearchView}
+\paragraph*{Beschreibung}
+Ein bereits existierendes Widget, das dem Benutzer eine Benutzeroberfläche bietet, um eine Suchanfrage einzugeben und eine Anfrage an einen Suchanbieter zu senden. 
+Zeigt eine Liste von Suchvorschlägen oder -ergebnissen an, falls verfügbar 
+und ermöglicht es dem Benutzer, einen Vorschlag oder ein Ergebnis auszuwählen.
+Es ist möglich letzte Suchen prorisiert vorzuschlagen, diese Funktion wird auch verwendet.

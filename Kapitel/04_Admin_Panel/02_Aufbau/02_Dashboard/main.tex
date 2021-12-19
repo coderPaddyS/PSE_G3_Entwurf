@@ -1,0 +1,40 @@
+\subsection{Dashboard}
+
+Das Dashboard ist die erste Seite auf die der Nutzer weitergeleitet wird, sofern er sich als Administrator authentifiziert hat.
+
+\paragraph*{Layout}
+Das Dashboard benutzt das Admin-Layout.
+
+\paragraph*{Erreichbarkeit}
+Das Dashboard ist unter \href{https://pse.itermori.de/admin/panel}{https://pse.itermori.de/admin/panel} erreichbar.
+
+\paragraph*{Verwendbarkeit}
+Ausschließlich authentifizierte Administratoren können diese Seite verwenden.
+
+\paragraph*{Aufgabe}
+Sie zeigt verschiedene Informationen an, so mindestens:
+
+\begin{itemize}
+    \item Name des angemeldeten Administrators
+    \item Anzahl der aktuellen Alias-Vorschläge
+    \item Anzahl der akzeptierten Aliasse
+    \item Anzahl der Einträge auf der Blacklist
+\end{itemize}
+
+\paragraph*{Desktop}
+\subparagraph*{Statischer Aufbau}
+Das Dashboard ist in zwei übereinanderliegende horizontale Boxen aufgeteilt.
+In der oberen Box steht eine Begrüßung.
+Die untere Box ist in weitere Abschnitte aufgeteilt, einen Abschnitt pro angezeigter Information.
+
+\paragraph*{Mobil}
+Das Dashboard ist in zwei übereinanderliegende horizontale Boxen aufgeteilt. Diese Boxen nehmen die komplette Horizontale ein.
+In der oberen Box steht eine Begrüßung.
+Die untere Box ist in weitere Abschnitte aufgeteilt, einen Abschnitt pro angezeigter Information.
+Diese Informationsabschnitte sind untereinander.
+Jeder Informationsabschnitt nimmt die komplette Breite der Box ein.
+
+\subparagraph*{Allgemeines dynamisches Verhalten}
+Die Begrüßung zeigt den hinterlegten Namen des angemeldeten Administrators an und begrüßt diesen.
+Die Abschnitte für die Informationen werden zum Seitenaufruf bestimmt. 
+Informationen in Form von konkreten Zahlen werden hochgezählt, bis diese ihren Wert erreicht haben.
