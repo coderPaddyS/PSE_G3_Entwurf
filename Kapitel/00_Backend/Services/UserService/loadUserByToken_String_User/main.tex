@@ -1,0 +1,16 @@
+\subsubsection{\texttt{loadUserByToken(accessToken : String) : User}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt den gewünschten Benutzer zurück.
+\paragraph*{Beschreibung}
+Die Methode ist ausschließlich von Administratoren aufzurufen.
+Die Methode ermöglicht, dass ein Administrator durch Angabe des Access-Tokens den gewünschten Benutzer zurückbekommen kann. 
+Ist der Access-Token ungültig, d.h. nicht von einem Benutzer, wird \texttt{null} zurückgegeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item accessToken : String
+    		\paragraph*{Beschreibung}
+    		Der Access-Token des gewünschten Benutzers, der zurückgegeben werden soll.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Der Benutzer, zu dem der übergebene Access-Token gehört, sofern der übergebene Access-Token gültig ist.
+Sollte der übergebene Access-Token ungültig sein, wird \texttt{null} zurückgegeben.
