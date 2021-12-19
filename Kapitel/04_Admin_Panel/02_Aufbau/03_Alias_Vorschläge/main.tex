@@ -24,7 +24,8 @@ Folgende Aufgaben werden erfüllt:
         \item Alias-Vorschlag
         \item Gebäudenummer
         \item Raum
-        \item Feedback
+        \item positives Feedback
+        \item negatives Feedback
     \end{itemize}
 \end{itemize}
 
@@ -38,24 +39,24 @@ Die untere Box beinhaltet die Alias-Vorschläge in tabellarischer Form, die Spal
     \item Alias-Vorschlag: Der Bezeichner des Alias-Vorschlags
     \item Gebäudenummer: Das zugehörige Gebäude des Alias-Vorschlags
     \item Raumnummer: Der zugehörige Raum des Alias-Vorschlags, \dq - \dq{} falls kein zugehöriger Raum existiert
-    \item Bewertungen: Die Anzahl an positiven und auch negativen Bewertungen zu einem Alias-Vorschlag
+    \item positive Bewertungen: Die Anzahl an positiven Bewertungen zu einem Alias-Vorschlag
+    \item negative Bewertungen: Die Anzahl an negativen Bewertungen zu einem Alias-Vorschlag
     \item Aktionen: Annehmen, Ablehnen, Blacklisten
 \end{enumerate}
 
 Die Spalten 1 bis 3 beinhalten ein Textfeld zur Anzeige der Informationen.
-Die Spalte 4 ist unterteilt in vier vertikale Boxen, im folgenden von links nach rechts mit 4.1 bis 4.4 bezeichnet.
+Die Spalte 4 ist unterteilt in zwei vertikale Boxen, im folgenden von links nach rechts mit 4.1 und 4.2 bezeichnet.
 4.1 enthält die Anzahl positiver Bewertungen, 4.2 enthält ein Element zur Kennzeichnung dass 4.1 die Anzahl der positiven Bewertungen darstellt, zum Beispiel ein \dq + \dq.
-4.3 enthält ein \dq - \dq{} und 4.4 enthält die Anzahl negativer Bewertungen.
-Spalte 5 ist unterteilt in drei vertikale Boxen. Diese enthalten jeweils ein Element, das eines der Aktionen repräsentiert. 
-Die Spaltenüberschrift beinhaltet ein Sortierungselement am rechten Ende.
+Die Spalte 5 ist unterteilt in zwei vertikale Boxen, im folgenden von links nach rechts mit 5.1 und 5.2 bezeichnet.
+5.1 enthält die Anzahl negativen Bewertungen, 5.2 enthält ein Element zur Kennzeichnung dass 5.1 die Anzahl der negativen Bewertungen darstellt, zum Beispiel ein \dq - \dq.
+Spalte 6 ist unterteilt in drei vertikale Boxen. Diese enthalten jeweils ein Element, das eines der Aktionen repräsentiert. 
+Die Spaltenüberschriften der Spalten 1-5 beinhalten ein Sortierungselement am rechten Ende.
 Der Abschnitt selber enthält die eindeutige Identifizierung des Kartenobjektes \verb#mapID# auf dass sich der Alias-Vorschlag bezieht. Dieser wird nicht angezeigt.
 
 \subparagraph*{Dynamisches Verhalten}
-Auf Klick auf ein Sortierungselement wird die Sortierung der Tabelle ändert.
+Auf Klick auf ein Sortierungselement wird die Sortierung der Tabelle geändert.
 Ist die Tabelle absteigend oder nicht nach der zugehörigen Spalte sortiert, so wird beim Klick auf das Sortierelement die Tabelle aufsteigend nach dieser Spalte sortiert.
 Ist die Tabelle bereits aufsteigend nach der zugehörigen Spalte sortiert, so wird beim Klick auf das Sortierelement die Tabelle absteigend nach dieser Spalte sortiert.
-Aufsteigend nach Bewertungen bedeutet dass primär aufsteigend nach der Differenz von positiven und negativen Bewertungen und sekundär absteigend nach der Anzahl an positiven Bewertungen sortiert wird.
-Absteigend nach Bewertungen bedeutet dass primär absteigend nach der Differenz von positiven und negativen Bewertungen und sekundär absteigend nach der Anzahl an positiven Bewertungen sortiert wird.
 
 \paragraph*{Mobil}
 \subparagraph*{Statischer Aufbau}
@@ -72,23 +73,23 @@ Jeder Alias-Vorschlag befindet sich in seinem eigenen Abschnitt, dieser ist wied
     \item Alias-Vorschlag: Der Bezeichner des Alias-Vorschlags
     \item Gebäudenummer: Das zugehörige Gebäude des Alias-Vorschlags
     \item Raumnummer: Der zugehörige Raum des Alias-Vorschlags, \dq - \dq{} falls kein zugehöriger Raum existiert
-    \item Bewertungen: Die Anzahl an positiven und auch negativen Bewertungen zu einem Alias-Vorschlag
+    \item positive Bewertungen: Die Anzahl an positiven Bewertungen zu einem Alias-Vorschlag
+    \item negative Bewertungen: Die Anzahl an negativen Bewertungen zu einem Alias-Vorschlag
     \item Aktionen: Annehmen, Ablehnen, Blacklisten
 \end{enumerate}
 
 Segment 1 befindet sich ganz oben im Alias-Vorschlag-Abschnitt. Segmente 2 und 3 folgen untereinander unter Segment 1.
-Segment 4 ist in zwei horizontale Boxen aufgeteilt (4.1 und 4.2), diese sind wiederum in zwei vertikale Boxen aufgeteilt (4.1.1 und 4.1.2; 4.2.1 und 4.2.2) .
-4.1.1 enthält die Anzahl positiver Bewertungen, 4.1.2 enthält ein Element zur Kennzeichnung dass 4.1.1 die Anzahl der positiven Bewertungen darstellt, zum Beispiel ein \dq + \dq.
-4.2.1 enthält die Anzahl negativer Bewertungen, 4.2.2 enthält ein Element zur Kennzeichnung dass 4.2.1 die Anzahl der negativen Bewertungen darstellt, zum Beispiel ein \dq - \dq.
-Segment 5 enthält drei vertikale Boxen. Jede Box ist genau einer Aktion zugeordnet und enthält ein Element um diese auszulösen.
+Segment 4 ist in  zwei vertikale Boxen aufgeteilt (4.1 und 4.2).
+4.1 enthält die Anzahl positiver Bewertungen, 4.2 enthält ein Element zur Kennzeichnung dass 4.1 die Anzahl der positiven Bewertungen darstellt, zum Beispiel ein \dq + \dq.
+Segment 5 ist in  zwei vertikale Boxen aufgeteilt (5.1 und 5.2).
+5.1 enthält die Anzahl negativer Bewertungen, 5.2 enthält ein Element zur Kennzeichnung dass 5.1 die Anzahl der negativen Bewertungen darstellt, zum Beispiel ein \dq - \dq.
+Segment 6 enthält drei vertikale Boxen. Jede Box ist genau einer Aktion zugeordnet und enthält ein Element um diese auszulösen.
 Der Abschnitt selber enthält die eindeutige Identifizierung des Kartenobjektes \verb#mapID# auf dass sich der Alias-Vorschlag bezieht. Dieser wird nicht angezeigt.
 
 \subparagraph*{Dynamisches Verhalten}
 Die Auswahl der Sortierungsoptionen bestimmt die angezeigte Reihenfolge der Alias-Vorschläge.
 Ist \dq Aufsteigend \dq{} ausgewählt, so werden die Alias-Vorschläge nach der ausgewählten Kategorie aufsteigend sortiert.
 Ist \dq Absteigend \dq{} ausgewählt, so werden die Alias-Vorschläge nach der ausgewählten Kategorie absteigend sortiert.
-Aufsteigend nach Bewertungen bedeutet dass primär aufsteigend nach der Differenz von positiven und negativen Bewertungen und sekundär absteigend nach der Anzahl an positiven Bewertungen sortiert wird.
-Absteigend nach Bewertungen bedeutet dass primär absteigend nach der Differenz von positiven und negativen Bewertungen und sekundär absteigend nach der Anzahl an positiven Bewertungen sortiert wird.
 
 \paragraph*{Allgemeines dynamisches Verhalten}
 Wird über ein Aktions- oder ein Sortierungselement gehovert oder auf ein solches geklickt, so ändert sich die Hintergrundfarbe auf eine hellere Abwandlung der vorherigen Hintergrundfarbe.
