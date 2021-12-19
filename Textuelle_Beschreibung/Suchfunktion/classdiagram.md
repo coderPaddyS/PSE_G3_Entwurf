@@ -5,4 +5,4 @@
         Cursor <-- Datenbank
         CursorAdapter --> Cursor
         SearchView --> CursorAdapter
-    ```
+```
