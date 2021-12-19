@@ -3,7 +3,8 @@
 Ladet den gewünschten Benutzer durch einen Access-Token und gibt ihm anschließend zurück.
 \paragraph*{Beschreibung}
 Die Methode implementiert die gleichnamige Methode der Schnittstelle \texttt{UserService}.
-Die Methode ist ausschließlich von Administratoren aufzurufen.
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Resolvers} aufgerufen.
 Die Methode ermöglicht, dass ein Administrator durch Angabe des Access-Tokens den gewünschten Benutzer erhalten kann. 
 Ist der Access-Token ungültig, d.h. nicht von einem Benutzer, wird \texttt{null} zurückgegeben.
 \paragraph*{Parameter}
