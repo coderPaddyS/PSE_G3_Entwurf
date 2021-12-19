@@ -1,0 +1,152 @@
+\chapter{Grundbausteine}
+
+\section{Alias}
+\paragraph*{Beschreibung}
+Ein alternativer Bezeichner für ein Kartenobjekt (MapObject), wie beispielsweise ein Raum (Room) oder Gebäude (Building).
+Benutzer können mit diesem nach dem zugehörigen Kartenobjekt suchen alternativ zum offizielen Namen (OfficialName).
+Aliasse können lokal sein (Benutzer hat den Alias selbst für sich hinzugefügt) oder global (Alias wurde von einem Benutzer vorgeschlagen und von einem Admin für alle Benutzer hinzugefügt).
+Die Aliasse werden lokal und auf dem Server gespeichert.
+
+\subsection{isLocal}%$$$M
+\paragraph*{Kurzbeschreibung}
+Diese Methode gibt zurück, ob der Alias lokal ist.
+\paragraph*{Beschreibung}
+Diese Methode gibt zurück, ob der Alias lokal ist (wahr) oder nicht (falsch).
+\paragraph*{Parameter}
+\begin{itemize}
+    \item keine
+\end{itemize}
+\paragraph*{Rückgabewert}
+bool ob der Alias lokal ist
+
+\subsection{getIdentifier}%$$$M
+\paragraph*{Kurzbeschreibung}
+Diese Methode gibt den Bezeichner des Alias zurück.
+\paragraph*{Beschreibung}
+Diese Methode gibt den Bezeichner des Alias zurück.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item keine
+\end{itemize}
+\paragraph*{Rückgabewert}
+String Bezeichner des Alias
+
+\subsection{getMapId}%$$$M
+\paragraph*{Kurzbeschreibung}
+Diese Methode gibt die KartenID des Alias zurück.
+\paragraph*{Beschreibung}
+Diese Methode gibt die KartenID des Alias zurück.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item keine
+\end{itemize}
+\paragraph*{Rückgabewert}
+MapId KartenID des Alias
+
+
+\section{Person}
+\paragraph*{Beschreibung}
+Eine Person, die ein Büro in einem Gebäude hat. Der Name der Person dient als alternativer Identifikator für einen Raum.
+\paragraph*{Anmerkung}
+Die Personen werden lokal und auf dem Server gespeichert.
+
+\subsection{getName}%$$$M
+\paragraph*{Kurzbeschreibung}
+Diese Methode liefert den vollständigen Namen der Person.
+\paragraph*{Beschreibung}
+Diese Methode liefert den vollständigen Namen der Person einschließlich des Titels in der Reihenfolge "Titel Vorname Nachname".
+\paragraph*{Parameter}
+\begin{itemize}
+    \item keine
+\end{itemize}
+\paragraph*{Rückgabewert}
+String Name der Person
+
+\subsection{getMapId}
+\paragraph*{Kurzbeschreibung}
+Diese Methode gibt die KartenID der Person zurück.
+\paragraph*{Beschreibung}
+Diese Methode gibt die KartenID der Person zurück.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item keine
+\end{itemize}
+\paragraph*{Rückgabewert}
+MapId KartenID
+
+
+\section{Building}
+\paragraph*{Beschreibung}
+Ein Gebäude mit Räumen, nach denen in der App gesucht werden kann.
+\paragraph*{Anmerkung}
+Die Gebäude werden lokal und auf dem Server gespeichert.
+
+
+\section{Room}
+\paragraph*{Kurzbeschreibung}
+Ein Raum in einem Gebäude.
+\paragraph*{Beschreibung}
+Ein Raum in einem Gebäude, nach dem in der App gesucht werden kann.
+\paragraph*{Anmerkung}
+Die Räume werden lokal und auf dem Server gespeichert.
+
+
+\section{MapObject}
+\paragraph*{Kurzbeschreibung}
+Ein Kartenobjekt.
+\paragraph*{Beschreibung}
+Ein Kartenobjekt, nach dem in der App gesucht werden kann.
+\paragraph*{Anmerkung}
+Die Kartenobjekte werden lokal und auf dem Server gespeichert.
+
+\subsection{getAdditionalData}%$$$M
+Diese Methode gibt die zusätzlichen Daten des Kartenobjekts zurück.
+\paragraph*{Beschreibung}
+Diese Methode gibt die zusätzlichen Daten des Kartenobjekts zurück.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item keine
+\end{itemize}
+\paragraph*{Rückgabewert}
+? zusätzlichen Daten des Kartenobjekts
+
+\subsection{getOfficialName}%$$$M
+\paragraph*{Kurzbeschreibung}
+Diese Methode gibt den offiziellen Namen des Kartenobjekts zurück.
+\paragraph*{Beschreibung}
+Diese Methode gibt den offiziellen Namen des Kartenobjekts zurück.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item keine
+\end{itemize}
+\paragraph*{Rückgabewert}
+String offizieller Name des Kartenobjekts
+
+\subsection{getMapId}%$$$M
+\paragraph*{Kurzbeschreibung}
+Diese Methode gibt die KartenID des Kartenobjekts zurück.
+\paragraph*{Beschreibung}
+Diese Methode gibt die KartenID des Kartenobjekts zurück.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item keine
+\end{itemize}
+\paragraph*{Rückgabewert}
+MapId KartenID des Kartenobjekts
+
+\subsection{getGeocoding}%$$$M
+\paragraph*{Beschreibung}
+Diese Methode gibt die Geokodierung des Kartenobjekts zurück.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item keine
+\end{itemize}
+\paragraph*{Rückgabewert}
+Geocoding Geokodierung
+
+
+\section{Geocoding}
+\paragraph*{Beschreibung}
+Die Definition des Standorts.
+\paragraph*{Anmerkung}
+Die Geocodings werden lokal und auf dem Server gespeichert.

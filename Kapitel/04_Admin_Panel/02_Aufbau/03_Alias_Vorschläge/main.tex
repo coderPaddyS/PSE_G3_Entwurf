@@ -1,0 +1,100 @@
+\subsection{Alias-Vorschläge}
+
+Die Alias-Vorschläge-Seite repräsentiert die Schnittstelle für sämtliche Aktionen, die mit Alias-Vorschlägen gemacht werden können.
+
+\paragraph*{Layout}
+Die Alias-Vorschläge-Seite benutzt das Admin-Layout.
+
+\paragraph*{Erreichbarkeit}
+Die Alias-Vorschläge-Seite ist unter \href{https://pse.itermori.de/admin/suggestions}{https://pse.itermori.de/admin/suggestions} erreichbar.
+
+\paragraph*{Verwendbarkeit}
+Ausschließlich authentifizierte Administratoren können diese Seite verwenden.
+
+\paragraph*{Aufgabe}
+Folgende Aufgaben werden erfüllt:
+
+\begin{itemize}
+    \item Anzeigen sämtlicher Alias-Vorschläge
+    \item Annahme von Alias-Vorschlägen
+    \item Ablehnung von Alias-Vorschlägen
+    \item Blacklisten von Alias-Vorschlägen
+    \item Filterung und Sortierung von angezeigten Alias-Vorschlägen nach 
+    \begin{itemize}
+        \item Alias-Vorschlag
+        \item Gebäudenummer
+        \item Raum
+        \item positives Feedback
+        \item negatives Feedback
+    \end{itemize}
+\end{itemize}
+
+\paragraph*{Desktop}
+\subparagraph*{Statischer Aufbau}
+Die Seite ist in zwei übereinanderliegende horizontale Boxen aufgeteilt.
+Die obere Box beinhaltet den zentrierten Titel \dq Alias-Vorschläge\dq.
+Die untere Box beinhaltet die Alias-Vorschläge in tabellarischer Form, die Spalten sind durch folgende Reihenfolge gegeben:
+
+\begin{enumerate}
+    \item Alias-Vorschlag: Der Bezeichner des Alias-Vorschlags
+    \item Gebäudenummer: Das zugehörige Gebäude des Alias-Vorschlags
+    \item Raumnummer: Der zugehörige Raum des Alias-Vorschlags, \dq - \dq{} falls kein zugehöriger Raum existiert
+    \item positive Bewertungen: Die Anzahl an positiven Bewertungen zu einem Alias-Vorschlag
+    \item negative Bewertungen: Die Anzahl an negativen Bewertungen zu einem Alias-Vorschlag
+    \item Aktionen: Annehmen, Ablehnen, Blacklisten
+\end{enumerate}
+
+Die Spalten 1 bis 3 beinhalten ein Textfeld zur Anzeige der Informationen.
+Die Spalte 4 ist unterteilt in zwei vertikale Boxen, im folgenden von links nach rechts mit 4.1 und 4.2 bezeichnet.
+4.1 enthält die Anzahl positiver Bewertungen, 4.2 enthält ein Element zur Kennzeichnung dass 4.1 die Anzahl der positiven Bewertungen darstellt, zum Beispiel ein \dq + \dq.
+Die Spalte 5 ist unterteilt in zwei vertikale Boxen, im folgenden von links nach rechts mit 5.1 und 5.2 bezeichnet.
+5.1 enthält die Anzahl negativen Bewertungen, 5.2 enthält ein Element zur Kennzeichnung dass 5.1 die Anzahl der negativen Bewertungen darstellt, zum Beispiel ein \dq - \dq.
+Spalte 6 ist unterteilt in drei vertikale Boxen. Diese enthalten jeweils ein Element, das eines der Aktionen repräsentiert. 
+Die Spaltenüberschriften der Spalten 1-5 beinhalten ein Sortierungselement am rechten Ende.
+Der Abschnitt selber enthält die eindeutige Identifizierung des Kartenobjektes \verb#mapID# auf dass sich der Alias-Vorschlag bezieht. Dieser wird nicht angezeigt.
+
+\subparagraph*{Dynamisches Verhalten}
+Auf Klick auf ein Sortierungselement wird die Sortierung der Tabelle geändert.
+Ist die Tabelle absteigend oder nicht nach der zugehörigen Spalte sortiert, so wird beim Klick auf das Sortierelement die Tabelle aufsteigend nach dieser Spalte sortiert.
+Ist die Tabelle bereits aufsteigend nach der zugehörigen Spalte sortiert, so wird beim Klick auf das Sortierelement die Tabelle absteigend nach dieser Spalte sortiert.
+
+\paragraph*{Mobil}
+\subparagraph*{Statischer Aufbau}
+Die Seite ist in zwei übereinanderliegende horizontale Boxen aufgeteilt. Diese nehmen die volle ihnen zur Verfügung stehende Horizontale ein.
+Die obere Box beinhaltet den zentrierten Titel \dq Alias-Vorschläge \dq.
+Die untere Box beinhaltet die Sortierungsoptionen und die Alias-Vorschläge.
+Die Sortierungsoptionen befinden sich ganz oben und ist in zwei Auswahlelemente aufgeteilt. 
+Das erste Auswahlelement beinhaltet einen Eintrag für die Kategorien Alias-Vorschlag, Gebäudenummer, Raumnummer und Bewertungen.
+Das zweite Auswahlelement beinhaltet die Einträge \dq Aufsteigend \dq{} und \dq Absteigend \dq{} oder Synonyme bzw. Abkürzungen dieser.
+Die Alias-Vorschläge befinden sich unterhalb der Sortierungsoptionen.
+Jeder Alias-Vorschlag befindet sich in seinem eigenen Abschnitt, dieser ist wiederum in folgende Segmente aufgeteilt:
+
+\begin{enumerate}
+    \item Alias-Vorschlag: Der Bezeichner des Alias-Vorschlags
+    \item Gebäudenummer: Das zugehörige Gebäude des Alias-Vorschlags
+    \item Raumnummer: Der zugehörige Raum des Alias-Vorschlags, \dq - \dq{} falls kein zugehöriger Raum existiert
+    \item positive Bewertungen: Die Anzahl an positiven Bewertungen zu einem Alias-Vorschlag
+    \item negative Bewertungen: Die Anzahl an negativen Bewertungen zu einem Alias-Vorschlag
+    \item Aktionen: Annehmen, Ablehnen, Blacklisten
+\end{enumerate}
+
+Segment 1 befindet sich ganz oben im Alias-Vorschlag-Abschnitt. Segmente 2 und 3 folgen untereinander unter Segment 1.
+Segment 4 ist in  zwei vertikale Boxen aufgeteilt (4.1 und 4.2).
+4.1 enthält die Anzahl positiver Bewertungen, 4.2 enthält ein Element zur Kennzeichnung dass 4.1 die Anzahl der positiven Bewertungen darstellt, zum Beispiel ein \dq + \dq.
+Segment 5 ist in  zwei vertikale Boxen aufgeteilt (5.1 und 5.2).
+5.1 enthält die Anzahl negativer Bewertungen, 5.2 enthält ein Element zur Kennzeichnung dass 5.1 die Anzahl der negativen Bewertungen darstellt, zum Beispiel ein \dq - \dq.
+Segment 6 enthält drei vertikale Boxen. Jede Box ist genau einer Aktion zugeordnet und enthält ein Element um diese auszulösen.
+Der Abschnitt selber enthält die eindeutige Identifizierung des Kartenobjektes \verb#mapID# auf dass sich der Alias-Vorschlag bezieht. Dieser wird nicht angezeigt.
+
+\subparagraph*{Dynamisches Verhalten}
+Die Auswahl der Sortierungsoptionen bestimmt die angezeigte Reihenfolge der Alias-Vorschläge.
+Ist \dq Aufsteigend \dq{} ausgewählt, so werden die Alias-Vorschläge nach der ausgewählten Kategorie aufsteigend sortiert.
+Ist \dq Absteigend \dq{} ausgewählt, so werden die Alias-Vorschläge nach der ausgewählten Kategorie absteigend sortiert.
+
+\paragraph*{Allgemeines dynamisches Verhalten}
+Wird über ein Aktions- oder ein Sortierungselement gehovert oder auf ein solches geklickt, so ändert sich die Hintergrundfarbe auf eine hellere Abwandlung der vorherigen Hintergrundfarbe.
+Wird nicht mehr über das Element gehovert oder wurde etwas anderes angeklickt, so wird die Hintergrundfarbe auf den originalen Wert gesetzt.
+Im folgenden bezeichnen \verb#alias# den Bezeichner des zugehörigen Alias-Vorschlags und \verb#mapID# die Kartenobjektidentifizierung des zugehörigen Alias-Vorschlags.
+Wird auf das Annehmen-Aktionselement eines zugehörigen Alias-Vorschlags geklickt, so wird die Methode \verb#accept# mit den Parametern \verb#mapID# und \verb#alias# aufgerufen. 
+Wird auf das Ablehnen-Aktionselement eines zugehörigen Alias-Vorschlags geklickt, so wird die Methode \verb#decline# mit den Parametern \verb#mapID# und \verb#alias# aufgerufen. 
+Wird auf das Blacklist-Aktionselement eines zugehörigen Alias-Vorschlags geklickt, so wird die Methode \verb#blacklist# mit dem Parameter \verb#alias# aufgerufen. 
