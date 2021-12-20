@@ -1,0 +1,16 @@
+\paragraph{\texttt{removeFromBlacklist(alias : String) : boolean}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Entfernt einen globalen Alias aus der Blacklist.
+\paragraph*{Beschreibung}
+Die Methode ist ausschließlich von Administratoren aufzurufen.
+Die Methode ermöglicht, dass ein Administrator einen Alias als Zeichenkette, die aktuell in der Blacklist hinterlegt ist, aus der Blacklist entfernen kann.
+Dies hat zur Folge, dass die entsprechende Zeichenkette nun als Alias eines Kartenobjekts erfolgreich vorgeschlagen werden kann.
+Hierfür wird der gewünschte Alias als Zeichenkette übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item alias : String
+    		\paragraph*{Beschreibung}
+    		Der Alias als Zeichenkette, den man aus der Blacklist entfernen möchte.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Wahr, wenn der gewünschte Alias als Zeichenkette erfolgreich aus der Blacklist entfernt werden konnte oder wenn die Zeichenkette bereits nicht in der Blacklist hinterlegt wahr. Im sonstigen Fall wird falsch zurückgegeben.
