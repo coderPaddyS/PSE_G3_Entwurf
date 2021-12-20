@@ -4,7 +4,7 @@ Diese Klasse ermöglicht das Durchsuchen der Datenbank nach gültigen Suchbegrif
 und ermöglicht die Bestimmung des Kartenobjekts zu einem gültigen Suchbegriff, 
 dies kann eine Gebäudenummer, Gebäudenummer und Raumnummer, Gebäudenummer und Alias eines Raumes, ein Alias eines Gebäudes oder eine Person sein.
 
-\subsection{getSuggestions}%$$$M
+\subsection{\texttt{+ getSuggestions(query : Query) : List<String>}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Diese Methode gibt Suchvorschläge zu der übergebenen Query zurück.
 \paragraph*{Beschreibung}
@@ -16,11 +16,11 @@ Wenn möglich sollen auch Rechtschreibfehler einalkuliert werden, so dass auch V
     \item query : Query Der Suchbegriff den der Benutzer eingegeben hat
 \end{itemize}
 \paragraph*{Rückgabewert}
-List<String> Suchvorschläge, die die Datenbank zurückgegeben hat
+List<String>, Suchvorschläge, die die Datenbank zurückgegeben hat
 \paragraph*{Notizen zur Implementierung}
 Wenn SQL genutzt wird, wird die Suche direkt auf SQL ausgeführt z.B. mit "like".
 
-\subsection{getSearchable}%$$$M
+\subsection{\texttt{+ getSearchable(searchKey : String) : MapObject}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Diese Methode gibt das zum Suchbegriffe gehörenden Kartenobjekt zurück.
 \paragraph*{Beschreibung}
@@ -30,4 +30,4 @@ Diese Klasse ermittelt das zu den Suchbegriffen gehörenden Kartenobjekt in der 
     \item searchKey : String Suchbegriff
 \end{itemize}
 \paragraph*{Rückgabewert}
-MapObject Kartenobjekt zum Suchbegriff
+MapObject, Kartenobjekt zum Suchbegriff

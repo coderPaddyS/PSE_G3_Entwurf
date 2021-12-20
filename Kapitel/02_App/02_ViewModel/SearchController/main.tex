@@ -5,7 +5,7 @@ und ermöglicht die Bestimmung des Kartenobjekts zu einem gültigen Suchbegriff,
 dies kann eine Gebäudenummer, Gebäudenummer und Raumnummer, Gebäudenummer und Alias eines Raumes, ein Alias eines Gebäudes oder eine Person sein.
 Dies macht sie, indem sie die Daten bei SearchModel anfordert.
 
-\subsection{getSuggestions}%$$$M
+\subsection{\texttt{+ getSuggestions(query : Query) : List<String>}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Diese Methode gibt Suchvorschläge zu der übergebenen Query zurück.
 \paragraph*{Beschreibung}
@@ -15,9 +15,9 @@ Diese Methode fordert Suchvorschläge zu der übergebenen Query von dem SearchMo
     \item query : Query Der Suchbegriff den der Benutzer eingegeben hat
 \end{itemize}
 \paragraph*{Rückgabewert}
-List<String> Suchvorschläge zur Query, die SearchModel zurückgegeben hat
+List<String>, Suchvorschläge zur Query, die SearchModel zurückgegeben hat
 
-\subsection{getSearchable}%$$$M
+\subsection{\texttt{+ getSearchable(searchKey : String) : MapObject}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Diese Methode gibt das zum Suchbegriffe gehörenden Kartenobjekt zurück.
 \paragraph*{Beschreibung}
@@ -27,4 +27,4 @@ Diese Methode fordert das zu den Suchbegriffen gehörenden Kartenobjekt von dem 
     \item searchKey : String Suchbegriff
 \end{itemize}
 \paragraph*{Rückgabewert}
-MapObject Kartenobjekt zum Suchbegriff, die SearchModel zurückgegeben hat
+MapObject, Kartenobjekt zum Suchbegriff, die SearchModel zurückgegeben hat
