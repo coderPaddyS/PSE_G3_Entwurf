@@ -22,7 +22,7 @@ und das Fokussieren eines dieser Marker.
 Erstellt eine TileMarkerOverlay-Instanz.
 \paragraph*{Beschreibung}
 Beginnt die von controller bereitgestellten Daten zu beobachten. Erzeugt das TileOverlay.
-Erzeugt die Marker über die Fabrikmethode createMarker.
+Erzeugt die MapObjectMarker über die Fabrikmethode createMarker.
 \paragraph*{Parameter}
 \begin{itemize}
     \item controller:MapLayerDataController MapLayerDataController der die Daten bereitstellt.
@@ -51,16 +51,16 @@ Teilt dem MapLayerDataController mit, dass ein bestimmtes Kartenobjekt ausgewäh
 \paragraph*{Rückgabewert}
 Void.
 
-\subsubsection{#create Marker {abstract}}%$$$M
+\subsubsection{#createMarker {abstract}}%$$$M
 \paragraph*{Beschreibung}
-Dies ist eine Fabrikmethode zur Erzeugung eines Markers.
+Dies ist eine Fabrikmethode zur Erzeugung eines MapObjectMarker.
 \paragraph*{Parameter}
 \begin{itemize}
     \item data:DisplayData DisplayData mit den Anzeige-Daten für den Marker.
     \item mapView:MapView MapView auf der der Marker angezeigt wird.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Marker.
+MapObjectMarker.
 
 
 \subsection{Weitere private Funktionalität des Beobachters}
@@ -91,7 +91,7 @@ Die Fabrikmethode zur Erzeugung eines Markers wird hier mit einem BuildingMarker
     \item mapView:MapView MapView auf der der Marker angezeigt wird.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Marker, erzeugter Marker.
+MapObjectMarker, erzeugter MapObjectMarker.
 
 \subsubsection{Weitere Implementierungen}%$$$M
 Benutzt den von TileMarkerOverlay geerbten Konstruktor.
@@ -114,7 +114,7 @@ Die Fabrikmethode zur Erzeugung eines Markers wird hier mit einem RoomMarker imp
     \item mapView:MapView MapView auf der der Marker angezeigt wird.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Marker, erzeugter Marker.
+MapObjectMarker, erzeugter MapObjectMarker.
 
 \subsubsection{Weitere Implementierungen}%$$$M
 Benutzt den von TileMarkerOverlay geerbten Konstruktor.
