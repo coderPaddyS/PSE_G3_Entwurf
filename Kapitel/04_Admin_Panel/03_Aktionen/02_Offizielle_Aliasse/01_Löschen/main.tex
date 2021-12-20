@@ -1,0 +1,30 @@
+\subsubsection{Löschen}
+
+Die Aktion die ausgeführt wird, um einen offiziellen Alias zu löschen.
+
+\paragraph*{Ziel}
+Der offizielle Alias, der diese Aktion ausgelöst hat, wird zur Löschung markiert und vorbereitet.
+Der zugehörige offizielle Alias wird nicht mehr in der Offizielle-Alias-Seite angezeigt.
+
+\paragraph*{Vorbedingung}
+Offizieller Alias ist vorhanden und wird angezeigt.
+
+\paragraph*{Nachbedingung}
+Offizieller Alias wird nicht mehr angezeigt. Der offizielle Alias ist zur Löschung vorbereitet.
+
+\paragraph*{Durchführung}
+\begin{enumerate}
+    \item Das Interface \verb#Change# wird durch implementierung der Methode \verb#Change::perform# instanziiert. \\
+          Dabei ruft die Methode \verb#Change::perform# dieser Instanz die Methode \verb#Backend::deleteOfficialAlias# mit folgenden Parametern auf \begin{enumerate}
+              \item alias: String = Der zu löschende offizielle Alias
+              \item mapID: String = Der Kartenobjektidentifizierer dieses offiziellen Aliases
+          \end{enumerate}
+    \item Die erzeugte Instanz wird den Changes durch die Methode \verb#Changes::addChange# mit folgenden Parametern übergeben: \begin{enumerate}
+        \item action: Change
+        \item metadata: JSON mit folgenden Werten: \begin{enumerate}
+            \item Alias: String = Bezeichner des offiziellen Aliases
+            \item Gebäudenummer: String = Gebäudenummer des offiziellen Aliases
+            \item Raum: String = Raum des offiziellen Aliases
+        \end{enumerate}
+    \end{enumerate}
+\end{enumerate}
