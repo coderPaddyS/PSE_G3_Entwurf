@@ -31,3 +31,27 @@ Diese Klasse ermittelt das zu den Suchbegriffen gehörenden Kartenobjekt in der 
 \end{itemize}
 \paragraph*{Rückgabewert}
 MapObject, Kartenobjekt zum Suchbegriff
+
+\subsection{\texttt{+ storeSearchKey(searchKey : String)}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Diese Methode speichert den gegebenen Suchbegriff.
+\paragraph*{Beschreibung}
+Diese Methode speichert den gegebenen Suchbegriff in der Datenbank als zuletzt gesucht.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item searchKey : String
+\end{itemize}
+\paragraph*{Rückgabewert}
+keinen
+
+\subsection{\texttt{+ getLastSearchKeys() : List<String>}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Diese Methode gibt die zuletzt gesuchten Suchbegriffe zurück.
+\paragraph*{Beschreibung}
+Diese Methode gibt die zuletzt gesuchten Suchbegriffe aus der Datenbank und gibt diese zurück.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item keine
+\end{itemize}
+\paragraph*{Rückgabewert}
+List<String>, zuletzt gesuchte Suchbegriffe
