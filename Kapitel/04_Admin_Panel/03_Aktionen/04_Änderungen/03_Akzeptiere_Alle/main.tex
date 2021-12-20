@@ -1,0 +1,18 @@
+\subsubsection{Akzeptiere Alle}
+
+Die Aktion die ausgeführt wird, um alle Änderungen anzunehmen.
+
+\paragraph*{Ziel}
+Alle Änderungen werden akzeptiert und durchgeführt.
+
+\paragraph*{Vorbedingung}
+Die Änderungen sind gespeichert und werden angezeigt.
+
+\paragraph*{Nachbedingung}
+Die Änderungen werden nicht mehr angezeigt und sind nicht mehr gespeichert. Die Änderungen wurden akzeptiert und durchgeführt.
+
+\paragraph*{Durchführung}
+\begin{enumerate}
+    \item Rufe auf jeder Änderung die Methode \ver#Change::perform#  der zugehörenden Instanz von \verb#Change# auf.
+    \item Entferne alle Änderungen aus der Sammlung an Änderungen.
+\end{enumerate}

@@ -6,7 +6,7 @@ Dieses Interface ist eine Schnittstelle für Lade- und Speicheroperationen zur a
 Klassen dieses Interfaces können von einem Beobachter beobachtet werden. Dazu werden 
 LiveData-Klassen benutzt.
 
-\subsubsection{+getTileSource():LiveData<ITileSource>}%$$$M
+\subsubsection{\texttt{+ getTileSource() : LiveData<ITileSource>}}%$$$M
 \paragraph*{Beschreibung}
 Gibt die ITileSource mit den Kartendaten zurück.
 \paragraph*{Parameter}
@@ -14,17 +14,17 @@ Keine.
 \paragraph*{Rückgabewert}
 LiveData<TileSource> mit den Kartendaten.
 
-\subsubsection{+saveLastPos(pos:IGeoPoint)}%$$$M
+\subsubsection{\texttt{+ saveLastPos(pos : IGeoPoint)}}%$$$M
 \paragraph*{Beschreibung}
 Speichert eine gegebene Position als letzte Position.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item pos:IGeoPoint zu speichernde Position.
+    \item pos : IGeoPoint zu speichernde Position.
 \end{itemize}
 \paragraph*{Rückgabewert}
 Void.
 
-\subsubsection{+getLastPos():IGeoPoint}%$$$M
+\subsubsection{\texttt{+ getLastPos() : IGeoPoint}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Gibt die letzte Position zurück.
 \paragraph*{Beschreibung}
@@ -36,7 +36,7 @@ Keine.
 \paragraph*{Rückgabewert}
 IGeoPoint, letzte Position.
 
-\subsubsection{+getFocusedPos():LiveData<IGeoPoint>}%$$$M
+\subsubsection{\texttt{+ getFocusedPos() : LiveData<IGeoPoint>}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Gibt die Position zurück, die mittig auf der Karte angezeigt werden muss.
 \paragraph*{Beschreibung}
