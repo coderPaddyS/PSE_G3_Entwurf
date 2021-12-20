@@ -1,11 +1,11 @@
-\section{Search}
+\subsection{Search}
 \paragraph*{Beschreibung}
 Diese Klasse ermöglicht die Suche nach Gebäuden und Räumen zu der gegebenen Query 
 und ermöglicht die Bestimmung des Kartenobjekts zu einem gültigen Suchbegriff, 
 dies kann eine Gebäudenummer, Gebäudenummer und Raumnummer, Gebäudenummer und Alias eines Raumes, ein Alias eines Gebäudes oder eine Person sein.
 Dies macht sie, indem sie die Daten bei SearchModel anfordert.
 
-\subsection{\texttt{+ getSuggestions(query : Query) : List<String>}}%$$$M
+\subsubsection{\texttt{+ getSuggestions(query : Query) : List<String>}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Diese Methode gibt Suchvorschläge zu der übergebenen Query zurück.
 \paragraph*{Beschreibung}
@@ -17,7 +17,7 @@ Diese Methode fordert Suchvorschläge zu der übergebenen Query von dem SearchMo
 \paragraph*{Rückgabewert}
 List<String>, Suchvorschläge zur Query, die SearchModel zurückgegeben hat
 
-\subsection{\texttt{+ getSearchable(searchKey : String) : MapObject}}%$$$M
+\subsubsection{\texttt{+ getSearchable(searchKey : String) : MapObject}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Diese Methode gibt das zum Suchbegriffe gehörenden Kartenobjekt zurück.
 \paragraph*{Beschreibung}
@@ -29,7 +29,7 @@ Diese Methode fordert das zu den Suchbegriffen gehörenden Kartenobjekt von dem 
 \paragraph*{Rückgabewert}
 MapObject, Kartenobjekt zum Suchbegriff, die SearchModel zurückgegeben hat
 
-\subsection{\texttt{+ storeSearchKey(searchKey : String)}}%$$$M
+\subsubsection{\texttt{+ storeSearchKey(searchKey : String)}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Diese Methode lässt den gegebenen Suchbegriff speichern.
 \paragraph*{Beschreibung}
@@ -41,7 +41,7 @@ Diese Methode lässt den gegebenen Suchbegriff in der Datenbank speichern.
 \paragraph*{Rückgabewert}
 keinen
 
-\subsection{\texttt{+ getLastSearchKeys() : List<String>}}%$$$M
+\subsubsection{\texttt{+ getLastSearchKeys() : List<String>}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Diese Methode gibt die zuletzt gesuchten Suchbegriffe zurück.
 \paragraph*{Beschreibung}
