@@ -3,7 +3,7 @@
 Interface.
 \paragraph*{Beschreibung}
 Dieses Interface ist eine Schnittstelle für Lade- und Speicheroperationen zur angezeigten Karte.\\
-Klassen dieses Interface können von einem Beobachter beobachtet werden. Dazu werden 
+Klassen dieses Interfaces können von einem Beobachter beobachtet werden. Dazu werden 
 LiveData-Klassen benutzt.
 
 \subsubsection{+getTileSource():LiveData<ITileSource>}%$$$M
@@ -29,6 +29,7 @@ Void.
 Gibt die letzte Position zurück.
 \paragraph*{Beschreibung}
 Diese Methode gibt die als letzte Position gespeicherte Position als IGeoPoint zurück.
+Wurde noch keine Position gespeichert, wird eine Defaut-Position zurückgegeben.
 Dies wird benötigt, damit die Karte beim Neuladen die gleiche Stelle zeigen kann.
 \paragraph*{Parameter}
 Keine.
