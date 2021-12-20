@@ -10,7 +10,7 @@ Diese Methode gibt Suchvorschläge zu der übergebenen Query zurück.
 \paragraph*{Beschreibung}
 Diese Methode gibt Suchvorschläge zu der übergebenen Query aus einer (SQL-)Datenbank, 
 die alle Kartenobjekte inklusive ihrer offiziellen Namen, Aliasse und Personen enthält, zurück.
-Wenn möglich sollen auch Rechtschreibfehler einalkuliert werden, so dass auch Vorschläge für falsch geschriebene Suchbegriffe kommen.
+Wenn möglich sollen auch Rechtschreibfehler einkalkuliert werden, so dass auch Vorschläge für falsch geschriebene Suchbegriffe kommen.
 \paragraph*{Parameter}
 \begin{itemize}
     \item query : Query Der Suchbegriff den der Benutzer eingegeben hat
@@ -18,11 +18,11 @@ Wenn möglich sollen auch Rechtschreibfehler einalkuliert werden, so dass auch V
 \paragraph*{Rückgabewert}
 List<String>, Suchvorschläge, die die Datenbank zurückgegeben hat
 \paragraph*{Notizen zur Implementierung}
-Wenn SQL genutzt wird, wird die Suche direkt auf SQL ausgeführt z.B. mit "like".
+Wenn SQL genutzt wird, wird die Suche direkt auf SQL ausgeführt z.B. mit \dq like\dq{}.
 
 \subsubsection{\texttt{+ getSearchable(searchKey : String) : MapObject}}%$$$M
 \paragraph*{Kurzbeschreibung}
-Diese Methode gibt das zum Suchbegriffe gehörenden Kartenobjekt zurück.
+Diese Methode gibt das zum Suchbegriff gehörenden Kartenobjekt zurück.
 \paragraph*{Beschreibung}
 Diese Klasse ermittelt das zu den Suchbegriffen gehörenden Kartenobjekt in der Datenbank und gibt dieses zurück.
 \paragraph*{Parameter}
