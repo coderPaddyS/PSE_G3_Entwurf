@@ -18,6 +18,20 @@ Die Liste ist leer, wenn es keine hinterlegten Räume gibt.
 \paragraph*{Rückgabewert}
 LiveData<List<DisplayData>>, DisplayData für Räume einer Etage.
 
+\subsubsection{\texttt{+ getFloorMapTileSource(mapId : int, level : int) : \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
+{ITileSource}}}%$$$M
+\paragraph*{Beschreibung}
+Gibt eine \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
+{ITileSource} mit den Kartendaten für das Stockwerk eines Gebäudes zurück.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Gebäudes.
+    \item level : int Stockwerk.
+\end{itemize}
+\paragraph*{Rückgabewert}
+\href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
+{ITileSource} mit den Kartendaten für die Etage.
+
 \subsubsection{\texttt{+ getBuildingDisplayData() : LiveData<List<DisplayData>>}}%$$$M
 \paragraph*{Beschreibung}
 Gibt die Anzeigedaten für alle Gebäude zurück.
@@ -25,6 +39,20 @@ Gibt die Anzeigedaten für alle Gebäude zurück.
 Keine.
 \paragraph*{Rückgabewert}
 LiveData<List<DisplayData>>, DisplayData für alle Gebäude.
+
+\subsubsection{\texttt{+ getBuildingTileSource() : \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
+{ITileSource}}}%$$$M
+\paragraph*{Beschreibung}
+Gibt eine \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
+{ITileSource} mit den Kartendaten für alle Gebäude zurück.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Gebäudes.
+    \item level : int Stockwerk.
+\end{itemize}
+\paragraph*{Rückgabewert}
+\href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
+{ITileSource} mit den Kartendaten für alle Gebäude.
 
 \subsubsection{\texttt{+ getLastSavedPosition() : IGeoPoint}}%$$$M
 \paragraph*{Kurzbeschreibung}
