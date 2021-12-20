@@ -1,0 +1,69 @@
+\section{MapScreen}
+\paragraph*{Typ}
+Composable.
+\paragraph*{Beschreibung}
+Die Aufgabe dieses Composables ist das Anzeigen der Karte und der Schaltflächen zur Kartensteuerung.\\
+Dazu ist folgendes nötig:
+\begin{itemize}
+    \item Anzeigen der Karte selbst. Diese besteht aus
+        \begin{itemize}
+            \item der \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/views/MapView.html}
+            {MapView} selbst, die u.a. die Straßenkarte anzeigt,
+            \item einem TileMarkerOverlay, das die Gebäude anzeigt,
+            \item einem TileMarkerOverlay, das wenn die App im Etagenmodus ist, die Etagenkarte anzeigt.
+        \end{itemize}
+        Die Karte befindet sich hinter allen weiteren Elementen.
+    \item Anzeigen des LevelChangeDisplays. Damit kann der Benutzer, wenn die App im Etagenmodus 
+    ist, die Etage wechseln.
+    \item Anzeigen des Buttons zur Ortung.
+    \item Anzeigen eines Kompasses, der die Himmelsrichtungen auf der Karte zeigt.
+\end{itemize}
+
+\paragraph*{Parameter}
+\begin{itemize}
+    \item dataProvider:MapDisplayDataProvider Klasse, die die Hintergrundkarte und Kartenposition bereitstellt.
+    \item buildingController:MapLayerDataController MapLayerDataController für die Gebäude-Ebene auf der Karte.
+    \item levelController:MapLayerDataController MapLayerDataController für die Etagen-Ebene auf der Karte.
+    \item levelChangeController:LevelChangeControllers LevelChangeControllers für das Wechseln der Etage.
+\end{itemize}
+
+\paragraph*{Interaktionen}
+Folgende Interaktionen mit der Karte müssen aktiviert beziehungsweise sichergestellt werden:
+\begin{itemize}
+    \item Der Benutzer kann in die Karte durch das Zusammen-(bez. Auseinander-)führen von zwei 
+    Fingern in die Karte heraus-(bez. hinein)zoomen.
+    \item Der Benutzer kann die Karte mit einem Finger verschieben.
+    \item Der Benutzer kann die Karte mit zwei Fingern drehen. Dabei muss sich die Kompass-
+    Anzeige aktualisieren.
+    \item Klickt der Benutzer auf den Button zur Ortung, wird der aktuelle Standort auf der Karte 
+    angezeigt. Dazu muss ggf. Standortzugriff angefordert werden (wird dieser verweigert passiert 
+    nichts).\\
+    Wird der Standort bereits angezeigt, wird die Karte so verschoben, dass sich die eigene Position 
+    in der Mitte des Bildschirms befindet. \\
+\end{itemize}
+
+\paragraph*{Startposition}
+Die Startposition der Karte ist beim Öffnen der App wie folgt definiert:
+\begin{itemize}
+    \item Ist Standortzugriff aktiviert, wird der eigene Standort auf der Karte mittig angezeigt.
+    \item Sind keine Standortinformationen verfügbar, so wird die letzte bekannte Position angezeigt.
+\end{itemize}
+Um dieses Verhalten zu ermöglichen, muss dafür gesorgt werden, dass die letzte Position beim Verlassen 
+der App gespeichert wird.\\
+Ist die App geöffnet und der Benutzer kehrt aus einer anderen Ansicht in die Kartenansicht zurück,
+wird die letzte Position angezeigt, sofern nicht eine bestimmte Position angezeigt werden muss 
+(siehe Beobachtete Daten: getFocusedPos).
+
+\paragraph*{Beobachtete Daten}
+Dieses Composable beobachtet einen MapDisplayDataProvider. 
+Eine Änderung der Daten wirkt sich wie folgt aus:
+\begin{itemize}
+    \item getTileSource: Die Karte, die von der MapView angezeigt wird, wird mit den neuen 
+    Kartendaten aktualisiert.
+    \item getFocusedPos: Die neue fokussierte Position wird mittig auf der Karte angezeigt.
+\end{itemize}
+
+\paragraph*{Notizen zur Implementierung}
+Zur Implementierung können die Klassen \href{https://osmdroid.github.io/osmdroid/javadocs/osmdroid-android/debug/org/osmdroid/views/overlay/mylocation/MyLocationNewOverlay.html}
+{MyLocationNewOverlay} für das Anzeigen des Standorts und \href{https://osmdroid.github.io/osmdroid/javadocs/osmdroid-android/debug/org/osmdroid/views/overlay/compass/CompassOverlay.html}
+{CompassOverlay} für das Anzeigen des Kompasses in Betracht gezogen werden.
