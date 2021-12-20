@@ -1,9 +1,9 @@
-\subsection{\texttt{getAlias(mapID : int) : List<Alias> aliases}}%$$$M
+\paragraph{\texttt{getAlias(mapID : int) : List<Alias> aliases}}%$$$M
 \paragraph*{Kurzbeschreibung}
-Gibt eine Liste der Aliasse des gewünschten Kartenobjekts zurück.
+Definiert das Erteilen der Anweisung an Klasse \texttt{AliasRepository}, eine Liste der Aliasse des gewünschten Kartenobjekts zurückzugeben, und gibt diese wiederum zurück.
 \paragraph*{Beschreibung}
-Die Methode ist ausschließlich von Administratoren aufzurufen.
-Gibt die Anweisung an die Schnittstelle \texttt{AliasService}, eine Liste der Aliasse des gewünschten Kartenobjekts zurückzugeben.
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Resolvers} aufgerufen.
 Die Methode ermöglicht, dass ein Administrator eine Liste aus allen Aliassen eines Kartenobjekts anfragen kann.
 Hierfür wird die ID des gewünschten Kartenobjekts übergeben.
 \paragraph*{Parameter}
