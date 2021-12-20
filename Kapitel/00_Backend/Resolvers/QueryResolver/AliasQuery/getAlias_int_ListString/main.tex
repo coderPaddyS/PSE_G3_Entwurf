@@ -1,9 +1,9 @@
-\paragraph{\texttt{getAlias(mapID : int) : List<Alias> aliases}}%$$$M
+\paragraph{\texttt{getAlias(mapID : int) : List<String> aliases}}%$$$M
 \paragraph*{Kurzbeschreibung}
-Gibt eine Liste der Aliasse des gewünschten Kartenobjekts zurück.
+Gibt eine Liste der Aliasse des gewünschten Kartenobjekts jeweils als Zeichenkette zurück.
 \paragraph*{Beschreibung}
 Die Methode ist ausschließlich von Administratoren aufzurufen.
-Gibt die Anweisung an die Schnittstelle \texttt{AliasService}, eine Liste der Aliasse des gewünschten Kartenobjekts zurückzugeben.
+Gibt die Anweisung an die Schnittstelle \texttt{AliasService}, eine Liste der Aliasse des gewünschten Kartenobjekts jeweils als Zeichenkette zurückzugeben.
 Die Methode ermöglicht, dass ein Administrator eine Liste aus allen Aliassen eines Kartenobjekts anfragen kann.
 Hierfür wird die ID des gewünschten Kartenobjekts übergeben.
 \paragraph*{Parameter}
@@ -13,7 +13,7 @@ Hierfür wird die ID des gewünschten Kartenobjekts übergeben.
     		Die ID des Kartenobjekts, dessen Aliasse man zurückgegeben haben möchte.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Die Liste mit den Aliassen des gewünschten Kartenobjekts.
+Die Liste mit den Aliassen des gewünschten Kartenobjekts, jeweils als Zeichenkette.
 
 \paragraph*{Notizen zu Entwurfsmustern}
 \begin{itemize}
