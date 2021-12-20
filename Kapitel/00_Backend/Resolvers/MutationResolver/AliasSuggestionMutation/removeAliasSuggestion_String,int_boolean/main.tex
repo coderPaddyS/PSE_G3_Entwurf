@@ -1,0 +1,18 @@
+\paragraph{\texttt{removeAliasSuggestion(aliasSuggestion : String, mapID : int) : boolean}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Entfernt den gewünschten Alias-Vorschlag.
+\paragraph*{Beschreibung}
+Die Methode ist ausschließlich von Administratoren aufzurufen.
+Die Methode ermöglicht, dass ein Administrator einen Alias-Vorschlag durch Angeben der entsprechenden Zeichenkette als auch der ID des dazugehörigen Kartenobjekts entfernen kann.
+Dies hat zur Folge, dass der Alias-Vorschlag aus der Datenbank aller Alias-Vorschlägen gelöscht wird.
+\paragraph*{Parameter}
+\begin{itemize}
+	\item aliasSuggestion : String
+		\paragraph*{Beschreibung}
+		Der Name, d.h. die Zeichenkette, des gewünschten, zu entfernende Alias-Vorschlags.
+	\item mapID : int
+		\paragraph*{Beschreibung}
+		Die ID des Kartenobjekts, für das der gewünschte, zu entfernende Alias-Vorschlag als Bezeichner dienen sollte.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Wahr, wenn der gewünschte Alias-Vorschlag erfolgreich entfernt werden konnte, ansonsten falsch.
