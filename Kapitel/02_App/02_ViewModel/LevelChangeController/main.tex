@@ -1,0 +1,69 @@
+\section{LevelChangeController}
+\paragraph*{Typ}
+Interface.
+\paragraph*{Beschreibung}
+Dieses Interface definiert die Schnittstelle zwischen View und ViewModel, über die 
+der Etagenmodus gesteuert wird.\\
+Das Interfaces stellt Informationen wie welche Etage gerade angezeigt wird bereit.
+Dazu kann sie von einem Beobachter beobachtet werden. Hierzu werden LiveData-Objekte verwendet.\\
+Es stehen Methoden zum Wechseln der Etage bereit.\\
+
+\subsubsection{changeLevelUp}%$$$M
+\paragraph*{Kurzbeschreibung}
+Wechselt eine Etage nach oben.
+\paragraph*{Beschreibung}
+Wenn sich die Karte im Etagenmodus befindet, und es eine weitere Etage über der gerade 
+angezeigten gibt, wird eine Etage nach oben gewechselt.\\
+Ist dies nicht der Fall, passiert nichts.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+Void.
+
+\subsubsection{changeLevelDown}%$$$M
+\paragraph*{Kurzbeschreibung}
+Wechselt eine Etage nach unten.
+\paragraph*{Beschreibung}
+Wenn sich die Karte im Etagenmodus befindet, und es eine weitere Etage unter der gerade 
+angezeigten gibt, wird eine Etage nach unten gewechselt.\\
+Ist dies nicht der Fall, passiert nichts.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+Void.
+
+\subsubsection{isHighestLevel}%$$$M
+\paragraph*{Beschreibung}
+Gibt an, ob die aktuelle Etage die oberste Etage im Gebäude ist.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+LiveData<boolean>, ob die aktuelle Etage die oberste Etage im Gebäude ist.
+
+\subsubsection{isLowestLevel}%$$$M
+\paragraph*{Beschreibung}
+Gibt an, ob die aktuelle Etage die unterste Etage im Gebäude ist.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+LiveData<boolean>, ob die aktuelle Etage die unterste Etage im Gebäude ist.
+
+\subsubsection{getLevel}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt die Nummer der aktuellen Etage zurück.
+\paragraph*{Beschreibung}
+Es wird die Nummer der aktuell angezeigten Etage zurückgegeben.\\
+Dabei wird für das Erdgeschoss 0, für das n-te Obergeschoss n und für das 
+m-te Untergeschoss -m zurückgegeben.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+LiveData<int> Nummer der aktuellen Etage.
+
+\subsubsection{isLevelMode}%$$$M
+\paragraph*{Beschreibung}
+Gibt zurück, ob sich die Karte gerade im Etagenmodus befindet.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+LiveData<boolean> ob sich die Karte gerade im Etagenmodus befindet.
