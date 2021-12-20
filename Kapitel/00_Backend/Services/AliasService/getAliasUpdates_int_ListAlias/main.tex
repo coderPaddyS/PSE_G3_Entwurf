@@ -1,0 +1,17 @@
+\paragraph{\texttt{getAliasUpdates(version : int) : List<Alias> updatedAliases}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Definiert das Erteilen der Anweisung an Klasse \texttt{AliasRepository}, eine Liste aller aktualisierten Aliasse seit einer bestimmten Version zurückzugeben, und gibt diese wiederum zurück. Dabei ist die zusätzliche Information enthalten, ob die aktualisierten Aliasse jeweils entfernt oder hinzugefügt wurden.
+\paragraph*{Beschreibung}
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Resolvers} aufgerufen.
+Die Methode ermöglicht, dass ein Administrator nach einer Liste aller aktualisierten Aliasse fragen und erhalten kann, die seit der übergebenen Version aktualisiert wurden.
+Dabei ist für jeden aktualisierten Alias in der Liste auch die Information enthalten, ob er entfernt oder hinzugefügt wurde.
+Hierfür wird die Version der Aliasse, die der Benutzer gerade auf seinem Smartphone hat, übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item version : int
+    		\paragraph*{Beschreibung}
+    		Die Version der Aliasse, die der Benutzer gerade auf seinem Smartphone hat.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Die Liste mit allen aktualisierten Aliassen und der zusätzlichen Information für jeden Alias, ob dieser entfernt oder hinzugefügt wurde, seit der übergebenen Version.
