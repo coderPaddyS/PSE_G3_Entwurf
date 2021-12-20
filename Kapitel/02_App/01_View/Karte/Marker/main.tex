@@ -7,18 +7,18 @@ Das Verhalten beim Antippen des Markers ist in dieser Klasse definiert.
 Diese Klasse benutzt eine Strategie. Das Verhalten, wenn das Kartenobjekt fokussiert wird,
 wird in die Subklassen ausgelagert, da dies je nach Kartenobjekttyp variiert.
 
-\subsubsection{+Konstruktor MapObjectMarker}%$$$M
+\subsubsection{\texttt{+ <<create>> MapObjectMarker(mapView : MapView, data : DisplayData, tileMarkerOverlay : TileMarkerOverlay)}}%$$$M
 \paragraph*{Beschreibung}
 Erstellt eine neue MapObjectMarker-Instanz.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapView:MapView MapView auf der der Marker angezeigt wird.
-    \item data:DisplayData Alle Daten, die zur Erstellung des Markers benötigt werden.
-    \item tileMarkerOverlay:TileMarkerOverlay TileMarkerOverlay-Instanz, der ein Klick 
+    \item mapView : MapView MapView auf der der Marker angezeigt wird.
+    \item data : DisplayData Alle Daten, die zur Erstellung des Markers benötigt werden.
+    \item tileMarkerOverlay : TileMarkerOverlay TileMarkerOverlay-Instanz, der ein Klick 
     auf diesen Marker mitgeteilt wird. Darf null sein.
 \end{itemize}
 
-\subsubsection{+getMapId}%$$$M
+\subsubsection{\texttt{+ getMapId() : int}}%$$$M
 \paragraph*{Beschreibung}
 Gibt MapId des KartenObjekts des Markers zurück.
 \paragraph*{Parameter}
@@ -26,29 +26,29 @@ Keine.
 \paragraph*{Rückgabewert}
 int, MapId des Kartenobjekt des Markers.
 
-\subsubsection{+onSingleTapConfirmed}%$$$M
+\subsubsection{\texttt{+ onSingleTapConfirmed(e : MotionEvent, mapView : MapView) : boolean}}%$$$M
 \paragraph*{Beschreibung}
 Das Anklicken dieses Markers wird der TileMarkerOverlay-Instanz mitgeteilt.
 \paragraph*{Parameter}
 Für die Verarbeitung werden beide Parameter nicht benutzt. Diese sind durch Overlay vorgegeben.
 \begin{itemize}
-    \item e:MotionEvent MotionEvent
-    \item mapView:MapView MapView auf der der Marker ist.
+    \item e : MotionEvent MotionEvent
+    \item mapView : MapView MapView auf der der Marker ist.
 \end{itemize}
 \paragraph*{Rückgabewert}
-true, da das MotionEvent verarbeitet wurde.
+boolean, gibt true zurück, da das MotionEvent verarbeitet wurde.
 
-\subsubsection{+focusMarkerObject {abstract}}%$$$M
+\subsubsection{\texttt{+ focusMarkerObject(floorMapExists : boolean) $\lbrace$abstract$\rbrace$}}%$$$M
 \paragraph*{Beschreibung}
 Beschreibt das (graphische) Verhalten des Markers, wenn das zugehörige Objekt fokussiert wird.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item floorMapExists:Boolean Genau dann wahr, wenn es zum (evtl. indirekt) ausgewählten Gebäude eine Etagenkarte gibt.
+    \item floorMapExists : boolean Genau dann wahr, wenn es zum (evtl. indirekt) ausgewählten Gebäude eine Etagenkarte gibt.
 \end{itemize}
 \paragraph*{Rückgabewert}
 Void.
 
-\subsubsection{+resetFocus {abstract}}%$$$M
+\subsubsection{\texttt{+ resetFocus() $\lbrace$abstract$\rbrace$}}%$$$M
 \paragraph*{Beschreibung}
 Setzt das Aussehen des Markers zurück, wenn er nicht mehr fokussiert wird.
 \paragraph*{Parameter}
@@ -63,7 +63,7 @@ Erbt von MapObjectMarker.
 \paragraph*{Beschreibung}
 MapObjectMarker für Gebäude.
 
-\subsubsection{+focusMarkerObject}%$$$M
+\subsubsection{\texttt{+ focusMarkerObject(floorMapExists : boolean)}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Beschreibt das (graphische) Verhalten des Markers, wenn das zugehörige Gebäude fokussiert wird.
 \paragraph*{Beschreibung}
@@ -71,7 +71,7 @@ Gibt es für das Gebäude eine Etagenkarte, wird der Marker nicht weiter angezei
 Gibt es keine Etagenkarte, wird der Marker als großer Standort-Pfeil angezeigt.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item floorMapExists:Boolean Genau dann wahr, wenn es zum (evtl. indirekt) ausgewählten Gebäude eine Etagenkarte gibt.
+    \item floorMapExists : boolean Genau dann wahr, wenn es zum (evtl. indirekt) ausgewählten Gebäude eine Etagenkarte gibt.
 \end{itemize}
 \paragraph*{Rückgabewert}
 Void.
@@ -87,14 +87,14 @@ Erbt von MapObjectMarker.
 \paragraph*{Beschreibung}
 MapObjectMarker für Räume.
 
-\subsubsection{+focusMarkerObject}%$$$M
+\subsubsection{\texttt{+ focusMarkerObject(floorMapExists : boolean)}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Beschreibt das (graphische) Verhalten des Markers, wenn der zugehörige Raum fokussiert wird.
 \paragraph*{Beschreibung}
 Der Marker als großer Standort-Pfeil angezeigt.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item floorMapExists:Boolean Genau dann wahr, wenn es zum (evtl. indirekt) ausgewählten Gebäude eine Etagenkarte gibt.
+    \item floorMapExists : boolean Genau dann wahr, wenn es zum (evtl. indirekt) ausgewählten Gebäude eine Etagenkarte gibt.
 \end{itemize}
 \paragraph*{Rückgabewert}
 Void.
