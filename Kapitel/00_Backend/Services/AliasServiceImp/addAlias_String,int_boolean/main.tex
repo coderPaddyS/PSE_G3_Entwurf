@@ -1,0 +1,21 @@
+\paragraph{\texttt{addAlias(alias : String, mapID : int) : boolean}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Erteilt die Anweisung an Klasse \texttt{AliasRepository}, einen Alias zur Datenbank der globalen Aliasse hinzuzufügen.
+\paragraph*{Beschreibung}
+Die Methode implementiert die gleichnamige Methode der Schnittstelle \texttt{AliasService}.
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Resolvers} aufgerufen.
+Die Methode ermöglicht, dass ein Administrator einen Alias zur Datenbank der globalen Aliassen hinzufügen kann.
+Dies hat zur Folge, dass das entsprechende Kartenobjekt nun zusätzlich durch diesen neuen hinzugefügten Alias gefunden werden kann.
+Hierfür wird der gewünschte Alias als Zeichenkette als auch die ID des dazugehörigen Kartenobjekts übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item alias : String
+    		\paragraph*{Beschreibung}
+    		Der Alias als Zeichenkette, den man hinzufügen möchte.
+    \item mapID : int
+    		\paragraph*{Beschreibung}
+    		Die ID des Kartenobjekts, für das der globale Alias als Bezeichner dient.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Wahr, wenn der gewünschte globale Alias erfolgreich hinzugefügt werden konnte, ansonsten falsch.

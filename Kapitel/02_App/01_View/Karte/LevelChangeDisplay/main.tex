@@ -1,0 +1,54 @@
+\section{LevelChangeDisplay}
+\paragraph*{Typ}
+Composable.
+\paragraph*{Beschreibung}
+Diese Klasse stellt über Compose eine Schaltfläche zum Wechseln der angezeigten Etage bereit.\\
+Die Schaltfläche besteht aus:
+\begin{itemize}
+    \item Einem Button zum Wechseln der Etage nach oben.
+    \item Einer Textanzeige, die die Etagennummer der aktuell angezeigten Etage anzeigt 
+    (z.B. \dq1. OG\dq, \dqEG\dq, \dq1. UG\dq. usw.)
+    \item Einem Button zum Wechseln der Etage nach unten.
+\end{itemize}
+Die Klasse ist ein Beobachter eines LevelChangeControllers. Dadurch erhält das 
+LevelChangeDisplay die Informationen zur aktuellen Etage. Wird einer der Buttons zum 
+Wechseln der Etage betätigt, meldet diese Klasse dies dem LevelChangeController, 
+die sich um den Etagenwechsel kümmert.
+
+\subsubsection{\texttt{+ onClickUp()}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Veranlasst den Etagenwechsel nach oben.
+\paragraph*{Beschreibung}
+Diese Methode wird aufgerufen, wenn der Button nach oben geklickt wurde. \\
+Wenn bereits die oberste Etage angezeigt wird passiert nichts. 
+Wird nicht die oberste Etage angezeigt, wird der Wechsel nach oben veranlasst.
+Dazu wird dies dem LevelChangeController mitgeteilt.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+Void.
+
+\subsubsection{\texttt{+ onClickDown()}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Veranlasst den Etagenwechsel nach unten.
+\paragraph*{Beschreibung}
+Diese Methode wird aufgerufen, wenn der Button nach unten geklickt wurde. \\
+Wenn bereits die unterste Etage angezeigt wird passiert nichts. 
+Wird nicht die unterste Etage angezeigt, wird der Wechsel nach unten veranlasst.
+Dazu wird dies dem LevelChangeController mitgeteilt.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+Void.
+
+\subsubsection{Weitere private Funktionalität}%$$$M
+Beobachtete Daten von LevelChangeController und Funktionalität:
+\begin{itemize}
+    \item isHighestLevel: Wird die oberste Etage angezeigt, wird der Button nach oben ausgegraut 
+    und hat keine Funktion. Wird nicht die oberste Etage angezeigt, ist er nicht ausgegraut und funktioniert.
+    \item isLowestLevel: Wird die unterste Etage angezeigt, wird der Button nach unten ausgegraut 
+    und hat keine Funktion. Wird nicht die unterste Etage angezeigt, ist er nicht ausgegraut und funktioniert.
+    \item getLevel: Ändert sich die Etage, wird die Anzeige der aktuellen Etage aktualisiert.
+    \item isLevelMode: Befindet sich die Karte nicht im Etagenmodus, wird die ganze Schaltfläche ausgeblendet.
+    Befindet sich die Karte im Etagenmodus, wird die Schaltfläche angezeigt.
+\end{itemize}

@@ -1,0 +1,73 @@
+\subsection{Blacklist}
+
+Die Blacklist-Seite zeigt alle aktuellen Einträge der Blacklist an.
+
+\paragraph*{Layout}
+Die Blacklist-Seite benutzt das Admin-Layout.
+
+\paragraph*{Erreichbarkeit}
+Die Blacklist-Seite ist unter \href{https://pse.itermori.de/admin/blacklist}{https://pse.itermori.de/admin/blacklist} erreichbar.
+
+\paragraph*{Verwendbarkeit}
+Ausschließlich authentifizierte Administratoren können diese Seite verwenden.
+
+\paragraph*{Aufgabe}
+Folgende Aufgaben werden erfüllt:
+
+\begin{enumerate}
+    \item Anzeigen der Blacklisteinträge
+    \item Löschen einzelner Blacklisteinträge
+    \item Filterung und Sortierung der Blacklisteinträge
+\end{enumerate}
+
+\paragraph*{Initiale Sortierung}
+Absteigend nach den Blacklisteinträgen
+
+\paragraph*{Desktop}
+\subparagraph*{Statischer Aufbau}
+Die Seite ist unterteilt in zwei übereinanderliegende horizontale Boxen.
+In der oberen Box steht der zentrierte Titel \dq Blacklist \dq.
+Die untere Box enthält die angezeigten Blacklisteinträge in tabellarischer Form. Die Spalten dieser Tabelle sind wie folgt gegeben:
+
+\begin{enumerate}
+    \item Eintrag: Bezeichner des Blacklisteintrags
+    \item Aktionen: Löschen
+\end{enumerate}
+
+Die Spalte 1 enthält ein Textfeld zum Anzeigen des Eintrags.
+Die Spalte 1 beinhaltet ein Sortierungselement am rechten Ende.
+Die Spalte 2 beinhaltet eine Box. Diese Box beinhaltet dass die Aktion \dq Löschen \dq{} repräsentiert.
+
+\subparagraph*{Dynamisches Verhalten}
+Bei Klick auf das Sortierungselement wird die Sortierung der Tabelle geändert.
+Ist die Tabelle absteigend sortiert, so wird beim Klick auf das Sortierelement die Tabelle aufsteigend nach den Einträgen sortiert.
+Ist die Tabelle aufsteigend sortiert, so wird beim Klick auf das Sortierelement die Tabelle absteigend nach den Einträgen sortiert.
+
+\paragraph*{Mobil}
+\subparagraph*{Statischer Aufbau}
+Die Seite ist in zwei übereinanderliegende horizontale Boxen aufgeteilt. Diese nehmen die volle ihnen zur Verfügung stehende Horizontale ein.
+Die obere Box beinhaltet den zentrierten Titel \dq Blacklist\dq.
+Die untere Box beinhaltet die Sortierungsoptionen und die Blacklisteinträge.
+Die Sortierungsoptionen befinden sich ganz oben und beinhaltet ein Auswahlelement. 
+Dieses Auswahlelement beinhaltet die Einträge \dq Aufsteigend \dq{} und \dq Absteigend \dq{} oder Synonyme bzw. Abkürzungen dieser.
+Die Blacklisteinträge befinden sich unterhalb der Sortierungsoptionen.
+Jeder Blacklisteintrag befindet sich in seinem eigenen Abschnitt, dieser ist wiederum in folgende Segmente aufgeteilt:
+
+\begin{enumerate}
+    \item Eintrag: Der Bezeichner des Blacklisteintrags
+    \item Aktionen: Löschen
+\end{enumerate}
+
+Segment 1 befindet sich ganz oben im Blacklisteintrag-Abschnitt und enthält ein Textfeld zum Anzeigen des Eintrags.
+Segment 2 enthält eine Box. Diese beinhaltet ein Element, dass die Aktion \dq Löschen \dq{} repräsentiert.
+
+\subparagraph*{Dynamisches Verhalten}
+Die Auswahl der Sortierungsoptionen bestimmt die angezeigte Reihenfolge der Blacklisteinträge.
+Ist \dq Aufsteigend \dq{} ausgewählt, so werden die Blacklisteinträge alphabetisch aufsteigend sortiert.
+Ist \dq Absteigend \dq{} ausgewählt, so werden die Blacklisteinträge alphabetisch absteigend sortiert.
+
+\paragraph*{Allgemeines dynamisches Verhalten}
+Wird über ein Aktions- oder ein Sortierungselement gehovert oder auf ein solches geklickt, so ändert sich die Hintergrundfarbe auf eine hellere Abwandlung der vorherigen Hintergrundfarbe.
+Wird nicht mehr über das Element gehovert oder wurde etwas anderes angeklickt, so wird die Hintergrundfarbe auf den originalen Wert gesetzt.
+Im folgenden bezeichnen \verb#entry# den Bezeichner des zugehörigen Blacklisteintrags.
+Wird auf das Löschen-Aktionselement eines zugehörigen Blacklisteintrags geklickt, so wird die Methode \verb#removeFromBlacklist# mit dem Parameter \verb#entry# aufgerufen. 

@@ -1,0 +1,18 @@
+\paragraph{\texttt{loadUserByToken(accessToken : String) : User}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Lädt den gewünschten Benutzer durch einen Access-Token und gibt ihn anschließend zurück.
+\paragraph*{Beschreibung}
+Die Methode implementiert die gleichnamige Methode der Schnittstelle \texttt{UserService}.
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Resolvers} aufgerufen.
+Die Methode ermöglicht, dass durch Angabe des Access-Tokens der gewünschte Benutzer erhalten werden kann. 
+Ist der Access-Token ungültig, d.h. nicht von einem Benutzer, wird \texttt{null} zurückgegeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item accessToken : String
+    		\paragraph*{Beschreibung}
+    		Der Access-Token des gewünschten Benutzers, der zurückgegeben werden soll.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Der Benutzer, zu dem der übergebene Access-Token gehört, sofern der übergebene Access-Token gültig ist.
+Sollte der übergebene Access-Token ungültig sein, wird \texttt{null} zurückgegeben.

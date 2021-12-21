@@ -1,0 +1,44 @@
+\section{DisplayData}
+\paragraph*{Beschreibung}
+Diese Klasse ist ein Container für Daten, die zum Anzeigen eines Kartenobjekts auf der 
+Karte benötigt werden. Dies sind insbesondere
+\begin{itemize}
+    \item die Koordinaten,
+    \item der Anzeigename auf der Karte,
+    \item die MapId des Kartenobjekts.
+\end{itemize}
+
+\subsubsection{\texttt{+ <<create>> DisplayData(latitude : double, longitude : double, name : String, mapId : int)}}%$$$M
+\paragraph*{Beschreibung}
+Erstellt eine neue DisplayData-Instanz.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item latitude : double Breitengrad der Position auf der Karte.
+    \item longitude : double Längengrad der Position auf der Karte.
+    \item name : String Anzeigename auf der Karte.
+    \item mapId : int MapId des Kartenobjekts.
+\end{itemize}
+
+\subsubsection{\texttt{+ getPosition() : IGeoPoint}}%$$$M
+\paragraph*{Beschreibung}
+Gibt die Position auf der Karte zurück.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+IGeoPoint mit den Koordinaten.
+
+\subsubsection{\texttt{+ getName() : String}}%$$$M
+\paragraph*{Beschreibung}
+Gibt den Anzeigenamen zurück.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+String mit Anzeigenamen.
+
+\subsubsection{\texttt{+ getMapId() : int}}%$$$M
+\paragraph*{Beschreibung}
+Gibt die MapId des Kartenobjekts zurück.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+int MapId des Kartenobjekts.
