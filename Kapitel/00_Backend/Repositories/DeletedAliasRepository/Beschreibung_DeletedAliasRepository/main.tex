@@ -1,0 +1,9 @@
+\subsection{Klassenbeschreibung : DeletedAliasRepository}%$$$M
+\paragraph*{Kurzbeschreibung}
+Händelt Zugriffe auf die zugrundeliegende Datenbank der gelöschten Aliasse.
+Dafür müssen Einträge ab einer bestimmten Version abgefragt sowie Einträge hinzugefügt und gelöscht werden können.
+\paragraph*{Enthaltene Methoden}
+\begin{itemize}
+    \item findNewerThanVersion(version : int)
+    \item deleteByNameAndMapID(name : String, MapID : int)
+\end{itemize}

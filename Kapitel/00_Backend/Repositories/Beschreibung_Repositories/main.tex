@@ -1,17 +1,15 @@
-\subsection{Paketbeschreibung : Resolver}%$$$M
+\subsection{Klassenbeschreibung : Repositories}%$$$M
 \paragraph*{Kurzbeschreibung}
-Beinhaltet die Schnittstellen, die von außen durch Http-Requests über die GraphQL-Schnittstelle aufgerufen werden können.
-\paragraph*{Beschreibung}
-Der Aufruf der Methoden der Klassen dieses Paket geschieht bei uns durch die in den Resourcen definierte GraphQL-Schnittstelle.
-Wird GraphQL nich genutzt, so muss auf andere Weise sichergestellt werden, dass die jeweiligen Http-Request zur Ausführung der richtigen Methoden
-führen und die richtige Rückgabe erzeugt wird.
-\paragraph*{Enthaltene Pakete}
-\begin{itemize}
-    \item MutationResolver
-    		\paragraph*{Beschreibung}
-            Bietet Schnittstellen zur Manipulation der gespeicherten Daten.
-    \item QueryResolver
-    		\paragraph*{Beschreibung}
-    		Bietet Schnittstelle zum Abfragen gespeicherter Daten.
-\end{itemize}
+Wie erwähnt empfehlen wir die Datenhaltung mittels SQL Datenbanken, und den Zugriff auf diese mittels eines Repsitories,
+dass von der Libraryklasse "JpaRepository" erbt. Hierfür wird eine seperate Klasse mit den jeweiligen Konfigurationen benötigt,
+die dafür sorgt, dass die richtigen Einträge der richtigen Datenbank und dem passenden Repsoitory zugeordnet werden können (siehe Paket "Configurations").
 
+\paragraph*{Enthaltene Klassen}
+\begin{itemize}
+    \item AliasRepsoitory
+    \item AliasSuggestionRepository
+    \item BlacklistRepository
+    \item MapIDRepository
+    \item UserRepository
+    \item DeletedAliasRepository
+\end{itemize}

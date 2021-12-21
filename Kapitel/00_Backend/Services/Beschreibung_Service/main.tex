@@ -2,8 +2,9 @@
 \paragraph*{Kurzbeschreibung}
 Schnittstellen, welche die Datenhaltung abstrahieren und Zugriff auf die zugrundeliegende Daten ermöglichen, ohne deren Struktur offenszulegen.
 Hierfür werden Interfaces genutzt, die von den Resolvern referenziert werden, ebenfalls um in den oberen Schichten möglichst 
-wenig von Implementierungsdetails abhängig zu sein. Für die Datenhaltun eignet sich ein JpaRepository, dass auf 
-eine SQL Datenbank zugreift, sodass wir diese Variante empfehlen.
+wenig von Implementierungsdetails abhängig zu sein. Für die Datenhaltung eignet sich ein JpaRepository, dass auf 
+eine SQL Datenbank zugreift, sodass wir diese Variante empfehlen. Dementsprechend benötigt jede Service-Implementierungsklasse die jeweilige 
+zugrundeliegende Repositoryklasse um ihre Methoden umzusetzen. 
 \paragraph*{Enthaltene KLassen}
 \begin{itemize}
     \item AliasService <<interface>>

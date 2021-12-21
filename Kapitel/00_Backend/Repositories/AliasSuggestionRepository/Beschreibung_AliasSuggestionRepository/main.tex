@@ -1,0 +1,11 @@
+\subsection{Klassenbeschreibung : AliasSuggestionRepository}%$$$M
+\paragraph*{Kurzbeschreibung}
+Händelt Zugriffe auf die zugrundeliegende Datenbank der vorhandenen Aliasvorschläge.
+Dazu gehören das Finden aller Vorschläge zu einer bestimmten MapID, das finden eines spezifischen Vorschlags mittels 
+seines Namens und der zugehörigen mapID sowie das Löschen und Speichern von Aliasvorschlägen.
+\paragraph*{Enthaltene Methoden}
+\begin{itemize}
+    \item findByMapID(mapID : int) : List<alias : String>
+    \item deleteByNameAndMapID(alias : String, mapID : int) 
+    \item findByNameAndMapID(alias : String, mapID : int) 
+\end{itemize}
