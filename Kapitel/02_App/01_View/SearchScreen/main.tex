@@ -47,7 +47,7 @@ Veranlasst das Schließen der Suchleiste inklusive Suchvorschlägen und Tastatur
 Und veranlasst das Anzeigen des Kartenobjekts zu dem ausgewählten Suchvorschlag auf der Karte.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item searchKey : String
+    \item searchKey : String = Die Zeichenkette, die der Benutzer eingetippt hat
 \end{itemize}
 \paragraph*{Rückgabewert}
 void
@@ -60,17 +60,17 @@ Veranlasst das Schließen der Suchleiste inklusive Suchvorschlägen und Tastatur
 Und veranlasst das Anzeigen des Kartenobjekts zu dem obersten angezeigten Suchvorschlag auf der Karte.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item searchKey : String
+    \item searchKey : String = Die Zeichenkette, die der Benutzer eingetippt hat
 \end{itemize}
 \paragraph*{Rückgabewert}
 void
 
 \subsection{+ onClickKeyboard}%$$$M
 \paragraph*{Beschreibung}
-Veranlasst das Aktualisieren der angezeigten Suchvorschläge.
+Veranlasst das Aktualisieren der angezeigten Suchvorschläge entsprechend der angeklickten Taste (außer Enter).
 \paragraph*{Parameter}
 \begin{itemize}
-    \item searchInput : String
+    \item searchInput : String = Die Zeichenkette, die der Benutzer eingetippt hat
 \end{itemize}
 \paragraph*{Rückgabewert}
 void

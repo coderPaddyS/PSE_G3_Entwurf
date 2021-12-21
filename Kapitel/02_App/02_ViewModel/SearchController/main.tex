@@ -1,49 +1,60 @@
-\subsection{Search}
+\subsection{Interface ISearchController}
 \paragraph*{Beschreibung}
-Diese Klasse ermöglicht die Suche nach Gebäuden und Räumen zu der gegebenen Query 
+Dieses Interface ermöglicht die Suche nach Gebäuden und Räumen zu der gegebenen Query 
 und ermöglicht die Bestimmung des Kartenobjekts zu einem gültigen Suchbegriff, 
 dies kann eine Gebäudenummer, Gebäudenummer und Raumnummer, Gebäudenummer und Alias eines Raumes, ein Alias eines Gebäudes oder eine Person sein.
 Dies macht sie, indem sie die Daten bei SearchModel anfordert.
 
-\subsubsection{\texttt{+ getSearchInput() : String}}%$$$M
+
+\subsubsection{\texttt{+ getSuggestions() : LiveData<List<String>>}}%$$$M
 \paragraph*{Kurzbeschreibung}
-Diese Methode ermöglicht Benutzereingaben und gibt einen gültigen Suchbegriff oder Null zurück.
+Gibt Suchvorschläge zu dem in einer Variablen gespeicherten Input zurück.
 \paragraph*{Beschreibung}
-Diese Methode ermöglicht die Suche von Gebäuden und Räumen über die Eingabe eines Suchbegriffs in ein Textfeld.
-Zeigt eine Liste von Vorschlägen (die Suchbegriffe), falls vorhanden, und erlaubt dem Benutzer, einen Vorschlag auszuwählen oder die Eingabe vollständig selbst vorzunehmen.
+Fordert Suchvorschläge zu dem in einer Variablen gespeicherten Input von einer Klasse, die ISearchModel implementiert, an und gibt diese zurück.
+Wenn der Input leer ist werden stattdessen die letzten Suchbegriffe angefordert und zurückgegeben.
 \paragraph*{Parameter}
 \begin{itemize}
     \item keine
 \end{itemize}
 \paragraph*{Rückgabewert}
-String, Suchbegriff, den der Benutzer eingegeben hat
-\paragraph*{Notizen zur Implementierung}
-Benutzt eine Instanz von SearchView (\href{https://developer.android.com/guide/topics/search/search-dialog#SearchableActivity}).
-Für das Durchsuchen der Daten wird getSuggestions von Search genutzt.
-Die Suchvorschläge werden einem Cursor übergeben.
-Dieser wird von einem CursorAdapter adaptiert und die Vorschläge werden so an die Instanz von SearchView gegeben.
-Dort werden die Vorschläge dann dem Benutzer angezeigt.
+LiveData<List<String>>, Suchvorschläge zum Input, die eine Klasse, die ISearchModel implementiert, zurückgegeben hat
 
-\subsubsection{\texttt{+ getSuggestions(query : Query) : List<String>}}%$$$M
+\subsubsection{\texttt{+ setInput(input : String)}}%$$$M
 \paragraph*{Kurzbeschreibung}
-Diese Methode gibt Suchvorschläge zu der übergebenen Query zurück.
+Speichert den gegebenen Input in einer Variablen.
 \paragraph*{Beschreibung}
-Diese Methode fordert Suchvorschläge zu der übergebenen Query von dem SearchModel an und gibt diese zurück.
+Speichert den gegebenen Input in einer Variablen, indem der alte Wert der Variablen überschrieben wird.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item query : Query Der Suchbegriff den der Benutzer eingegeben hat
+    \item input : String = Der Input, den der Benutzer zur Suche eingegeben hat
 \end{itemize}
 \paragraph*{Rückgabewert}
-LiveData<List<String>>, Suchvorschläge zur Query, die SearchModel zurückgegeben hat
+void
 
-\subsubsection{\texttt{+ getSearchable(searchKey : String) : MapObject}}%$$$M
+\subsubsection{\texttt{+ confirminput()}}%$$$M
 \paragraph*{Kurzbeschreibung}
-Diese Methode gibt das zum Suchbegriff gehörenden Kartenobjekt zurück.
-\paragraph*{Beschreibung}
-Diese Methode fordert das zu den Suchbegriffen gehörenden Kartenobjekt von dem SearchModel an und gibt dieses zurück.
+Zeigt das Kartenobjekts zu dem obersten angezeigten Suchvorschlag an.
 \paragraph*{Parameter}
+Fordert die Speicherung des obersten angezeigten Suchvorschlags von einer Klasse, die ISearchModel implementiert.
+Fordert die MapId des obersten angezeigten Suchvorschlags von einer Klasse, die ISearchModel implementiert, an.
+Fordert von dem Navigationscontroller, das er die Karte mit der MapId fokussiert läd.
 \begin{itemize}
-    \item searchKey : String Suchbegriff
+    \item keine
 \end{itemize}
 \paragraph*{Rückgabewert}
-MapObject, Kartenobjekt zum Suchbegriff, die SearchModel zurückgegeben hat
+void
+
+\subsubsection{\texttt{+ selectSuggestion(suggestion : String)}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Zeigt das Kartenobjekts zu dem ausgewählten Suchvorschlag an.
+\paragraph*{Parameter}
+Fordert die Speicherung des ausgewählten Suchvorschlags von einer Klasse, die ISearchModel implementiert.
+Fordert die MapId des ausgewählten Suchvorschlags von einer Klasse, die ISearchModel implementiert, an.
+Fordert von dem Navigationscontroller, das er die Karte mit der MapId fokussiert läd.
+\begin{itemize}
+    \item suggestion : String = Der ausgewählte Suchvorschlag
+\end{itemize}
+\paragraph*{Rückgabewert}
+void
+
+\subsection{class SearchController implements ISearchController}
