@@ -1,8 +1,9 @@
 \subsection{Interface ISearchModel}
 \paragraph*{Beschreibung}
-Dieses Interface ermöglicht das Durchsuchen der Datenbank nach gültigen Suchbegriffen zu der gegebenen Query.
-Sie ermöglicht die Bestimmung des Kartenobjekts zu einem gültigen Suchbegriff, 
+Dieses Interface ermöglicht das Durchsuchen der Datenbank nach gültigen Suchbegriffen zu einem gegebenen String.
+Es ermöglicht die Bestimmung der MapId zu einem gültigen Suchbegriff, 
 dieser kann eine Gebäudenummer, Gebäudenummer und Raumnummer, Gebäudenummer und Alias eines Raumes, ein Alias eines Gebäudes oder eine Person sein.
+Es ermöglicht die Speicherung und Ausgabe von zuletzt gesuchten Suchbegriffen.
 
 \subsubsection{\texttt{+ getSuggestions(input : String, amount : int) : List<String>}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -65,3 +66,8 @@ Diese Klasse ermittelt das zu den Suchbegriffen gehörenden Kartenobjekt in der 
 \end{itemize}
 \paragraph*{Rückgabewert}
 int, MapId zum Suchbegriff
+
+\subsection{class SearchModel implements ISearchModel}
+\paragraph*{Beschreibung}
+Klasse zur Verwaltung der Daten zum Suchen von Kartenobjekten mit Hilfe eines Strings: 
+Bestimmung von Suchvorschlägen, Speicherung und Ausgabe von zuletzt gesuchten Suchbegriffen, Bestimmung der MapId zu Suchbegriffen.
