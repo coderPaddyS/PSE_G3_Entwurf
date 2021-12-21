@@ -15,17 +15,15 @@ Erstellt einen neuen LevelModeController.
 
 \subsubsection{\texttt{+ startLevelMode(mapId : int)}}%$$$M
 \paragraph*{Kurzbeschreibung}
-Startet den Etagenansicht eines Gebäudes.
+Startet die Etagenansicht eines Gebäudes.
 \paragraph*{Beschreibung}
 Diese Methode startet für die Etagenansicht für ein gegebenes Gebäude.\\
-Existieren die Etagenansicht für das Gebäude nicht, passiert nichts.\\
+Existiert die Etagenansicht für das Gebäude nicht, passiert nichts.\\
 Existiert die Etagenansicht für das Gebäude werden alle durch das MapLayerDataController-Interface beobachtbaren 
 Kartendaten zur Etagen-Layer aktualisiert. Insbesondere ist isLevelMode() \texttt{wahr}.\\
-Ist dieses Gebäude das erste, von dem die Etagenansicht betrachtet wird, seit der Kartenmodus geöffnet wurde, 
-wird das Erdgeschoss geladen.\\
-War dieses Gebäude nicht das letzte, von dem die Etagenansicht betrachtet wurde, wird das Erdgeschoss geladen.\\
-War dieses Gebäude das letzte, von dem die Etagenansicht in dieser Kartenmodus-Session geladen war, wird die 
+Ist dieses Gebäude das letzte, von dem die Etagenansicht in dieser Kartenmodus-Session geladen wurde, wird die 
 Etage geladen, die zuletzt von diesem Gebäude betrachtet wurde.
+Ist dies nicht der Fall oder wurde in dieser Kartenmodus-Session noch keine Etagenansicht geladen, wird das Erdgeschoss geladen.
 \paragraph*{Parameter}
 \begin{itemize}
     \item mapId : int MapId des Gebäudes.
