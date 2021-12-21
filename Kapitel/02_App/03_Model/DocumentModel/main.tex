@@ -1,6 +1,6 @@
-\subsection{class DocumentController}
+\subsection{class DocumentModel}
 \paragraph*{Beschreibung}
-Klasse zum Bekommen eines Dokumentes.
+Klasse zum Verwalten von Dokumenten über ein Enum Document.
 
 \subsubsection{+ getDocument(identifier : Document) : String}%$$$M
 \paragraph*{Beschreibung}
@@ -11,3 +11,13 @@ Die Methode gibt zu dem Bezeichner das zugehörige Dokument zurück.
 \end{itemize}
 \paragraph*{Rückgabewert}
 String, der Text des Dokuments
+
+
+\subsubsection{enum Document}
+\paragraph*{Elemente}
+\begin{itemize}
+    \item DATENSCHUTZERKLAERUNG
+    \item IMPRESSUM
+    \item HILFESEITE
+    \item LIZENZEN
+\end{itemize}
