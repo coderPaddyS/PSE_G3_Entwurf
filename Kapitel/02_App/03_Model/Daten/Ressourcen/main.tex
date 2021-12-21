@@ -1,0 +1,19 @@
+\subsubsection{Ressourcen}
+Folgende Dateien werden über die \href{https://developer.android.com/reference/android/content/res/Resources}{Resources} gespeichert:
+\begin{itemize}
+    \item Anzeige-Strings: Alle Zeichenketten, die in der App angezeigt werden, 
+    müssen in allen unterstützten Sprachen als String-Ressource vorliegen.\\
+    Der Zugriff hierauf darf auch außerhalb des Models erfolgen.
+    \item Textdokumente: Alle Textdokumente im Markdown-Format müssen in allen unterstützten 
+    Sprachen als String-Ressource gespeichert sein:\\
+    \begin{itemize}
+        \item Datenschutzerklärung
+        \item Impressum
+        \item Hilfe-Seite
+        \item Lizenzen
+    \end{itemize}
+    Der Zugriff hierauf darf nur aus dem Model erfolgen.
+    \item Themes: Alle Themes müssen als Theme-Ressourcen gespeichert sein. 
+    Alle in der UI verwendeten Farben müssen aus einem dieser Themes stammen.\\
+    Der Zugriff hierauf darf auch außerhalb des Models erfolgen.
+\end{itemize}
