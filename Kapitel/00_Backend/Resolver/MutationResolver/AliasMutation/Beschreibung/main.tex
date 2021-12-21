@@ -1,0 +1,16 @@
+\subsection{\texttt{Klassenbeschreibung : AliasMutation}%$$$M
+\paragraph*{Kurzbeschreibung}
+Nimmt Http-Requests entgegen, welche in erster Linie Aliaseinträge manipulieren wollen.
+\paragraph*{Enthaltene Methoden}
+\begin{itemize}
+    \item blacklistAlias(wordToForbid : String) : Boolean
+    		\paragraph*{Beschreibung}
+            Setzt ein Wort auf die Blacklist. Dies bedeutet das keine Aliasvorschläge, die diesem Wort entsprechen mehr angenommen werden.
+            Außerdem wird das Wort aus den bestehenden Aliassen bzw. Aliasvorschlägen gelöscht, falls vorhanden.
+    \item removeAlias(alias : String)
+    		\paragraph*{Beschreibung}
+            Entfernt einen Alias aus der Liste der vorhanden Aliasse, falls vorhanden.
+    \item removeFromBlacklist(forbiddenWord : String)
+    	    \paragraph*{Beschreibung}
+            Entfernt ein Wort aus der Blacklist, sodass in Zukunft wieder Aliasvorschläge dieser Form angenommen werden.        
+        \end{itemize}

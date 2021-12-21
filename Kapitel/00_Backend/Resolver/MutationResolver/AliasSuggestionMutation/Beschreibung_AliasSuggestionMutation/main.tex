@@ -1,0 +1,21 @@
+\subsection{\texttt{Klassenbeschreibung : AliasSuggestionMutation}%$$$M
+\paragraph*{Kurzbeschreibung}
+Nimmt Http-Requests entgegen, welche in erster Linie Aliasvorschläge manipulieren wollen.
+\paragraph*{Beschreibung}
+Die Methode ist ausschließlich von Administratoren aufzurufen.
+Die Methode ermöglicht, dass ein Administrator einen globalen Alias aus der Datenbank aus allen globalen Aliassen entfernen kann.
+Dies hat zur Folge, dass das entsprechende Kartenobjekt nicht mehr durch diesen, nun gelöschten Alias, gefunden werden kann.
+Hierfür wird der gewünschte globale Alias als Zeichenkette als auch die ID des dazugehörigen Kartenobjekts übergeben.
+\paragraph*{Enthaltene Methoden}
+\begin{itemize}
+    \item blacklistAlias(wordToForbid : String) : Boolean
+    		\paragraph*{Beschreibung}
+            Setzt ein Wort auf die Blacklist. Dies bedeutet das keine Aliasvorschläge, die diesem Wort entsprechen mehr angenommen werden.
+            Außerdem wird das Wort aus den bestehenden Aliassen bzw. Aliasvorschlägen gelöscht, falls vorhanden.
+    \item removeAlias(alias : String)
+    		\paragraph*{Beschreibung}
+            Entfernt einen Alias aus der Liste der vorhanden Aliasse, falls vorhanden.
+    \item removeFromBlacklist(forbiddenWord : String)
+    	    \paragraph*{Beschreibung}
+            Entfernt ein Wort aus der Blacklist, sodass in Zukunft wieder Aliasvorschläge dieser Form angenommen werden.        
+        \end{itemize}
