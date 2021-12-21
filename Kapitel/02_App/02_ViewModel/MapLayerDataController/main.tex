@@ -8,7 +8,7 @@ Daten für die Karte als LiveData-Objekte herausgegeben.\\
 Außerdem wird die Änderung dieser Daten spezifiziert, wenn ein Objekt ausgewählt wird, dessen
 Daten im MapLayerDataController verwaltet werden.
 
-\subsubsection{selectMapObject}%$$$M
+\subsubsection{\texttt{+ selectMapObject(mapId : int)}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Diese Methode fokussiert das richtige Element, nachdem ein Kartenobjekt ausgewählt wurde.
 \paragraph*{Beschreibung}
@@ -18,12 +18,12 @@ Deise Methode kümmert sich um die Fokussierung des richtigen Kartenobjekts. Eve
 aus oder in die Etagenansicht gewechselt werden.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapId:int MapId des ausgewählten Kartenobjekts.
+    \item mapId : int MapId des ausgewählten Kartenobjekts.
 \end{itemize}
 \paragraph*{Rückgabewert}
 Void.
 
-\subsubsection{getTileSource}%$$$M
+\subsubsection{\texttt{+ getTileSource() : LiveData<\href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}{ITileSource}>}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Gibt die \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
 {ITileSource} mit den Daten für eine Kartenebene zurück.
@@ -35,7 +35,7 @@ Keine.
 LiveData<\href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
 {ITileSource}> mit den Kartendaten, darf null sein.
 
-\subsubsection{getMapObjectData}%$$$M
+\subsubsection{\texttt{+ getMapObjectData() : LiveData<List<DisplayData>>}}%$$$M
 \paragraph*{Beschreibung}
 Gibt die Anzeige-Daten der Kartenobjekte zurück.
 \paragraph*{Parameter}
@@ -43,7 +43,7 @@ Keine.
 \paragraph*{Rückgabewert}
 LiveData<List<DisplayData>> mit den Daten der Kartenobjekte.
 
-\subsubsection{getFocusedMapId}%$$$M
+\subsubsection{\texttt{+ getFocusedMapId() : LiveData<int>}}%$$$M
 \paragraph*{Beschreibung}
 Gibt die MapId des fokussierten Kartenobjekts zurück.
 \paragraph*{Parameter}
@@ -51,7 +51,7 @@ Keine.
 \paragraph*{Rückgabewert}
 LiveData<int> MapId des fokussierten Kartenobjekts.
 
-\subsubsection{isFloorFocus}%$$$M
+\subsubsection{\texttt{+ isFloorFocus() : LiveData<boolean>}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Gibt zurück, ob das fokussierte Kartenobjekt auf einer Etage ist.
 \paragraph*{Beschreibung}

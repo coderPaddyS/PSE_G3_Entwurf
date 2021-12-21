@@ -1,0 +1,27 @@
+\subsubsection{Löschen}
+
+Die Aktion die ausgeführt wird, um einen Blacklisteintrag zu löschen.
+
+\paragraph*{Ziel}
+Der Blacklisteneintrag, der diese Aktion ausgelöst hat, wird zur Löschung markiert und vorbereitet.
+Der zugehörige Blacklisteneintrag wird nicht mehr in der Blacklist-Seite angezeigt.
+
+\paragraph*{Vorbedingung}
+Blacklisteintrag ist vorhanden und wird angezeigt.
+
+\paragraph*{Nachbedingung}
+Blacklisteintrag wird nicht mehr angezeigt. Der Blacklisteintrag ist zur Löschung vorbereitet.
+
+\paragraph*{Durchführung}
+\begin{enumerate}
+    \item Das Interface \verb#Change# wird durch implementierung der Methode \verb#Change::perform# instanziiert. \\
+          Dabei ruft die Methode \verb#Change::perform# dieser Instanz die Methode \verb#Backend::deleteBlacklist# mit folgenden Parametern auf \begin{enumerate}
+              \item entry: Der zu löschende Blacklisteintrag
+          \end{enumerate}
+    \item Die erzeugte Instanz wird den Changes durch die Methode \verb#Changes::addChange# mit folgenden Parametern übergeben: \begin{enumerate}
+        \item action : Change
+        \item metadata : JSON mit folgenden Werten: \begin{enumerate}
+            \item entry : String = Blacklisteintrag
+        \end{enumerate}
+    \end{enumerate}
+\end{enumerate}

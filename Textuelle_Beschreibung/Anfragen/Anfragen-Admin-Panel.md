@@ -82,7 +82,6 @@ Erfolg
 ## Alias entfernen
 ### Admin-Panel sendet
 - Access-Token
-- MapId
 - Alias (Name)
 ### Server antwortet
 Erfolg
