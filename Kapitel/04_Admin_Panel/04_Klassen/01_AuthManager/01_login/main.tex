@@ -1,0 +1,15 @@
+\paragraph{\texttt{+login() : boolean}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Ermöglicht einen Nutzer sich anzumelden.
+Treten Fehler auf, wird dies dem Nutzer angezeigt.
+\paragraph*{Beschreibung}
+Ermöglicht einen Nutzer sich anzumelden.
+Hierfür wird ein OpenIDConnect-Provider (OIDC-Provider) verwendet, der zuvor durch die Methode \verb#AuthManager::configure# konfiguriert wird.
+Dazu wird der Nutzer auf die Login-Seite des OIDC-Providers geleitet und anschließend wieder zurück.
+Der erhaltene Access-Token wird anschließend gespeichert.
+Treten Fehler auf, wird dies dem Nutzer angezeigt. In diesem Fall ist der Access-Token \verb#null#.
+Bei Erfolg wird wahr zurückgegeben, andernfalls wird Falsch zurückgegeben.
+\paragraph*{Parameter}
+Keine
+\paragraph*{Rückgabewert}
+Wahr, wenn erfolgreich, Falsch sonst
