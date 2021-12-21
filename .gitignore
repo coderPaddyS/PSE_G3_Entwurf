@@ -328,3 +328,6 @@ main.ist
 *.class
 
 graphql-java-example/old\ (jetty)/target/*
+
+#inkscape
+svg-inkscape/
