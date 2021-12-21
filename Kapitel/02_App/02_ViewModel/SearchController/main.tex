@@ -9,31 +9,31 @@ Das Kartenobjekt mit der MapId wird nach abgeschlossener Suche auf der Karte mit
 
 \subsubsection{\texttt{+ getSuggestions() : LiveData<List<String>>}}%$$$M
 \paragraph*{Kurzbeschreibung}
-Gibt Suchvorschläge zu dem in einer Variablen gespeicherten Input zurück.
+Gibt Suchvorschläge zu der in einer Variablen gespeicherten Eingabe zurück.
 \paragraph*{Beschreibung}
-Fordert Suchvorschläge zu dem in einer Variablen gespeicherten Input von einer Klasse, die ISearchModel implementiert, an und gibt diese zurück.
-Wenn der Input leer ist werden stattdessen die letzten Suchbegriffe angefordert und zurückgegeben.
+Fordert Suchvorschläge zu der in einer Variablen gespeicherten Eingabe von einer Klasse, die ISearchModel implementiert, an und gibt diese zurück.
+Wenn die Eingabe leer ist werden stattdessen die letzten Suchbegriffe angefordert und zurückgegeben.
 \paragraph*{Parameter}
 \begin{itemize}
     \item keine
 \end{itemize}
 \paragraph*{Rückgabewert}
-LiveData<List<String>>, Suchvorschläge zum Input, die eine Klasse, die ISearchModel implementiert, zurückgegeben hat
+LiveData<List<String>>, Suchvorschläge zur Eingabe, die eine Klasse, die ISearchModel implementiert, zurückgegeben hat
 
 \subsubsection{\texttt{+ setInput(input : String)}}%$$$M
 \paragraph*{Kurzbeschreibung}
-Speichert den gegebenen Input in einer Variablen.
+Speichert die gegebenen Eingabe in einer Variablen.
 \paragraph*{Beschreibung}
-Speichert den gegebenen Input in einer Variablen, indem der alte Wert der Variablen überschrieben wird.
+Speichert die gegebenen Eingabe in einer Variablen, indem der alte Wert der Variablen überschrieben wird.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item input : String = Der Input, den der Benutzer zur Suche eingegeben hat
+    \item input : String = Die Eingabe, den der Benutzer zur Suche eingegeben hat
 \end{itemize}
 \paragraph*{Rückgabewert}
 void
 
 \subsubsection{\texttt{+ confirminput()}}%$$$M
-\paragraph*{Kurzbeschreibung}
+\paragraph*{Beschreibung}
 Zeigt das Kartenobjekts zu dem obersten angezeigten Suchvorschlag an.
 \paragraph*{Parameter}
 Fordert die Speicherung des obersten angezeigten Suchvorschlags von einer Klasse, die ISearchModel implementiert.
