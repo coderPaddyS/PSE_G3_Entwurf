@@ -9,6 +9,8 @@ Es existieren folgende Tabellen:
 \begin{itemize}
     \item buildings: Tabelle mit BuildingEntity-Elementen. Hierin sind alle Gebäude gespeichert.
     \item rooms: Tabelle mit RoomEntity-Elementen. Hierin sind alle Räume gespeichert.
+    \item searches: Tabelle mit SearchEntity-Elementen. Hierin werden alle erfolgreichen Suchen gespeichert. 
+    Es ist immer nur die letzte Suche mit einem Suchbegriff gespeichert.
 \end{itemize}
 
 In der Datenbank gibt es folgende Datenklassen
@@ -53,4 +55,16 @@ Es handelt sich hierbei um eine Datenklasse, die als \href{https://developer.and
 \begin{itemize}
     \item latitude : double Breitengrad.
     \item longitude : double Längengrad.
+\end{itemize}
+
+%---------------------------------------------------
+\paragraph{SearchEntity}
+\subparagraph*{Typ}
+Datenklasse.
+\subparagraph*{Beschreibung}
+Diese Datenklasse enthält die Daten für getätigte Suche.
+\subparagraph*{Daten}
+\begin{itemize}
+    \item searchTerm : String Suchbegriff. [Primärschlüssel]
+    \item date : Date Zeitpunkt der Suche.
 \end{itemize}
