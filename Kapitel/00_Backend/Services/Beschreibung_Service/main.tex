@@ -1,0 +1,22 @@
+\subsection{Paketbeschreibung : Service}%$$$M
+\paragraph*{Kurzbeschreibung}
+Schnittstellen, welche die Datenhaltung abstrahieren und Zugriff auf die zugrundeliegende Daten ermöglichen, ohne deren Struktur offenszulegen.
+Hierfür werden Interfaces genutzt, die von den Resolvern referenziert werden, ebenfalls um in den oberen Schichten möglichst 
+wenig von Implementierungsdetails abhängig zu sein. Für die Datenhaltun eignet sich ein JpaRepository, dass auf 
+eine SQL Datenbank zugreift, sodass wir diese Variante empfehlen.
+\paragraph*{Enthaltene KLassen}
+\begin{itemize}
+    \item AliasService <<interface>>
+    \item AliasServiceImp
+    \item DeletedAliasService <<interface>>
+    \item DeletedAliasServiceImp
+    \item UserService <<interface>>
+    \item UserServiceImp
+    \item AliasSuggestionService <<interface>>
+    \item AliasSuggestionServiceImp
+    \item BlacklistService <<interface>>
+    \item BlacklistServiceImp
+    \item MapIDService <<interface>>
+    \item MapIDServiceImp
+\end{itemize}
+
