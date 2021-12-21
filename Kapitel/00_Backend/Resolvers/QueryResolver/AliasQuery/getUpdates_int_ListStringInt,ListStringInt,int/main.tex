@@ -1,0 +1,16 @@
+\paragraph{\texttt{getUpdates(version : int) : (toAdd : List<(alias : String, mapID : int)>, toDelete : List<(alias : String, mapID : int)>, newVersion : int)}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt eine Liste aller Aktualisierungen bezüglich der Aliasse zurück, d.h. eine Liste aller neu hinzugefügten Aliasse samt ID des jeweiligen, dazugehörigen Kartenobjekts, eine Liste aller entfernten Aliasse samt ID des jeweiligen, dazugehörigen Kartenobjekts, und die neue Version seit der übergebenen Version.
+\paragraph*{Beschreibung}
+Gibt die Anweisung an die Schnittstelle \texttt{AliasService}, eine Liste aller Aktualisierungen bezüglich der Aliasse und die neue Version seit der übergebenen Version zurückzugeben. 
+Dabei wird eine Liste aller neu hinzugefügten Aliasse, eine Liste aller entfernten Aliasse, und die neue Version zurückgegeben.
+Die Methode ermöglicht, dass ein Benutzer seine auf dem Smartphone hinterlegten Aliasse zu aktualisieren, sodass die Version der Aliasse auf dem Smartphone der Version der Aliasse auf dem Server entspricht.
+Hierfür wird die Version der Aliasse, die der Benutzer gerade auf seinem Smartphone hat, übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item version : int
+    		\paragraph*{Beschreibung}
+    		Die Version der Aliasse, die der Benutzer gerade auf seinem Smartphone hat.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Die Liste aller Aktualisierungen bezüglich der Aliasse, d.h. eine Liste aller neu hinzugefügten Aliasse samt ID des jeweiligen, dazugehörigen Kartenobjekts, eine Liste aller entfernten Aliasse samt ID des jeweiligen, dazugehörigen Kartenobjekts, und die neue Version als 3-Tupel seit der übergebenen Version.
