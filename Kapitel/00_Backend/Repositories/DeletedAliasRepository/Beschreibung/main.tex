@@ -1,9 +1,9 @@
 \subsubsection*{Klassenbeschreibung}%$$$M
 \paragraph*{Kurzbeschreibung}
-Händelt Zugriffe auf die zugrundeliegende Datenbank der gelöschten Aliasse.
+Verwaltet Zugriffe auf die zugrundeliegende Datenbank der gelöschten Aliasse.
 Dafür müssen Einträge ab einer bestimmten Version abgefragt sowie Einträge hinzugefügt und gelöscht werden können.
 \paragraph*{Enthaltene Methoden}
 \begin{itemize}
-    \item findNewerThanVersion(version : int)
+    \item findNewerThanVersion(version : int) : List<ALias : String>
     \item deleteByNameAndMapID(name : String, MapID : int)
 \end{itemize}
