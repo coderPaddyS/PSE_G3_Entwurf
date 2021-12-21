@@ -1,0 +1,34 @@
+\subsection{LevelModeController}
+\paragraph*{Typ}
+Implementiert MapLayerDataController, LevelChangeController.
+\paragraph*{Beschreibung}
+Diese Klasse steuert den Etagenmodus. Sie stellt alle benötigten Daten bereit, um die aktuelle Etage anzuzeigen. 
+Sie stellt alle benötigten Aufrufe bereit, um Interaktionen mit der Etagenkarte zu verarbeiten.
+
+\subsubsection{\texttt{+ <<create>> LevelModeController(dataProvider : IMapDataProvider)}}%$$$M
+\paragraph*{Beschreibung}
+Erstellt einen neuen LevelModeController.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item dataProvider : IMapDataProvider IMapDataProvider von dem diese Klasse die Kartendaten bezieht.
+\end{itemize}
+
+\subsubsection{\texttt{+ startLevelMode(mapId : int)}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Startet den Etagenansicht eines Gebäudes.
+\paragraph*{Beschreibung}
+Diese Methode startet für die Etagenansicht für ein gegebenes Gebäude.\\
+Existieren die Etagenansicht für das Gebäude nicht, passiert nichts.\\
+Existiert die Etagenansicht für das Gebäude werden alle durch das MapLayerDataController-Interface beobachtbaren 
+Kartendaten zur Etagen-Layer aktualisiert. Insbesondere ist isLevelMode() \texttt{wahr}.\\
+Ist dieses Gebäude das erste, von dem die Etagenansicht betrachtet wird, seit der Kartenmodus geöffnet wurde, 
+wird das Erdgeschoss geladen.\\
+War dieses Gebäude nicht das letzte, von dem die Etagenansicht betrachtet wurde, wird das Erdgeschoss geladen.\\
+War dieses Gebäude das letzte, von dem die Etagenansicht in dieser Kartenmodus-Session geladen war, wird die 
+Etage geladen, die zuletzt von diesem Gebäude betrachtet wurde.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Gebäudes.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Void.
