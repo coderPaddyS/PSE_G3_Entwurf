@@ -1,9 +1,10 @@
 \subsection{Interface ISearchController}
 \paragraph*{Beschreibung}
-Dieses Interface ermöglicht die Suche nach Gebäuden und Räumen zu der gegebenen Query 
-und ermöglicht die Bestimmung des Kartenobjekts zu einem gültigen Suchbegriff, 
+Dieses Interface ermöglicht die Suche nach Gebäuden und Räumen zu dem gegebenen String. 
+Es ermöglicht die Bestimmung der MapId zu einem ausgewählten, gültigen Suchbegriff, 
 dies kann eine Gebäudenummer, Gebäudenummer und Raumnummer, Gebäudenummer und Alias eines Raumes, ein Alias eines Gebäudes oder eine Person sein.
 Dies macht sie, indem sie die Daten bei SearchModel anfordert.
+Das Kartenobjekt mit der MapId wird nach abgeschlossener Suche auf der Karte mit Hilfe des Navigationskontrollers angezeigt.
 
 
 \subsubsection{\texttt{+ getSuggestions() : LiveData<List<String>>}}%$$$M
@@ -58,3 +59,5 @@ Fordert von dem Navigationscontroller, das er die Karte mit der MapId fokussiert
 void
 
 \subsection{class SearchController implements ISearchController}
+\paragraph*{Beschreibung}
+Klasse zur Suche nach Kartenobjekten und Anzeigen dieser in der Karte.
