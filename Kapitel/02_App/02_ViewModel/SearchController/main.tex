@@ -8,17 +8,17 @@ Das Kartenobjekt mit der MapId wird nach abgeschlossener Suche auf der Karte mit
 
 
 \subsubsection{\texttt{+ getSuggestions() : LiveData<List<String>>}}%$$$M
-\paragraph*{Kurzbeschreibung}
-Gibt Suchvorschläge zu der in einer Variablen gespeicherten Eingabe zurück.
 \paragraph*{Beschreibung}
-Fordert Suchvorschläge zu der in einer Variablen gespeicherten Eingabe von einer Klasse, die ISearchModel implementiert, an und gibt diese zurück.
-Wenn die Eingabe leer ist werden stattdessen die letzten Suchbegriffe angefordert und zurückgegeben.
+Gibt Suchvorschläge zu der in einer Variablen gespeicherten Eingabe zurück.
 \paragraph*{Parameter}
 \begin{itemize}
     \item keine
 \end{itemize}
 \paragraph*{Rückgabewert}
 LiveData<List<String>>, Suchvorschläge zur Eingabe, die eine Klasse, die ISearchModel implementiert, zurückgegeben hat
+\paragraph*{Notizen zur Implementierung}
+Fordert Suchvorschläge zu der in einer Variablen gespeicherten Eingabe von einer Klasse, die ISearchModel implementiert, an und gibt diese zurück.
+Wenn die Eingabe leer ist werden stattdessen die letzten Suchbegriffe angefordert und zurückgegeben.
 
 \subsubsection{\texttt{+ setInput(input : String)}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -36,27 +36,30 @@ void
 \paragraph*{Beschreibung}
 Zeigt das Kartenobjekts zu dem obersten angezeigten Suchvorschlag an.
 \paragraph*{Parameter}
-Fordert die Speicherung des obersten angezeigten Suchvorschlags von einer Klasse, die ISearchModel implementiert.
-Fordert die MapId des obersten angezeigten Suchvorschlags von einer Klasse, die ISearchModel implementiert, an.
-Fordert von dem Navigationscontroller, das er die Karte mit der MapId fokussiert läd.
 \begin{itemize}
     \item keine
 \end{itemize}
 \paragraph*{Rückgabewert}
 void
+\paragraph*{Notizen zur Implementierung}
+Fordert die Speicherung des obersten angezeigten Suchvorschlags von einer Klasse, die ISearchModel implementiert.
+Fordert die MapId des obersten angezeigten Suchvorschlags von einer Klasse, die ISearchModel implementiert, an.
+Fordert von dem Navigationscontroller, das er die Karte mit der MapId fokussiert läd.
 
 \subsubsection{\texttt{+ selectSuggestion(suggestion : String)}}%$$$M
-\paragraph*{Kurzbeschreibung}
+\paragraph*{Beschreibung}
 Zeigt das Kartenobjekts zu dem ausgewählten Suchvorschlag an.
 \paragraph*{Parameter}
-Fordert die Speicherung des ausgewählten Suchvorschlags von einer Klasse, die ISearchModel implementiert.
-Fordert die MapId des ausgewählten Suchvorschlags von einer Klasse, die ISearchModel implementiert, an.
-Fordert von dem Navigationscontroller, das er die Karte mit der MapId fokussiert läd.
 \begin{itemize}
     \item suggestion : String = Der ausgewählte Suchvorschlag
 \end{itemize}
 \paragraph*{Rückgabewert}
 void
+\paragraph*{Notizen zur Implementierung}
+Fordert die Speicherung des ausgewählten Suchvorschlags von einer Klasse, die ISearchModel implementiert.
+Fordert die MapId des ausgewählten Suchvorschlags von einer Klasse, die ISearchModel implementiert, an.
+Fordert von dem Navigationscontroller, das er die Karte mit der MapId fokussiert läd.
+
 
 \subsection{class SearchController implements ISearchController}
 \paragraph*{Beschreibung}

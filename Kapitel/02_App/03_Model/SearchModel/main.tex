@@ -11,10 +11,6 @@ Diese Methode gibt Suchvorschläge zu dem übergebenen String zurück.
 \paragraph*{Beschreibung}
 Diese Methode gibt Suchvorschläge zu dem übergebenen String aus einer (SQL-)Datenbank, 
 die alle Kartenobjekte inklusive ihrer offiziellen Namen, Aliasse und Personen enthält, zurück.
-Es werden die Suchvorschläge nach der Übereinstimmung mit der Eingabe sortiert zurück gegeben.
-Die Suchvorschläge mit der höchsten Übereinstimmung sind die ersten Elemente der Liste.
-Die Liste enthält genau so viele Vorschläge, wie die Anzahl vorgibt. Die Anzahl ist nicht negativ.
-Somit werden auch Vorschläge für falsch geschriebene Suchbegriffe angezeigt.
 \paragraph*{Parameter}
 \begin{itemize}
     \item input : String = Der Suchbegriff den der Benutzer eingegeben hat
@@ -23,37 +19,42 @@ Somit werden auch Vorschläge für falsch geschriebene Suchbegriffe angezeigt.
 \paragraph*{Rückgabewert}
 List<String>, Suchvorschläge, die die Datenbank zurückgegeben hat
 \paragraph*{Notizen zur Implementierung}
+Es werden die Suchvorschläge nach der Übereinstimmung mit der Eingabe sortiert zurück gegeben.
+Die Suchvorschläge mit der höchsten Übereinstimmung sind die ersten Elemente der Liste.
+Die Liste enthält genau so viele Vorschläge, wie die Anzahl vorgibt. Die Anzahl ist nicht negativ.
+Somit werden auch Vorschläge für falsch geschriebene Suchbegriffe angezeigt.
 Wenn SQL genutzt wird, wird die Suche direkt auf SQL ausgeführt z.B. mit \dq like\dq{}.
 
 \subsubsection{\texttt{+ getLastSearches(amount : int) : List<String>}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Diese Methode gibt eine Liste der zuletzt gesuchten Suchbegriffe zurück.
 \paragraph*{Beschreibung}
-Diese Methode gibt eine Liste der zuletzt gesuchten Suchbegriffe aus der Datenbank zurück.
-Die Anzahl der Elemente ist die übergebene Anzahl, es sei den es gibt nicht genug bereits gesuchte Suchbegriffe.
-Die Suchbegriffe werden nach der letzten Benutzung sortiert. 
-Der zuletzt genutzte Suchbegriff ist das erste Element der Liste.
+Diese Methode gibt eine Liste der zuletzt gesuchten Suchbegriffe, nach ihrer letzten Benutzung sortiert, aus der Datenbank zurück.
 \paragraph*{Parameter}
 \begin{itemize}
     \item amout : int = Die maximale Anzahl der Elemente der Liste an letzten Suchbegriffen
 \end{itemize}
 \paragraph*{Rückgabewert}
 List<String>, zuletzt gesuchte Suchbegriffe
+\paragraph*{Notizen zur Implementierung}
+Die Anzahl der Elemente ist die übergebene Anzahl, es sei den es gibt nicht genug bereits gesuchte Suchbegriffe.
+Der zuletzt genutzte Suchbegriff ist das erste Element der Liste.
 
 \subsubsection{\texttt{+ storeSearchKey(searchKey : String)}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Diese Methode speichert den gegebenen Suchbegriff.
 \paragraph*{Beschreibung}
 Diese Methode speichert den gegebenen Suchbegriff in der Datenbank als zuletzt gesucht.
-Wenn der Suchbegriff bereits in der Liste der zuletzt gesuchten Suchbegriffe ist, 
-wird der Suchbegriff zuerst aus der Liste entfernt und dann als neuster zuletzt gesuchter Suchbegriff hinzugefügt.
-Somit sind die bereits gesuchten Suchbegriffe immer danach sortiert, wann sie zuletzt gesucht wurden.
 \paragraph*{Parameter}
 \begin{itemize}
     \item searchKey : String = Suchbegriff, der gespeichert werden soll
 \end{itemize}
 \paragraph*{Rückgabewert}
 keinen
+\paragraph*{Notizen zur Implementierung}
+Wenn der Suchbegriff bereits in der Liste der zuletzt gesuchten Suchbegriffe ist, 
+wird der Suchbegriff zuerst aus der Liste entfernt und dann als neuster zuletzt gesuchter Suchbegriff hinzugefügt.
+Somit sind die bereits gesuchten Suchbegriffe immer danach sortiert, wann sie zuletzt gesucht wurden.
 
 \subsubsection{\texttt{+ getMapIdBySearchKey(searchKey : String) : int}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -66,6 +67,7 @@ Diese Klasse ermittelt das zu den Suchbegriffen gehörenden Kartenobjekt in der 
 \end{itemize}
 \paragraph*{Rückgabewert}
 int, MapId zum Suchbegriff
+
 
 \subsection{class SearchModel implements ISearchModel}
 \paragraph*{Beschreibung}
