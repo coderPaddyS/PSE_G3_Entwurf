@@ -17,7 +17,7 @@ Für die Verwaltung dieser Overlays wird das FolderOverlay eingesetzt.\\
 Diese Klasse verwaltet die MapObjectMarker, die Aktion beim Klicken auf diese Marker, 
 und das Fokussieren eines dieser Marker.
 
-\subsubsection{\texttt{+ <<create>> TileMarkerOverlay(controller : MapLayerDataController)}}%$$$M
+\subsubsection{\texttt{+ <<create>> TileMarkerOverlay(controller : MapLayerDataController, mapView : MapView)}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Erstellt eine TileMarkerOverlay-Instanz.
 \paragraph*{Beschreibung}
@@ -26,6 +26,7 @@ Erzeugt die MapObjectMarker über die Fabrikmethode createMarker.
 \paragraph*{Parameter}
 \begin{itemize}
     \item controller : MapLayerDataController MapLayerDataController der die Daten bereitstellt.
+    \item mapView : MapView MapView auf der sich das Overlay befindet.
 \end{itemize}
 
 \subsection{Delegierte Methoden}
@@ -51,7 +52,7 @@ Teilt dem MapLayerDataController mit, dass ein bestimmtes Kartenobjekt ausgewäh
 \paragraph*{Rückgabewert}
 Void.
 
-\subsubsection{\texttt{# createMarker(data : DisplayData) : MapObjectMarker $\lbrace$abstract$\rbrace$}}%$$$M
+\subsubsection{\texttt{# createMarker(data : DisplayData, mapView : MapView) : MapObjectMarker $\lbrace$abstract$\rbrace$}}%$$$M
 \paragraph*{Beschreibung}
 Dies ist eine Fabrikmethode zur Erzeugung eines MapObjectMarker.
 \paragraph*{Parameter}
