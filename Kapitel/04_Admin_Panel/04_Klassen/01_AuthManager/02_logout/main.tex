@@ -1,13 +1,11 @@
 \paragraph{\texttt{+login() : boolean}}%$$$M
 \paragraph*{Kurzbeschreibung}
-Ermöglicht einen Nutzer sich abzumelden.
-Treten Fehler auf, wird dies dem Nutzer angezeigt.
+Ermöglicht einem Nutzer sich abzumelden.
 \paragraph*{Beschreibung}
-Ermöglicht einen Nutzer sich abzumelden.
+Ermöglicht einem Nutzer sich abzumelden.
 Hierfür wird ein OpenIDConnect-Provider (OIDC-Provider) verwendet, der zuvor durch die Methode \verb#AuthManager::configure# konfiguriert wird.
 Dazu wird der Nutzer auf die Logout-Seite des OIDC-Providers geleitet, falls der OIDC-Provider eine Rückleitung unterstützt, wird der Nutzer wieder zurück zur Startseite geleitet.
 Der Access-Token wird dabei invalidiert.
-Treten Fehler auf, wird dies dem Nutzer angezeigt. In diesem Fall ist der Access-Token \verb#null#.
 Bei Erfolg wird wahr zurückgegeben, andernfalls wird Falsch zurückgegeben.
 \paragraph*{Parameter}
 Keine
