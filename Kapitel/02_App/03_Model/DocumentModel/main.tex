@@ -1,23 +1,23 @@
 \subsection{class DocumentModel}
 \paragraph*{Beschreibung}
-Klasse zum Verwalten von Dokumenten über ein Enum Document.
+Klasse zum Verwalten von Dokumenten über ein Enum DocumentTyp.
 
-\subsubsection{+ getDocument(identifier : Document) : String}%$$$M
+\subsubsection{+ getDocument(identifier : DocumentTyp) : String}%$$$M
 \paragraph*{Beschreibung}
 Die Methode gibt zu dem Bezeichner das zugehörige Dokument zurück.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item identifier : Document = Der Bezeichner für ein Dokument
+    \item identifier : DocumentTyp = Der Bezeichner für ein Dokument
 \end{itemize}
 \paragraph*{Rückgabewert}
 String, der Text des Dokuments
 
 
-\subsubsection{enum Document}
+\subsubsection{enum DocumentTyp}
 \paragraph*{Elemente}
 \begin{itemize}
-    \item DATENSCHUTZERKLAERUNG
+    \item DATA_PROTECTION_DECLARATION
     \item IMPRESSUM
-    \item HILFESEITE
-    \item LIZENZEN
+    \item HELP_PAGE
+    \item LICENSES
 \end{itemize}
