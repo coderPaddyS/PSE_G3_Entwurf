@@ -1,0 +1,18 @@
+\paragraph{\texttt{addUser(accessToken : String) : UserID}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Nimmt einen Benutzer, der sich authentifiziert hat und noch nicht in die Datenbank aufgenommen wurde, in der Datenbank auf.
+\paragraph*{Beschreibung}
+Die Methode implementiert die gleichnamige Methode der Schnittstelle \texttt{UserService}.
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Resolvers} aufgerufen.
+Die Methode ermöglicht, dass ein Administrator einen Benutzer zur Datenbank aus allen Benutzern hinzufügen kann. Hierfür muss der Benutzer sich authentifiziert haben. 
+Zudem wird der Benutzer nur dann in die Datenbank aufgenommen, wenn er noch nicht in der Datenbank hinterlegt ist.
+Hierfür wird der Access-Token des gewünschten Benutzers übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item accessToken : String
+    		\paragraph*{Beschreibung}
+    		Der Access-Token des gewünschten Benutzers, der sich bereits authentifiziert hat und den man in die Datenbank aufnehmen möchte.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Die ID des in die Datenbank aufgenommenen Benutzers.

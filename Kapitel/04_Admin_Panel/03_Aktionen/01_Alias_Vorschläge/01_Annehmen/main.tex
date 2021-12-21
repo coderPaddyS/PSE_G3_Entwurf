@@ -1,0 +1,30 @@
+\subsubsection{Annehmen}
+
+Die Aktion die ausgeführt wird, um einen Alias-Vorschlag anzunehmen.
+
+\paragraph*{Ziel}
+Der Alias-Vorschlag, der diese Aktion ausgelöst hat, wird zur Annahme markiert und vorbereitet.
+Der zugehörige Alias-Vorschlag wird nicht mehr in der Alias-Vorschläge-Seite angezeigt.
+
+\paragraph*{Vorbedingung}
+Alias-Vorschlag ist vorhanden und wird angezeigt.
+
+\paragraph*{Nachbedingung}
+Alias-Vorschlag wird nicht mehr angezeigt. Der Alias-Vorschlag ist zur Annahme vorbereitet.
+
+\paragraph*{Durchführung}
+\begin{enumerate}
+    \item Das Interface \verb#Change# wird durch implementierung der Methode \verb#Change::perform# instanziiert. \\
+          Dabei ruft die Methode \verb#Change::perform# dieser Instanz die Methode \verb#Backend::acceptAliasSuggestion# mit folgenden Parametern auf \begin{enumerate}
+              \item alias: String = Der Bezeichner des Alias-Vorschlags
+              \item mapID: String = Der Kartenobjektidentifizierer des Alias-Vorschlags
+          \end{enumerate}
+    \item Die erzeugte Instanz wird den Changes durch die Methode \verb#Changes::addChange# mit folgenden Parametern übergeben: \begin{enumerate}
+        \item action: Change
+        \item metadata: JSON mit folgenden Werten: \begin{enumerate}
+            \item Alias: String = Der Bezeichner des Alias-Vorschlags
+            \item Gebäudenummer: String = Gebäudenummer des Alias-Vorschlags
+            \item Raum: String = Raum des Alias-Vorschlags
+        \end{enumerate}
+    \end{enumerate}
+\end{enumerate}

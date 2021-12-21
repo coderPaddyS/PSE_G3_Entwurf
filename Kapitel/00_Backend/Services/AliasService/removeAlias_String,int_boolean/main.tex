@@ -1,0 +1,20 @@
+\paragraph{\texttt{removeAlias(alias : String, mapID : int) : boolean}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Definiert das Erteilen der Anweisung an Klasse \texttt{AliasRepository}, einen globalen Alias aus der Datenbank zu entfernen.
+\paragraph*{Beschreibung}
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Resolvers} aufgerufen.
+Die Methode ermöglicht, dass ein Administrator einen globalen Alias aus der Datenbank aus allen globalen Aliassen entfernen kann.
+Dies hat zur Folge, dass das entsprechende Kartenobjekt nicht mehr durch diesen, nun gelöschten Alias, gefunden werden kann.
+Hierfür wird der gewünschte globale Alias als Zeichenkette als auch die ID des dazugehörigen Kartenobjekts übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item alias : String
+    		\paragraph*{Beschreibung}
+    		Der globale Alias als Zeichenkette, den man entfernen möchte.
+    \item mapID : int
+    		\paragraph*{Beschreibung}
+    		Die ID des Kartenobjekts, für das der globale Alias als Bezeichner dient.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Wahr, wenn der gewünschte globale Alias erfolgreich entfernt werden konnte, ansonsten falsch.
