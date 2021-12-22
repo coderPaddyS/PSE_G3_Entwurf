@@ -1,0 +1,20 @@
+\paragraph{\texttt{addDeletedAlias(deletedAlias : String, mapID : int) : boolean}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Erteilt die Anweisung an Klasse \texttt{DeletedAliasRepository}, einen entfernten Alias zur Datenbank der entfernten Aliasse hinzuzufügen.
+\paragraph*{Beschreibung}
+Die Methode implementiert die gleichnamige Methode der Schnittstelle \texttt{DeletedAliasService}.
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Resolvers} aufgerufen.
+Die Methode ermöglicht, dass ein Administrator einen entfernten Alias zur Datenbank der entfernten Aliassen hinzufügen kann.
+Hierfür wird der gewünschte, entfernte Alias als Zeichenkette als auch die ID des dazugehörigen Kartenobjekts übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item deletedAlias : String
+    		\paragraph*{Beschreibung}
+    		Der entfernte Alias als Zeichenkette, den man hinzufügen möchte.
+    \item mapID : int
+    		\paragraph*{Beschreibung}
+    		Die ID des Kartenobjekts, für das der entfernte Alias als Bezeichner gedient hat.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Wahr, wenn der gewünschte, entfernte Alias zur Datenbank der entfernten Aliasse erfolgreich hinzugefügt werden konnte, ansonsten falsch.
