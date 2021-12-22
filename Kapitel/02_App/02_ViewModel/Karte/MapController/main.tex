@@ -1,0 +1,19 @@
+\subsection{MapController}
+\paragraph*{Typ}
+Implementiert MapLayerDataController.
+\paragraph*{Beschreibung}
+Diese Klasse steuert die Karte im Allgemeinen. Das heißt: Diese Klasse stellt die Karte (Straßenkarte) bereit 
+und stellt die benötigten Daten zum Verschieben der Karte bereit (wie Position zu der sie verschoben werden soll).\\
+Diese Klasse ist insbesondere für die Verarbeitung und Steuerung des Fokus der Karte beim Betreten der 
+Kartenansicht verantwortlich (z.B. wenn ein Gebäude über die Suche gefunden wurde und angezeigt werden muss).
+Diese Information ist durch den Wechsel zwischen Ansichten durch NavHost und NavGraph verfügbar.
+
+\subsubsection{\texttt{+ <<create>> MapController(dataProvider : IMapDataProvider)}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Erstellt einen neuen MapController.
+\paragraph*{Beschreibung}
+Erstellt einen neuen LevelModeController und einen neuen BuildingModeController.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item dataProvider : IMapDataProvider IMapDataProvider von dem diese Klasse die Kartendaten bezieht.
+\end{itemize}
