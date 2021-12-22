@@ -1,0 +1,19 @@
+\paragraph{\texttt{approveAliasSuggestion(aliasSuggestion : String, mapID : int) : boolean}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Akzeptiert den gewünschten Alias-Vorschlag.
+\paragraph*{Beschreibung}
+Die Methode ist ausschließlich von Administratoren aufzurufen.
+Gibt die Anweisung an die Schnittstelle \texttt{AliasSuggestionService}, einen Alias-Vorschlag anzunehmen.
+Die Methode ermöglicht, dass ein Administrator einen Alias-Vorschlag durch Angeben der entsprechenden Zeichenkette und die ID des dazugehörigen Kartenobjekts akzeptieren kann.
+Dies hat zur Folge, dass der angenommene Alias-Vorschlag in die Alias-Datenbank aufgenommen wird.
+\paragraph*{Parameter}
+\begin{itemize}
+	\item aliasSuggestion : String
+		\paragraph*{Beschreibung}
+		Die Zeichenkette des gewünschten, zu akzeptierenden Alias-Vorschlags.
+	\item mapID : int
+		\paragraph*{Beschreibung}
+		Die ID des Kartenobjekts, für das der Alias-Vorschlag als Bezeichner dienen soll.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Wahr, wenn der gewünschte Alias-Vorschlag erfolgreich akzeptiert werden konnte, ansonsten falsch.
