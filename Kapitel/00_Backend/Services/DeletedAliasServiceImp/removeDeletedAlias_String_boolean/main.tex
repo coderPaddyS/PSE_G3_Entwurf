@@ -1,7 +1,8 @@
-\paragraph*{\texttt{removeDeletedAlias(deletedAlias : String, mapID : int) : boolean}}%$$$M
+\paragraph*{\texttt{removeDeletedAlias(deletedAlias : String) : boolean}}%$$$M
 \paragraph*{Kurzbeschreibung}
-Definiert das Erteilen der Anweisung an Klasse \texttt{AliasRepository}, einen Alias aus der Datenbank der entfernten Aliasse zu entfernen.
+Erteilt die Anweisung an Klasse \texttt{AliasRepository}, einen Alias aus der Datenbank der entfernten Aliasse zu entfernen.
 \paragraph*{Beschreibung}
+Die Methode implementiert die gleichnamige Methode der Schnittstelle \texttt{DeletedAliasService}.
 Die Methode ist serverintern und wird somit nicht explizit aufgerufen.
 Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Resolvers} aufgerufen.
 Die Methode ermöglicht, dass ein Alias aus der Datenbank der entfernten Aliasse entfernt werden kann.
