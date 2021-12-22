@@ -1,0 +1,17 @@
+\paragraph*{\texttt{removeDeletedAlias(deletedAlias : String, mapID : int) : boolean}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Erteilt die Anweisung an Klasse \texttt{AliasRepository}, einen Alias aus der Datenbank der entfernten Aliasse zu entfernen.
+\paragraph*{Beschreibung}
+Die Methode implementiert die gleichnamige Methode der Schnittstelle \texttt{DeletedAliasService}.
+Die Methode ist serverintern und wird somit nicht explizit aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Resolvers} aufgerufen.
+Die Methode ermöglicht, dass ein Alias aus der Datenbank der entfernten Aliasse entfernt werden kann.
+Hierfür wird der Alias als Zeichenkette und die ID des dazugehörigen Kartenobjekts übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item deletedAlias : String
+    		\paragraph*{Beschreibung}
+    		Der Alias als Zeichenkette, der in der Datenbank der entfernten Aliasse hinterlegt ist und entfernt werden soll.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Wahr, wenn der Alias, der in der Datenbank der entfernten Aliasse hinterlegt ist, erfolgreich entfernt werden wurde oder wenn der Alias bereits nicht in der Datenbank der entfernten Aliasse hinterlegt war. Im sonstigen Fall wird falsch zurückgegeben.
