@@ -2,8 +2,8 @@
 \paragraph*{Typ}
 Interface.
 \paragraph*{Beschreibung}
-Dieses Interface definiert eine Schnittstelle, das alle Daten bereitstellt, 
-die zum anzeigen der Informationen zu einem Kartenobjekt benötigt werden. 
+Dieses Interface definiert eine Schnittstelle, die alle Daten bereitstellt, 
+die zum Anzeigen der Informationen zu einem Kartenobjekt benötigt werden. 
 Außerdem bietet es Methoden an, um einige dieser Daten zu ändern.
 
 \subsubsection{\texttt{+ getBuildingAddress(mapId : int) : String}}%$$$M
@@ -87,7 +87,7 @@ Diese Methode sorgt dafür, dass Feedback zu einem Alias-Vorschlag gesendet wird
 \paragraph*{Beschreibung}
 Die Methode prüft, ob der Benutzer das Feedback senden kann und darf.
 Ist der Benutzer nicht angemeldet, wird in den Anmeldemodus gewechselt. Das senden des Feedbacks entfällt dann.\\
-Ist das Access-Token des Benutzers abgelaufen wird in den Anmeldemodus zur erneuten Anmeldung  gewechselt. Das senden des Feedbacks entfällt dann.\\
+Ist der Access-Token des Benutzers abgelaufen, wird in den Anmeldemodus zur erneuten Anmeldung gewechselt. Das senden des Feedbacks entfällt dann.\\
 Das Feedback wird an das Model gegeben, um es an den Server zu senden.
 \paragraph*{Parameter}
 \begin{itemize}

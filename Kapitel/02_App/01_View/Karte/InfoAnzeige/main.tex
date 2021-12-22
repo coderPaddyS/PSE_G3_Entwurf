@@ -6,16 +6,16 @@ Dieses Composable zeigt Informationen zum ausgewählten Kartenobjekt an.\\
 Es gibt zwei verschiedene Anzeigemodi:
 
 \subparagraph*{Kompakte Anzeige}
-Wird das InfoDisplay geöffnet, wird es nur in der unteren Bildschirmhälfte angezeigt. 
+Wird das MapObjectInfoDisplay geöffnet, wird es nur in der unteren Bildschirmhälfte angezeigt. 
 Es werden nur die wichtigsten Informationen angezeigt. Es wird nach Kartenobjekt unterschieden:
 \begin{itemize}
     \item Gebäude: Es werden nur Gebäudenummer und Adresse angezeigt.
     \item Raum: Es werden Raumnummer, wenn vorhanden Raumtyp, Gebäudenummer des zugehörigen Gebäudes und Stockwerk angezeigt.
 \end{itemize}
-Rechts unten wird ein Button zum Wechsel in die Ausführliche Anzeige angezeigt.
+Rechts unten wird ein Button zum Wechsel in die ausführliche Anzeige angezeigt.
 
 \subparagraph*{Ausführliche Anzeige}
-Die Ausführliche Anzeige bedeckt den ganzen Bildschirm.
+Die ausführliche Anzeige bedeckt den ganzen Bildschirm.
 Es wird folgendes angezeigt:
 \begin{itemize}
     \item Informationen der kompakten Anzeige.
@@ -28,34 +28,34 @@ Es wird folgendes angezeigt:
     \item Globale Aliasse: Es werden globale Aliasse für dieses Kartenobjekt angezeigt.
     \begin{itemize}
         \item Gibt es sehr viele globale Aliasse, sodass die Kategorie über 3 Zeilen lang ist, werden nur 
-        die ersten 3 Zeilen angezeigt. Rechts unten befindet sich dann ein Button \dq mehr anzeigen\dq . 
+        die ersten 3 Zeilen angezeigt. Rechts unten befindet sich dann ein Button \dq{}mehr anzeigen\dq{}. 
         Wird auf diesen Button geklickt werden an gleicher Stelle  alle globalen Aliasse angezeigt. 
-        Der Button enthält dann den Text \dq weniger anzeigen\dq . Wird er nun geklickt wird wieder nur die 
-        reduzierte Anzahl globaler Aliasse angezeigt und der Button zeigt wieder \dq mehr anzeigen\dq.
+        Der Button enthält dann den Text \dq{}weniger anzeigen\dq{}. Wird er nun geklickt wird wieder nur die 
+        reduzierte Anzahl globaler Aliasse angezeigt und der Button zeigt wieder \dq{}mehr anzeigen\dq{}.
         \item Gibt es noch keine globalen Aliasse wird ein Text angezeigt. Dieser Text weißt den Benutzer 
         darauf hin, dass es noch keine globalen Aliasse gibt und dass der Benutzer selbst einen vorschlagen kann.
     \end{itemize}
-    Neben der Überschrift befindet sich auf der rechten Seite ein Button auf dem \dq Vorschlagen\dq  steht.
+    Neben der Überschrift befindet sich auf der rechten Seite ein Button auf dem \dq{}Vorschlagen\dq{} steht.
     Wird auf diesen Button geklickt, wird dies dem ViewModel mitgeteilt.
     \item Lokale Aliasse: Es werden lokale Aliasse für dieses Kartenobjekt angezeigt. 
     \begin{itemize}
         \item Gibt es sehr viele lokale Aliasse, sodass die Kategorie über 3 Zeilen lang ist, werden nur 
-        die ersten 3 Zeilen angezeigt. Rechts unten befindet sich dann ein Button \dq mehr anzeigen\dq . 
-        Wird auf diesen Button geklickt werden an gleicher Stelle  alle lokalen Aliasse angezeigt. 
-        Der Button enthält dann den Text \dq weniger anzeigen\dq . Wird er nun geklickt wird wieder nur die 
-        reduzierte Anzahl globaler Aliasse angezeigt und der Button zeigt wieder \dq mehr anzeigen\dq.
+        die ersten 3 Zeilen angezeigt. Rechts unten befindet sich dann ein Button \dq{}mehr anzeigen\dq{}. 
+        Wird auf diesen Button geklickt werden an gleicher Stelle alle lokalen Aliasse angezeigt. 
+        Der Button enthält dann den Text \dq{}weniger anzeigen\dq{}. Wird er nun geklickt wird wieder nur die 
+        reduzierte Anzahl globaler Aliasse angezeigt und der Button zeigt wieder \dq{}mehr anzeigen\dq{}.
         \item Gibt es noch keine lokalen Aliasse wird ein Text angezeigt. Dieser Text weißt den Benutzer 
-        darauf hin, dass es noch keine lokalen Aliasse gibt und dass der Benutzer selbst einen hinzufügen kann kann.
+        darauf hin, dass es noch keine lokalen Aliasse gibt und dass der Benutzer selbst einen hinzufügen kann.
         \item Gibt es mindestens einen lokalen Alias, so wird unter den Aliassen ein Text angezeigt, 
         der den Benutzer darauf hinweist, dass er durch langes Klicken auf einen lokalen Alias, diesen 
         löschen kann.\\
         Klickt der Benutzer auf einen der angezeigten lokalen Aliasse und hält diesen für mindestens eine 
         Sekunde gedrückt, erscheint eine Meldung, ob der Benutzer den ausgewählten lokalen Alias wirklich 
-        löschen möchte. Es gibt die Auswahlmöglichkeiten \dq Abbrechen\dq  und \dq Bestätigen\dq .\\ 
-        Wird auf \dq Bestätigen\dq  geklickt, wird dies dem ViewModel mitgeteilt und die Meldung schließt sich.\\
-        Wird auf \dq Abbrechen\dq  geklickt, oder die Zurück-Taste (des Endgeräts) betätigt, schließt sicht die Meldung ebenfalls.
+        löschen möchte. Es gibt die Auswahlmöglichkeiten \dq{}Abbrechen\dq{} und \dq{}Bestätigen\dq{}.\\ 
+        Wird auf \dq{}Bestätigen\dq{} geklickt, wird dies dem ViewModel mitgeteilt und die Meldung schließt sich.\\
+        Wird auf \dq{}Abbrechen\dq{} geklickt, oder die Zurück-Taste (des Endgeräts) betätigt, schließt sich die Meldung ebenfalls.
     \end{itemize}
-    Neben der Überschrift befindet sich auf der rechten Seite ein Button auf dem \dq Hinzufügen\dq  steht. 
+    Neben der Überschrift befindet sich auf der rechten Seite ein Button auf dem \dq{}Hinzufügen\dq{} oder ein gleichbedeutendes Symbol steht. 
     Wird auf diesen geklickt, wechselt die App in den Screen zum Hinzufügen eines lokalen Aliasses.
 \end{itemize}
 Kann der gesamte Inhalt der ausführlichen Anzeige nicht auf einem Bildschirm angezeigt werden, erlaubt sie es zu scrollen.
@@ -65,7 +65,7 @@ Kann der gesamte Inhalt der ausführlichen Anzeige nicht auf einem Bildschirm an
 Es gibt zwei Möglichkeiten, von der kompakten in die ausführliche Anzeige zu wechseln:
 \begin{itemize}
     \item Der Benutzer klickt auf den Button zum Wechsel in die ausführliche Anzeige rechts unten.
-    \item Der Benutzer packt die kompakte Anzeige im oberen Teil (Überschrift und höher) und zeiht sie nach oben (drag-Operation).
+    \item Der Benutzer packt die kompakte Anzeige im oberen Teil (Überschrift und höher) und zieht sie nach oben (drag-Operation).
 \end{itemize}
 In beiden Fällen gibt es die gleiche Animation beim Wechseln: Die kompakte Anzeige wird nach oben hin immer 
 höher, bis sie so hoch ist wie der Bildschirm. Danach befindet sie sich in der ausführlichen Anzeige.
