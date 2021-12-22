@@ -39,14 +39,12 @@ Folgende Aufgaben werden erfüllt:
     \end{itemize}
 \end{itemize}
 
-\paragraph*{Initiale Sortierung}
-Absteigend nach dem Zeitpunkt der Änderung
-
-\paragraph*{Desktop}
-\subparagraph*{Statischer Aufbau}
-Die Seite ist unterteilt in zwei übereinanderliegende horizontale Boxen.
+\paragraph*{Statischer Aufbau}
+\subparagraph*{Desktop}
+Die Seite ist unterteilt in zwei übereinanderliegende horizontale Boxen. \\
 In der oberen Box steht der zentrierte Titel \dq Änderungen \dq.
 Die untere Box beinhaltet jeweils ein Element dass die Aktionen \dq Alle durchführen\dq{} und \dq Alle revidieren\dq{} repräsentiert.
+
 Des Weiteren beinhaltet diese Box darunter eine Auflistung aller Änderungen in tabellarischer Form. Diese ist wie folgt gegeben:
 
 \begin{itemize}
@@ -58,23 +56,18 @@ Des Weiteren beinhaltet diese Box darunter eine Auflistung aller Änderungen in 
 
 Die Spalten 1 bis 2 beinhalten ein Textfeld zur Anzeige der Informationen.
 Die Spalte 3 beinhaltet eine zweispaltige Tabelle. Diese zeigt die konkreten Daten der Änderung nach dem Schema \dq Attribut - Wert \dq{}, zum Beispiel \dq Gebäude - 50.34 \dq{} für einen offiziellen Alias, an.
-Die Spalte 4 beinhaltet eine Box. Diese beinhaltet Elemente, die die Aktionen \dq Akzeptieren \dq{} und \dq Revidieren \dq{} repräsentieren.
-Die Spalten 1 und 2 besitzen ein Sortierungselement am rechten Ende.
+Die Spalte 4 beinhaltet eine Box. Diese beinhaltet Elemente, die die Aktionen \dq Akzeptieren \dq{} und \dq Revidieren \dq{} repräsentieren. \\
+Die Spalten 1 und 2 besitzen ein Sortierungselement am linken Ende.
 
-\subparagraph*{Dynamisches Verhalten}
-Bei Klick auf ein Sortierungselement wird die Sortierung der Tabelle geändert.
-Ist die Tabelle absteigend oder nicht nach der zugehörigen Spalte sortiert, so wird beim Klick auf das Sortierelement die Tabelle aufsteigend nach dieser Spalte sortiert.
-Ist die Tabelle bereits aufsteigend nach der zugehörigen Spalte sortiert, so wird beim Klick auf das Sortierelement die Tabelle absteigend nach dieser Spalte sortiert.
-
-\paragraph*{Mobil}
-\subparagraph*{Statischer Aufbau}
-Die Seite ist in zwei übereinanderliegende horizontale Boxen aufgeteilt. Diese nehmen die volle ihnen zur Verfügung stehende Horizontale ein.
+\subparagraph*{Mobil}
+Die Seite ist in zwei übereinanderliegende horizontale Boxen aufgeteilt. Diese nehmen die volle ihnen zur Verfügung stehende Horizontale ein. \\
 Die obere Box beinhaltet den zentrierten Titel \dq Änderungen\dq.
-Die untere Box beinhaltet die Sortierungsoptionen, die Änderungen und zwei Aktionselemente, die die Aktionen \dq Alle durchführen\dq{} und \dq Alle revidieren\dq{} repräsentieren.
-Die Sortierungsoptionen befinden sich ganz oben und ist in zwei Auswahlelemente aufgeteilt. 
+Die untere Box beinhaltet die Sortierungsoptionen, die Änderungen und zwei Aktionselemente, die die Aktionen \dq Alle durchführen\dq{} und \dq Alle revidieren\dq{} repräsentieren. \\
+Die Sortierungsoptionen befinden sich ganz oben und sind in zwei Auswahlelemente aufgeteilt. 
 Das erste Auswahlelement beinhaltet jeweils einen Eintrag zu Zeit und Kategorie.
-Das zweite Auswahlelement beinhaltet die Einträge \dq Aufsteigend \dq{} und \dq Absteigend \dq{} oder Synonyme bzw. Abkürzungen dieser.
+Das zweite Auswahlelement beinhaltet die Einträge \dq Aufsteigend \dq{} und \dq Absteigend \dq{} oder Synonyme bzw. Abkürzungen dieser.\\
 Unter den Sortierungsoptionen befinden sich die Aktionselemente, darunter folgen die Änderungen.
+
 Jede Änderung befindet sich in seinem eigenen Abschnitt, dieser ist wiederum in folgende Segmente aufgeteilt:
 
 \begin{itemize}
@@ -88,7 +81,13 @@ Segment 1 befindet sich ganz oben im Änderungs-Abschnitt. Segmente 2 und 3 folg
 Dabei enthält Segment 3 eine zweispaltige Tabelle. Diese zeigt die konkreten Daten der Änderung nach dem Schema \dq Attribut - Wert \dq{}, zum Beispiel \dq Gebäude - 50.34 \dq{} für einen offiziellen Alias, an.
 Segment 4 enthält eine Box. Diese beinhaltet Elemente, die die Aktionen \dq Akzeptieren \dq{} und \dq Revidieren \dq{} repräsentieren.
 
-\subparagraph*{Dynamisches Verhalten}
+\paragraph*{Dynamisches Verhalten}
+\subparagraph*{Desktop}
+Bei Klick auf ein Sortierungselement wird die Sortierung der Tabelle geändert.
+Ist die Tabelle absteigend oder nicht nach der zugehörigen Spalte sortiert, so wird beim Klick auf das Sortierelement die Tabelle aufsteigend nach dieser Spalte sortiert.
+Ist die Tabelle bereits aufsteigend nach der zugehörigen Spalte sortiert, so wird beim Klick auf das Sortierelement die Tabelle absteigend nach dieser Spalte sortiert.
+
+\subparagraph*{Mobil}
 Die Auswahl der Sortierungsoptionen bestimmt die angezeigte Reihenfolge der offiziellen Aliasse.
 Ist \dq Aufsteigend \dq{} ausgewählt, so werden die offiziellen Aliasse nach der ausgewählten Spalte, referiert durch den Eintrag, aufsteigend sortiert.
 Ist \dq Absteigend \dq{} ausgewählt, so werden die offiziellen Aliasse nach der ausgewählten Spalte, referiert durch den Eintrag, absteigend sortiert.
@@ -96,3 +95,8 @@ Ist \dq Absteigend \dq{} ausgewählt, so werden die offiziellen Aliasse nach der
 \paragraph*{Allgemeines dynamisches Verhalten}
 Wird über ein Aktions- oder ein Sortierungselement gehovert oder auf ein solches geklickt, so ändert sich die Hintergrundfarbe auf eine hellere Abwandlung der vorherigen Hintergrundfarbe.
 Wird nicht mehr über das Element gehovert oder wurde etwas anderes angeklickt, so wird die Hintergrundfarbe auf den originalen Wert gesetzt.
+
+\paragraph*{Initialer Zustand}
+Die Änderungen sind absteigend nach den Zeiten sortiert.
+Es werden alle Änderungen der aktuellen Session angezeigt.
+Die Filteroptionen sind entsprechend angepasst.
