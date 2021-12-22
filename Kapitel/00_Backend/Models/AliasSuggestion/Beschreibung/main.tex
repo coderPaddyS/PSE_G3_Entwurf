@@ -1,0 +1,26 @@
+\subsection{Klassenbeschreibung}%$$$M
+\paragraph*{Kurzbeschreibung}
+    Repräsentiert einen bestehenden Alias-Vorschlag. 
+\paragraph*{Enthaltene Attribute}
+\begin{itemize}
+    \item id : int
+    		\paragraph*{Beschreibung}
+            Generelle ID die zum Speichern in einer Datenbank notwendig ist.
+    \item name : String
+            \paragraph{Beschreibung}
+            Der Alias,der vorgeschlagen wird.
+    \item mapID : int
+            \paragraph{Beschreibung}               
+            MapId mittels der das Kartenobjekt, auf das der Alias bezogen ist, eindeutig identifiziert ist.     
+    \item creator : User
+            \paragraph{Beschreibung}               
+            Ersteller des Vorschlages. 
+    \item posVotes : int
+            \paragraph{Beschreibung}               
+            Anzahl der abgegebenen positiven Bewertungen.
+    \item negVotes : int  
+            \paragraph{Beschreibung}           
+            Anzahl der abgegebenen positiven Bewertungen.   
+    \item votedUsers : List<user : String>
+            \paragraph{Beschreibung}        
+            List der eindeutigen Kennzeichner aller Nutzer, die diesen Vorschlag bewertet oder erstellt haben.

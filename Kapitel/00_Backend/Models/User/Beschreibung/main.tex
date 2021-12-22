@@ -1,0 +1,15 @@
+\subsection{Klassenbeschreibung}%$$$M
+\paragraph*{Kurzbeschreibung}
+Repräsentiert eindeutig einen registrierten Nutzer mit seinen jeweiligen Berechtigungen.
+\paragraph*{Enthaltene Attribute}
+\begin{itemize}
+    \item id : long
+    		\paragraph*{Beschreibung}
+            Generelle ID die zum Speichern in einer Datenbank notwendig ist.
+    \item name : String
+            \paragraph{Beschreibung}
+            Der eindeutige Kennzeichner unter dem ein Nutzer im System identifizierbar ist.
+    \item Authorities : Collectiton<? extends GrantedAuthorities>
+            \paragraph{Beschreibung}               
+            Sammlung aller Berechtigungen(Rollen), die dem Nutzer gewährt worden sind. Insbesondere ist hier zwischen
+            \dq Nutzer \dq und \dq Admin \dq zu unterscheiden.
