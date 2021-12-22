@@ -1,0 +1,23 @@
+\paragraph{\texttt{getAliasSuggestions(minValToShowPos : int, minValToShowNeg : int) : List<(aliasSuggestion : String, mapID : int, evaluationPos : int, evaluationNeg : int)>}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt eine Liste der Alias-Vorschläge samt der ID des jeweiligen, zugehörigen Kartenobjekts und der Anzahl der positiven Bewertung und negativen Bewertungen als 3-Tupel zurück. Dabei werden lediglich Alias-Vorschläge zurückgegeben, die die Mindestanzahl von positiven oder negativen Bewertungen erfüllen, um angezeigt zu werden, zurück.
+\paragraph*{Beschreibung}
+Die Methode ist ausschließlich von Administratoren aufzurufen.
+Die Methode ermöglicht, dass ein Administrator eine Liste der Alias-Vorschläge samt der ID des jeweiligen, zugehörigen Kartenobjekts und der Anzahl der positiven Bewertung und negativen Bewertungen als 4-Tupel anfragen kann. 
+Es werden lediglich die Alias-Vorschläge angezeigt, die die Mindestanzahl von positiven oder negativen Bewertungen erfüllen.
+Hierfür wird die Mindestanzahl von positiven und negativen Bewertungen übergeben, die ein Alias-Vorschlag erfüllen muss, damit er angezeigt wird.
+Es ist möglich, einen oder beide Parameter nicht zu übergeben, dann wird der bereits festgelegte Standardwert berücksichtigt.
+\paragraph*{Parameter}
+\begin{itemize}
+	\item minValToShowPos : int
+		\paragraph*{Beschreibung}
+		Die Mindestanzahl von positiven Bewertungen, die ein Alias-Vorschlag haben muss, damit er in der Liste aufgenommen und zurückgegeben wird.
+		Wenn dieser Parameter nicht übergeben wird, wird der festgelegte Standardwert benutzt.
+	\item minValToShowNeg : int
+		\paragraph*{Beschreibung}
+		Die Mindestanzahl von negativen Bewertungen, die ein Alias-Vorschlag haben muss, damit er in der Liste aufgenommen und zurückgegeben wird. 
+		Wenn dieser Parameter nicht übergeben wird, wird der festgelegte Standardwert benutzt.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Die Liste mit den Alias-Vorschlägen samt der ID des jeweiligen, zugehörigen Kartenobjekts und der Anzahl der positiven Bewertung und negativen Bewertungen als 4-Tupel. 
+Die Alias-Vorschlägen erfüllen die Mindestanzahl von positiven oder negativen Bewertungen, um angezeigt zu werden.
