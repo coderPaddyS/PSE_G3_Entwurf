@@ -1,0 +1,15 @@
+\paragraph{\texttt{blacklistAliasSuggestion(aliasSuggestion : String) : boolean}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Setzt den gewünschten Alias-Vorschlag auf die Blacklist.
+\paragraph*{Beschreibung}
+Die Methode ist ausschließlich von Administratoren aufzurufen.
+Gibt die Anweisung an die Schnittstelle \texttt{AliasSuggestionService}, einen Alias-Vorschlag auf die Blacklist zu setzen.
+Die Methode ermöglicht, dass ein Administrator einen Alias-Vorschlag durch Angeben der entsprechenden Zeichenkette auf die Blacklist setzen und damit ablehnen kann.
+\paragraph*{Parameter}
+\begin{itemize}
+	\item aliasSuggestion : String
+		\paragraph*{Beschreibung}
+		Die Zeichenkette des gewünschten, auf die Blacklist zu setzenden Alias-Vorschlags.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Wahr, wenn der gewünschte Alias-Vorschlag erfolgreich auf die Blacklist gesetzt werden konnte oder wenn der Alias-Vorschlag bereits auf die Blacklist gesetzt war, ansonsten falsch.
