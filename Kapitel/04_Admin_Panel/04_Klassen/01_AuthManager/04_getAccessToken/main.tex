@@ -1,0 +1,12 @@
+\paragraph{\texttt{+getAccessToken() : String}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Getter für den Access-Token.
+\paragraph*{Beschreibung}
+Getter für den Access-Token.
+Ist kein Access-Token gesetzt, so wird der Nutzer aufgefordert sich zu authentifizieren, sofern der AuthManager durch \verb#AuthManager::configure# konfiguriert wurde.
+Ist der Access-Token invalide, so wird versucht diesen zu erneuern.
+Treten Fehler auf, oder wurde der AuthManager nicht authentifiziert, wird \verb#null# zurückgegeben.
+\paragraph*{Parameter}
+Keine
+\paragraph*{Rückgabewert}
+Access-Token oder \verb#null#
