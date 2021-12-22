@@ -32,13 +32,12 @@ Veranlasst die Löschung des Suchverlaufs.
 \paragraph*{Rückgabewert}
 void
 
-\subsubsection{+ changeStoreSearchHistory()}%$$$M
+\subsubsection{+ setStoreSearchHistory(value : boolean)}%$$$M
 \paragraph*{Beschreibung}
-Veranlasst die Änderung der Speicherung des Suchverlaufs. 
-Wenn er gespeichert wurde wird er nicht mehr gespeichert und umgekehrt.
+Veranlasst die Änderung der Speicherung des Suchverlaufs abhängig vom gegebenen Wert.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item keine
+    \item value : boolean
 \end{itemize}
 \paragraph*{Rückgabewert}
 void
@@ -65,7 +64,7 @@ LiveData<List<String>>, Liste der Namen der unterstützten Sprachen in den entsp
 
 \subsubsection{+ getTheme() : LiveData<Theme>}%$$$M
 \paragraph*{Beschreibung}
-Gibt das aktuell ausgewähltes Theme zurück.
+Gibt das aktuell ausgewählte Theme zurück.
 \paragraph*{Parameter}
 \begin{itemize}
     \item keine
