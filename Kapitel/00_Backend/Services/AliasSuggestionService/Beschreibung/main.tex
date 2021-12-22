@@ -1,0 +1,10 @@
+\subsubsection*{Klassenbeschreibung}%$$$M
+\paragraph*{Kurzbeschreibung}
+Zugriff auf zugrundeliegende Datenhaltung der Aliasvorschlägge.
+\paragraph*{Enthaltene Methoden}
+\begin{itemize}
+    \item \texttt{addAliasSuggestion(name :String, username : String, mapID : int)}
+    \item \texttt{removeAliasSuggestion(mapID : int, name : String)}
+    \item \texttt{voteForAlias(mapID : int, alias : String, vote : boolean, user : String)}
+    \item \texttt{getAliasSuggestions(posAmount : int, negAmount : int) : (List<(alias : String, mapID : int, rating : int)>, List<(alias : String, mapID : int, rating : int)>)}
+\end{itemize}
