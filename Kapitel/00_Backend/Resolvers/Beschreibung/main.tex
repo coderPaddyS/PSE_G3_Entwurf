@@ -1,0 +1,17 @@
+\subsection*{Paketbeschreibung}%$$$M
+\paragraph*{Kurzbeschreibung}
+Beinhaltet die Schnittstellen, die von außen durch Http-Requests über die GraphQL-Schnittstelle aufgerufen werden können.
+\paragraph*{Beschreibung}
+Der Aufruf der Methoden der Klassen dieses Paketes geschieht durch die in den Resourcen definierte GraphQL-Schnittstelle.
+Wird GraphQL nicht genutzt, so muss auf andere Weise sichergestellt werden, dass die jeweiligen Http-Request zur Ausführung der richtigen Methoden
+führen und die richtige Rückgabe erzeugt wird.
+\paragraph*{Enthaltene Pakete}
+\begin{itemize}
+    \item MutationResolver
+    		\paragraph*{Beschreibung}
+        Bietet Schnittstellen zur Manipulation der gespeicherten Daten.
+    \item QueryResolver
+    		\paragraph*{Beschreibung}
+    		Bietet Schnittstelle zum Abfragen gespeicherter Daten.
+\end{itemize}
+

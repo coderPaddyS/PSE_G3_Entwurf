@@ -1,0 +1,17 @@
+\subsubsection*{Klassenbeschreibung}%$$$M
+\paragraph*{Kurzbeschreibung}
+Nimmt HTTP-Requests zur Abfrage von Informationen über die hinterlegten Aliasse sowie über die Blacklist entgegen.
+Dafür empfehlen wir, dass alle Klassen dieses Paketes von der Libraryklasse \dq GraphQLQueryResolver \dq erben sollten.
+\paragraph*{Enthaltene Methoden}
+\begin{itemize}
+    \item \texttt{getAlias(mapID : int) : List<Alias> aliases}
+    \item \texttt{getAlias(mapID : int, userID : String) : List<Alias> aliases}
+    \item \texttt{getUpdates(version : int) : (toAdd : List<Alias>, toDelete : List<Alias>, newVersion : int)}
+    \item \texttt{getBlacklist() : List<alias : String>}
+\end{itemize}
+\paragraph*{Genutzte Klassen}
+\begin{itemize}
+    \item AliasService
+    \item DeletedAliasService
+    \item BlacklistService
+\end{itemize}

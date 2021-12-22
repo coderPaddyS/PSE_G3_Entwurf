@@ -1,0 +1,11 @@
+\subsubsection*{Klassenbeschreibung}%$$$M
+\paragraph*{Kurzbeschreibung}
+Verwaltet Zugriffe auf die zugrundeliegende Datenbank der vorhandenen Aliasse.
+Dazu gehören das Finden aller Aliasse zu einer bestimmten MapID, das Löschen und Finden mittels das Namens sowie
+das Abspeichern neuer Aliasse.
+\paragraph*{Enthaltene Methoden}
+\begin{itemize}
+    \item findByMapID(mapID : int) : List<alias : String>
+    \item deleteByName(alias : String) 
+    \item findByName(alias : String)
+\end{itemize}
