@@ -6,7 +6,7 @@ Die Methode ist ausschließlich von Administratoren aufzurufen.
 Gibt die Anweisung an die Schnittstelle \texttt{AliasService}, eine Liste der Aliasse des gewünschten Kartenobjekts, die ein bestimmter Benutzer ursprünglich vorgeschlagen hatte, zurückzugeben.
 Die Methode ermöglicht, dass ein Administrator eine Liste aus allen Aliassen eines Kartenobjekts anfragen kann, die ein bestimmter Benutzer ursprünglich vorgeschlagen hatte, jeweils als Zeichenkette.
 D.h., durch die Methode erhält man alle Alias-Vorschläge des Benutzers, die bereits von einem Administrator angenommen und somit zu globalen Aliasse verwandelt wurden.
-Hierfür wird die ID des gewünschten Kartenobjekts und das Pseudonym des gewünschten Benutzers übergeben.
+Hierfür wird die ID des gewünschten Kartenobjekts und der vom Access-Token abgeleitete Benutzeridentifikator des gewünschten Benutzers übergeben.
 \paragraph*{Parameter}
 \begin{itemize}
     \item mapID : int
@@ -14,7 +14,7 @@ Hierfür wird die ID des gewünschten Kartenobjekts und das Pseudonym des gewün
     		Die ID des Kartenobjekts, dessen Aliasse man zurückgegeben haben möchte.
     	\item user : String
     		\paragraph*{Beschreibung}
-    		Das Pseudonym des Benutzers, dessen Aliasse man zurückgegeben haben möchte.
+    		Der vom Access-Token abgeleitete Benutzeridentifikator des Benutzers, dessen Aliasse man zurückgegeben haben möchte.
 \end{itemize}
 \paragraph*{Rückgabewert}
 Die Liste mit den Aliassen des gewünschten Kartenobjekts, die der Benutzer ursprünglich vorgeschlagen hatte, jeweils als Zeichenkette.

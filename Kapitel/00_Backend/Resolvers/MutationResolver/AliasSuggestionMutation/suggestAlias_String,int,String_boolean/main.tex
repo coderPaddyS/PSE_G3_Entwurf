@@ -4,7 +4,7 @@ Schlägt den gewünschten Alias vor.
 \paragraph*{Beschreibung}
 Gibt die Anweisung an die Schnittstelle \texttt{AliasSuggestionService}, einen Alias-Vorschlag zur Datenbank aller Alias-Vorschläge hinzuzufügen.
 Die Methode ermöglicht, dass ein Benutzer einen Alias vorschlagen kann. 
-Hierfür wird die entsprechende Zeichenkette des Alias-Vorschlags und die ID des dazugehörigen Kartenobjekts als auch das Pseudonym des vorschlagenden Benutzers übergeben.
+Hierfür wird die entsprechende Zeichenkette des Alias-Vorschlags und die ID des dazugehörigen Kartenobjekts als auch der vom Access-Token abgeleitete Benutzeridentifikator des vorschlagenden Benutzers übergeben.
 \paragraph*{Parameter}
 \begin{itemize}
 	\item aliasSuggestion : String
@@ -15,7 +15,7 @@ Hierfür wird die entsprechende Zeichenkette des Alias-Vorschlags und die ID des
 		Die ID des Kartenobjekts, für das der Alias als Bezeichner vorgeschlagen wird.
 	\item user : String
 		\paragraph*{Beschreibung}
-		Das Pseudonym des vorschlagenden Benutzers.
+		Der vom Access-Token abgeleitete Benutzeridentifikator des vorschlagenden Benutzers.
 \end{itemize}
 \paragraph*{Rückgabewert}
 Wahr, wenn der gewünschte Alias erfolgreich vorgeschlagen werden konnte, ansonsten falsch.
