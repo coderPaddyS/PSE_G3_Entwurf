@@ -1,7 +1,7 @@
 \subsection{Admin-Layout}
 
-\subsubsection{Statischer Aufbau}
-\paragraph*{Desktop}
+\paragraph*{Statischer Aufbau}
+\subparagraph*{Desktop}
 Das Admin-Layout ist in zwei vertikale Bereiche, Navigation und Seiteninhalt, untergliedert. Diese sind nebeneinander angeordnet.
 Die Navigation ist eine vertikale Box mit der Höhe des Sichtbereichs als Höhe.
 Die Navigation ist so breit wie ihr Inhalt und einfarbig.
@@ -9,26 +9,21 @@ Der Seiteninhalt ist eine vertikale Box. Der Seiteninhalt hat eine Mindesthöhe 
 Der Seiteninhalt nimmt den restlichen horizontalen Bereich ein, der nicht durch die Navigation beansprucht wird.
 Der Seiteninhalt hat eine einheitliche Hintergrundfarbe.
 
-\subparagraph*{Dynamisches Verhalten}
-Die Navigation ist zunächst nach links eingeklappt und zeigt keine Inhalte an. Wird über die Navigation gehovert oder auf diese geklickt,
-so klappt sich die Navigation nach rechts aus. 
-
-\paragraph*{Mobil}
+\subparagraph*{Mobil}
 Das Admin-Layout ist in zwei horizontale Bereiche, Navigation und Seiteninhalt, untergliedert.
 Die Navigation befindet sich am unteren Bildschirmrand und nimmt im geschlossenen Zustand bis zu 10\% der Sichtbereichshöhe ein.
 Die Navigation hat eine einheitliche Hintergrundfarbe und nimmt den kompletten Horizontalen Bereich ein.
 Der Seiteninhalt ist am oberen Bildschirmrand und nimmt die verbleibende Höhe bis zur Navigation ein.
 Der Seiteninhalt nimmt den kompletten horizontalen Bereich ein und hat eine einheitliche Hintergrundfarbe.
 
-\subparagraph*{Dynamisches Verhalten}
+\paragraph*{Dynamisches Verhalten}
+\subparagraph*{Desktop}
+Die Navigation ist zunächst nach links eingeklappt und zeigt keine Inhalte an. Wird über die Navigation gehovert oder auf diese geklickt,
+so klappt sich die Navigation nach rechts aus. 
+
+\subparagraph*{Mobil}
 Die Navigation ist zunächst nach unten eingeklappt. Wird über die Navigation gehovert oder auf diese geklickt,
 so klappt sich die Navigation nach oben aus.
-
-\paragraph*{Dargestellte Inhalte}
-\subparagraph*{Navigation}
-Die Navigation beinhaltet für jede Seite, die das Admin-Layout verwendet, ein Verlinkungselement. 
-Diese Verlinkungselemente sind untereinander angeordnet, ausgehend vom obersten Punkt der Navigation.
-Als letzten Eintrag besitzt die Navigation ein Element mit der Aufschrift \dq Logout \dq. Dieser Eintrag befindet sich ganz unten in der Navigation
 
 \paragraph*{Allgemeines dynamisches Verhalten}
 Alle Seiten, die auf dem Admin-Layout basieren, stehen nur angemeldeten Administratoren zur Verfügung. 
@@ -40,3 +35,9 @@ Wird über ein Element der Navigation gehovert oder geklickt, so wird die Hinter
 Wird nicht mehr über ein Element der Navigation gehovert oder wird auf ein anderes Element geklickt, so werden Hintergrundfarbe und Schriftfarbe zurückgesetzt.
 Wird auf ein Verlinkungselement geklickt, so wird auf die zugehörige Seite weitergeleitet.
 Wird auf das \dq Logout\dq - Element geklickt, so wird der Benutzer abgemeldet und auf die Startseite weitergeleitet.
+
+\paragraph*{Dargestellte Inhalte}
+\subparagraph*{Navigation}
+Die Navigation beinhaltet für jede Seite, die das Admin-Layout verwendet, ein Verlinkungselement. 
+Diese Verlinkungselemente sind untereinander angeordnet, ausgehend vom obersten Punkt der Navigation.
+Als letzten Eintrag besitzt die Navigation ein Element mit der Aufschrift \dq Logout \dq. Dieser Eintrag befindet sich ganz unten in der Navigation
