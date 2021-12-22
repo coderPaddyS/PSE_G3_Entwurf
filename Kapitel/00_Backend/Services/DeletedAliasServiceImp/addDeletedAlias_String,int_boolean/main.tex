@@ -6,7 +6,7 @@ Die Methode implementiert die gleichnamige Methode der Schnittstelle \texttt{Del
 Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
 Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Resolvers} aufgerufen.
 Die Methode ermöglicht, dass ein Administrator einen Alias zur Datenbank der entfernten Aliassen hinzufügen kann.
-Hierfür wird der entfernte Alias als Zeichenkette als auch die ID des dazugehörigen Kartenobjekts übergeben.
+Hierfür wird der Alias als Zeichenkette als auch die ID des dazugehörigen Kartenobjekts übergeben.
 \paragraph*{Parameter}
 \begin{itemize}
     \item deletedAlias : String
@@ -17,4 +17,4 @@ Hierfür wird der entfernte Alias als Zeichenkette als auch die ID des dazugehö
     		Die ID des Kartenobjekts, für das der Alias als Bezeichner gedient hat.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Wahr, wenn der entfernte Alias zur Datenbank der entfernten Aliasse erfolgreich hinzugefügt werden konnte, ansonsten falsch.
+Wahr, wenn der Alias zur Datenbank der entfernten Aliasse erfolgreich hinzugefügt werden konnte oder wenn der Alias bereits in der Datenbank der entfernten Aliasse hinterlegt war, ansonsten falsch.
