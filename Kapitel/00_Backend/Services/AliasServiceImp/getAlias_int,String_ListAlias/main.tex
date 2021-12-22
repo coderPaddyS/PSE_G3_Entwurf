@@ -1,20 +1,21 @@
-\paragraph{\texttt{getAlias(mapID : int, userID : UserID) : List<Alias> aliases}}%$$$M
+\paragraph{\texttt{getAlias(mapID : int, user : String) : List<Alias> aliases}}%$$$M
 \paragraph*{Kurzbeschreibung}
-Definiert das Erteilen der Anweisung an Klasse \texttt{AliasRepository}, eine Liste der Aliasse des gewünschten Kartenobjekts, die ein bestimmter Benutzer ursprünglich vorgeschlagen hatte, zurückzugeben, und gibt diese wiederum zurück.
+Erteilt die Anweisung an Klasse \texttt{AliasRepository}, eine Liste der Aliasse des gewünschten Kartenobjekts, die ein bestimmter Benutzer ursprünglich vorgeschlagen hatte, zurückzugeben, und gibt diese wiederum zurück.
 \paragraph*{Beschreibung}
+Die Methode implementiert die gleichnamige Methode der Schnittstelle \texttt{AliasService}.
 Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
 Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Resolvers} aufgerufen.
 Die Methode ermöglicht, dass ein Administrator eine Liste aus allen Aliassen eines Kartenobjekts anfragen kann, die ein bestimmter Benutzer ursprünglich vorgeschlagen hatte.
 D.h., durch die Methode erhält man alle Alias-Vorschläge des Benutzers, die bereits von einem Administrator angenommen und somit zu globalen Aliasse verwandelt wurden.
-Hierfür wird die ID des gewünschten Kartenobjekts und die ID des gewünschten Benutzers übergeben.
+Hierfür wird die ID des gewünschten Kartenobjekts und das Pseudonym des gewünschten Benutzers übergeben.
 \paragraph*{Parameter}
 \begin{itemize}
     \item mapID : int
     		\paragraph*{Beschreibung}
     		Die ID des Kartenobjekts, dessen Aliasse man zurückgegeben haben möchte.
-    	\item userID : UserID
+    	\item user : String
     		\paragraph*{Beschreibung}
-    		Die ID des Benutzers, dessen Aliasse man zurückgegeben haben möchte.
+    		Das Pseudonym des Benutzers, dessen Aliasse man zurückgegeben haben möchte.
 \end{itemize}
 \paragraph*{Rückgabewert}
 Die Liste mit den Aliassen des gewünschten Kartenobjekts, die der Benutzer ursprünglich vorgeschlagen hatte.
