@@ -9,7 +9,9 @@ Es existieren folgende Tabellen:
 \begin{itemize}
     \item buildings: Tabelle mit BuildingEntity-Elementen. Hierin sind alle Gebäude gespeichert.
     \item rooms: Tabelle mit RoomEntity-Elementen. Hierin sind alle Räume gespeichert.
-    \item searches: Tabelle mit SearchEntity-Elementen. Hierin werden alle erfolgreichen Suchen gespeichert. 
+    \item globalAliases: Tabelle mit AliasEntity-Elementen. Hierin sind die globalen Aliasse gespeichert.
+    \item localAliases: Tabelle mit AliasEntity-Elementen. Hierin sind die lokalen Aliasse gespeichert.
+    \item searchHistory: Tabelle mit SearchEntity-Elementen. Hierin werden alle erfolgreichen Suchen gespeichert. 
     Es ist immer nur die letzte Suche mit einem Suchbegriff gespeichert.
 \end{itemize}
 
@@ -27,6 +29,7 @@ Diese Datenklasse enthält die Daten zu einem Gebäude.
     \item name : String Anzeigename des Gebäudes auf der Karte.
     \item levelMin : int Etagennummer der untersten Etage (-1 = 1.UG, 0 = EG, 1 = 1.OG).
     \item levelMax : int Etagennummer der obersten Etage.
+    \item address : String Adresse des Gebäudes.
 \end{itemize}
 
 %---------------------------------------------------
@@ -41,6 +44,7 @@ Diese Datenklasse enthält die Daten zu einem Raum.
     \item name : String Anzeigename des Raums auf der Karte.
     \item mapId : int MapId des Gebäudes in dem sich der Raum befindet.
     \item level : int Nummer der Etage, auf der sich der Raum befindet.
+    \item type : int Typ des Raumes.
 \end{itemize}
 
 %---------------------------------------------------
@@ -62,9 +66,21 @@ Es handelt sich hierbei um eine Datenklasse, die als \href{https://developer.and
 \subparagraph*{Typ}
 Datenklasse.
 \subparagraph*{Beschreibung}
-Diese Datenklasse enthält die Daten für getätigte Suche.
+Diese Datenklasse enthält Einträge des Suchverlaufs.
 \subparagraph*{Daten}
 \begin{itemize}
     \item searchTerm : String Suchbegriff. [Primärschlüssel]
     \item date : Date Zeitpunkt der Suche.
+\end{itemize}
+
+%---------------------------------------------------
+\paragraph{AliasEntity}
+\subparagraph*{Typ}
+Datenklasse.
+\subparagraph*{Beschreibung}
+Diese Datenklasse speichert einen Alias.
+\subparagraph*{Daten}
+\begin{itemize}
+    \item term : String Alternativer Bezeichner (Alias) für Kartenobjekt.
+    \item mapId : int MapId des zugehörigen Kartenobjekts
 \end{itemize}
