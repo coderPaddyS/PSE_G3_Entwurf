@@ -1,9 +1,9 @@
-\paragraph{\texttt{getAliasSuggestions(minValToShowPos : int, minValToShowNeg : int) : List<(aliasSuggestion : String, mapID : int, evaluation : (int, int))>}}%$$$M
+\paragraph*{\texttt{getAliasSuggestions(minValToShowPos : int, minValToShowNeg : int) : List<(aliasSuggestion : AliasSuggestion>}}%$$$M
 \paragraph*{Kurzbeschreibung}
-Gibt eine Liste der Alias-Vorschläge samt der ID des jeweiligen, zugehörigen Kartenobjekts und der Anzahl der positiven Bewertung und negativen Bewertungen als 3-Tupel zurück. Dabei werden lediglich Alias-Vorschläge zurückgegeben, die die Mindestanzahl von positiven oder negativen Bewertungen erfüllen, um angezeigt zu werden, zurück.
+Gibt eine Liste der Alias-Vorschläge.
 \paragraph*{Beschreibung}
 Die Methode ist ausschließlich von Administratoren aufzurufen.
-Die Methode ermöglicht, dass ein Administrator eine Liste der Alias-Vorschläge samt der ID des jeweiligen, zugehörigen Kartenobjekts und der Anzahl der positiven Bewertung und negativen Bewertungen als 3-Tupel anfragen kann. 
+Die Methode ermöglicht, dass ein Administrator eine Liste der Alias-Vorschläge anfragen kann.
 Es werden lediglich die Alias-Vorschläge angezeigt, die die Mindestanzahl von positiven oder negativen Bewertungen erfüllen.
 Hierfür wird die Mindestanzahl von positiven und negativen Bewertungen übergeben, die ein Alias-Vorschlag erfüllen muss, damit er angezeigt wird.
 Es ist möglich, einen oder beide Parameter nicht zu übergeben, dann wird der bereits festgelegte Standardwert berücksichtigt.
@@ -19,5 +19,4 @@ Es ist möglich, einen oder beide Parameter nicht zu übergeben, dann wird der b
 		Wenn dieser Parameter nicht übergeben wird, wird der festgelegte Standardwert benutzt.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Die Liste mit den Alias-Vorschlägen samt der ID des jeweiligen, zugehörigen Kartenobjekts und der Anzahl der positiven Bewertung und negativen Bewertungen als 3-Tupel. 
-Die Alias-Vorschlägen erfüllen die Mindestanzahl von positiven oder negativen Bewertungen, um angezeigt zu werden.
+Die Liste mit den Alias-Vorschlägen. 
