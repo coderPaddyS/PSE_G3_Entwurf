@@ -2,7 +2,8 @@
 \paragraph*{Typ}
 Composable.
 \paragraph*{Beschreibung}
-Die Aufgabe dieses Composables ist das Anzeigen der Karte und der Schaltflächen zur Kartensteuerung.\\
+Dieses Composable ist für den Aufbau der Ansicht des Kartenmodus verantwortlich.
+Dies beinhaltet das Anzeigen der Karte und der Schaltflächen zur Kartensteuerung.\\
 Dazu ist folgendes nötig:
 \begin{itemize}
     \item Anzeigen der Karte selbst. Diese besteht aus
@@ -17,6 +18,14 @@ Dazu ist folgendes nötig:
     ist, die Etage wechseln.
     \item Anzeigen des Buttons zur Ortung.
     \item Anzeigen eines Kompasses, der die Himmelsrichtungen auf der Karte zeigt.
+\end{itemize}
+Wird ein Kartenobjekt fokussiert müssen die Informationen dazu mithilfe eines MapObjectInfoDisplays angezeigt werden.\\
+Weiter werden folgende Schaltflächen angezeigt, durch welche man in andere Ansichten navigieren kann:
+\begin{itemize}
+    \item Einstellungsbutton: In der oberen linken Ecke wird ein Button mit einem Einstellungssymbol angezeigt. 
+    Wird dieser geklickt, wird der Einstellungsmodus aufgerufen.
+    \item Suchleiste: Oben, neben dem Einstellungsbutton wird eine Suchleiste angezeigt. 
+    Wird auf diese geklickt, wird der Suchmodus aufgerufen.
 \end{itemize}
 
 \paragraph*{Parameter}
