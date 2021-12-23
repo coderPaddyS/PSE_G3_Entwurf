@@ -1,0 +1,19 @@
+\paragraph{\texttt{removeAliasSuggestion(aliasSuggestion : String, mapID : int) : boolean}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Definiert das Erteilen der Anweisung an Klasse \texttt{AliasSuggestionRepository}, einen Alias-Vorschlag aus der Datenbank der Alias-Vorschläge zu entfernen.
+\paragraph*{Beschreibung}
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Resolvers} aufgerufen.
+Die Methode ermöglicht, dass ein Alias-Vorschlag aus der Datenbank der Alias-Vorschlägen entfernt werden kann.
+Hierfür wird der gewünschte Alias-Vorschlag als Zeichenkette und die ID des dazugehörigen Kartenobjekts übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item aliasSuggestion : String
+    		\paragraph*{Beschreibung}
+    		Der Alias-Vorschlag als Zeichenkette, den man aus der Datenbank der Alias-Vorschläge entfernen möchte.
+    \item mapID : int
+    		\paragraph*{Beschreibung}
+    		Die ID des Kartenobjekts, für das der Alias-Vorschlag Alias als Bezeichner dient.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Wahr, wenn der gewünschte Alias-Vorschlag erfolgreich aus der Datenbank der Alias-Vorschläge entfernt werden konnte oder wenn der Alias-Vorschlag bereits nicht in der Datenbank der Alias-Vorschläge hinterlegt war, ansonsten falsch.
