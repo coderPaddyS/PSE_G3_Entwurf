@@ -1,0 +1,22 @@
+\subsubsection{AliasDataProvider}
+\paragraph*{Typ}
+Implementiert IAliasDataProvider.
+\paragraph*{Beschreibung}
+Der AliasDataProvider ist eine Fassade des Models. 
+Dahinter verbirgt sie die gesamte Funktionalität zum Lesen, Modifizieren, Vorschlagen und Löschen von Aliassen.\\
+Diese Klasse besitzt einen LocalAliasManager und einen GlobalAliasManager.
+
+\paragraph*{Methoden, die an den LocalAliasManager delegiert werden}
+\begin{itemize}
+    \item \texttt{+ getLocalAliases(mapId : int) : LiveData<List<String>>}
+    \item \texttt{+ addLocalAlias(mapId : int, alias : String)}
+    \item \texttt{+ deleteLocalAlias(mapId : int, alias : String)}
+    \item \texttt{+ getGlobalAliases(mapId : int) : List<String>}%diese Methode gehört hier hin, siehe LocalAliasManager
+\end{itemize}
+
+\paragraph*{Methoden, die an den OnlineAliasManager delegiert werden}
+\begin{itemize}
+    \item \texttt{+ suggestGlobalAlias(mapId : int, alias : String) : boolean}
+    \item \texttt{+ getAliasSuggestions(mapId : int) : List<String>}
+    \item \texttt{+ sendAliasFeedback(mapId : int, suggestion : String, feedback : SuggestionFeedback)}
+\end{itemize}
