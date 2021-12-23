@@ -2,11 +2,11 @@
 \paragraph*{Typ}
 Implementiert IMapDataProvider.
 \paragraph*{Beschreibung}
-Diese Klasse ist implementiert die Fassade IMapDataProvider für die Model-Schicht der Karte.\\
+Diese Klasse implementiert die Fassade IMapDataProvider für die Model-Schicht der Karte.\\
 Ein MapDataProvider besitzt eine Instanz der Klassen 
 TileSourceProvider, DisplayDataProvider, MapObjectInformationProvider, PositionDataManager.
 
-\paragraph*{Methoden, die an delegiert TileSourceProvider werden}
+\paragraph*{Methoden, die an TileSourceProvider delegiert werden}
 \begin{itemize}
     \item \texttt{+ getFloorMapTileSource(mapId : int, level : int) : \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}{ITileSource}}
     \item \texttt{+ getBuildingTileSource() : \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}{ITileSource}}
