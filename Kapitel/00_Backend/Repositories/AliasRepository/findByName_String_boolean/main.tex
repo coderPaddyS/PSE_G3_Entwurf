@@ -1,0 +1,17 @@
+\paragraph{\texttt{findByName(alias : String) : int}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt die ID eines in der Datenbank hinterlegten Aliasses zurück.
+\paragraph*{Beschreibung}
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Services} aufgerufen.
+Die Methode ermöglicht, dass die ID eines bestimmten Aliasses durch Angabe der entsprechenden Zeichenkette angefragt werden und zurückbekommen kann.
+Hierfür wird der Alias als Zeichenkette übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item alias : String
+    		\paragraph*{Beschreibung}
+    		Der als Zeichenkette angegebene Alias.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Die ID des als Zeichenkette übergebenen Aliasses, sofern die übergebene Zeichenkette gültig ist.
+Im Fall, dass die übergebene Zeichenkette ungültig ist, wird \texttt{null} zurückgegeben.
