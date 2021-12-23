@@ -1,0 +1,10 @@
+\subsection{Klassenbeschreibung}%$$$M
+\paragraph*{Kurzbeschreibung}
+Konfigurationsklasse, die die Verifiziererkomponente zur Validiereung der Access-Token in JWTFilter ermöglicht.
+\paragraph*{Beschreibung}
+Definiert den Algorithmus und mit diesem und dem Tokensecret aus \dq SecurityProperties \dq die Verifizierungskomponente.
+\paragraph*{Methoden}
+\begin{itemize}
+	\item jwtAlgorithm(properties SecurityProperties) : Algorithm
+    \item verfier(properties : SecurityProperties, algorithm : Algorithm) : JWTVerifier
+\end{itemize}	

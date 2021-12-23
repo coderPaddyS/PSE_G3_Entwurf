@@ -1,0 +1,27 @@
+\paragraph{\texttt{doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Führt den Filter aus. Hierbei wird ggf. anhand des Access-Tokens authorisierung bzw. Authentifizierung vorgenommen.
+\paragraph*{Beschreibung}
+Zunächst wird ggf der Token dem Header des Http-Requests entnommen. Dieser wird anschließend mithilfe des in
+\dq SecurityConfig \dq definierten Verifiers validiert. Ist er gültig, so wird zunächst der Nutzeridentifikator dem Token entnommen und mittels der \dq loadByToken \dq Methode 
+des UserService der entsprechende User geladen. Ist dieser noch nicht vorhanden, so muss dieser mitt der \dq addUser \dq Methode
+zuerst hinzugefügt und dann erneut geladen werden. Anschließend werden die Authorisierungen des Users einem \dq 
+JWTPreAuthenticationToken \dq übergeben. Anschließend wird mit der \dq getContext \dq Methode des SecurityContextHolders der 
+Security-Context geladen und diesem mittels der \dq setAuthentication() \dq Methode der erstellte JWTPreAuthenticationToken 
+übergeben. 
+
+so
+\paragraph*{Parameter}
+\begin{itemize}
+    \item HttpServletRequest
+    		\paragraph*{Beschreibung}
+            Von einem Frontend abgesandter, eintreffender HttpRequest, der ggf. einen Access-Token im Header trägt.
+    \item HttpServletResponse
+        	\paragraph*{Beschreibung}
+            Genutzt um den HttpRequest nach Beenden des Filters weiterzuleiten.
+    \item FilterChain
+    		\paragraph*{Beschreibung}
+            Klasse, die dafür sorgt, dass alle vorangeschaaltenen Filter in einer festen Reihenfolge ausgeführt werden. Da es in diesem Entwurf nur einen Filter gibt,
+            sorgt dieser nur dementsprechend nur für die Ausführung des einen Filters und der Request wird nach dessen Ausführung direkt (an die GraphQL-Schnittstelle) weitergeleitet.
+
+\end{itemize}

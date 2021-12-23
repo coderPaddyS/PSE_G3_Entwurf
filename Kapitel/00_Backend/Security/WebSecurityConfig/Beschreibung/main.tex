@@ -1,0 +1,14 @@
+\subsection{Klassenbeschreibung}%$$$M
+\paragraph*{Kurzbeschreibung}
+Konfigurationsklasse, die die Standdartberechtigungen für die Methoden in Resolverebene festlegt und für die Voranschaltung des Filters sorgt.
+\paragraph*{Beschreibung}
+Die Klasse erbt von \dq WebSecurityConfigurerAdapter \dq und überscheibt die \dq configure \dq Methode, sodass 
+alle Methoden auf Resolverebene standardmäßig ohne jegliche Berechtigungen zugänglich sind und der JWTFilter vorangeschaltet wird.
+\paragraph*{Methoden}
+\begin{itemize}
+	\item configure(HttpSecurity http)
+\end{itemize}	
+\paragraph*{Genutzte Klassen}
+\begin{itemize}
+	\item JWTFilter
+\end{itemize}	
