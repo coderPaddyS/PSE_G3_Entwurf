@@ -1,0 +1,18 @@
+\paragraph{\texttt{addToBlacklist(toBlacklist : String) : boolean}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Erteilt die Anweisung an Klasse \texttt{BlacklistRepository}, eine Zeichenkette in die Blacklist aufzunehmen.
+\paragraph*{Beschreibung}
+Die Methode implementiert die gleichnamige Methode der Schnittstelle \texttt{BlacklistService}.
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Resolvers} aufgerufen.
+Die Methode ermöglicht, dass ein Administrator eine Zeichenkette in die Blacklist aufnehmen kann.
+Dies hat zur Folge, dass ein Alias-Vorschlag, der genau aus dieser Zeichenkette zusammengesetzt ist, nicht angenommen werden kann und herausgefiltert wird.
+Hierfür wird die in die Blacklist aufzunehmende Zeichenkette übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item toBlacklist : String
+    		\paragraph*{Beschreibung}
+    		Die in die Blacklist aufzunehmende Zeichenkette.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Wahr, wenn die übergebene Zeichenkette in die Blacklist erfolgreich aufgenommen werden konnte oder die Zeichenkette bereits in der Datenbank hinterlegt war, ansonsten falsch.
