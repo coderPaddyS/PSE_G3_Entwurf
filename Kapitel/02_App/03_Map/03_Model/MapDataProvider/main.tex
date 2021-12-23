@@ -75,3 +75,45 @@ Speichert eine Position als letzte Position.
 \end{itemize}
 \paragraph*{Rückgabewert}
 Void.
+
+\subsubsection*{\texttt{+ getBuildingAddress(mapId : int) : String}}%$$$M
+\paragraph*{Beschreibung}
+Gibt die Adresse eines Gebäudes zurück.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Gebäudes.
+\end{itemize}
+\paragraph*{Rückgabewert}
+String mit Adresse, oder \texttt{null}, wenn MapId kein Gebäude ist.
+
+\subsubsection*{\texttt{+ getRoomData(mapId : int) : (RoomType, String, int)}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt Daten zu einem Raum zurück.
+\paragraph*{Beschreibung}
+Diese Methode gibt zu einem, durch seine MapId gegebenen, Raum folgende Informationen zurück:
+\begin{itemize}
+    \item Der Typ des Raumes,
+    \item die Nummer des Gebäudes, in dem sich der Raum befindet,
+    \item das Stockwerk, auf dem sich der Raum befindet.
+\end{itemize}
+Ist die gegebene MapId ungültig oder kein Raum, wird \texttt{null} zurückgegeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Raums.
+\end{itemize}
+\paragraph*{Rückgabewert}
+(RoomType, String, int, List<String>) Raumdaten oder \texttt{null}.
+
+\subsubsection*{\texttt{+ getPersons(mapId : int) : List<String>}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt die Namen der Personen zurück, die zu einem Kartenobjekt gehören.
+\paragraph*{Beschreibung}
+Gibt eine Liste mit den vollen Namen (inklusive Titel) aller dem Kartenobjekt zugeordneten 
+Personen zurück. Diese kann leer sein.\\
+Ist die gegebene MapId ungültig ist sie ebenfalls leer.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Kartenobjekts.
+\end{itemize}
+\paragraph*{Rückgabewert}
+List<String> mit den Namen aller zugeordneten Personen.
