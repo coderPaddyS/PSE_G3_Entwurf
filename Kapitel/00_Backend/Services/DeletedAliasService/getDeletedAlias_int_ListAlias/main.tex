@@ -1,0 +1,16 @@
+\paragraph*{\texttt{getDeletedAlias(version : int) : List<alias : String, mapID : int>}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Definiert das Erteilen der Anweisung an Klasse \texttt{DeletedAliasRepository}, eine Liste der entfernten Aliasse seit einer bestimmten Version zurückzugeben, und gibt diese wiederum zurück.
+\paragraph*{Beschreibung}
+Die Methode ist serverintern und wird somit nicht explizit aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Resolvers} aufgerufen.
+Die Methode ermöglicht, dass eine Liste aus allen entfernten Aliassen seit einer bestimmten Version angefragt werden kann.
+Hierfür wird die Version übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item version : int
+    		\paragraph*{Beschreibung}
+    		Die Version, ab der entfernte Aliasse in die Liste aufgenommen werden sollen.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Die Liste mit den entfernten Aliassen seit der gewünschten Version.
