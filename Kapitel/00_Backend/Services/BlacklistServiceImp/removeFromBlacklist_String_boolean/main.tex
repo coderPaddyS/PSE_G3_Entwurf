@@ -1,0 +1,18 @@
+\paragraph{\texttt{removeFromBlacklist(blacklistedToRem : String) : boolean}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Erteilt die Anweisung an Klasse \texttt{BlacklistRepository}, eine Zeichenkette aus der Blacklist zu entfernen.
+\paragraph*{Beschreibung}
+Die Methode implementiert die gleichnamige Methode der Schnittstelle \texttt{BlacklistService}.
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Resolvers} aufgerufen.
+Die Methode ermöglicht, dass ein Administrator eine Zeichenkette aus der Blacklist entfernen kann.
+Dies hat zur Folge, dass ein Alias-Vorschlag, der genau aus dieser Zeichenkette zusammengesetzt ist, nicht mehr herausgefiltert und somit die Möglichkeit hat, angenommen zu werden.
+Hierfür wird die aus der Blacklist zu entfernende Zeichenkette übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item blacklistedToRem : String
+    		\paragraph*{Beschreibung}
+    		Die aus der Blacklist zu entfernende Zeichenkette.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Wahr, wenn die übergebene Zeichenkette aus der Blacklist erfolgreich entfernt werden konnte oder die Zeichenkette bereits nicht in der Blacklist hinterlegt war, ansonsten falsch.
