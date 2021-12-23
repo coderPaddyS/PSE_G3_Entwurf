@@ -1,0 +1,16 @@
+\subsection{Paketbeschreibung}%$$$M
+\paragraph*{Kurzbeschreibung}
+    Repräsentiert einen bestehenden oder gelöschten Alias eines Kartenobjektes. Dementsprechend wird diese Entity entweder
+    in der Datenhaltung der aktuellen oder die der gelöschten Aliasse gespeichert. Ein Alias ist eindeutig und es kann dementsprechend
+    keine zwei Aliasse mit demselben Namen geben.
+\paragraph*{Enthaltene Attribute}
+\begin{itemize}
+    \item id
+    		\paragraph*{Beschreibung}
+            Generelle ID die zum Speichern in einer Datenbank notwendig ist.
+    \item name
+            \paragraph{Beschreibung}
+            Der Alias welcher durch dieses Objekt repräsentiert werden soll.
+    \item mapID 
+            \paragraph{Beschreibung}               
+            MapId mittels der das Kartenobjekt, auf das der Alias bezogen ist, eindeutig identifiziert ist.
