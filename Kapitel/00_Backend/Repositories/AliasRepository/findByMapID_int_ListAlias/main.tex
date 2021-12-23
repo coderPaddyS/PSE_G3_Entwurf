@@ -1,0 +1,16 @@
+\paragraph{\texttt{findByMapID(mapID : int) : List<alias : String> aliases}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt eine Liste der Aliasse, die als Bezeichner für ein bestimmtes Kartenobjekt dienen, zurück.
+\paragraph*{Beschreibung}
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Services} aufgerufen.
+Die Methode ermöglicht, dass eine Liste aus allen Aliassen eines Kartenobjekts angefragt kann.
+Hierfür wird die ID des gewünschten Kartenobjekts übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapID : int
+    		\paragraph*{Beschreibung}
+    		Die ID des Kartenobjekts, dessen Aliasse man zurückgegeben haben möchte.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Die Liste mit den Aliassen des gewünschten Kartenobjekts.
