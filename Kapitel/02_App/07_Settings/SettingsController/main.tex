@@ -1,8 +1,10 @@
-\subsection{Interface ISettingsController}
+\subsubsection{ISettingsController}
+\paragraph*{Typ}
+Interface.
 \paragraph*{Beschreibung}
-Dieses Interface ermöglicht die Verwaltung der Einstellungen.
+Dieses Interface bietet eine Schnittstelle für die Verwaltung der Einstellungen.
 
-\subsubsection{+ setLanguage(language : String)}%$$$M
+\subsubsection*{\texttt{+ setLanguage(language : String)}}%$$$M
 \paragraph*{Beschreibung}
 Prüft, ob die Sprache ein Wert aus getSupportedLanguages() ist und wenn ja, veranlasst die Umstellung der App in die Sprache.
 \paragraph*{Parameter}
@@ -10,19 +12,19 @@ Prüft, ob die Sprache ein Wert aus getSupportedLanguages() ist und wenn ja, ver
     \item language : String = die Sprache, in der die App angezeigt werden soll
 \end{itemize}
 \paragraph*{Rückgabewert}
-void
+Void.
 
-\subsubsection{+ setTheme(theme : Theme)}%$$$M
+\subsubsection*{\texttt{+ setTheme(theme : Theme)}}%$$$M
 \paragraph*{Beschreibung}
-Veranlasst die Umstellung der App auf das Theme.
+Veranlasst die Umstellung der App auf ein Theme.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item theme : Theme = das Theme, in dem die App angezeigt werden soll
+    \item theme : Theme = das Theme, in dem die App angezeigt werden soll.
 \end{itemize}
 \paragraph*{Rückgabewert}
-void
+Void.
 
-\subsubsection{+ deleteSearchHistory()}%$$$M
+\subsubsection*{\texttt{+ deleteSearchHistory()}}%$$$M
 \paragraph*{Beschreibung}
 Veranlasst die Löschung des Suchverlaufs.
 \paragraph*{Parameter}
@@ -30,9 +32,9 @@ Veranlasst die Löschung des Suchverlaufs.
     \item keine
 \end{itemize}
 \paragraph*{Rückgabewert}
-void
+Void.
 
-\subsubsection{+ setStoreSearchHistory(value : boolean)}%$$$M
+\subsubsection*{\texttt{+ setStoreSearchHistory(value : boolean)}}%$$$M
 \paragraph*{Beschreibung}
 Veranlasst die Änderung der Speicherung des Suchverlaufs abhängig vom gegebenen Wert.
 \paragraph*{Parameter}
@@ -40,9 +42,9 @@ Veranlasst die Änderung der Speicherung des Suchverlaufs abhängig vom gegebene
     \item value : boolean = Wert, ob der Suchverlauf gespeichert werden soll oder nicht
 \end{itemize}
 \paragraph*{Rückgabewert}
-void
+Void.
 
-\subsubsection{+ getLanguageIdentifier() : LiveData<String>}%$$$M
+\subsubsection*{\texttt{+ getLanguageIdentifier() : LiveData<String>}}%$$$M
 \paragraph*{Beschreibung}
 Gibt den Namen der ausgewählten Sprache in dieser Sprache zurück.
 \paragraph*{Parameter}
@@ -50,9 +52,9 @@ Gibt den Namen der ausgewählten Sprache in dieser Sprache zurück.
     \item keine
 \end{itemize}
 \paragraph*{Rückgabewert}
-LiveData<String>, Name der ausgewählten Sprache in dieser Sprache
+LiveData<String>, Name der ausgewählten Sprache in dieser Sprache.
 
-\subsubsection{+ getSupportedLanguages() : LiveData<List<String>>}%$$$M
+\subsubsection*{\texttt{+ getSupportedLanguages() : LiveData<List<String>>}}%$$$M
 \paragraph*{Beschreibung}
 Gibt eine Liste der Namen der unterstützten Sprachen in den entsprechenden Sprachen zurück.
 \paragraph*{Parameter}
@@ -60,9 +62,9 @@ Gibt eine Liste der Namen der unterstützten Sprachen in den entsprechenden Spra
     \item keine
 \end{itemize}
 \paragraph*{Rückgabewert}
-LiveData<List<String>>, Liste der Namen der unterstützten Sprachen in den entsprechenden Sprachen
+LiveData<List<String>>, Liste der Namen der unterstützten Sprachen in den entsprechenden Sprachen.
 
-\subsubsection{+ getTheme() : LiveData<Theme>}%$$$M
+\subsubsection*{\texttt{+ getTheme() : LiveData<Theme>}}%$$$M
 \paragraph*{Beschreibung}
 Gibt das aktuell ausgewählte Theme zurück.
 \paragraph*{Parameter}
@@ -70,9 +72,9 @@ Gibt das aktuell ausgewählte Theme zurück.
     \item keine
 \end{itemize}
 \paragraph*{Rückgabewert}
-LiveData<Theme>, aktuell ausgewähltes Theme
+LiveData<Theme>, aktuell ausgewähltes Theme.
 
-\subsubsection{+ getStoreSearchHistory() : LiveData<boolean>}%$$$M
+\subsubsection*{\texttt{+ getStoreSearchHistory() : LiveData<boolean>}}%$$$M
 \paragraph*{Beschreibung}
 Gibt zurück, ob der Suchverlauf gespeichert werden soll (true) oder nicht (false).
 \paragraph*{Parameter}
@@ -82,7 +84,9 @@ Gibt zurück, ob der Suchverlauf gespeichert werden soll (true) oder nicht (fals
 \paragraph*{Rückgabewert}
 LiveData<boolean>, ob der Suchverlauf gespeichert werden soll (true) oder nicht (false).
 
-
-\subsection{class SettingsController implements ISettingsController}
+%----------------------------------------------------------
+\subsubsection{SettingsController}
+\paragraph*{Typ}
+Implementiert ISettingsController.
 \paragraph*{Beschreibung}
-Diese Klasse dient der Verwaltung der Einstellungen.
+Diese Klasse dient der Verwaltung der Einstellungen im ViewModel.
