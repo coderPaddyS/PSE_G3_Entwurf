@@ -1,0 +1,23 @@
+\paragraph{\texttt{addAliasSuggestion(aliasSuggestion : String, mapID : int, user : String) : boolean}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Erteilt die Anweisung an Klasse \texttt{AliasSuggestionRepository}, einen Alias-Vorschlag zur Datenbank der Alias-Vorschläge hinzuzufügen.
+\paragraph*{Beschreibung}
+Die Methode implementiert die gleichnamige Methode der Schnittstelle \texttt{AliasSuggestionService}.
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Resolvers} aufgerufen.
+Die Methode ermöglicht, dass ein Alias-Vorschlag zur Datenbank der Alias-Vorschlägen hinzugefügt werden kann.
+Hierfür wird der gewünschte Alias-Vorschlag als Zeichenkette und die ID des dazugehörigen Kartenobjekts als auch der vorschlagende Benutzer übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item aliasSuggestion : String
+    		\paragraph*{Beschreibung}
+    		Der Alias-Vorschlag als Zeichenkette, den man hinzufügen möchte.
+    \item mapID : int
+    		\paragraph*{Beschreibung}
+    		Die ID des Kartenobjekts, für das der Alias-Vorschlag Alias als Bezeichner dient.
+    	\item user : String
+    		\paragraph*{Beschreibung}
+    		Der Benutzer, der den Alias vorgeschlagen hat.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Wahr, wenn der gewünschte Alias-Vorschlag erfolgreich hinzugefügt werden konnte oder wenn der Alias-Vorschlag bereits in der Datenbank der Alias-Vorschläge hinterlegt war, ansonsten falsch.
