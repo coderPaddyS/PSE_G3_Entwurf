@@ -1,4 +1,4 @@
-\section{MapDisplayDataProvider}
+\subsubsection{MapDisplayDataProvider}
 \paragraph*{Typ}
 Interface.
 \paragraph*{Beschreibung}
@@ -6,7 +6,7 @@ Dieses Interface ist eine Schnittstelle für Lade- und Speicheroperationen zur a
 Klassen dieses Interfaces können von einem Beobachter beobachtet werden. Dazu werden 
 LiveData-Klassen benutzt.
 
-\subsubsection{\texttt{+ getTileSource() : LiveData<ITileSource>}}%$$$M
+\subsubsection*{\texttt{+ getTileSource() : LiveData<ITileSource>}}%$$$M
 \paragraph*{Beschreibung}
 Gibt die ITileSource mit den Kartendaten zurück.
 \paragraph*{Parameter}
@@ -14,7 +14,7 @@ Keine.
 \paragraph*{Rückgabewert}
 LiveData<TileSource> mit den Kartendaten.
 
-\subsubsection{\texttt{+ saveLastPos(pos : IGeoPoint)}}%$$$M
+\subsubsection*{\texttt{+ saveLastPos(pos : IGeoPoint)}}%$$$M
 \paragraph*{Beschreibung}
 Speichert eine gegebene Position als letzte Position.
 \paragraph*{Parameter}
@@ -24,7 +24,7 @@ Speichert eine gegebene Position als letzte Position.
 \paragraph*{Rückgabewert}
 Void.
 
-\subsubsection{\texttt{+ getLastPos() : IGeoPoint}}%$$$M
+\subsubsection*{\texttt{+ getLastPos() : IGeoPoint}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Gibt die letzte Position zurück.
 \paragraph*{Beschreibung}
@@ -36,7 +36,7 @@ Keine.
 \paragraph*{Rückgabewert}
 IGeoPoint, letzte Position.
 
-\subsubsection{\texttt{+ getFocusedPos() : LiveData<IGeoPoint>}}%$$$M
+\subsubsection*{\texttt{+ getFocusedPos() : LiveData<IGeoPoint>}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Gibt die Position zurück, die mittig auf der Karte angezeigt werden muss.
 \paragraph*{Beschreibung}
@@ -48,7 +48,7 @@ Keine.
 \paragraph*{Rückgabewert}
 LiveData<IGeoPoint>, Position, die mittig angezeigt werden soll.
 
-\subsubsection{\texttt{+ getBuildingController() : MapLayerDataController}}%$$$M
+\subsubsection*{\texttt{+ getBuildingController() : MapLayerDataController}}%$$$M
 \paragraph*{Beschreibung}
 Gibt den MapLayerDataController für die Gebäude-Ebene der Karte zurück.
 \paragraph*{Parameter}
@@ -56,7 +56,7 @@ Keine.
 \paragraph*{Rückgabewert}
 MapLayerDataController für die Gebäude-Ebene der Karte.
 
-\subsubsection{\texttt{+ getLevelController() : MapLayerDataController}}%$$$M
+\subsubsection*{\texttt{+ getLevelController() : MapLayerDataController}}%$$$M
 \paragraph*{Beschreibung}
 Gibt den MapLayerDataController für die Etagen-Ebene auf der Karte zurück.
 \paragraph*{Parameter}
@@ -64,7 +64,7 @@ Keine.
 \paragraph*{Rückgabewert}
 MapLayerDataController für die Etagen-Ebene auf der Karte.
 
-\subsubsection{\texttt{+ getLevelChangeController() : LevelChangeController}}%$$$M
+\subsubsection*{\texttt{+ getLevelChangeController() : LevelChangeController}}%$$$M
 \paragraph*{Beschreibung}
 Gibt den LevelChangeControllers für den Etagenwechsel zurück.
 \paragraph*{Parameter}
@@ -72,7 +72,7 @@ Keine.
 \paragraph*{Rückgabewert}
 LevelChangeController für den Etagenwechsel.
 
-\subsubsection{\texttt{+ getMapObjectInfoController() : IMapObjectInfoController}}%$$$M
+\subsubsection*{\texttt{+ getMapObjectInfoController() : IMapObjectInfoController}}%$$$M
 \paragraph*{Beschreibung}
 Gibt den IMapObjectInfoController zurück.
 \paragraph*{Parameter}

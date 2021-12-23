@@ -1,4 +1,4 @@
-\section{IMapObjectInfoController}
+\subsubsection{IMapObjectInfoController}
 \paragraph*{Typ}
 Interface.
 \paragraph*{Beschreibung}
@@ -6,7 +6,7 @@ Dieses Interface definiert eine Schnittstelle, die alle Daten bereitstellt,
 die zum Anzeigen der Informationen zu einem Kartenobjekt benötigt werden. 
 Außerdem bietet es Methoden an, um einige dieser Daten zu ändern.
 
-\subsubsection{\texttt{+ getBuildingAddress(mapId : int) : String}}%$$$M
+\subsubsection*{\texttt{+ getBuildingAddress(mapId : int) : String}}%$$$M
 \paragraph*{Beschreibung}
 Gibt die Adresse eines Gebäudes zurück.
 \paragraph*{Parameter}
@@ -16,7 +16,7 @@ Gibt die Adresse eines Gebäudes zurück.
 \paragraph*{Rückgabewert}
 String mit Adresse, \texttt{null}, wenn MapId ungültig.
 
-\subsubsection{\texttt{+ getRoomInfo(mapId : int) : (RoomType, String, int, List<String>)}}%$$$M
+\subsubsection*{\texttt{+ getRoomInfo(mapId : int) : (RoomType, String, int, List<String>)}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Gibt die statischen Informationen zu einem Raum zurück.
 \paragraph*{Beschreibung}
@@ -35,7 +35,7 @@ Ist die gegebene MapId ungültig, wird \texttt{null} zurückgegeben.
 \paragraph*{Rückgabewert}
 (RoomType, String, int, List<String>), 4-Tupel aus Typ des Raums, Nummer des Gebäudes, Stockwerk, Personen. Kann \texttt{null} sein.
 
-\subsubsection{\texttt{+ getGlobalAliases(mapId : int) : List<String>}}%$$$M
+\subsubsection*{\texttt{+ getGlobalAliases(mapId : int) : List<String>}}%$$$M
 \paragraph*{Beschreibung}
 Gibt eine Liste aller globalen Aliasse eines Kartenobjekts zurück.
 \paragraph*{Parameter}
@@ -45,7 +45,7 @@ Gibt eine Liste aller globalen Aliasse eines Kartenobjekts zurück.
 \paragraph*{Rückgabewert}
 List<String>, Liste der globalen Aliasse.
 
-\subsubsection{\texttt{+ getLocalAliases(mapId : int) : LiveData<List<String>>}}%$$$M
+\subsubsection*{\texttt{+ getLocalAliases(mapId : int) : LiveData<List<String>>}}%$$$M
 \paragraph*{Beschreibung}
 Gibt eine Liste aller lokalen Aliasse eines Kartenobjekts zurück.
 \paragraph*{Parameter}
@@ -55,7 +55,7 @@ Gibt eine Liste aller lokalen Aliasse eines Kartenobjekts zurück.
 \paragraph*{Rückgabewert}
 LiveData<List<String>>, Liste der lokalen Aliasse.
 
-\subsubsection{\texttt{+ deleteLocalAlias(mapId : int, alias : String)}}%$$$M
+\subsubsection*{\texttt{+ deleteLocalAlias(mapId : int, alias : String)}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Sorgt dafür, dass ein gegebener lokaler Alias gelöscht wird.
 \paragraph*{Beschreibung}
@@ -68,7 +68,7 @@ Sind die Parameter ungültig, passiert nichts.
 \paragraph*{Rückgabewert}
 Void.
 
-\subsubsection{\texttt{+ getAliasSuggestions(mapId : int) : LiveData<List<String>>}}%$$$M
+\subsubsection*{\texttt{+ getAliasSuggestions(mapId : int) : LiveData<List<String>>}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Gibt eine Liste mit bewertbaren Alias-Vorschlägen zurück.
 \paragraph*{Beschreibung}
@@ -81,7 +81,7 @@ die vom Benutzer noch bewertet werden dürfen.
 \paragraph*{Rückgabewert}
 LiveData<List<String>>, Liste der Alias-Vorschläge.
 
-\subsubsection{\texttt{+ giveAliasFeefback(mapId : int, suggestion : String, feedback : SuggestionFeedback) : boolean}}%$$$M
+\subsubsection*{\texttt{+ giveAliasFeefback(mapId : int, suggestion : String, feedback : SuggestionFeedback) : boolean}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Diese Methode sorgt dafür, dass Feedback zu einem Alias-Vorschlag gesendet wird.
 \paragraph*{Beschreibung}
