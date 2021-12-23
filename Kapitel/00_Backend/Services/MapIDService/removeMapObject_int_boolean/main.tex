@@ -1,0 +1,15 @@
+\paragraph{\texttt{removeMapObject(mapID : int) : boolean}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Definiert das Erteilen der Anweisung an Klasse \texttt{MapIDRepository}, ein Kartenobjekt aus Datenbank der Kartenobjekte zu entfernen.
+\paragraph*{Beschreibung}
+Die Methode ermöglicht, dass ein Administrator ein Kartenobjekt aus Datenbank der Kartenobjekte entfernen kann.
+Dies hat insbesondere zur Folge, dass das Kartenobjekt nicht mehr auf der Karte der App angezeigt wird.
+Hierfür wird die ID des gewünschten Kartenobjekts übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapID : int
+    		\paragraph*{Beschreibung}
+    		Die ID des Kartenobjekts, das aus der Datenbank der Kartenobjekte entfernt werden soll.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Wahr, wenn das gewünschte Kartenobjekt aus der Datenbank der Kartenobjekte erfolgreich entfernt werden konnte oder das das Kartenobjekt bereits nicht in der Datenbank der Kartenobjekte hinterlegt war, ansonsten falsch.
