@@ -1,0 +1,11 @@
+\subsection{Admin-Panel}
+
+Die Entwicklung erfolgt auf einzelnen Zweigen, die in den \verb#main#-Zweig überführt werden, sobald diese fertig ausgearbeitet sind.
+Sobald der \verb#main#-Zweig aktualisiert wurde, wird die aktuelle Version des Admin-Panels gebaut und automatisch auf dem Server hochgeladen,
+so dass die neue Version über HTTPS erreichbar ist.
+
+Jedes mal wenn ein Entwicklungszweig aktualisiert wird, wird eine neue Testumgebung aufgesetzt und die definierten Tests durchgeführt.
+Diese Tests testen einzelne Komponenten in isolierten Umgebungen auf Funktionalität und dienen dazu, die Funktionalität beizubehalten.
+Scheitern Tests, so kann der Entwicklungszweig nicht in den \verb#main#-Zweig überführt werden.
+
+Die Schnittstellen zum \verb#Backend# werden hierbei nur mit geeigneten Testdatensätzen imitiert.
