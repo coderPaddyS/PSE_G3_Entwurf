@@ -1,4 +1,4 @@
-\section{TileMarkerOverlay}
+\subsubsection{TileMarkerOverlay}
 \paragraph*{Typ} 
 Abstrakte Klasse, erbt von Overlay.
 \paragraph*{Entwurfsmuster}
@@ -17,7 +17,7 @@ Für die Verwaltung dieser Overlays wird das FolderOverlay eingesetzt.\\
 Diese Klasse verwaltet die MapObjectMarker, die Aktion beim Klicken auf diese Marker, 
 und das Fokussieren eines dieser Marker.
 
-\subsubsection{\texttt{+ <<create>> TileMarkerOverlay(controller : MapLayerDataController, mapView : MapView)}}%$$$M
+\subsubsection*{\texttt{+ <<create>> TileMarkerOverlay(controller : MapLayerDataController, mapView : MapView)}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Erstellt eine TileMarkerOverlay-Instanz.
 \paragraph*{Beschreibung}
@@ -29,7 +29,7 @@ Erzeugt die MapObjectMarker über die Fabrikmethode createMarker.
     \item mapView : MapView MapView auf der sich das Overlay befindet.
 \end{itemize}
 
-\subsection{Delegierte Methoden}
+\subsubsection*{Delegierte Methoden}
 Für das Dekorierer-Entwurfsmuster werden folgende Methoden von Overlay ohne Veränderung 
 an die FolderOverlay-Instanz delegiert:
 \begin{itemize}
@@ -42,7 +42,7 @@ an die FolderOverlay-Instanz delegiert:
     \item onDetach(mapView : MapView)
 \end{itemize}
 
-\subsubsection{\texttt{+ onMarkerTap(mapId : int)}}%$$$M
+\subsubsection*{\texttt{+ onMarkerTap(mapId : int)}}%$$$M
 \paragraph*{Beschreibung}
 Teilt dem MapLayerDataController mit, dass ein bestimmtes Kartenobjekt ausgewählt wurde.
 \paragraph*{Parameter}
@@ -52,7 +52,7 @@ Teilt dem MapLayerDataController mit, dass ein bestimmtes Kartenobjekt ausgewäh
 \paragraph*{Rückgabewert}
 Void.
 
-\subsubsection{\texttt{\# createMarker(data : DisplayData, mapView : MapView) : MapObjectMarker $\lbrace$abstract$\rbrace$}}%$$$M
+\subsubsection*{\texttt{\# createMarker(data : DisplayData, mapView : MapView) : MapObjectMarker $\lbrace$abstract$\rbrace$}}%$$$M
 \paragraph*{Beschreibung}
 Dies ist eine Fabrikmethode zur Erzeugung eines MapObjectMarker.
 \paragraph*{Parameter}
@@ -64,7 +64,7 @@ Dies ist eine Fabrikmethode zur Erzeugung eines MapObjectMarker.
 MapObjectMarker.
 
 
-\subsection{Weitere private Funktionalität des Beobachters}
+\subsubsection*{Weitere private Funktionalität des Beobachters}
 Ändern sich die beobachteten Daten aktualisieren sich die Overlays wie folgt:
 \begin{itemize}
     \item TileSource: Das TileOverlay wird mit den neuen Kartendaten aktualisiert.
@@ -75,13 +75,13 @@ MapObjectMarker.
 \end{itemize}
 
 %-------------------------------------------------------------
-\section{BuildingOverlay}
+\subsubsection{BuildingOverlay}
 \paragraph*{Typ}
 Erbt von TileMarkerOverlay.
 \paragraph*{Beschreibung}
 Diese Klasse ist ein TileMarkerOverlay für die Gebäudeebene auf der Karte.
 
-\subsubsection{\texttt{\# createMarker(data : DisplayData) : MapObjectMarker}}%$$$M
+\subsubsection*{\texttt{\# createMarker(data : DisplayData) : MapObjectMarker}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Erzeugt einen BuildingMarker mit den gegeben Daten.
 \paragraph*{Beschreibung}
@@ -94,17 +94,17 @@ Die Fabrikmethode zur Erzeugung eines Markers wird hier mit einem BuildingMarker
 \paragraph*{Rückgabewert}
 MapObjectMarker, erzeugter MapObjectMarker.
 
-\subsubsection{\texttt{Weitere Implementierungen}}%$$$M
+\subsubsection*{\texttt{Weitere Implementierungen}}%$$$M
 Benutzt den von TileMarkerOverlay geerbten Konstruktor.
 
 %-------------------------------------------------------------
-\section{FloorOverlay}
+\subsubsection{FloorOverlay}
 \paragraph*{Typ}
 Erbt von TileMarkerOverlay.
 \paragraph*{Beschreibung}
 Diese Klasse ist ein TileMarkerOverlay für die Etagenebene auf der Karte.
 
-\subsubsection{\texttt{\# createMarker(data : DisplayData) : MapObjectMarker}}%$$$M
+\subsubsection*{\texttt{\# createMarker(data : DisplayData) : MapObjectMarker}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Erzeugt einen RoomMarker mit den gegeben Daten.
 \paragraph*{Beschreibung}
@@ -117,5 +117,5 @@ Die Fabrikmethode zur Erzeugung eines Markers wird hier mit einem RoomMarker imp
 \paragraph*{Rückgabewert}
 MapObjectMarker, erzeugter MapObjectMarker.
 
-\subsubsection{Weitere Implementierungen}%$$$M
+\subsubsection*{Weitere Implementierungen}%$$$M
 Benutzt den von TileMarkerOverlay geerbten Konstruktor.
