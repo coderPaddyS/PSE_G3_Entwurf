@@ -1,0 +1,99 @@
+\subsubsection{IMapObjectInfoController}
+\paragraph*{Typ}
+Interface.
+\paragraph*{Beschreibung}
+Dieses Interface definiert eine Schnittstelle, die alle Daten bereitstellt, 
+die zum Anzeigen der Informationen zu einem Kartenobjekt benötigt werden. 
+Außerdem bietet es Methoden an, um einige dieser Daten zu ändern.
+
+\subsubsection*{\texttt{+ getBuildingAddress(mapId : int) : String}}%$$$M
+\paragraph*{Beschreibung}
+Gibt die Adresse eines Gebäudes zurück.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Gebäudes.
+\end{itemize}
+\paragraph*{Rückgabewert}
+String mit Adresse, \texttt{null}, wenn MapId ungültig.
+
+\subsubsection*{\texttt{+ getRoomInfo(mapId : int) : (RoomType, String, int, List<String>)}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt die statischen Informationen zu einem Raum zurück.
+\paragraph*{Beschreibung}
+Diese Methode gibt zu einem, durch seine MapId gegebenen, Raum folgende Informationen zurück:
+\begin{itemize}
+    \item Der Typ des Raumes,
+    \item die Nummer des Gebäudes, in dem sich der Raum befindet,
+    \item das Stockwerk, auf dem sich der Raum befindet,
+    \item eine Liste mit den Namen aller Personen, die diesem Raum zugeordnet sind (kann leer sein).
+\end{itemize}
+Ist die gegebene MapId ungültig, wird \texttt{null} zurückgegeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Raums.
+\end{itemize}
+\paragraph*{Rückgabewert}
+(RoomType, String, int, List<String>), 4-Tupel aus Typ des Raums, Nummer des Gebäudes, Stockwerk, Personen. Kann \texttt{null} sein.
+
+\subsubsection*{\texttt{+ getGlobalAliases(mapId : int) : List<String>}}%$$$M
+\paragraph*{Beschreibung}
+Gibt eine Liste aller globalen Aliasse eines Kartenobjekts zurück.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Kartenobjekts.
+\end{itemize}
+\paragraph*{Rückgabewert}
+List<String>, Liste der globalen Aliasse.
+
+\subsubsection*{\texttt{+ getLocalAliases(mapId : int) : LiveData<List<String>>}}%$$$M
+\paragraph*{Beschreibung}
+Gibt eine Liste aller lokalen Aliasse eines Kartenobjekts zurück.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Kartenobjekts.
+\end{itemize}
+\paragraph*{Rückgabewert}
+LiveData<List<String>>, Liste der lokalen Aliasse.
+
+\subsubsection*{\texttt{+ deleteLocalAlias(mapId : int, alias : String)}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Sorgt dafür, dass ein gegebener lokaler Alias gelöscht wird.
+\paragraph*{Beschreibung}
+Sind die Parameter ungültig, passiert nichts.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Kartenobjekts.
+    \item alias : String Alias der zu löschen ist.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Void.
+
+\subsubsection*{\texttt{+ getAliasSuggestions(mapId : int) : LiveData<List<String>>}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt eine Liste mit bewertbaren Alias-Vorschlägen zurück.
+\paragraph*{Beschreibung}
+Gibt eine Liste mit relevanten Alias-Vorschlägen für das Kartenobjekt zurück, 
+die vom Benutzer noch bewertet werden dürfen.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Kartenobjekts.
+\end{itemize}
+\paragraph*{Rückgabewert}
+LiveData<List<String>>, Liste der Alias-Vorschläge.
+
+\subsubsection*{\texttt{+ giveAliasFeefback(mapId : int, suggestion : String, feedback : SuggestionFeedback) : boolean}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Diese Methode sorgt dafür, dass Feedback zu einem Alias-Vorschlag gesendet wird.
+\paragraph*{Beschreibung}
+Die Methode prüft, ob der Benutzer das Feedback senden kann und darf.
+Ist der Benutzer nicht angemeldet, wird in den Anmeldemodus gewechselt. Das Senden des Feedbacks entfällt dann.\\
+Muss der Benutzer sich für diese Aktion erst erneut anmelden, wird in den Anmeldemodus zur erneuten Anmeldung gewechselt. Das Senden des Feedbacks entfällt dann.\\
+Das Feedback wird an das Model gegeben, um es an den Server zu senden.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Kartenobjekts.
+    \item suggestion : String Vorschlag. 
+    \item feedback : SuggestionFeedback Feedback.
+\end{itemize}
+\paragraph*{Rückgabewert}
+boolean, ob das Senden erfolgreich war.
