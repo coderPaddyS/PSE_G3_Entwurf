@@ -1,0 +1,17 @@
+\paragraph*{\texttt{blacklistAlias(toBlacklist : String) : boolean}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Setzt eine bestimmte Zeichenkette auf die Blacklist.
+\paragraph*{Beschreibung}
+Die Methode ist ausschließlich von Administratoren aufzurufen.
+Gibt die Anweisung an die Schnittstelle \texttt{BlacklistService}, eine Zeichenkette auf die Blacklist zu setzen.
+Die Methode ermöglicht, dass ein Administrator eine bestimmte Zeichenkette auf die Blacklist setzen kann.
+Dies hat zur Folge, dass ein Aliasvorschlag, der genau aus dieser Zeichenkette zusammengesetzt ist, nicht hinzugefügt werden kann.
+Hierfür wird die Zeichenkette übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item toBlacklist : String
+    		\paragraph*{Beschreibung}
+    		Die Zeichenkette, die man auf die Blacklist setzen möchte.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Wahr, wenn die gewünschte Zeichenkette erfolgreich auf die Blacklist gesetzt werden konnte, ansonsten falsch.

@@ -1,0 +1,25 @@
+\paragraph*{\texttt{evaluateAliasSuggestion(aliasSuggestion : String, mapID : int, user : String, evaluation : boolean) : boolean}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Bewertet den gewünschten Alias-Vorschlag.
+\paragraph*{Beschreibung}
+Gibt die Anweisung an die Schnittstelle \texttt{AliasSuggestionService}, einen Alias-Vorschlag wie gewünscht zu bewerten.
+Die Methode ermöglicht, dass ein Benutzer einen Alias-Vorschlag bewerten kann. 
+Hierfür wird der gewünschte Alias-Vorschlag als auch die ID des dazugehörigen Kartenobjekts und der vom Access-Token abgeleitete Benutzeridentifikator des bewertenden Benutzers übergeben.
+Außerdem wird Bewertung übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+	\item aliasSuggestion : String
+		\paragraph*{Beschreibung}
+		Der zu bewertende Alias-Vorschlag als Zeichenkette.
+	\item mapID : int
+		\paragraph*{Beschreibung}
+		Die ID des Kartenobjekts, für das der Alias-Vorschlag als Bezeichner dienen soll.
+	\item user : String
+		\paragraph*{Beschreibung}
+		Der vom Access-Token abgeleitete Benutzeridentifikator des vorschlagenden Benutzers.
+	\item evaluation : boolean
+		\paragraph*{Beschreibung}
+		Die Bewertung des bewertenden Benutzers für den gewünschten Alias-Vorschlag.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Wahr, wenn der gewünschte Alias erfolgreich bewertet werden konnte, ansonsten falsch.

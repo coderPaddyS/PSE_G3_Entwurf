@@ -1,0 +1,22 @@
+\paragraph*{\texttt{getAliasSuggestions(minValToShowPos : int, minValToShowNeg : int) : List<(aliasSuggestion : AliasSuggestion>}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt eine Liste der Alias-Vorschläge.
+\paragraph*{Beschreibung}
+Die Methode ist ausschließlich von Administratoren aufzurufen.
+Die Methode ermöglicht, dass ein Administrator eine Liste der Alias-Vorschläge anfragen kann.
+Es werden lediglich die Alias-Vorschläge angezeigt, die die Mindestanzahl von positiven oder negativen Bewertungen erfüllen.
+Hierfür wird die Mindestanzahl von positiven und negativen Bewertungen übergeben, die ein Alias-Vorschlag erfüllen muss, damit er angezeigt wird.
+Es ist möglich, einen oder beide Parameter nicht zu übergeben, dann wird der bereits festgelegte Standardwert berücksichtigt.
+\paragraph*{Parameter}
+\begin{itemize}
+	\item minValToShowPos : int
+		\paragraph*{Beschreibung}
+		Die Mindestanzahl von positiven Bewertungen, die ein Alias-Vorschlag haben muss, damit er in der Liste aufgenommen und zurückgegeben wird.
+		Wenn dieser Parameter nicht übergeben wird, wird der festgelegte Standardwert benutzt.
+	\item minValToShowNeg : int
+		\paragraph*{Beschreibung}
+		Die Mindestanzahl von negativen Bewertungen, die ein Alias-Vorschlag haben muss, damit er in der Liste aufgenommen und zurückgegeben wird. 
+		Wenn dieser Parameter nicht übergeben wird, wird der festgelegte Standardwert benutzt.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Die Liste mit den Alias-Vorschlägen. 
