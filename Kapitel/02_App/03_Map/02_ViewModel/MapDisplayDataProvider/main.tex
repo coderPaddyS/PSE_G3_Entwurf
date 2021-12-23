@@ -79,3 +79,17 @@ Gibt den IMapObjectInfoController zurück.
 Keine.
 \paragraph*{Rückgabewert}
 IMapObjectInfoController.
+
+\subsubsection*{\texttt{+ getRoomError() : LiveData<(String, String, String)>}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt die Error-Daten zurück, wenn ein Raum nicht in der App existiert.
+\paragraph*{Beschreibung}
+Wird das Anzeigen eines Raums angefordert, der in der App nicht existiert (das Gebäude aber schon), 
+muss eine Fehlermeldung erscheinen. Die Daten für diese Fehlermeldung liefert diese Methode.\\
+Es werden Gebäude Nummer, angeforderter Raum und vermutetes Stockwerk, in dem sich der Raum befindet, 
+falls er existiert, in dieser Reihenfolge zurückgegeben.\\
+Gibt es keine Fehlerdaten, da es keinen Fehler gibt, wird LiveData<null> zurückgegeben.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+LiveData<(String, String, String)> aus Gebäudenummer, Raumnummer, Stockwerk.

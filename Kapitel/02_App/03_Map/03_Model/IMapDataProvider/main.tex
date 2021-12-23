@@ -1,0 +1,120 @@
+\subsubsection{IMapDataProvider}
+\paragraph*{Typ}
+Interface.
+\paragraph*{Beschreibung}
+Dieses Interface beschreibt die Schnittstelle von Model um Kartendaten anzufordern und zu speichern.
+Dieses Interface ist eine Fassade für die Model-Schicht der Karte.
+
+\subsubsection*{\texttt{+ getRoomDisplayData(mapId : int, level : int) : LiveData<List<DisplayData>>}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt die Anzeigedaten für Räume einer Etage zurück.
+\paragraph*{Beschreibung}
+Gibt DisplayData-Objekte zu allen Räumen einer Etage eines Gebäudes zurück.\\
+Die Liste ist leer, wenn es keine hinterlegten Räume gibt.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Gebäudes.
+    \item level : int Stockwerk.
+\end{itemize}
+\paragraph*{Rückgabewert}
+LiveData<List<DisplayData>>, DisplayData für Räume einer Etage.
+
+\subsubsection*{\texttt{+ getFloorMapTileSource(mapId : int, level : int) : \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
+{ITileSource}}}%$$$M
+\paragraph*{Beschreibung}
+Gibt eine \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
+{ITileSource} mit den Kartendaten für das Stockwerk eines Gebäudes zurück.\\
+Existiert die angeforderte Etagenkarte nicht auf dem Gerät, wird null zurückgegeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Gebäudes.
+    \item level : int Stockwerk.
+\end{itemize}
+\paragraph*{Rückgabewert}
+\href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
+{ITileSource} mit den Kartendaten für die Etage oder null.
+
+\subsubsection*{\texttt{+ getBuildingDisplayData() : LiveData<List<DisplayData>>}}%$$$M
+\paragraph*{Beschreibung}
+Gibt die Anzeigedaten für alle Gebäude zurück.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+LiveData<List<DisplayData>>, DisplayData für alle Gebäude.
+
+\subsubsection*{\texttt{+ getBuildingTileSource() : \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
+{ITileSource}}}%$$$M
+\paragraph*{Beschreibung}
+Gibt eine \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
+{ITileSource} mit den Kartendaten für alle Gebäude zurück.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Gebäudes.
+    \item level : int Stockwerk.
+\end{itemize}
+\paragraph*{Rückgabewert}
+\href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
+{ITileSource} mit den Kartendaten für alle Gebäude.
+
+\subsubsection*{\texttt{+ getLastSavedPosition() : IGeoPoint}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt die letzte gespeicherte Position zurück.
+\paragraph*{Beschreibung}
+Diese Methode gibt die letzte gespeicherte Position zurück. Wurde noch keine Position gespeichert,
+wird eine Default-Position zurückgegeben. Es wird nie null zurückgegeben.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+IGeoPoint mit letzter gespeicherter Position (oder Default-Wert), ist nie null.
+
+\subsubsection*{\texttt{+ savePosition(pos : IGeoPoint)}}%$$$M
+\paragraph*{Beschreibung}
+Speichert eine Position als letzte Position.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item pos : IGeoPoint zu speichernde Position.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Void.
+
+\subsubsection*{\texttt{+ getBuildingAddress(mapId : int) : String}}%$$$M
+\paragraph*{Beschreibung}
+Gibt die Adresse eines Gebäudes zurück.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Gebäudes.
+\end{itemize}
+\paragraph*{Rückgabewert}
+String mit Adresse, oder \texttt{null}, wenn MapId kein Gebäude ist.
+
+\subsubsection*{\texttt{+ getRoomData(mapId : int) : (RoomType, String, int)}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt Daten zu einem Raum zurück.
+\paragraph*{Beschreibung}
+Diese Methode gibt zu einem, durch seine MapId gegebenen, Raum folgende Informationen zurück:
+\begin{itemize}
+    \item Der Typ des Raumes,
+    \item die Nummer des Gebäudes, in dem sich der Raum befindet,
+    \item das Stockwerk, auf dem sich der Raum befindet.
+\end{itemize}
+Ist die gegebene MapId ungültig oder kein Raum, wird \texttt{null} zurückgegeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Raums.
+\end{itemize}
+\paragraph*{Rückgabewert}
+(RoomType, String, int, List<String>) Raumdaten oder \texttt{null}.
+
+\subsubsection*{\texttt{+ getPersons(mapId : int) : List<String>}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt die Namen der Personen zurück, die zu einem Kartenobjekt gehören.
+\paragraph*{Beschreibung}
+Gibt eine Liste mit den vollen Namen (inklusive Titel) aller dem Kartenobjekt zugeordneten 
+Personen zurück. Diese kann leer sein.\\
+Ist die gegebene MapId ungültig ist sie ebenfalls leer.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Kartenobjekts.
+\end{itemize}
+\paragraph*{Rückgabewert}
+List<String> mit den Namen aller zugeordneten Personen.

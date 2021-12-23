@@ -1,3 +1,4 @@
+\newpage
 \subsubsection{Blacklisten}
 
 Die Aktion die ausgeführt wird, um einen Alias-Vorschlag auf die Blacklist zu setzen.
@@ -15,7 +16,8 @@ Alias-Vorschlag wird nicht mehr angezeigt. Der Alias-Vorschlag ist zur Setzung a
 \paragraph*{Durchführung}
 \begin{enumerate}
     \item Das Interface \verb#Change# wird durch implementierung der Methode \verb#Change::perform# instanziiert. \\
-          Dabei ruft die Methode \verb#Change::perform# dieser Instanz die Methode \verb#Backend::blacklistAliasSuggestion# mit folgenden Parametern auf \begin{enumerate}
+          Dabei ruft die Methode \verb#Change::perform# dieser Instanz die \\ 
+          Methode \verb#Backend::blacklistAliasSuggestion# mit folgenden Parametern auf \begin{enumerate}
               \item alias: String = Der Bezeichner des Alias-Vorschlags
               \item mapID: String = Der Kartenobjektidentifizierer des Alias-Vorschlags
           \end{enumerate}

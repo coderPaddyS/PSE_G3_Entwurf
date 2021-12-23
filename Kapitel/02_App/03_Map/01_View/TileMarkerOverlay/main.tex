@@ -33,13 +33,13 @@ Erzeugt die MapObjectMarker über die Fabrikmethode createMarker.
 Für das Dekorierer-Entwurfsmuster werden folgende Methoden von Overlay ohne Veränderung 
 an die FolderOverlay-Instanz delegiert:
 \begin{itemize}
-    \item draw(pCanvas : Canvas, pProjection : Projection)
-    \item draw(pCanvas : Canvas, pMapView : MapView, pShadow : boolean)
-    \item onSingleTapUp(e : MotionEvent, mapView : MapView) : boolean
-    \item onSingleTapConfirmed(e : MotionEvent, mapView : MapView) : boolean
-    \item onLongPress(e : MotionEvent, mapView : MapView) : boolean
-    \item onTouchEvent(e : MotionEvent, mapView : MapView) : boolean
-    \item onDetach(mapView : MapView)
+    \item \texttt{draw(pCanvas : Canvas, pProjection : Projection)}
+    \item \texttt{draw(pCanvas : Canvas, pMapView : MapView, pShadow : boolean)}
+    \item \texttt{onSingleTapUp(e : MotionEvent, mapView : MapView) : boolean}
+    \item \texttt{onSingleTapConfirmed(e : MotionEvent, mapView : MapView) : boolean}
+    \item \texttt{onLongPress(e : MotionEvent, mapView : MapView) : boolean}
+    \item \texttt{onTouchEvent(e : MotionEvent, mapView : MapView) : boolean}
+    \item \texttt{onDetach(mapView : MapView)}
 \end{itemize}
 
 \subsubsection*{\texttt{+ onMarkerTap(mapId : int)}}%$$$M

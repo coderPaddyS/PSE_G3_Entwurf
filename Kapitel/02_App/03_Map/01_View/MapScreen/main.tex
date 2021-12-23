@@ -19,7 +19,6 @@ Dazu ist folgendes nötig:
     \item Anzeigen des Buttons zur Ortung.
     \item Anzeigen eines Kompasses, der die Himmelsrichtungen auf der Karte zeigt.
 \end{itemize}
-Wird ein Kartenobjekt fokussiert müssen die Informationen dazu mithilfe eines MapObjectInfoDisplays angezeigt werden.\\
 Weiter werden folgende Schaltflächen angezeigt, durch welche man in andere Ansichten navigieren kann:
 \begin{itemize}
     \item Einstellungsbutton: In der oberen linken Ecke wird ein Button mit einem Einstellungssymbol angezeigt. 
@@ -46,6 +45,9 @@ Folgende Interaktionen mit der Karte müssen aktiviert beziehungsweise sicherges
     nichts).\\
     Wird der Standort bereits angezeigt, wird die Karte so verschoben, dass sich die eigene Position 
     in der Mitte des Bildschirms befindet. \\
+    \item Wird ein Kartenobjekt fokussiert werden die Informationen dazu mithilfe eines MapObjectInfoDisplays angezeigt. 
+    Wird erneut auf die Karte geklickt, verschwindet das MapObjectInfoDisplays wieder.
+
 \end{itemize}
 
 \paragraph*{Startposition}
@@ -68,6 +70,8 @@ Eine Änderung der Daten wirkt sich wie folgt aus:
     \item getTileSource: Die Karte, die von der MapView angezeigt wird, wird mit den neuen 
     Kartendaten aktualisiert.
     \item getFocusedPos: Die neue fokussierte Position wird mittig auf der Karte angezeigt.
+    \item getRoomError: Ist der übergebene Wert nicht \texttt{null}, werden die Fehlerinformationen 
+    in einer Meldung über allen anderen Elementen angezeigt.
 \end{itemize}
 
 \paragraph*{Notizen zur Implementierung}

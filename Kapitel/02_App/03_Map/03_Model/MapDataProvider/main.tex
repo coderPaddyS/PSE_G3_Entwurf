@@ -1,77 +1,32 @@
-\subsubsection{IMapDataProvider}
+\subsubsection{MapDataProvider}
 \paragraph*{Typ}
-Interface.
+Implementiert IMapDataProvider.
 \paragraph*{Beschreibung}
-Dieses Interface beschreibt die Schnittstelle von Model um Kartendaten anzufordern und zu speichern.
+Diese Klasse implementiert die Fassade IMapDataProvider für die Model-Schicht der Karte.\\
+Ein MapDataProvider besitzt eine Instanz der Klassen 
+TileSourceProvider, DisplayDataProvider, MapObjectInformationProvider, PositionDataManager.
 
-\subsubsection*{\texttt{+ getRoomDisplayData(mapId : int, level : int) : LiveData<List<DisplayData>>}}%$$$M
-\paragraph*{Kurzbeschreibung}
-Gibt die Anzeigedaten für Räume einer Etage zurück.
-\paragraph*{Beschreibung}
-Gibt DisplayData-Objekte zu allen Räumen einer Etage eines Gebäudes zurück.\\
-Die Liste ist leer, wenn es keine hinterlegten Räume gibt.
-\paragraph*{Parameter}
+\paragraph*{Methoden, die an TileSourceProvider delegiert werden}
 \begin{itemize}
-    \item mapId : int MapId des Gebäudes.
-    \item level : int Stockwerk.
+    \item \texttt{+ getFloorMapTileSource(mapId : int, level : int) : \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}{ITileSource}}
+    \item \texttt{+ getBuildingTileSource() : \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}{ITileSource}}
 \end{itemize}
-\paragraph*{Rückgabewert}
-LiveData<List<DisplayData>>, DisplayData für Räume einer Etage.
 
-\subsubsection*{\texttt{+ getFloorMapTileSource(mapId : int, level : int) : \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
-{ITileSource}}}%$$$M
-\paragraph*{Beschreibung}
-Gibt eine \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
-{ITileSource} mit den Kartendaten für das Stockwerk eines Gebäudes zurück.\\
-Existiert die angeforderte Etagenkarte nicht auf dem Gerät, wird null zurückgegeben.
-\paragraph*{Parameter}
+\paragraph*{Methoden, die an DisplayDataProvider delegiert werden}
 \begin{itemize}
-    \item mapId : int MapId des Gebäudes.
-    \item level : int Stockwerk.
+    \item \texttt{+ getRoomDisplayData(mapId : int, level : int) : LiveData<List<DisplayData>>}
+    \item \texttt{+ getBuildingDisplayData() : LiveData<List<DisplayData>>}
 \end{itemize}
-\paragraph*{Rückgabewert}
-\href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
-{ITileSource} mit den Kartendaten für die Etage oder null.
 
-\subsubsection*{\texttt{+ getBuildingDisplayData() : LiveData<List<DisplayData>>}}%$$$M
-\paragraph*{Beschreibung}
-Gibt die Anzeigedaten für alle Gebäude zurück.
-\paragraph*{Parameter}
-Keine.
-\paragraph*{Rückgabewert}
-LiveData<List<DisplayData>>, DisplayData für alle Gebäude.
-
-\subsubsection*{\texttt{+ getBuildingTileSource() : \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
-{ITileSource}}}%$$$M
-\paragraph*{Beschreibung}
-Gibt eine \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
-{ITileSource} mit den Kartendaten für alle Gebäude zurück.
-\paragraph*{Parameter}
+\paragraph*{Methoden, die an MapObjectInformationProvider delegiert werden}
 \begin{itemize}
-    \item mapId : int MapId des Gebäudes.
-    \item level : int Stockwerk.
+    \item \texttt{+ getBuildingAddress(mapId : int) : String}
+    \item \texttt{+ getRoomData(mapId : int) : (RoomType, String, int)}
+    \item \texttt{+ getPersons(mapId : int) : List<String>}
 \end{itemize}
-\paragraph*{Rückgabewert}
-\href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
-{ITileSource} mit den Kartendaten für alle Gebäude.
 
-\subsubsection*{\texttt{+ getLastSavedPosition() : IGeoPoint}}%$$$M
-\paragraph*{Kurzbeschreibung}
-Gibt die letzte gespeicherte Position zurück.
-\paragraph*{Beschreibung}
-Diese Methode gibt die letzte gespeicherte Position zurück. Wurde noch keine Position gespeichert,
-wird eine Default-Position zurückgegeben. Es wird nie null zurückgegeben.
-\paragraph*{Parameter}
-Keine.
-\paragraph*{Rückgabewert}
-IGeoPoint mit letzter gespeicherter Position (oder Default-Wert), ist nie null.
-
-\subsubsection*{\texttt{+ savePosition(pos : IGeoPoint)}}%$$$M
-\paragraph*{Beschreibung}
-Speichert eine Position als letzte Position.
-\paragraph*{Parameter}
+\paragraph*{Methoden, die an PositionDataManager delegiert werden}
 \begin{itemize}
-    \item pos : IGeoPoint zu speichernde Position.
+    \item \texttt{+ getLastSavedPosition() : IGeoPoint}
+    \item \texttt{+ savePosition(pos : IGeoPoint)}
 \end{itemize}
-\paragraph*{Rückgabewert}
-Void.

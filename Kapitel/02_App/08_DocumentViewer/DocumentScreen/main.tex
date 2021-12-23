@@ -1,30 +1,31 @@
-\subsection{DocumentScreen}
+\subsubsection{DocumentScreen}
+\paragraph*{Typ}
+Composable.
 \paragraph*{Beschreibung}
-Klasse zum Anzeigen eines längeren Textes in einfachem Format. 
-Es wird Markdown genutzt.
+Klasse zum Anzeigen eines Textdokuments im Markdown-Format.\\
+Diese Klasse nutzt die Funktionalität einer Markdown-Library.\\
+Das anzuzeigende Dokument wird direkt aus den Ressourcen geladen.
+Welches Dokument geladen werden soll, wird wie in Navigation beschrieben, beim Aufruf mitgegeben. 
+Dabei wird die Id des DokumentTypes verwendet.
 
-\subsection{Beschreibung der Benutzeroberfläche}
-Das Dokument wird in einem eigenen Fenster im Vollbild angezeigt.
+\subsubsection*{Beschreibung der Benutzeroberfläche}
+Das Dokument wird im Vollbild angezeigt.
 Die Überschrift wird am oberen Bildschirmrand angezeigt.
 Links neben der Überschrift am oberen Bildschirmrand ist ein \dq Zurück-Knopf \dq{}.
 Der Text wird unter der Unterschrift und dem \dq Zurück-Knopf \dq{} angezeigt und man kann scrollen.
 
-\subsection{+ onClickBack}%$$$M
+\subsubsection*{\texttt{+ onClickBack()}}%$$$M
 \paragraph*{Beschreibung}
 Veranlasst bei Betätigung des \dq Zurück-Knopfs \dq{} das Schließen des Textanzeigefensters.
 \paragraph*{Parameter}
-\begin{itemize}
-    \item keine
-\end{itemize}
+Keine.
 \paragraph*{Rückgabewert}
-void
+Void.
 
-\subsection{+ onClickReturn}%$$$M
+\subsubsection*{\texttt{+ onClickReturn()}}%$$$M
 \paragraph*{Beschreibung}
 Veranlasst bei Betätigung der Zurückgehen-Funktion des Endgeräts das Schließen des Textanzeigefensters.
 \paragraph*{Parameter}
-\begin{itemize}
-    \item keine
-\end{itemize}
+Keine.
 \paragraph*{Rückgabewert}
-void
+Void.
