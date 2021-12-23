@@ -1,0 +1,88 @@
+\subsection{Interface ISettingsController}
+\paragraph*{Beschreibung}
+Dieses Interface ermöglicht die Verwaltung der Einstellungen.
+
+\subsubsection{+ setLanguage(language : String)}%$$$M
+\paragraph*{Beschreibung}
+Prüft, ob die Sprache ein Wert aus getSupportedLanguages() ist und wenn ja, veranlasst die Umstellung der App in die Sprache.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item language : String = die Sprache, in der die App angezeigt werden soll
+\end{itemize}
+\paragraph*{Rückgabewert}
+void
+
+\subsubsection{+ setTheme(theme : Theme)}%$$$M
+\paragraph*{Beschreibung}
+Veranlasst die Umstellung der App auf das Theme.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item theme : Theme = das Theme, in dem die App angezeigt werden soll
+\end{itemize}
+\paragraph*{Rückgabewert}
+void
+
+\subsubsection{+ deleteSearchHistory()}%$$$M
+\paragraph*{Beschreibung}
+Veranlasst die Löschung des Suchverlaufs.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item keine
+\end{itemize}
+\paragraph*{Rückgabewert}
+void
+
+\subsubsection{+ setStoreSearchHistory(value : boolean)}%$$$M
+\paragraph*{Beschreibung}
+Veranlasst die Änderung der Speicherung des Suchverlaufs abhängig vom gegebenen Wert.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item value : boolean = Wert, ob der Suchverlauf gespeichert werden soll oder nicht
+\end{itemize}
+\paragraph*{Rückgabewert}
+void
+
+\subsubsection{+ getLanguageIdentifier() : LiveData<String>}%$$$M
+\paragraph*{Beschreibung}
+Gibt den Namen der ausgewählten Sprache in dieser Sprache zurück.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item keine
+\end{itemize}
+\paragraph*{Rückgabewert}
+LiveData<String>, Name der ausgewählten Sprache in dieser Sprache
+
+\subsubsection{+ getSupportedLanguages() : LiveData<List<String>>}%$$$M
+\paragraph*{Beschreibung}
+Gibt eine Liste der Namen der unterstützten Sprachen in den entsprechenden Sprachen zurück.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item keine
+\end{itemize}
+\paragraph*{Rückgabewert}
+LiveData<List<String>>, Liste der Namen der unterstützten Sprachen in den entsprechenden Sprachen
+
+\subsubsection{+ getTheme() : LiveData<Theme>}%$$$M
+\paragraph*{Beschreibung}
+Gibt das aktuell ausgewählte Theme zurück.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item keine
+\end{itemize}
+\paragraph*{Rückgabewert}
+LiveData<Theme>, aktuell ausgewähltes Theme
+
+\subsubsection{+ getStoreSearchHistory() : LiveData<boolean>}%$$$M
+\paragraph*{Beschreibung}
+Gibt zurück, ob der Suchverlauf gespeichert werden soll (true) oder nicht (false).
+\paragraph*{Parameter}
+\begin{itemize}
+    \item keine
+\end{itemize}
+\paragraph*{Rückgabewert}
+LiveData<boolean>, ob der Suchverlauf gespeichert werden soll (true) oder nicht (false).
+
+
+\subsection{class SettingsController implements ISettingsController}
+\paragraph*{Beschreibung}
+Diese Klasse dient der Verwaltung der Einstellungen.
