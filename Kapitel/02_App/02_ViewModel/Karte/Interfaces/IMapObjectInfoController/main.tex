@@ -86,8 +86,8 @@ LiveData<List<String>>, Liste der Alias-Vorschläge.
 Diese Methode sorgt dafür, dass Feedback zu einem Alias-Vorschlag gesendet wird.
 \paragraph*{Beschreibung}
 Die Methode prüft, ob der Benutzer das Feedback senden kann und darf.
-Ist der Benutzer nicht angemeldet, wird in den Anmeldemodus gewechselt. Das senden des Feedbacks entfällt dann.\\
-Ist der Access-Token des Benutzers abgelaufen, wird in den Anmeldemodus zur erneuten Anmeldung gewechselt. Das senden des Feedbacks entfällt dann.\\
+Ist der Benutzer nicht angemeldet, wird in den Anmeldemodus gewechselt. Das Senden des Feedbacks entfällt dann.\\
+Muss der Benutzer sich für diese Aktion erst erneut anmelden, wird in den Anmeldemodus zur erneuten Anmeldung gewechselt. Das Senden des Feedbacks entfällt dann.\\
 Das Feedback wird an das Model gegeben, um es an den Server zu senden.
 \paragraph*{Parameter}
 \begin{itemize}
