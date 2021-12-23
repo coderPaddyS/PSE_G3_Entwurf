@@ -1,0 +1,16 @@
+\paragraph{\texttt{deleteByName(alias : String) : boolean}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Entfernt einen Alias von der Datenbank.
+\paragraph*{Beschreibung}
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Services} aufgerufen.
+Die Methode ermöglicht, dass ein bestimmter Alias durch Angabe der entsprechenden Zeichenkette entfernt werden kann.
+Hierfür wird der Alias als Zeichenkette übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item alias : String
+    		\paragraph*{Beschreibung}
+    		Der als Zeichenkette angegebene Alias.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Wahr, wenn der übergebene Alias aus der Datenbank der Aliasse entfernt werden konnte oder wenn der Alias bereits nicht in der Datenbank hinterlegt war, ansonsten falsch.
