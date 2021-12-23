@@ -1,0 +1,12 @@
+\paragraph{\texttt{+ addChange(change: Change, metadata: JSON, category: String) : boolean}}%$$$M
+\paragraph*{Beschreibung}
+Fügt eine Änderung mitsamt ihrer Metadaten hinzu.
+Dabei wird eine Instanz von \verb#ChangeAction# erzeugt und der aktuelle Zeitpunkt hinterlegt.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item change: Change = Instanz des Interfaces \verb#Change#, die die Änderung durchführt.
+    \item metadata: JSON = JSON mit darzustellenden Informationen.
+    \item category: String = Die Kategorie der Änderung.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Wahr, wenn erfolgreich, Falsch sonst
