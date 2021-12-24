@@ -1,0 +1,16 @@
+\paragraph{\texttt{findByNegVotes(minVotesPos : int) : List<aliasSuggestion : AliasSuggestion>}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt eine Liste aller in der entsprechenden Datenbank hinterlegten Alias-Vorschläge, die mindestens eine bestimmte Anzahl an positiven Bewertungen haben.
+\paragraph*{Beschreibung}
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Services} aufgerufen.
+Die Methode ermöglicht, dass eine Liste aller in der entsprechenden Datenbank hinterlegten Alias-Vorschläge, die mindestens die übergebene Anzahl an positiven Bewertungen haben, angefragt und zurückgegeben werden kann.
+Hierfür wird die Mindestanzahl an positiven Bewertungen übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item minVotesNeg : int
+    		\paragraph*{Beschreibung}
+    		Die Mindestanzahl an positiven Bewertungen, die die Alias-Vorschläge haben sollen, damit sie in der Liste enthalten sind.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Die Liste mit den in der Datenbank hinterlegten Alias-Vorschlägen, die mindestens die übergebene Anzahl an positiven Bewertungen haben.
