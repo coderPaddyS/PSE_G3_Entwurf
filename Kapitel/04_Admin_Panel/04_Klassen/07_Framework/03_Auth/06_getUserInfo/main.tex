@@ -1,0 +1,12 @@
+\paragraph{\texttt{+ getUserInfo() : JSON}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Getter für die Informationen des angemeldeten Benutzers.
+\paragraph*{Beschreibung}
+Getter für die Informationen des angemeldeten Benutzers.
+Ist kein ID-Token gesetzt, so wird der Benutzer aufgefordert sich zu authentifizieren, sofern der Framework durch \verb#Framework::configure# konfiguriert wurde.
+Ist der ID-Token invalide, so wird versucht diesen zu erneuern.
+Treten Fehler auf, oder wurde der AuthManager nicht authentifiziert, wird \verb#null# zurückgegeben.
+\paragraph*{Parameter}
+Keine
+\paragraph*{Rückgabewert}
+JSON mit den Benutzerinformationen

@@ -1,0 +1,15 @@
+\section{Schichtenarchitektur}
+
+Das Admin-Panel ist in drei separate Schichten aufgeteilt. Diese sind wie folgend:
+
+\paragraph*{View}
+Die erste Schicht ist die View. Diese wird durch die HTML-Dokumente des Admin-Panels mitsamt Styling durch CSS realisiert.
+Sie ist durch Layouts und den Aufbau beschrieben.
+
+\paragraph*{Controller}
+Die zweite Schicht ist der Controller und steuert die Interaktionen. Der Controller erweitert die View um Funktionalität. 
+Dieser besteht aus den Klassen Framework, AuthManager und Backend. Framework ist hier die Fassade.
+
+\paragraph*{Model}
+Die letzte Schicht ist das Model. Dieses stellt den Zugriff auf die Daten sicher.
+Das Model besteht aus den Klassen Changes, ChangeAction und Alias sowie dem Interface Change.
