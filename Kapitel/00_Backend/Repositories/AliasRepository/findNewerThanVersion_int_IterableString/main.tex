@@ -1,0 +1,16 @@
+\paragraph*{\texttt{+findNewerThanVersion(version : int) : Iterable<alias : String>}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt eine Liste von Aliassen, die seit einer bestimmten Version hinzugefügt wurden.
+\paragraph*{Beschreibung}
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Services} aufgerufen.
+Die Methode ermöglicht, dass eine Liste von Aliassen, die seit der übergebenen Version hinzugefügt wurden, angefragt und zurückgegeben werden kann.
+Dementsprechend wird die Version übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item version : int
+    		\paragraph*{Beschreibung}
+    		Die Version, ab der Aliasse, die hinzugefügt wurden, in die Liste aufgenommen werden sollen.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Die Liste von Aliassen, die seit einer bestimmten Version hinzugefügt wurden.
