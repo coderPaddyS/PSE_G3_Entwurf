@@ -1,14 +1,14 @@
 \newpage
 \subsection{Änderungen}
 
-Die Aktionen-Seite zeigt alle Änderungen an offiziellen Aliassen, Alias-Vorschlägen und der Blacklist an und ermöglicht das Akzeptieren oder Revidieren der Änderungen.
+Die Änderungen-Seite zeigt alle Änderungen an \hyperref[AP_Offizielle_Aliasse]{offiziellen Aliassen}, \hyperref[AP_Alias_Vorschlage]{Alias-Vorschlägen} und der \hyperref[AP_Blacklist]{Blacklist} an und ermöglicht das \hyperref[AP_Aktionen_Anderungen_Akzeptieren]{Akzeptieren} oder \hyperref[AP_Aktionen_Anderungen_Revidieren]{Revidieren} der Änderungen.
 Dabei sind diese Änderungen aus der aktuellen Sitzung des angemeldeten Administrators durch den Administrator vorgenommen worden.
 
 \paragraph*{Layout}
-Die Offizielle-Alias-Seite benutzt das Admin-Layout.
+Die Änderungen-Seite benutzt das \hyperref[AP_Admin_Layout]{Admin-Layout}.
 
 \paragraph*{Erreichbarkeit}
-Die Offizielle-Alias-Seite ist unter \href{https://pse.itermori.de/admin/changes}{https://pse.itermori.de/admin/changes} erreichbar.
+Die Änderungen-Seite ist unter \href{https://pse.itermori.de/admin/changes}{https://pse.itermori.de/admin/changes} erreichbar.
 
 \paragraph*{Verwendbarkeit}
 Ausschließlich authentifizierte Administratoren können diese Seite verwenden.
@@ -18,14 +18,14 @@ Folgende Aufgaben werden erfüllt:
 
 \begin{itemize}
     \item Anzeigen der Änderungen folgender Kategorien: \begin{itemize}
-        \item offizielle Aliasse
-        \item Alias-Vorschläge
-        \item Blacklist
+        \item \hyperref[AP_Offizielle_Aliasse]{offizielle Aliasse}
+        \item \hyperref[AP_Alias_Vorschlage]{Alias-Vorschläge} 
+        \item \hyperref[AP_Blacklist]{Blacklist}
     \end{itemize}
-    \item Akzeptieren von allen Änderungen
-    \item Akzeptieren einer Änderung
-    \item Revidieren von allen Änderungen
-    \item Revidieren einer Änderung
+    \item \hyperref[AP_Aktionen_Anderungen_Akzeptiere_Alle]{Akzeptieren von allen Änderungen}
+    \item \hyperref[AP_Aktionen_Anderungen_Akzeptieren]{Akzeptieren einer Änderung}
+    \item \hyperref[AP_Aktionen_Anderungen_Revidiere_Alle]{Revidieren von allen Änderungen}
+    \item \hyperref[AP_Aktionen_Anderungen_Revidieren]{Revidieren einer Änderung}
     \item Zeit der Änderung
     \item Filterung von Änderungen nach 
     \begin{itemize}
@@ -44,7 +44,7 @@ Folgende Aufgaben werden erfüllt:
 \subparagraph*{Desktop}
 Die Seite ist unterteilt in zwei übereinanderliegende horizontale Boxen. \\
 In der oberen Box steht der zentrierte Titel \dq Änderungen \dq.
-Die untere Box beinhaltet jeweils ein Element dass die Aktionen \dq Alle durchführen\dq{} und \dq Alle revidieren\dq{} repräsentiert.
+Die untere Box beinhaltet jeweils ein Element dass die \hyperref[AP_Aktionen_Anderungen]{Aktionen} \hyperref[AP_Aktionen_Anderungen_Akzeptiere_Alle]{Akzeptieren von allen Änderungen} und \hyperref[AP_Aktionen_Anderungen_Revidiere_Alle]{Revidieren von allen Änderungen} repräsentiert.
 
 Des Weiteren beinhaltet diese Box darunter eine Auflistung aller Änderungen in tabellarischer Form. Diese ist wie folgt gegeben:
 
@@ -52,42 +52,22 @@ Des Weiteren beinhaltet diese Box darunter eine Auflistung aller Änderungen in 
     \item Zeit: Zeitpunkt der Änderung
     \item Kategorie: Das zugehörige Gebäude des offiziellen Aliases
     \item Metadaten: Die konkreten Daten der Änderung
-    \item Aktionen: Akzeptieren, Revidieren
+    \item \hyperref[AP_Aktionen_Anderungen]{Aktionen}: \hyperref[AP_Aktionen_Anderungen_Akzeptieren]{Akzeptieren}, \hyperref[AP_Aktionen_Anderungen_Revidieren]{Revidieren}
 \end{itemize}
 
 Die Spalten 1 bis 2 beinhalten ein Textfeld zur Anzeige der Informationen.
 Die Spalte 3 beinhaltet eine zweispaltige Tabelle. Diese zeigt die konkreten Daten der Änderung nach dem Schema \dq Attribut - Wert \dq{}, zum Beispiel \dq Gebäude - 50.34 \dq{} für einen offiziellen Alias, an.
-Die Spalte 4 beinhaltet eine Box. Diese beinhaltet Elemente, die die Aktionen \dq Akzeptieren \dq{} und \dq Revidieren \dq{} repräsentieren. \\
+Die Spalte 4 beinhaltet eine Box. Diese beinhaltet Elemente, die die \hyperref[AP_Aktionen_Anderungen]{Aktionen} \hyperref[AP_Aktionen_Anderungen_Akzeptieren]{Akzeptieren} und \hyperref[AP_Aktionen_Anderungen_Revidieren]{Revidieren} repräsentieren. \\
 Die Spalten 1 und 2 besitzen ein Sortierungselement am linken Ende.
 
-\begin{center}
-    \captionsetup[figure]{labelformat=empty}
-    \inprelimg[width=0.7\textwidth]{änderungen_desktop.png}
-    \captionof{figure}{Desktop Ansicht}
-    \captionsetup[figure]{labelformat=default}
-\end{center}
-
-\vspace{0.5em}
-\begin{minipage}{\textwidth}
-    \begin{minipage}{.5\textwidth}
-        \subparagraph*{Mobil}
-        Die Seite ist in zwei übereinanderliegende horizontale Boxen aufgeteilt. Diese nehmen die volle ihnen zur Verfügung stehende Horizontale ein. \\
-        Die obere Box beinhaltet den zentrierten Titel \dq Änderungen\dq.
-        Die untere Box beinhaltet die Sortierungsoptionen, die Änderungen und zwei Aktionselemente, die die Aktionen \dq Alle durchführen\dq{} und \dq Alle revidieren\dq{} repräsentieren. \\
-        Die Sortierungsoptionen befinden sich ganz oben und sind in zwei Auswahlelemente aufgeteilt. 
-        Das erste Auswahlelement beinhaltet jeweils einen Eintrag zu Zeit und Kategorie.
-        Das zweite Auswahlelement beinhaltet die Einträge \dq Aufsteigend \dq{} und \dq Absteigend \dq{} oder Synonyme bzw. Abkürzungen dieser.\\
-        Unter den Sortierungsoptionen befinden sich die Aktionselemente, darunter folgen die Änderungen.
-    \end{minipage}
-    \begin{minipage}{.5\textwidth}
-        \hspace{.2\textwidth}
-        \captionsetup[figure]{labelformat=empty}
-        \inprelimg[height=0.9\textwidth]{änderungen_mobil.png}
-        \captionof{figure}{Mobile Ansicht}
-        \captionsetup[figure]{labelformat=default}
-    \end{minipage}
-\end{minipage}
-\vspace{0.5em}
+\subparagraph*{Mobil}
+Die Seite ist in zwei übereinanderliegende horizontale Boxen aufgeteilt. Diese nehmen die volle ihnen zur Verfügung stehende Horizontale ein. \\
+Die obere Box beinhaltet den zentrierten Titel \dq Änderungen\dq.
+Die untere Box beinhaltet die Sortierungsoptionen, die Änderungen und zwei Aktionselemente, die die Aktionen \hyperref[AP_Aktionen_Anderungen_Akzeptiere_Alle]{Akzeptieren von allen Änderungen} und \hyperref[AP_Aktionen_Anderungen_Revidiere_Alle]{Revidieren von allen Änderungen} repräsentieren. \\
+Die Sortierungsoptionen befinden sich ganz oben und sind in zwei Auswahlelemente aufgeteilt. 
+Das erste Auswahlelement beinhaltet jeweils einen Eintrag zu Zeit und Kategorie.
+Das zweite Auswahlelement beinhaltet die Einträge \dq Aufsteigend \dq{} und \dq Absteigend \dq{} oder Synonyme bzw. Abkürzungen dieser.\\
+Unter den Sortierungsoptionen befinden sich die Aktionselemente, darunter folgen die Änderungen.
 
 Jede Änderung befindet sich in seinem eigenen Abschnitt, dieser ist wiederum in folgende Segmente aufgeteilt:
 
@@ -95,12 +75,12 @@ Jede Änderung befindet sich in seinem eigenen Abschnitt, dieser ist wiederum in
     \item Zeit: Zeitpunkt der Änderung
     \item Kategorie: Das zugehörige Gebäude des offiziellen Aliases
     \item Metadaten: Die konkreten Daten der Änderung
-    \item Aktionen: Akzeptieren, Revidieren
+    \item \hyperref[AP_Aktionen_Anderungen]{Aktionen}: \hyperref[AP_Aktionen_Anderungen_Akzeptieren]{Akzeptieren}, \hyperref[AP_Aktionen_Anderungen_Revidieren]{Revidieren}
 \end{itemize}
 
 Segment 1 befindet sich ganz oben im Änderungs-Abschnitt. Segmente 2 und 3 folgen untereinander unter Segment 1.
 Dabei enthält Segment 3 eine zweispaltige Tabelle. Diese zeigt die konkreten Daten der Änderung nach dem Schema \dq Attribut - Wert \dq{}, zum Beispiel \dq Gebäude - 50.34 \dq{} für einen offiziellen Alias, an.
-Segment 4 enthält eine Box. Diese beinhaltet Elemente, die die Aktionen \dq Akzeptieren \dq{} und \dq Revidieren \dq{} repräsentieren.
+Segment 4 enthält eine Box. Diese beinhaltet Elemente, die die \hyperref[AP_Aktionen_Anderungen]{Aktionen} \hyperref[AP_Aktionen_Anderungen_Akzeptieren]{Akzeptieren} und \hyperref[AP_Aktionen_Anderungen_Revidieren]{Revidieren} repräsentieren.
 
 \paragraph*{Dynamisches Verhalten}
 \subparagraph*{Desktop}
@@ -121,3 +101,20 @@ Wird nicht mehr über das Element gehovert oder wurde etwas anderes angeklickt, 
 Die Änderungen sind absteigend nach den Zeiten sortiert.
 Es werden alle Änderungen der aktuellen Session angezeigt.
 Die Filteroptionen sind entsprechend angepasst.
+
+\subsubsection*{Bilder}
+\begin{minipage}{\linewidth}
+    \centering
+    \begin{minipage}{.69\textwidth}
+        \captionsetup[figure]{labelformat=empty}
+        \inprelimg[width=\textwidth]{änderungen_desktop.png}
+        \captionof{figure}{Desktop Ansicht}
+        \captionsetup[figure]{labelformat=default}
+    \end{minipage}
+    \begin{minipage}{.3\textwidth}
+        \captionsetup[figure]{labelformat=empty}
+        \inprelimg[width=\textwidth]{änderungen_mobil.png}    
+        \captionof{figure}{Mobile Ansicht}
+        \captionsetup[figure]{labelformat=default}
+    \end{minipage}
+\end{minipage}

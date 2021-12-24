@@ -1,13 +1,14 @@
-\paragraph{\texttt{+ login() : boolean}}\label{AP_AuthManager_login}%$$$M
+\paragraph{\texttt{+ login() : Boolean}}\label{AP_AuthManager_login}%$$$M
 \paragraph*{Kurzbeschreibung}
 Ermöglicht einem Benutzer sich anzumelden.
 \paragraph*{Beschreibung}
 Ermöglicht einem Benutzer sich anzumelden.
-Hierfür wird ein OpenIDConnect-Provider (OIDC-Provider) verwendet, der zuvor durch die Methode \verb#AuthManager::configure# konfiguriert wird.
+Hierfür wird ein OpenIDConnect-Provider (OIDC-Provider) verwendet, der zuvor durch die Methode \hyperref[AP_AuthManager_configure]{\texttt{AuthManager::configure}} konfiguriert wird.
 Dazu wird der Benutzer auf die Login-Seite des OIDC-Providers geleitet und anschließend wieder zurück.
-Der erhaltene Access-Token wird anschließend gespeichert.
+Die erhaltenen Access-, ID- und Refresh-Token werden anschließend gespeichert.
+Die Benutzerdaten werden aus dem ID-Token extrahiert.
 Bei Erfolg wird wahr zurückgegeben, andernfalls wird falsch zurückgegeben.
 \paragraph*{Parameter}
-Keine
+Keine.
 \paragraph*{Rückgabewert}
-Wahr, wenn erfolgreich, falsch sonst
+Wahr, wenn erfolgreich, falsch sonst.

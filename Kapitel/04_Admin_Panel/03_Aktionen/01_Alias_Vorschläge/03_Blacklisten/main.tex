@@ -1,5 +1,5 @@
 \newpage
-\subsubsection{Blacklisten}\label{AP_Aktionen_Alias_Vorschläge_Blacklisten}
+\subsubsection{Blacklisten}\label{AP_Aktionen_Alias_Vorschlage_Blacklisten}
 
 Die Aktion die ausgeführt wird, um einen Alias-Vorschlag auf die Blacklist zu setzen.
 
@@ -15,18 +15,16 @@ Alias-Vorschlag wird nicht mehr angezeigt. Der Alias-Vorschlag ist zur Setzung a
 
 \paragraph*{Durchführung}
 \begin{enumerate}
-    \item Das Interface \verb#Change# wird durch implementierung der Methode \verb#Change::perform# instanziiert. \\
-          Dabei ruft die Methode \verb#Change::perform# dieser Instanz die \\ 
-          Methode \verb#Backend::blacklistAliasSuggestion# mit folgenden Parametern auf \begin{enumerate}
-              \item alias: String = Der Bezeichner des Alias-Vorschlags
-              \item mapID: String = Der Kartenobjektidentifizierer des Alias-Vorschlags
-          \end{enumerate}
-    \item Die erzeugte Instanz wird den Changes durch die Methode \verb#Changes::addChange# mit folgenden Parametern übergeben: \begin{enumerate}
+    \item Das Interface \hyperref[AP_Change]{\texttt{Change}} wird durch implementierung der Methode \hyperref[AP_Change_perform]{\texttt{Change::perform}} instanziiert. \\
+          Dabei ruft die Methode \hyperref[AP_Change_perform]{\texttt{Change::perform}} dieser Instanz die Methode \\
+          \hyperref[AP_Framework_blacklistAliasSuggestion]{\texttt{Framework::blacklistAliasSuggestion}} auf.
+    \item Die erzeugte Instanz wird den \hyperref[AP_Changes]{Änderungen} durch die Methode \hyperref[AP_Framework_addChange]{\texttt{Framework::addChange}} mit folgenden Parametern übergeben: \begin{enumerate}
         \item action: Change
         \item metadata: JSON mit folgenden Werten: \begin{enumerate}
             \item Alias: String = Der Bezeichner des Alias-Vorschlags
             \item Gebäudenummer: String = Gebäudenummer des Alias-Vorschlags
             \item Raum: String = Raum des Alias-Vorschlags
         \end{enumerate}
+        \item \dq Alias-Vorschläge \dq: String
     \end{enumerate}
 \end{enumerate}

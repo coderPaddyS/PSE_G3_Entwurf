@@ -1,0 +1,19 @@
+\paragraph*{\texttt{+doesAliasExist(mapID : int, alias : String) : Boolean}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Definiert das Erteilen der Anweisung an Klasse \texttt{AliasRepository}, die Existenz eines Aliasses zu überprüfen, und gibt diesen Wahrheitswert zurück.
+\paragraph*{Beschreibung}
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Resolvers} aufgerufen.
+Die Methode ermöglicht, dass ein Administrator anfragen kann, ob ein Alias existiert.
+Hierfür wird die ID des dazugehörigen Kartenobjekts und der gewünschte Alias als Zeichenkette übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapID : int
+    		\paragraph*{Beschreibung}
+    		Die ID des Kartenobjekts, für das der Alias als Bezeichner dient.
+    	\item alias : String
+    		\paragraph*{Beschreibung}
+    		Der Alias als Zeichenkette, dessen Existenz man überprüfen will.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Wahr, wenn der übergebene Alias existiert, ansonsten falsch.
