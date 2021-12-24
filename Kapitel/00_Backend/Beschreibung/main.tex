@@ -1,0 +1,17 @@
+\subsection{Beschreibung}%$$$M
+
+\paragraph*{Backend}
+Das \dq Backend \dq stellt die Serverseite unserer Applikation dar. Sie ist verantwortlich für die Datenhaltung und muss die benötigten Schnittstellen für Applikation und Admin-Panel zur Verfügung stellen.
+ Hierbei muss jedoch zwischen öffentlich zugänglichen, nur für angemeldete Nutzer verfügbare und Admin beschränkten Schnittstellen differenziert werden.
+\paragraph*{Architekturbeschreibung}
+Das Server-Backend wird in einer 3-stufigen, durchlässigen Schichtenarchitektur strukturiert. Nachdem die Authorisierung und Authentifizierung
+mittels eines vorangeschaltenen Filters erfolgt ist, wird der Http-Request an eine in den Ressourcen definierte GraphQL-Schnittstelle weitergeleitet. Diese Schnittstelle
+entspricht dem Entwurfsmuster \dq Fassade \dq. Diese einheitliche Schnittstelle bietet den Zugriff auf eine Menge von Schnittstellen der obersten Schicht - den Resolvern.
+Hier wird vor Methodenaufruf auf die benötigten Berechtigungen überprüft. Sind diese erfüllt, werden entsprechende Schnitstellen der darunterliegenden Schicht - den Sevices - 
+für die Umsetzung genutzt. Die Services bieten Zugang zu den hinterlegten Daten. Für die Referenzierung dieser auf Resolverebene werden Interfaces genutzt, um die Datenhaltung 
+von der Anwendungslogik zu trennen. Es ist anzumerken, dass hier nicht von einer undurchlässigen Schichtenarchitektur gesprochen werden kann, da der in gewisser Weise
+über der obersten Schicht liegende Filter den Service für die Datenhaltung der Nutzer benötigt, um dessen Berechtigungen bestimmen zu können.
+Um eine Datenhaltung mittels einer Datenbank zu realisieren, was nicht unbedingt notwendig, aber empfohlen wird, ist eine weitere Schicht von Nöten: die Repositories.
+Diese setzen den konkreten Umgang mit der zugrundeliegenden Datenbank um und ermöglichen Lese- und Schreibzugriffe, sodass benötigte Informationen abgefragt und bestehende manipuliert 
+werden können.
+ 

@@ -1,0 +1,48 @@
+\subsubsection{GlobalAliasManager}
+\paragraph*{Typ}
+Klasse.
+\paragraph*{Beschreibung}
+Diese Klasse verwaltet alle Alias-Daten, die nicht lokal auf dem Endgerät gespeichert sind, 
+sondern bei denen eine Kommunikation mit dem Server nötig ist.
+
+\subsubsection*{\texttt{+ suggestGlobalAlias(mapId : int, alias : String) : boolean}}%$$$M
+\paragraph*{Exceptions}
+Wirft eine ConnectionFailedException, wenn die Verbindung mit dem Server nicht möglich ist.\\
+Wirft eine NotAuthenticatedException, wenn der Benutzer sich anmelden muss.
+\paragraph*{Beschreibung}
+Reicht einen Alias-Vorschlag beim Server ein.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Kartenobjekts.
+    \item alias : String Bezeichner.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Void.
+
+\subsubsection*{\texttt{+ getAliasSuggestions(mapId : int) : List<String>}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt eine Liste mit bewertbaren Alias-Vorschlägen zurück.
+\paragraph*{Beschreibung}
+Gibt eine Liste mit relevanten Alias-Vorschlägen für das Kartenobjekt zurück, 
+die vom Benutzer noch bewertet werden dürfen.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Kartenobjekts.
+\end{itemize}
+\paragraph*{Rückgabewert}
+List<String>, Liste der Alias-Vorschläge.
+
+\subsubsection*{\texttt{+ sendAliasFeedback(mapId : int, suggestion : String, feedback : SuggestionFeedback)}}%$$$M
+\paragraph*{Exceptions}
+Wirft eine ConnectionFailedException, wenn die Verbindung mit dem Server nicht möglich ist.\\
+Wirft eine NotAuthenticatedException, wenn der Benutzer sich anmelden muss.
+\paragraph*{Beschreibung}
+Diese Methode sendet das Feedback zu einem Alias-Vorschlag an den Server.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Kartenobjekts.
+    \item suggestion : String Vorschlag. 
+    \item feedback : SuggestionFeedback Feedback.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Void.
