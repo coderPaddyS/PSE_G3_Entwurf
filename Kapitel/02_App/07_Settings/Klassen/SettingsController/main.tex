@@ -1,10 +1,10 @@
-\subsubsection{ISettingsController}
+\subsubsection{ISettingsController}\label{App_Settings_ISettingsController}
 \paragraph*{Typ}
 \texttt{Interface}.
 \paragraph*{Beschreibung}
 Dieses Interface bietet eine Schnittstelle für die Verwaltung der Einstellungen.
 
-\subsubsection*{\texttt{+ setLanguage(language : String)}}%$$$M
+\subsubsection*{\texttt{+ setLanguage(language : String)}}\label{App_Settings_ISettingsController_setLanguage}%$$$M
 \paragraph*{Beschreibung}
 Prüft, ob die Sprache ein Wert aus getSupportedLanguages() ist und wenn ja, veranlasst die Umstellung der App in die Sprache.
 \paragraph*{Parameter}
@@ -14,7 +14,7 @@ Prüft, ob die Sprache ein Wert aus getSupportedLanguages() ist und wenn ja, ver
 \paragraph*{Rückgabewert}
 \texttt{Void}.
 
-\subsubsection*{\texttt{+ setTheme(theme : Theme)}}%$$$M
+\subsubsection*{\texttt{+ setTheme(theme : Theme)}}\label{App_Settings_ISettingsController_setTheme}%$$$M
 \paragraph*{Beschreibung}
 Veranlasst die Umstellung der App auf ein Theme.
 \paragraph*{Parameter}
@@ -24,7 +24,7 @@ Veranlasst die Umstellung der App auf ein Theme.
 \paragraph*{Rückgabewert}
 \texttt{Void}.
 
-\subsubsection*{\texttt{+ deleteSearchHistory()}}%$$$M
+\subsubsection*{\texttt{+ deleteSearchHistory()}}\label{App_Settings_ISettingsController_deleteSearchHistory}%$$$M
 \paragraph*{Beschreibung}
 Veranlasst die Löschung des Suchverlaufs.
 \paragraph*{Parameter}
@@ -32,7 +32,7 @@ Keine.
 \paragraph*{Rückgabewert}
 \texttt{Void}.
 
-\subsubsection*{\texttt{+ setStoreSearchHistory(value : boolean)}}%$$$M
+\subsubsection*{\texttt{+ setStoreSearchHistory(value : boolean)}}\label{App_Settings_ISettingsController_setStoreSearchHistory}%$$$M
 \paragraph*{Beschreibung}
 Veranlasst die Änderung der Speicherung des Suchverlaufs abhängig vom gegebenen Wert.
 \paragraph*{Parameter}
@@ -42,7 +42,7 @@ Veranlasst die Änderung der Speicherung des Suchverlaufs abhängig vom gegebene
 \paragraph*{Rückgabewert}
 \texttt{Void}.
 
-\subsubsection*{\texttt{+ getLanguage() : LiveData<String>}}%$$$M
+\subsubsection*{\texttt{+ getLanguage() : LiveData<String>}}\label{App_Settings_ISettingsController_getLanguage}%$$$M
 \paragraph*{Beschreibung}
 Gibt den Namen der ausgewählten Sprache in dieser Sprache zurück.
 \paragraph*{Parameter}
@@ -50,7 +50,7 @@ Keine.
 \paragraph*{Rückgabewert}
 \texttt{LiveData<String>}, Name der ausgewählten Sprache in dieser Sprache.
 
-\subsubsection*{\texttt{+ getSupportedLanguages() : LiveData<List<String>>}}%$$$M
+\subsubsection*{\texttt{+ getSupportedLanguages() : LiveData<List<String>>}}\label{App_Settings_ISettingsController_getSupportedLanguages}%$$$M
 \paragraph*{Beschreibung}
 Gibt eine Liste der Namen der unterstützten Sprachen in den entsprechenden Sprachen zurück.
 \paragraph*{Parameter}
@@ -58,7 +58,7 @@ Keine.
 \paragraph*{Rückgabewert}
 \texttt{LiveData<List<String>>}, Liste der Namen der unterstützten Sprachen in den entsprechenden Sprachen.
 
-\subsubsection*{\texttt{+ getTheme() : LiveData<Theme>}}%$$$M
+\subsubsection*{\texttt{+ getTheme() : LiveData<Theme>}}\label{App_Settings_ISettingsController_getTheme}%$$$M
 \paragraph*{Beschreibung}
 Gibt das aktuell ausgewählte Theme zurück.
 \paragraph*{Parameter}
@@ -66,7 +66,7 @@ Keine.
 \paragraph*{Rückgabewert}
 \texttt{LiveData<Theme>}, aktuell ausgewähltes Theme.
 
-\subsubsection*{\texttt{+ getStoreSearchHistory() : LiveData<boolean>}}%$$$M
+\subsubsection*{\texttt{+ getStoreSearchHistory() : LiveData<boolean>}}\label{App_Settings_ISettingsController_getStoreSearchhistory}%$$$M
 \paragraph*{Beschreibung}
 Gibt zurück, ob der Suchverlauf gespeichert werden soll (true) oder nicht (false).
 \paragraph*{Parameter}
@@ -75,7 +75,7 @@ Keine.
 \texttt{LiveData<boolean>}, ob der Suchverlauf gespeichert werden soll (true) oder nicht (false).
 
 %----------------------------------------------------------
-\subsubsection{SettingsController}
+\subsubsection{SettingsController}\label{App_Settings_SettingsController}
 \paragraph*{Typ}
 Implementiert \texttt{ISettingsController}.
 \paragraph*{Beschreibung}
