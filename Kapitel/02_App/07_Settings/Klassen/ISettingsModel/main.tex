@@ -1,0 +1,82 @@
+\subsubsection{ISettingsModel}
+\paragraph*{Typ}
+Interface.
+\paragraph*{Beschreibung}
+Dieses Interface bietet eine Schnittstelle für die Durchführung von Änderungen an den Einstellungen der App.
+
+\subsubsection*{\texttt{+ setLanguage(language : String)}}%$$$M
+\paragraph*{Beschreibung}
+Stellt die Sprache der App auf die gegebene Sprache um.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item language : String = Sprache, in der die App angezeigt werden soll.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Void.
+
+\subsubsection*{\texttt{+ setTheme(theme : Theme)}}%$$$M
+\paragraph*{Beschreibung}
+Stellt die App auf ein gegebenes Theme um.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item theme : Theme = Theme, in dem die App angezeigt werden soll.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Void.
+
+\subsubsection*{\texttt{+ deleteSearchHistory()}}%$$$M
+\paragraph*{Beschreibung}
+Löscht den Suchverlaufs.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+Void.
+
+\subsubsection*{\texttt{+ setStoreSearchHistory(value : boolean)}}%$$$M
+\paragraph*{Beschreibung}
+Setzt den Wert für die Speicherung des Suchverlaufs.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item value : boolean = Wert, ob der Suchverlauf gespeichert werden soll oder nicht.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Void.
+
+\subsubsection*{\texttt{+ getLanguageIdentifier() : LiveData<String>}}%$$$M
+\paragraph*{Beschreibung}
+Gibt den ISO-639-1-Code der ausgewählten Sprache zurück.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+LiveData<String>, ISO-639-1-Code der ausgewählten Sprache.
+
+\subsubsection*{\texttt{+ getSupportedLanguages() : LiveData<List<String>>}}%$$$M
+\paragraph*{Beschreibung}
+Gibt eine Liste der ISO-639-1-Codes der unterstützten Sprachen zurück.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+LiveData<List<String>>, Liste der ISO-639-1-Codes der unterstützten Sprachen.
+
+\subsubsection*{\texttt{+ getTheme() : LiveData<Theme>}}%$$$M
+\paragraph*{Beschreibung}
+Gibt das aktuell ausgewählte Theme zurück.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+LiveData<Theme>, aktuell ausgewähltes Theme.
+
+\subsubsection*{\texttt{+ getStoreSearchHistory() : LiveData<boolean>}}%$$$M
+\paragraph*{Beschreibung}
+Gibt zurück, ob der Suchverlauf gespeichert wird.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+LiveData<boolean>, ob der Suchverlauf gespeichert wird (true) oder nicht (false).
+
+%----------------------------------------------------------
+\subsubsection{SettingsModel}
+\paragraph*{Typ}
+Implementiert ISettingsModel.
+\paragraph*{Beschreibung}
+Diese Klasse dient der Durchführung von Änderungen an den Einstellungen der App.
