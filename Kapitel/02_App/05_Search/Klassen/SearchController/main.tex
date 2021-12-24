@@ -1,4 +1,6 @@
-\subsection{Interface ISearchController}
+\subsubsection{ISearchController}
+\paragraph*{Typ}
+Interface.
 \paragraph*{Beschreibung}
 Dieses Interface ermöglicht die Suche nach Gebäuden und Räumen zu dem gegebenen String. 
 Es ermöglicht die Bestimmung der MapId zu einem ausgewählten, gültigen Suchbegriff. 
@@ -7,50 +9,48 @@ Dies macht sie, indem sie die Daten bei SearchModel anfordert.
 Das Kartenobjekt mit der MapId wird nach abgeschlossener Suche auf der Karte mit Hilfe des NavController angezeigt.
 
 
-\subsubsection{\texttt{+ getSuggestions() : LiveData<List<String>>}}%$$$M
+\subsubsection*{\texttt{+ getSuggestions() : LiveData<List<String>>}}%$$$M
 \paragraph*{Beschreibung}
 Gibt Suchvorschläge zu der aktuellen Eingabe zurück.
 Wenn die Eingabe leer ist werden stattdessen die letzten Suchbegriffe angefordert und zurückgegeben.
 \paragraph*{Parameter}
-\begin{itemize}
-    \item keine
-\end{itemize}
+Keine.
 \paragraph*{Rückgabewert}
-LiveData<List<String>>, Suchvorschläge zur Eingabe, die eine Klasse, die ISearchModel implementiert, zurückgegeben hat
+LiveData<List<String>>, Suchvorschläge zur Eingabe, die eine Klasse, die ISearchModel implementiert, zurückgegeben hat.
 
-\subsubsection{\texttt{+ setInput(input : String)}}%$$$M
+\subsubsection*{\texttt{+ setInput(input : String)}}%$$$M
 \paragraph*{Beschreibung}
 Nimmt den aktuellen Input-String entgegen und aktualisiert damit die Suchvorschläge.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item input : String = Die Eingabe, den der Benutzer zur Suche eingegeben hat
+    \item input : String Die Eingabe, den der Benutzer zur Suche eingegeben hat.
 \end{itemize}
 \paragraph*{Rückgabewert}
-void
+Void.
 
-\subsubsection{\texttt{+ confirminput()}}%$$$M
+\subsubsection*{\texttt{+ confirminput()}}%$$$M
 \paragraph*{Beschreibung}
 Zeigt das Kartenobjekts zu dem Suchvorschlag mit der höchsten Übereinstimmung an und wechselt dazu in den Kartenmodus.
 Fordert die Speicherung des Suchvorschlags von einer Klasse, die ISearchModel implementiert.
 \paragraph*{Parameter}
-\begin{itemize}
-    \item keine
-\end{itemize}
+Keine.
 \paragraph*{Rückgabewert}
-void
+Void.
 
-\subsubsection{\texttt{+ selectSuggestion(suggestion : String)}}%$$$M
+\subsubsection*{\texttt{+ selectSuggestion(suggestion : String)}}%$$$M
 \paragraph*{Beschreibung}
 Zeigt das Kartenobjekt zu dem ausgewählten Suchvorschlag an und wechselt dazu in den Kartenmodus.
 Fordert die Speicherung des ausgewählten Suchvorschlags von einer Klasse, die ISearchModel implementiert.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item suggestion : String = Der ausgewählte Suchvorschlag
+    \item suggestion : String Der ausgewählte Suchvorschlag.
 \end{itemize}
 \paragraph*{Rückgabewert}
-void
+Void.
 
 
-\subsection{class SearchController implements ISearchController}
+\subsubsection{SearchController}
+\paragraph*{Typ}
+Implementiert ISearchController.
 \paragraph*{Beschreibung}
 Klasse zur Suche nach Kartenobjekten und Anzeigen dieser in der Karte.
