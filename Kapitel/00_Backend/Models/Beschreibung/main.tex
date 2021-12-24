@@ -1,6 +1,10 @@
 \subsection{Paketbeschreibung}%$$$M
 \paragraph*{Kurzbeschreibung}
-    Enthält die Klassen der zu speichernden Entitys.
+    Enthält die Klassen der zu speichernden Entities.
+\paragraph*{Anmerkung}  
+    Die hier beschriebenenen Getter- und Settermethoden sind nur die, welche für eine anwendungsinterne Datenhaltung 
+    notwendig sind. Für eine Datenhaltung in einer Datenbank mittels Spring Data JPA und Hibernate, die wir bevorzugen, sollten 
+    standardmäßige Getter und Setter für alle Atribute der Entities generiert werden.
 \paragraph*{Enthaltene Klassen}
 \begin{itemize}
     \item Alias
@@ -17,3 +21,9 @@
             \paragraph{Beschreibung} 
           Bildet eine bestimmte MapId vom Typ int auf das entsprechende Kartenobjekt ab.
 \end{itemize}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{\currfiledir Models}
+  \caption{UML-Paketdiagramm}
+\end{figure}
