@@ -3,8 +3,8 @@
 Interface zum Zugriff auf zugrundeliegende Datenhaltung der Aliasvorschlägge.
 \paragraph*{Enthaltene Methoden}
 \begin{itemize}
-    \item \texttt{addAliasSuggestion(aliasSuggestion : String, mapID : int, user : String) : Boolean}
-    \item \texttt{removeAliasSuggestion(aliasSuggestion : String, mapID : int) : Boolean} 
-    \item \texttt{voteForAlias(aliasSuggestion : String, mapID : int, user : String, vote : boolean) : Boolean}
-    \item \texttt{getAliasSuggestions(minValToShowPos : int, minValToShowNeg : int) : Iterable<AliasSuggestion>}
+    \item \texttt{+addAliasSuggestion(aliasSuggestion : String, mapID : int, user : String) : Boolean}
+    \item \texttt{+removeAliasSuggestion(aliasSuggestion : String, mapID : int) : Boolean} 
+    \item \texttt{+voteForAlias(aliasSuggestion : String, mapID : int, user : String, vote : Boolean) : Boolean}
+    \item \texttt{+getAliasSuggestions(minValToShowPos : int, minValToShowNeg : int) : Iterable<AliasSuggestion>}
 \end{itemize}

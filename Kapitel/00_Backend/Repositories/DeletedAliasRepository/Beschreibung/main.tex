@@ -4,6 +4,6 @@ Verwaltet Zugriffe auf die zugrundeliegende Datenbank der gelöschten Aliasse.
 Dafür müssen Einträge ab einer bestimmten Version abgefragt sowie Einträge hinzugefügt und gelöscht werden können.
 \paragraph*{Enthaltene Methoden}
 \begin{itemize}
-    \item \texttt{findNewerThanVersion(version : int) : (Iterable<Alias>, version : int)}
-    \item \texttt{deleteByNameAndMapID(deletedAlias : String, mapID : int) : Boolean}
+    \item \texttt{+findNewerThanVersion(version : int) : (Iterable<Alias>, version : int)}
+    \item \texttt{+deleteByNameAndMapID(deletedAlias : String, mapID : int) : Boolean}
 \end{itemize}

@@ -5,11 +5,11 @@ Dazu gehören das Finden aller Vorschläge zu einer bestimmten MapID, das Finden
 seines Namens und der zugehörigen MapID sowie das Löschen und Speichern von Aliasvorschlägen.
 \paragraph*{Enthaltene Methoden}
 \begin{itemize}
-    \item \texttt{findByMapID(mapID : int) : Iterable<alias : String>}
-    \item \texttt{deleteByNameAndMapID(aliasSuggestion : String, mapID : int) : Boolean}
-    \item \texttt{deleteByName(aliasSuggestion : String) : Boolean}
-    \item \texttt{findByVotes(minVotesNeg : int, minVotesPos : int) : Iterable<AliasSuggestion>}
-    \item \texttt{findAmountByMapID(mapID : int, amount : int) : Iterable<aliasSuggestion : String>}
-    \item \texttt{updateVotes(aliasSuggestion : String, mapID : int, vote : Boolean) : Boolean}
-    \item \texttt{addVoter(user : String, aliasSuggestion : String, mapID : int)}
+    \item \texttt{+findByMapID(mapID : int) : Iterable<alias : String>}
+    \item \texttt{+deleteByNameAndMapID(aliasSuggestion : String, mapID : int) : Boolean}
+    \item \texttt{+deleteByName(aliasSuggestion : String) : Boolean}
+    \item \texttt{+findByVotes(minVotesNeg : int, minVotesPos : int) : Iterable<AliasSuggestion>}
+    \item \texttt{+findAmountByMapID(mapID : int, amount : int) : Iterable<aliasSuggestion : String>}
+    \item \texttt{+updateVotes(aliasSuggestion : String, mapID : int, vote : Boolean) : Boolean}
+    \item \texttt{+addVoter(user : String, aliasSuggestion : String, mapID : int)}
 \end{itemize}
