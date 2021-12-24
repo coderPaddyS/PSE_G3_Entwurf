@@ -1,0 +1,17 @@
+\paragraph*{\texttt{+findByID(mapID : int) : String}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt das Kartenobjekt als Zeichenkette, das einer bestimmten ID entspricht, zurück.
+\paragraph*{Beschreibung}
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Services} aufgerufen.
+Die Methode ermöglicht, dass das Kartenobjekt, das der übergebenen ID entspricht, als Zeichenkette angefragt und zurückgegeben werden kann.
+Hierfür wird die ID des gewünschten Kartenobjekts übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapID : int
+    		\paragraph*{Beschreibung}
+    		Die ID des gewünschten Kartenobjekts.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Das Kartenobjekt als Zeichenkette, das der übergebenen ID entspricht, sofern die übergebene ID gültig ist.
+Im Fall, dass die übergebene ID ungültig ist, wird \texttt{null} zurückgegeben.
