@@ -1,16 +1,28 @@
 \subsection{Paketbeschreibung}%$$$M
 \paragraph*{Kurzbeschreibung}
-Beinhaltet die Schnittstellen, die von außen durch Http-Requests über die GraphQL-Schnittstelle aufgerufen werden können.
+Beinhaltet alle Klassen und Konfigurationen, die zur Authentifizierung und Authorisierung des Nutzers nötig sind.
 \paragraph*{Beschreibung}
-Der Aufruf der Methoden der Klassen dieses Paket geschieht bei uns durch die in den Resourcen definierte GraphQL-Schnittstelle.
-Wird GraphQL nich genutzt, so muss auf andere Weise sichergestellt werden, dass die jeweiligen Http-Request zur Ausführung der richtigen Methoden
-führen und die richtige Rückgabe erzeugt wird.
-\paragraph*{Enthaltene Pakete}
+Bestimmte Methoden auf Resolverebene sollen nur angemeldeten Nutzern oder teilweise auch nur Nutzern, die bestimmte Authorisierungen
+innehaben, zugänglich sein. Um dies mittels Spring-Security zu realisieren wird in \dq WebSecurityConfig \dq spezifiziert, dass mittels eines vorangeschaltenen Filters vor jedem
+Methodenaufruf der Header des zu bearbeitenden Http-Requests auf ein Access-Token überprüft werden soll. Ist ein valider Token enthalten, 
+wird diesem die Nutzeridentifikation entnommen. Mit diesem eindeutigen Kennzeichner wird die entsprechende User-Entitys
+wenn noch nicht vorhanden erstellt und geladen. Dieser werden dann  die Nutzerauthoritäten entnommen und in ein JWTPreAuthenticationToken gewrapped in den Security-Kontext abgelegt. Dadurch kann vor der Methodenausführung
+im Resolver überprüft werden, ob der Security-Context die benötigte Authorität enthält.
+
+\paragraph*{Enthaltene Klasse}
 \begin{itemize}
-    \item MutationResolver
+	\item WebSecurityConfig
+	\paragraph*{Beschreibung}
+			Klasse, in der die Standardkonfigurationen der Zugriffsberechtigungen auf die Methoden 
+			der Resolverebene festgelegt werden (diesen gelten, wenn den Methoden nicht durch Annotationen o.ä. andere
+			Authoritäten zugeordnet werden). Außerdem wird hier für das Voranschalten des Filters zur Authorisierung und Authentifizierung gesorgt.
+    \item JWTFilter
     		\paragraph*{Beschreibung}
-    		Bietet Schnittstellen zur Manipulation der gespeicherten Daten.
-    \item QueryResolver
+    		Überprüft HttpRequest auf ein gültiges Token und fügt gegebenfalls ein JWTPreAuthenticationToken mit den entsprechenden Authoritäten in den Security-Context ein.
+	\item SecurityConfig
+			\paragraph*{Beschreibung}
+			Klasse, in der der Algorithmus und mittels diesem auch der Verifizier für die Signatur gegebener Access-Token definiert werden.		
+	\item JWTPreAuthenticationToken
     		\paragraph*{Beschreibung}
-    		Bietet Schnittstelle zum Abfragen gespeicherter Daten.
+			Wrapper-Klasse für gegebene Authoritäten.
 \end{itemize}
