@@ -1,11 +1,11 @@
-\subsubsection{GlobalAliasManager}
+\subsubsection{GlobalAliasManager}\label{App_AddAlias_GlobalAliasManager}
 \paragraph*{Typ}
 Klasse.
 \paragraph*{Beschreibung}
 Diese Klasse verwaltet alle Alias-Daten, die nicht lokal auf dem Endgerät gespeichert sind, 
 sondern bei denen eine Kommunikation mit dem Server nötig ist.
 
-\subsubsection*{\texttt{+ suggestGlobalAlias(mapId : int, alias : String) : boolean}}%$$$M
+\subsubsection*{\texttt{+ suggestGlobalAlias(mapId : int, alias : String) : boolean}}\label{App_AddAlias_GlobalAliasManager_suggestGlobalAlias}%$$$M
 \paragraph*{Exceptions}
 Wirft eine ConnectionFailedException, wenn die Verbindung mit dem Server nicht möglich ist.\\
 Wirft eine NotAuthenticatedException, wenn der Benutzer sich anmelden muss.
@@ -19,7 +19,7 @@ Reicht einen Alias-Vorschlag beim Server ein.
 \paragraph*{Rückgabewert}
 \texttt{Void}.
 
-\subsubsection*{\texttt{+ getAliasSuggestions(mapId : int) : List<String>}}%$$$M
+\subsubsection*{\texttt{+ getAliasSuggestions(mapId : int) : List<String>}}\label{App_AddAlias_GlobalAliasManager_getAliasSuggestions}%$$$M
 \paragraph*{Kurzbeschreibung}
 Gibt eine Liste mit bewertbaren Alias-Vorschlägen zurück.
 \paragraph*{Beschreibung}
@@ -32,7 +32,7 @@ die vom Benutzer noch bewertet werden dürfen.
 \paragraph*{Rückgabewert}
 \texttt{List<String>}, Liste der Alias-Vorschläge.
 
-\subsubsection*{\texttt{+ sendAliasFeedback(mapId : int, suggestion : String, feedback : SuggestionFeedback)}}%$$$M
+\subsubsection*{\texttt{+ sendAliasFeedback(mapId : int, suggestion : String, feedback : SuggestionFeedback)}}\label{App_AddAlias_GlobalAliasManager_sentAliasFeedback}%$$$M
 \paragraph*{Exceptions}
 Wirft eine ConnectionFailedException, wenn die Verbindung mit dem Server nicht möglich ist.\\
 Wirft eine NotAuthenticatedException, wenn der Benutzer sich anmelden muss.

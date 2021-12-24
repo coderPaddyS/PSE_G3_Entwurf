@@ -1,4 +1,4 @@
-\subsubsection{LocalAliasManager}
+\subsubsection{LocalAliasManager}\label{App_AddAlias_LocalAliasManager}
 \paragraph*{Typ}
 Klasse.
 \paragraph*{Beschreibung}
@@ -6,7 +6,7 @@ Diese Klasse verwaltet alle Alias-Daten, die lokal auf dem Endgerät gespeichert
 Dies sind nicht ausschließlich lokale Aliasse. Da eine möglichst aktuelle Kopie der 
 globalen Alias-Tabelle lokal gespeichert ist, sind auch Getter auf globale Aliasse möglich.
 
-\subsubsection*{\texttt{+ addLocalAlias(mapId : int, alias : String)}}%$$$M
+\subsubsection*{\texttt{+ addLocalAlias(mapId : int, alias : String)}}\label{App_AddAlias_LocalAliasManager_addLocalAlias}%$$$M
 \paragraph*{Beschreibung}
 Erstellt und speichert einen neuen lokalen Alias.
 \paragraph*{Parameter}
@@ -17,7 +17,7 @@ Erstellt und speichert einen neuen lokalen Alias.
 \paragraph*{Rückgabewert}
 \texttt{Void}.
 
-\subsubsection*{\texttt{+ deleteLocalAlias(mapId : int, alias : String)}}%$$$M
+\subsubsection*{\texttt{+ deleteLocalAlias(mapId : int, alias : String)}}\label{App_AddAlias_LocalAliasManager_deleteLocalAlias}%$$$M
 \paragraph*{Beschreibung}
 Löscht einen lokalen Alias. Existiert er nicht, passiert nichts.
 \paragraph*{Parameter}
@@ -28,7 +28,7 @@ Löscht einen lokalen Alias. Existiert er nicht, passiert nichts.
 \paragraph*{Rückgabewert}
 \texttt{Void}.
 
-\subsubsection*{\texttt{+ getLocalAliases(mapId : int) : LiveData<List<String>>}}%$$$M
+\subsubsection*{\texttt{+ getLocalAliases(mapId : int) : LiveData<List<String>>}}\label{App_AddAlias_LocalAliasManager_getLocalAliases}%$$$M
 \paragraph*{Beschreibung}
 Gibt eine Liste aller lokalen Aliasse eines Kartenobjekts zurück.
 \paragraph*{Parameter}
@@ -38,7 +38,7 @@ Gibt eine Liste aller lokalen Aliasse eines Kartenobjekts zurück.
 \paragraph*{Rückgabewert}
 \texttt{LiveData<List<String>>}, Liste der lokalen Aliasse.
 
-\subsubsection*{\texttt{+ getGlobalAliases(mapId : int) : List<String>}}%$$$M
+\subsubsection*{\texttt{+ getGlobalAliases(mapId : int) : List<String>}}\label{App_AddAlias_LocalAliasManager_getGlobalAliases}%$$$M
 \paragraph*{Beschreibung}
 Gibt eine Liste aller globalen Aliasse eines Kartenobjekts zurück. 
 \paragraph*{Parameter}

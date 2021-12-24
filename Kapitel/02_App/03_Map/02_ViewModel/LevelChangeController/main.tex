@@ -1,4 +1,4 @@
-\subsubsection{LevelChangeController}
+\subsubsection{LevelChangeController}\label{App_Map_ViewModel_LevelChangeController}
 \paragraph*{Typ}
 \texttt{Interface}.
 \paragraph*{Beschreibung}
@@ -8,7 +8,7 @@ Das Interfaces stellt Informationen wie welche Etage gerade angezeigt wird berei
 Dazu kann sie von einem Beobachter beobachtet werden. Hierzu werden LiveData-Objekte verwendet.\\
 Es stehen Methoden zum Wechseln der Etage bereit.\\
 
-\subsubsection*{\texttt{+ changeLevelUp()}}%$$$M
+\subsubsection*{\texttt{+ changeLevelUp()}}\label{App_Map_ViewModel_changeLevelUp}%$$$M
 \paragraph*{Kurzbeschreibung}
 Wechselt eine Etage nach oben.
 \paragraph*{Beschreibung}
@@ -20,7 +20,7 @@ Keine.
 \paragraph*{Rückgabewert}
 \texttt{Void}.
 
-\subsubsection*{\texttt{+ changeLevelDown()}}%$$$M
+\subsubsection*{\texttt{+ changeLevelDown()}}\label{App_Map_ViewModel_changeLevelDown}%$$$M
 \paragraph*{Kurzbeschreibung}
 Wechselt eine Etage nach unten.
 \paragraph*{Beschreibung}
@@ -32,7 +32,7 @@ Keine.
 \paragraph*{Rückgabewert}
 \texttt{Void}.
 
-\subsubsection*{\texttt{+ isHighestLevel() : LiveData<boolean>}}%$$$M
+\subsubsection*{\texttt{+ isHighestLevel() : LiveData<boolean>}}\label{App_Map_ViewModel_isHighestLevel}%$$$M
 \paragraph*{Beschreibung}
 Gibt an, ob die aktuelle Etage die oberste Etage im Gebäude ist.
 \paragraph*{Parameter}
@@ -40,7 +40,7 @@ Keine.
 \paragraph*{Rückgabewert}
 \texttt{LiveData<boolean>}, ob die aktuelle Etage die oberste Etage im Gebäude ist.
 
-\subsubsection*{\texttt{+ isLowestLevel() : LiveData<boolean>}}%$$$M
+\subsubsection*{\texttt{+ isLowestLevel() : LiveData<boolean>}}\label{App_Map_ViewModel_isLowestLevel}%$$$M
 \paragraph*{Beschreibung}
 Gibt an, ob die aktuelle Etage die unterste Etage im Gebäude ist.
 \paragraph*{Parameter}
@@ -48,7 +48,7 @@ Keine.
 \paragraph*{Rückgabewert}
 \texttt{LiveData<boolean>}, ob die aktuelle Etage die unterste Etage im Gebäude ist.
 
-\subsubsection*{\texttt{+ getLevel() : LiveData<int>}}%$$$M
+\subsubsection*{\texttt{+ getLevel() : LiveData<int>}}\label{App_Map_ViewModel_getLevel}%$$$M
 \paragraph*{Kurzbeschreibung}
 Gibt die Nummer der aktuellen Etage zurück.
 \paragraph*{Beschreibung}
@@ -60,7 +60,7 @@ Keine.
 \paragraph*{Rückgabewert}
 \texttt{LiveData<int>}, Nummer der aktuellen Etage.
 
-\subsubsection*{\texttt{+ isLevelMode() : LiveData<boolean>}}%$$$M
+\subsubsection*{\texttt{+ isLevelMode() : LiveData<boolean>}}\label{App_Map_ViewModel_isLevelMode}%$$$M
 \paragraph*{Beschreibung}
 Gibt zurück, ob sich die Karte gerade im Etagenmodus befindet.
 \paragraph*{Parameter}

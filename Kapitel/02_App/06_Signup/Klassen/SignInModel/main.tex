@@ -1,10 +1,10 @@
-\subsubsection{ISignInModel}
+\subsubsection{ISignInModel}\label{App_Signup_ISignInModel}
 \paragraph*{Typ}
 \texttt{Interface}.
 \paragraph*{Beschreibung}
 Dieses Interface stellt die Daten zur Anmeldung bereit und führt die Anmeldung aus.
 
-\subsubsection{\texttt{+ getSupportedProviders() : List<String>}}%$$$M
+\subsubsection{\texttt{+ getSupportedProviders() : List<String>}}\label{App_Signup_ISignInModel_getSupportProviders}%$$$M
 \paragraph*{Beschreibung}
 Gibt eine Liste aller unterstützen Anmeldediensten zurück.
 \paragraph*{Parameter}
@@ -12,7 +12,7 @@ Keine.
 \paragraph*{Rückgabewert}
 \texttt{List<String>} mit den Namen aller unterstützen Anmeldediensten.
 
-\subsubsection{\texttt{+ signIn(provider : String) : boolean}}%$$$M
+\subsubsection{\texttt{+ signIn(provider : String) : boolean}}\label{App_Signup_ISignInModel_signIn}%$$$M
 \paragraph*{Kurzbeschreibung}
 Führt die Anmeldung durch.
 \paragraph*{Beschreibung}
@@ -27,7 +27,7 @@ Dem Server wird die Anmeldung mitgeteilt. Der Server sendet eine UserId für den
 \texttt{boolean}, ob die Anmeldung erfolgreich war.
 
 %-------------------------------------------------
-\subsubsection{SignInModel}
+\subsubsection{SignInModel}\label{App_Signup_SignInModel}
 \paragraph*{Typ}
 Implementiert \texttt{ISignInModel}.
 \paragraph*{Beschreibung}

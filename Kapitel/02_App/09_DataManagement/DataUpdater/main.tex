@@ -1,4 +1,4 @@
-\subsubsection{DataUpdater}
+\subsubsection{DataUpdater}\label{App_DocumentViewer_DataUpdater}
 \paragraph*{Typ}
 \texttt{Interface}.
 \paragraph*{Beschreibung}
@@ -9,7 +9,7 @@ ausgeführt werden. DataUpdater mit gleicher Priorität sind voneinander unabhä
 die Reihenfolge ihrer Ausführung ist egal.\\
 Da sich die Aktualisierung je nach Datentyp unterscheidet, wird hier eine Strategie benutzt.
 
-\subsubsection*{\texttt{+ getPriority() : int}}%$$$M
+\subsubsection*{\texttt{+ getPriority() : int}}\label{App_DocumentViewer_DataUpdater_getPriority}%$$$M
 \paragraph*{Kurzbeschreibung}
 Gibt die Priorität zurück.
 \paragraph*{Beschreibung}
@@ -21,7 +21,7 @@ Keine.
 \paragraph*{Rückgabewert}
 \texttt{int}, Priorität des DataUpdaters.
 
-\subsubsection*{\texttt{+ updateData() : boolean}}%$$$M
+\subsubsection*{\texttt{+ updateData() : boolean}}\label{App_DocumentViewer_DataUpdater_updateData}%$$$M
 \paragraph*{Kurzbeschreibung}
 Führt die Aktualisierung der Daten durch.
 \paragraph*{Beschreibung}
@@ -36,7 +36,7 @@ Keine.
 \texttt{boolean}, ob die Aktualisierung erfolgreich war.
 
 %-----------------------------------------------
-\subsubsection{GlobalAliasUpdater}
+\subsubsection{GlobalAliasUpdater}\label{App_DocumentViewer_GlobalAliasUpdater}
 \paragraph*{Typ}
 Implementiert \texttt{DataUpdater}.
 \paragraph*{Beschreibung}
