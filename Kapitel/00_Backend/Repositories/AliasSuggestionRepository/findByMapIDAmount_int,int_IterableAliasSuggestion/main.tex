@@ -1,0 +1,20 @@
+\paragraph*{\texttt{+findByMapIDAmount(mapID : int, amount : int) : Iterable<aliasSuggestion : AliasSuggestion>}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt eine Liste von einer bestimmten Anzahl an Alias-Vorschlägen, die als Bezeichner für ein bestimmtes Kartenobjekt dienen sollen.
+\paragraph*{Beschreibung}
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Services} aufgerufen.
+Die Methode ermöglicht, dass eine Liste von Alias-Vorschlägen, die als Bezeichner für ein bestimmtes Kartenobjekt dienen sollen, angefragt und zurückgegeben werden kann.
+Dabei werden nur so viele Alias-Vorschläge hinzugefügt wie als Parameter übergeben.
+Dementsprechend wird die ID des Kartenobjekts, für das die Alias-Vorschläge als Bezeichner dienen sollen, und die Anzahl an Alias-Vorschlägen, die insgesamt zur Liste hinzugefügt werden sollen.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapID : int
+    		\paragraph*{Beschreibung}
+    		Die ID des Kartenobjekts, für das die Alias-Vorschläge als Bezeichner dienen sollen
+    	\item amount : int
+    		\paragraph*{Beschreibung}
+    		Die Anzahl an Alias-Vorschlägen, die insgesamt zur Liste hinzugefügt werden sollen.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Die Liste aus Alias-Vorschlägen, die als Bezeichner für das übergebene Kartenobjekt dienen und insgesamt nicht mehr Alias-Vorschläge als die übergebene Anzahl enthält.
