@@ -1,0 +1,34 @@
+\subsubsection{ISignInModel}
+\paragraph*{Typ}
+Interface.
+\paragraph*{Beschreibung}
+Dieses Interface stellt die Daten zur Anmeldung bereit und führt die Anmeldung aus.
+
+\subsubsection{\texttt{+ getSupportedProviders() : List<String>}}%$$$M
+\paragraph*{Beschreibung}
+Gibt eine Liste aller unterstützen Anmeldediensten zurück.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+List<String> mit den Namen aller unterstützen Anmeldediensten.
+
+\subsubsection{\texttt{+ signIn(provider : String) : boolean}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Führt die Anmeldung durch.
+\paragraph*{Beschreibung}
+Diese Methode leitet den Nutzer zur LogIn-Seite des OpenId-Providers weiter.
+Diese öffnet sich im Browser. Nach der Anmeldung werden die erhaltenen Access-, Id- und Refresh-Tokens gespeichert.
+Dem Server wird die Anmeldung mitgeteilt. Der Server sendet eine UserId für den Benutzer, die in der App gespeichert wird.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item provider : String ausgewählter Anmeldedienst.
+\end{itemize}
+\paragraph*{Rückgabewert}
+boolean, ob die Anmeldung erfolgreich war.
+
+%-------------------------------------------------
+\subsubsection{SignInModel}
+\paragraph*{Typ}
+Implementiert ISignInModel.
+\paragraph*{Beschreibung}
+Diese Klasse stellt die Daten zur Anmeldung bereit und führt die Anmeldung aus.
