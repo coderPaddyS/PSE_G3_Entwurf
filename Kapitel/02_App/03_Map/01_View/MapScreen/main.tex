@@ -1,8 +1,8 @@
 \subsubsection{MapScreen}
 \paragraph*{Typ}
-Composable.
+\texttt{Composable}.
 \paragraph*{Beschreibung}
-Dieses Composable ist für den Aufbau der Ansicht des Kartenmodus verantwortlich.
+Dieses \texttt{Composable} ist für den Aufbau der Ansicht des Kartenmodus verantwortlich.
 Dies beinhaltet das Anzeigen der Karte und der Schaltflächen zur Kartensteuerung.\\
 Dazu ist folgendes nötig:
 \begin{itemize}
@@ -29,7 +29,7 @@ Weiter werden folgende Schaltflächen angezeigt, durch welche man in andere Ansi
 
 \paragraph*{Parameter}
 \begin{itemize}
-    \item dataProvider : MapDisplayDataProvider Klasse, die die Hintergrundkarte und Kartenposition bereitstellt.
+    \item \texttt{dataProvider : MapDisplayDataProvider} Klasse, die die Hintergrundkarte und Kartenposition bereitstellt.
 \end{itemize}
 
 \paragraph*{Interaktionen}
@@ -61,16 +61,16 @@ Um dieses Verhalten zu ermöglichen, muss dafür gesorgt werden, dass die letzte
 der App gespeichert wird.\\
 Ist die App geöffnet und der Benutzer kehrt aus einer anderen Ansicht in die Kartenansicht zurück,
 wird die letzte Position angezeigt, sofern nicht eine bestimmte Position angezeigt werden muss 
-(siehe Beobachtete Daten: getFocusedPos).
+(siehe Beobachtete Daten: \texttt{getFocusedPos}).
 
 \paragraph*{Beobachtete Daten}
-Dieses Composable beobachtet einen MapDisplayDataProvider. 
+Dieses \texttt{Composable} beobachtet einen MapDisplayDataProvider. 
 Eine Änderung der Daten wirkt sich wie folgt aus:
 \begin{itemize}
-    \item getTileSource: Die Karte, die von der MapView angezeigt wird, wird mit den neuen 
+    \item \texttt{getTileSource}: Die Karte, die von der MapView angezeigt wird, wird mit den neuen 
     Kartendaten aktualisiert.
-    \item getFocusedPos: Die neue fokussierte Position wird mittig auf der Karte angezeigt.
-    \item getRoomError: Ist der übergebene Wert nicht \texttt{null}, werden die Fehlerinformationen 
+    \item \texttt{getFocusedPos}: Die neue fokussierte Position wird mittig auf der Karte angezeigt.
+    \item \texttt{getRoomError}: Ist der übergebene Wert nicht \texttt{null}, werden die Fehlerinformationen 
     in einer Meldung über allen anderen Elementen angezeigt.
 \end{itemize}
 

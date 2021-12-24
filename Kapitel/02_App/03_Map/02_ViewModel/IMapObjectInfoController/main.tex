@@ -1,6 +1,6 @@
 \subsubsection{IMapObjectInfoController}
 \paragraph*{Typ}
-Interface.
+\texttt{Interface}.
 \paragraph*{Beschreibung}
 Dieses Interface definiert eine Schnittstelle, die alle Daten bereitstellt, 
 die zum Anzeigen der Informationen zu einem Kartenobjekt benötigt werden. 
@@ -11,10 +11,10 @@ Außerdem bietet es Methoden an, um einige dieser Daten zu ändern.
 Gibt die Adresse eines Gebäudes zurück.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapId : int MapId des Gebäudes.
+    \item \texttt{mapId : int} MapId des Gebäudes.
 \end{itemize}
 \paragraph*{Rückgabewert}
-String mit Adresse, \texttt{null}, wenn MapId ungültig.
+\texttt{String} mit Adresse, \texttt{null}, wenn MapId ungültig.
 
 \subsubsection*{\texttt{+ getRoomInfo(mapId : int) : (RoomType, String, int, List<String>)}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -30,30 +30,30 @@ Diese Methode gibt zu einem, durch seine MapId gegebenen, Raum folgende Informat
 Ist die gegebene MapId ungültig, wird \texttt{null} zurückgegeben.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapId : int MapId des Raums.
+    \item \texttt{mapId : int} MapId des Raums.
 \end{itemize}
 \paragraph*{Rückgabewert}
-(RoomType, String, int, List<String>), 4-Tupel aus Typ des Raums, Nummer des Gebäudes, Stockwerk, Personen. Kann \texttt{null} sein.
+\texttt{(RoomType, String, int, List<String>)}, 4-Tupel aus Typ des Raums, Nummer des Gebäudes, Stockwerk, Personen. Kann \texttt{null} sein.
 
 \subsubsection*{\texttt{+ getGlobalAliases(mapId : int) : List<String>}}%$$$M
 \paragraph*{Beschreibung}
 Gibt eine Liste aller globalen Aliasse eines Kartenobjekts zurück.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapId : int MapId des Kartenobjekts.
+    \item \texttt{mapId : int} MapId des Kartenobjekts.
 \end{itemize}
 \paragraph*{Rückgabewert}
-List<String>, Liste der globalen Aliasse.
+\texttt{List<String>}, Liste der globalen Aliasse.
 
 \subsubsection*{\texttt{+ getLocalAliases(mapId : int) : LiveData<List<String>>}}%$$$M
 \paragraph*{Beschreibung}
 Gibt eine Liste aller lokalen Aliasse eines Kartenobjekts zurück.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapId : int MapId des Kartenobjekts.
+    \item \texttt{mapId : int} MapId des Kartenobjekts.
 \end{itemize}
 \paragraph*{Rückgabewert}
-LiveData<List<String>>, Liste der lokalen Aliasse.
+\texttt{LiveData<List<String>>}, Liste der lokalen Aliasse.
 
 \subsubsection*{\texttt{+ deleteLocalAlias(mapId : int, alias : String)}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -62,11 +62,11 @@ Sorgt dafür, dass ein gegebener lokaler Alias gelöscht wird.
 Sind die Parameter ungültig, passiert nichts.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapId : int MapId des Kartenobjekts.
-    \item alias : String Alias der zu löschen ist.
+    \item \texttt{mapId : int} MapId des Kartenobjekts.
+    \item \texttt{alias : String} Alias der zu löschen ist.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Void.
+\texttt{Void}.
 
 \subsubsection*{\texttt{+ getAliasSuggestions(mapId : int) : LiveData<List<String>>}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -76,10 +76,10 @@ Gibt eine Liste mit relevanten Alias-Vorschlägen für das Kartenobjekt zurück,
 die vom Benutzer noch bewertet werden dürfen.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapId : int MapId des Kartenobjekts.
+    \item \texttt{mapId : int} MapId des Kartenobjekts.
 \end{itemize}
 \paragraph*{Rückgabewert}
-LiveData<List<String>>, Liste der Alias-Vorschläge.
+\texttt{LiveData<List<String>>}, Liste der Alias-Vorschläge.
 
 \subsubsection*{\texttt{+ giveAliasFeedback(mapId : int, suggestion : String, feedback : SuggestionFeedback) : boolean}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -91,9 +91,9 @@ Muss der Benutzer sich für diese Aktion erst erneut anmelden, wird in den Anmel
 Das Feedback wird an das Model gegeben, um es an den Server zu senden.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapId : int MapId des Kartenobjekts.
-    \item suggestion : String Vorschlag. 
-    \item feedback : SuggestionFeedback Feedback.
+    \item \texttt{mapId : int} MapId des Kartenobjekts.
+    \item \texttt{suggestion : String} Vorschlag. 
+    \item \texttt{feedback : SuggestionFeedback} Feedback.
 \end{itemize}
 \paragraph*{Rückgabewert}
-boolean, ob das Senden erfolgreich war.
+\texttt{boolean}, ob das Senden erfolgreich war.

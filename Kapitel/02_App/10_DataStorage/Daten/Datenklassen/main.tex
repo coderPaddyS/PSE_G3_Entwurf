@@ -24,12 +24,12 @@ Datenklasse.
 Diese Datenklasse enthält die Daten zu einem Gebäude.
 \subparagraph*{Daten}
 \begin{itemize}
-    \item mapId : int MapId des Gebäudes. [Primärschlüssel]
-    \item pos : Position Position auf der Karte.
-    \item name : String Anzeigename des Gebäudes auf der Karte.
-    \item levelMin : int Etagennummer der untersten Etage (-1 = 1.UG, 0 = EG, 1 = 1.OG).
-    \item levelMax : int Etagennummer der obersten Etage.
-    \item address : String Adresse des Gebäudes.
+    \item \texttt{mapId : int} MapId des Gebäudes. [Primärschlüssel]
+    \item \texttt{pos : Position} Position auf der Karte.
+    \item \texttt{name : String} Anzeigename des Gebäudes auf der Karte.
+    \item \texttt{levelMin : int} Etagennummer der untersten Etage (-1 = 1.UG, 0 = EG, 1 = 1.OG).
+    \item \texttt{levelMax : int} Etagennummer der obersten Etage.
+    \item \texttt{address : String} Adresse des Gebäudes.
 \end{itemize}
 
 %---------------------------------------------------
@@ -39,12 +39,12 @@ Datenklasse.
 \subparagraph*{Beschreibung}
 Diese Datenklasse enthält die Daten zu einem Raum.
 \begin{itemize}
-    \item mapId : int MapId des Raumes. [Primärschlüssel]
-    \item pos : Position Position auf der Karte.
-    \item name : String Anzeigename des Raums auf der Karte.
-    \item mapId : int MapId des Gebäudes in dem sich der Raum befindet.
-    \item level : int Nummer der Etage, auf der sich der Raum befindet.
-    \item type : int Typ des Raumes.
+    \item \texttt{mapId : int} MapId des Raumes. [Primärschlüssel]
+    \item \texttt{pos : Position} Position auf der Karte.
+    \item \texttt{name : String} Anzeigename des Raums auf der Karte.
+    \item \texttt{mapId : int} MapId des Gebäudes in dem sich der Raum befindet.
+    \item \texttt{level : int} Nummer der Etage, auf der sich der Raum befindet.
+    \item \texttt{type : int} Typ des Raumes.
 \end{itemize}
 
 %---------------------------------------------------
@@ -57,8 +57,8 @@ Es handelt sich hierbei um eine Datenklasse, die als \href{https://developer.and
 {eingebettete Datenklasse} in andern Datenklassen verwendet werden kann. 
 \subparagraph*{Daten}
 \begin{itemize}
-    \item latitude : double Breitengrad.
-    \item longitude : double Längengrad.
+    \item \texttt{latitude : double} Breitengrad.
+    \item \texttt{longitude : double} Längengrad.
 \end{itemize}
 
 %---------------------------------------------------
@@ -69,8 +69,8 @@ Datenklasse.
 Diese Datenklasse enthält Einträge des Suchverlaufs.
 \subparagraph*{Daten}
 \begin{itemize}
-    \item searchTerm : String Suchbegriff. [Primärschlüssel]
-    \item date : Date Zeitpunkt der Suche.
+    \item \texttt{searchTerm : String} Suchbegriff. [Primärschlüssel]
+    \item \texttt{date : Date} Zeitpunkt der Suche.
 \end{itemize}
 
 %---------------------------------------------------
@@ -81,8 +81,8 @@ Datenklasse.
 Diese Datenklasse speichert einen Alias.
 \subparagraph*{Daten}
 \begin{itemize}
-    \item term : String Alternativer Bezeichner (Alias) für Kartenobjekt.
-    \item mapId : int MapId des zugehörigen Kartenobjekts
+    \item \texttt{term : String} Alternativer Bezeichner (Alias) für Kartenobjekt.
+    \item \texttt{mapId : int} MapId des zugehörigen Kartenobjekts
 \end{itemize}
 
 %---------------------------------------------------
@@ -93,8 +93,8 @@ Datenklasse.
 Diese Datenklasse speichert die Daten einer Person.
 \subparagraph*{Daten}
 \begin{itemize}
-    \item title : String Titel der Person.
-    \item firstName : String Vorname.
-    \item lastName : String Nachname.
-    \item mapId : int MapId des Kartenobjekts, dem diese Person zugeordnet ist.
+    \item \texttt{title : String} Titel der Person.
+    \item \texttt{firstName : String} Vorname.
+    \item \texttt{lastName : String} Nachname.
+    \item \texttt{mapId : int} MapId des Kartenobjekts, dem diese Person zugeordnet ist.
 \end{itemize}

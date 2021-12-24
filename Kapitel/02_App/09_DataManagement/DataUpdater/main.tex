@@ -1,6 +1,6 @@
 \subsubsection{DataUpdater}
 \paragraph*{Typ}
-Interface.
+\texttt{Interface}.
 \paragraph*{Beschreibung}
 Ein DataUpdater aktualisiert lokal gespeicherte Daten durch Kommunikation mit dem Server.\\
 Ein DataUpdater hat eine Priorität, mit der er ausgeführt werden soll. Dabei müssen 
@@ -19,7 +19,7 @@ Für DataUpdater mit gleicher Priorität ist die Reihenfolge der Ausführung ega
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
-int, Priorität des DataUpdaters.
+\texttt{int}, Priorität des DataUpdaters.
 
 \subsubsection*{\texttt{+ updateData() : boolean}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -33,12 +33,12 @@ In diesem Fall dürfen keine Inkonsistenzen in der Datenbank entstehen.
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
-boolean, ob die Aktualisierung erfolgreich war.
+\texttt{boolean}, ob die Aktualisierung erfolgreich war.
 
 %-----------------------------------------------
 \subsubsection{GlobalAliasUpdater}
 \paragraph*{Typ}
-Implementiert DataUpdater.
+Implementiert \texttt{DataUpdater}.
 \paragraph*{Beschreibung}
 Der GlobalAliasUpdater ist ein DataUpdater. Er aktualisiert die lokale Kopie der globalen
 Alias-Datenbank des Servers. \\
