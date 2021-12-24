@@ -1,0 +1,27 @@
+\subsubsection{PositionDataManager}
+\paragraph*{Typ}
+Klasse.
+\paragraph*{Beschreibung}
+Diese Klasse erlaubt das Lesen und Schreiben der letzten Position.
+
+\subsubsection*{\texttt{+ getLastSavedPosition() : IGeoPoint}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt die letzte gespeicherte Position zurück.
+\paragraph*{Beschreibung}
+Diese Methode gibt die letzte gespeicherte Position zurück. Wurde noch keine Position gespeichert,
+wird eine Default-Position zurückgegeben. Es wird nie null zurückgegeben.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+IGeoPoint mit letzter gespeicherter Position (oder Default-Wert), ist nie null.
+
+\subsubsection*{\texttt{+ savePosition(pos : IGeoPoint)}}%$$$M
+\paragraph*{Beschreibung}
+Speichert eine Position als letzte Position.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item pos : IGeoPoint zu speichernde Position.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Void.
+

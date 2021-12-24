@@ -15,7 +15,8 @@ Offizieller Alias wird nicht mehr angezeigt. Der offizielle Alias ist zur Lösch
 \paragraph*{Durchführung}
 \begin{enumerate}
     \item Das Interface \verb#Change# wird durch implementierung der Methode \verb#Change::perform# instanziiert. \\
-          Dabei ruft die Methode \verb#Change::perform# dieser Instanz die Methode \verb#Backend::deleteOfficialAlias# mit folgenden Parametern auf \begin{enumerate}
+          Dabei ruft die Methode \verb#Change::perform# dieser Instanz die \\
+          Methode \verb#Backend::deleteOfficialAlias# mit folgenden Parametern auf \begin{enumerate}
               \item alias: String = Der zu löschende offizielle Alias
               \item mapID: String = Der Kartenobjektidentifizierer dieses offiziellen Aliases
           \end{enumerate}

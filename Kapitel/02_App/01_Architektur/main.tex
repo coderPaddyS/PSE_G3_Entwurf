@@ -1,0 +1,14 @@
+\section{Architektur}
+Die App benutzt den Architekturstil \texttt{Model View ViewModel (MVVM)}. Dieser besteht aus drei Schichten:
+
+\paragraph*{View}
+Hierin befinden sich alle Klassen, die Teil der grafischen Benutzeroberfläche (GUI) sind. 
+Für die View wird primär \href{https://developer.android.com/jetpack/compose}{Jetpack Compose} benutzt. 
+Hinter der Compose-Schnittstelle kommt teilweise die \href{https://developer.android.com/reference/android/view/View}{Android View} zum Einsatz.
+
+\paragraph*{ViewModel}
+Hierin findet die Anzeigelogik für die View statt.
+
+\paragraph*{Model}
+Das Model ist für die Datenlogik zuständig. Ein Teil der Daten ist lokal auf dem Gerät gespeichert. 
+Ein anderer Teil befindet sich auf einem Server. Hierfür kommt im Model der Architekturstil Client-Server zum Einsatz.
