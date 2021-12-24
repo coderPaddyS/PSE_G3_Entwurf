@@ -1,0 +1,13 @@
+\paragraph{\texttt{+ login() : boolean}}\label{AP_Framework_login}%$$$M
+\paragraph*{Kurzbeschreibung}
+Ermöglicht einem Benutzer sich anzumelden.
+\paragraph*{Beschreibung}
+Ermöglicht einem Benutzer sich anzumelden.
+Hierfür wird ein OpenIDConnect-Provider (OIDC-Provider) verwendet, der zuvor durch die Methode \verb#Framework::configure# konfiguriert wird.
+Dazu wird der Benutzer auf die Login-Seite des OIDC-Providers geleitet und anschließend wieder zurück.
+Der erhaltene Access-Token wird anschließend gespeichert.
+Bei Erfolg wird wahr zurückgegeben, andernfalls wird falsch zurückgegeben.
+\paragraph*{Parameter}
+Keine
+\paragraph*{Rückgabewert}
+Wahr, wenn erfolgreich, falsch sonst

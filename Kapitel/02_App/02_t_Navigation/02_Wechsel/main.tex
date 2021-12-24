@@ -1,0 +1,42 @@
+\subsection{Wechsel zwischen Ansichten}
+Der Wechsel zwischen den Ansichten wird mithilfe der von \href{https://developer.android.com/jetpack/compose/navigation?hl=fr}
+{Jetpack Compose bereitgestellten Navigation mithilfe eines NavHosts und eines NavControllers} 
+umgesetzt.
+
+\subsubsection*{Ziele}
+Der Wechsel in eine bestimmte Ansicht kann durch folgende Ziele durchgeführt werden:
+\begin{itemize}
+    \item \texttt{Kartenansicht}: 
+    \begin{itemize}
+        \item \texttt{map}: Wechsel in die \texttt{Kartenansicht}, ohne ein bestimmtes Kartenobjekt zu fokussieren.
+        \item \texttt{map/\{mapId\}}: Wechsel in die \texttt{Kartenansicht}, das durch seine MapId gegebene Kartenobjekt wird fokussiert.
+        \item \texttt{map/\{mapId\}/\{number\}}: Wechsel in die \texttt{Kartenansicht}, das durch seine MapId gegebene Gebäude wird fokussiert. 
+        Über den durch seine Raumnummer gegebene, in der App nicht existierende Raum wird eine Vermutung zum Stockwerk angezeigt.
+    \end{itemize}
+    \item \texttt{Alias-Hinzufügen-Ansicht}:
+    \begin{itemize}
+        \item \texttt{addalias/\{mapId\}}: Wechsel in die \texttt{Alias-Hinzufügen-Ansicht}. 
+        Der Alias soll für ein durch seine MapId gegebenes Kartenobjekt hinzugefügt werden.
+    \end{itemize}
+    \item \texttt{Suche}: 
+    \begin{itemize}
+        \item \texttt{search}: Wechsel in die \texttt{Suche}
+    \end{itemize}
+    \item \texttt{Anmeldung}: \begin{itemize}
+        \item \texttt{signin/new}: Wechsel in die \texttt{Anmeldung}.
+        \item \texttt{signin/funktion}: Wechsel in die \texttt{Anmeldung} mit dem Hinweis, dass die gewünschte Funktion nur angemeldeten Benutzern zur Verfügung steht.
+        \item \texttt{signin/again}: Wechsel in die \texttt{Anmeldung} mit dem Hinweis, dass die Anmeldung des Benutzers abgelaufen ist und er sich erneut anmelden muss.
+    \end{itemize}
+    \item \texttt{Einstellungen}: 
+    \begin{itemize}
+        \item \texttt{settings}: Wechsel in die \texttt{Einstellungen}
+    \end{itemize}
+    \item \texttt{Dokumentenanzeige}: 
+    \begin{itemize}
+        \item \texttt{documentview/\{documentId\}}: Wechsel in die \texttt{Dokumentenanzeige}. 
+        Es wird das durch seine ID gegebene Dokument angezeigt. Die IDs sind dem \texttt{Enum DocumentType} zu entnehmen.
+    \end{itemize}
+\end{itemize}
+Zusätzlich erlaubt die Navigation das zurückgehen zur vorherigen Ansicht.
+
+

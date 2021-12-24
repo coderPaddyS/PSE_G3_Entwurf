@@ -1,0 +1,83 @@
+\subsubsection{SearchScreen}
+\paragraph*{Typ}
+Composable.
+\paragraph*{Beschreibung}
+Diese Klasse ermöglicht die Eingabe eines Suchbegriffs in ein Textfeld durch den Benutzer, 
+die Anzeige einer Liste von Suchvorschlägen und die Auswahl eines Vorschlages durch den Benutzer, 
+indem er einen Vorschlag auswählt oder die Eingabe vollständig selbst vornimmt.
+
+\subsubsection*{Beschreibung der Benutzeroberfläche}
+Die Suchleiste wird am oberen Bildschirmrand angezeigt mit der Liste an Suchvorschlägen darunter aufgelistet.
+Links neben der Suchleiste am oberen Bildschirmrand ist ein \dq Zurück-Knopf \dq{}.
+Eine Tastatur ist geöffnet.
+
+\subsubsection*{\texttt{+ onClickBack}}%$$$M
+\paragraph*{Beschreibung}
+Veranlasst bei Betätigung des \dq Zurück-Knopfs \dq{} das Schließen der Suchleiste inklusive Suchvorschlägen und Tastatur und somit die Rückkehr zur Kartenansicht.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+Void.
+
+\subsubsection*{\texttt{+ onClickReturn}}%$$$M
+\paragraph*{Beschreibung}
+Veranlasst bei Betätigung der Zurückgehen-Funktion des Endgeräts das Schließen der Suchleiste inklusive Suchvorschlägen und Tastatur und somit die Rückkehr zur Kartenansicht.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+Void.
+
+\subsubsection*{\texttt{+ onClickSearchSuggestion}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Veranlasst das Anzeigen des Kartenobjekts zu dem ausgewählten Suchvorschlag.
+\paragraph*{Beschreibung}
+Veranlasst das Schließen der Suchleiste inklusive Suchvorschlägen und Tastatur.
+Und veranlasst das Anzeigen des Kartenobjekts zu dem ausgewählten Suchvorschlag auf der Karte.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item searchKey : String Die Zeichenkette, die der Benutzer eingetippt hat.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Void.
+
+\subsubsection*{\texttt{+ onClickEnter}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Veranlasst das Anzeigen des Kartenobjekts zu dem obersten angezeigten Suchvorschlag.
+\paragraph*{Beschreibung}
+Veranlasst das Schließen der Suchleiste inklusive Suchvorschlägen und Tastatur.
+Und veranlasst das Anzeigen des Kartenobjekts zu dem obersten angezeigten Suchvorschlag auf der Karte.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item searchKey : String Die Zeichenkette, die der Benutzer eingetippt hat.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Void.
+
+\subsubsection*{\texttt{+ onClickKeyboard}}%$$$M
+\paragraph*{Beschreibung}
+Veranlasst das Aktualisieren der angezeigten Suchvorschläge entsprechend der aktuell eingegebenen Zeichenkette.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item searchInput : String Die Zeichenkette, die der Benutzer eingetippt hat.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Void.
+
+
+\subsubsection*{Bibliothek SearchView}
+\paragraph*{Beschreibung}
+Ein bereits existierendes Widget, das dem Benutzer eine Benutzeroberfläche bietet, um eine Suchanfrage einzugeben und eine Anfrage an einen Suchanbieter zu senden. 
+Zeigt eine Liste von Suchvorschlägen oder -ergebnissen an, falls verfügbar 
+und ermöglicht es dem Benutzer, einen Vorschlag oder ein Ergebnis auszuwählen.
+Diese Bibliothek kann für die Implementierung genutzt werden.
+
+\subsubsection*{Bilder}
+\begin{minipage}{\linewidth}
+    \centering
+    \begin{minipage}{.49\textwidth}
+        \captionsetup[figure]{labelformat=empty}
+        \inprelimg[width=\textwidth]{Suchfunktion.png}
+        \captionof{figure}{Suchfunktion}
+        \captionsetup[figure]{labelformat=default}
+    \end{minipage}
+\end{minipage}

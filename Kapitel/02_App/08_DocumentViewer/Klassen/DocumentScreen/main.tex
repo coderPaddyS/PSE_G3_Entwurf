@@ -1,0 +1,42 @@
+\subsubsection{DocumentScreen}
+\paragraph*{Typ}
+Composable.
+\paragraph*{Beschreibung}
+Klasse zum Anzeigen eines Textdokuments im Markdown-Format.\\
+Diese Klasse nutzt die Funktionalität einer Markdown-Library.\\
+Das anzuzeigende Dokument wird direkt aus den Ressourcen geladen.
+Welches Dokument geladen werden soll, wird wie in Navigation beschrieben, beim Aufruf mitgegeben. 
+Dabei wird die Id des DokumentTypes verwendet.
+
+\subsubsection*{Beschreibung der Benutzeroberfläche}
+Das Dokument wird im Vollbild angezeigt.
+Die Überschrift wird am oberen Bildschirmrand angezeigt.
+Links neben der Überschrift am oberen Bildschirmrand ist ein \dq Zurück-Knopf \dq{}.
+Der Text wird unter der Unterschrift und dem \dq Zurück-Knopf \dq{} angezeigt und man kann scrollen.
+
+\subsubsection*{\texttt{+ onClickBack()}}%$$$M
+\paragraph*{Beschreibung}
+Veranlasst bei Betätigung des \dq Zurück-Knopfs \dq{} das Schließen des Textanzeigefensters.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+Void.
+
+\subsubsection*{\texttt{+ onClickReturn()}}%$$$M
+\paragraph*{Beschreibung}
+Veranlasst bei Betätigung der Zurückgehen-Funktion des Endgeräts das Schließen des Textanzeigefensters.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+Void.
+
+\subsubsection*{Bilder}
+\begin{minipage}{\linewidth}
+    \centering
+    \begin{minipage}{.49\textwidth}
+        \captionsetup[figure]{labelformat=empty}
+        \inprelimg[width=\textwidth]{Dokument.png}
+        \captionof{figure}{Dokumentenansicht}
+        \captionsetup[figure]{labelformat=default}
+    \end{minipage}
+\end{minipage}

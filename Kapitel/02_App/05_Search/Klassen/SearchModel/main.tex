@@ -1,0 +1,68 @@
+\subsubsection{ISearchModel}
+\paragraph*{Typ}
+Interface.
+\paragraph*{Beschreibung}
+Dieses Interface ermöglicht das Durchsuchen der Datenbank nach gültigen Suchbegriffen zu einem gegebenen String.
+Es ermöglicht die Bestimmung der MapId zu einem gültigen Suchbegriff, 
+dieser kann eine Gebäudenummer, Gebäudenummer und Raumnummer, Gebäudenummer und Alias eines Raumes, ein Alias eines Gebäudes oder eine Person sein.
+Es ermöglicht die Speicherung und Ausgabe von zuletzt gesuchten Suchbegriffen.
+
+ \subsubsection*{\texttt{+ getSuggestions(input : String, amount : int) : List<String>}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt Suchvorschläge zu dem übergebenen String zurück.
+\paragraph*{Beschreibung}
+Diese Methode gibt Suchvorschläge zu dem übergebenen String aus einer Datenbank, 
+die alle Kartenobjekte inklusive ihrer offiziellen Namen, Aliasse und Personen enthält, zurück.
+Die Suche wird direkt auf der Datenbank ausgeführt, wie z.B. mit \dq like \dq{} von SQL.
+Es werden die Suchvorschläge nach der Übereinstimmung mit der Eingabe sortiert zurück gegeben.
+Die Suchvorschläge mit der höchsten Übereinstimmung sind die ersten Elemente der Liste.
+Somit werden auch Vorschläge für falsch geschriebene Suchbegriffe angezeigt.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item input : String Der Suchbegriff den der Benutzer eingegeben hat.
+    \item amount : int Die maximale Anzahl der Elemente der Liste an Suchvorschlägen, nicht negativ.
+\end{itemize}
+\paragraph*{Rückgabewert}
+List<String>, Suchvorschläge, die die Datenbank zurückgegeben hat.
+
+ \subsubsection*{\texttt{+ getLastSearches(amount : int) : List<String>}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt eine Liste der zuletzt gesuchten Suchbegriffe zurück.
+\paragraph*{Beschreibung}
+Diese Methode gibt eine Liste der zuletzt gesuchten Suchbegriffe, nach ihrer letzten Benutzung sortiert (zuletzt gesuchten zuerst), zurück.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item amount : int Die maximale Anzahl der Elemente der Liste an letzten Suchbegriffen.
+\end{itemize}
+\paragraph*{Rückgabewert}
+List<String>, zuletzt gesuchte Suchbegriffe.
+
+ \subsubsection*{\texttt{+ storeSearchKey(searchKey : String)}}%$$$M
+\paragraph*{Beschreibung}
+Speichert den gegebenen Suchbegriff mit dem aktuellen Datum im Suchverlauf.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item searchKey : String Suchbegriff, der gespeichert werden soll.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Void.
+
+ \subsubsection*{\texttt{+ getMapIdBySearchKey(searchKey : String) : int}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt die MapId des zum Suchbegriff gehörenden Kartenobjekts zurück.
+\paragraph*{Beschreibung}
+Diese Methode ermittelt das zu den Suchbegriffen gehörenden Kartenobjekt in der Datenbank und gibt die MapId dieses zurück.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item searchKey : String Suchbegriff, dessen MapId bestimmt werden soll.
+\end{itemize}
+\paragraph*{Rückgabewert}
+int, MapId zum Suchbegriff.
+
+
+\subsubsection{SearchModel}
+\paragraph*{Typ}
+Implementiert ISearchModel.
+\paragraph*{Beschreibung}
+Klasse zur Verwaltung der Daten zum Suchen von Kartenobjekten mit Hilfe eines Strings: 
+Bestimmung von Suchvorschlägen, Speicherung und Ausgabe von zuletzt gesuchten Suchbegriffen, Bestimmung der MapId zu Suchbegriffen.

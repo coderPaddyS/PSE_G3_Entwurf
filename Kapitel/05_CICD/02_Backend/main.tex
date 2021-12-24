@@ -1,0 +1,14 @@
+\section{Backend}\label{CICD_Backend}
+
+Die Entwicklung erfolgt auf einzelnen Zweigen, die in den \verb#main#-Zweig überführt werden, sobald diese fertig ausgearbeitet sind.
+Sobald der \verb#main#-Zweig aktualisiert wurde, wird die aktuelle Version des Backends gebaut und automatisch auf dem Server hochgeladen.
+Dort ersetzt diese die alte Version und wird automatisch gestartet.
+
+Jedes mal wenn ein Entwicklungszweig aktualisiert wird, wird eine neue Testumgebung aufgesetzt und die definierten Tests durchgeführt.
+Diese Tests testen einzelne Komponenten in isolierten Umgebungen auf Funktionalität und dienen dazu, die Funktionalität beizubehalten.
+Scheitern Tests, so kann der Entwicklungszweig nicht in den \verb#main#-Zweig überführt werden.
+
+Die Überführung eines Entwicklungszweigs in den \verb#main#-Zweig benötigt die Zustimmung eines anderen Teammitgliedes.
+Andernfalls kann nicht überführt werden.
+
+Die HTTP-Schnittstellen werden hierbei nur mit geeigneten Testdatensätzen imitiert.
