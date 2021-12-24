@@ -1,0 +1,27 @@
+\subsubsection{DisplayDataProvider}
+\paragraph*{Typ}
+Klasse.
+\paragraph*{Beschreibung}
+Diese Klasse stellt die Anzeigedaten für die Gebäude oder die Räume einer Etage bereit.
+
+\subsubsection*{\texttt{+ getBuildingDisplayData() : LiveData<List<DisplayData>>}}%$$$M
+\paragraph*{Beschreibung}
+Gibt die Anzeigedaten für alle Gebäude zurück.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+LiveData<List<DisplayData>>, DisplayData für alle Gebäude.
+
+\subsubsection*{\texttt{+ getRoomDisplayData(mapId : int, level : int) : LiveData<List<DisplayData>>}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt die Anzeigedaten für Räume einer Etage zurück.
+\paragraph*{Beschreibung}
+Gibt DisplayData-Objekte zu allen Räumen einer Etage eines Gebäudes zurück.\\
+Die Liste ist leer, wenn es keine hinterlegten Räume gibt.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Gebäudes.
+    \item level : int Stockwerk.
+\end{itemize}
+\paragraph*{Rückgabewert}
+LiveData<List<DisplayData>>, DisplayData für Räume einer Etage.

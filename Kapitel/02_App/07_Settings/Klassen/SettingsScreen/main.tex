@@ -1,0 +1,34 @@
+\subsubsection{SettingsScreen}
+\paragraph*{Typ}
+Composable.
+\paragraph*{Beschreibung}
+Dieses Composable zeigt die Einstellungen an. 
+Der Benutzer kann die Einstellungen durch Interaktion mit dem SettingsScreen festlegen und ändern.\\
+Der SettingsScreen besitzt einen ISettingsController, der die Daten bereitstellt und die Änderungen an den Einstellungen durchführt. 
+
+\paragraph*{Aufbau}
+Der SettingsScreen zeigt folgende Einstellungs-Möglichkeiten untereinander an:
+\begin{itemize}
+    \item Anmelde-Schaltfläche: Ist der Benutzer nicht angemeldet, wird angezeigt, dass er sich anmelden kann. 
+    Klickt der Benutzer auf diese Schaltfläche, zeigt die App die Anmeldung an.\\
+    Ist der Benutzer angemeldet, wird angezeigt, dass er angemeldet ist. Außerdem wird die UserId angezeigt. 
+    Klickt er lange auf diese, wird die UserId in die Zwischenablage kopiert. 
+    Es wird über einen \href{https://developer.android.com/guide/topics/ui/notifiers/toasts}{Toast} angezeigt, dass 
+    die UserId in die Zwischenablage kopiert wurde.
+    \item Sprach-Schaltfläche: Klickt der Benutzer auf diese Schaltfläche, bekommt er in einem Untermenü alle verfügbaren Sprachen angezeigt. 
+    Wählt er davon eine aus, wird die App in der ausgewählten Sprache angezeigt. Die App bleibt im Untermenü.\\
+    Im Untermenü befindet sich oben links ein Zurück-Button. Wird dieser gedrückt oder die Zurückfunktion des Endgeräts betätigt, 
+    wird wieder die Gesamtansicht angezeigt.
+    \item Theme-Schaltfläche: Klickt der Benutzer auf diese Schaltfläche, bekommt er in einem Untermenü alle verfügbaren Themes angezeigt. 
+    Wählt er davon eines aus, wird die App im gewählten Theme angezeigt. Die App bleibt im Untermenü.\\
+    Im Untermenü befindet sich oben links ein Zurück-Button. Wird dieser gedrückt oder die Zurückfunktion des Endgeräts betätigt, 
+    wird wieder die Gesamtansicht angezeigt.
+    \item Suchverlauf speichern: In dieser Schaltfläche befindet sich ein Schalter. 
+    Am Zustand des Schalters lässt sich erkennen, ob die Speicherung des Suchverlaufs an- oder ausgeschaltet ist. 
+    Durch Klicken auf den Schalter lässt sich dies wechseln.
+    \item Suchverlauf löschen: Wird diese Schaltfläche angeklickt, wird der Suchverlauf gelöscht.
+    \item Impressum anzeigen: Wird auf diese Schaltfläche geklickt, wechselt die App in die Dokumentenansicht und zeigt dort das Impressum der App an.
+    \item Datenschutz anzeigen: Wird auf diese Schaltfläche geklickt, wechselt die App in die Dokumentenansicht und zeigt dort die Datenschutzerklärung der App an.
+    \item Hilfe anzeigen: Wird auf diese Schaltfläche geklickt, wechselt die App in die Dokumentenansicht und zeigt dort eine Hilfeseite an.
+    \item Lizenzen anzeigen: Wird auf diese Schaltfläche geklickt, wechselt die App in die Dokumentenansicht und zeigt dort Open-Source-Lizenzen der App an.
+\end{itemize}
