@@ -1,9 +1,10 @@
-\paragraph{\texttt{+ removeChange(action: ChangeAction) : boolean}}\label{AP_Changes_removeChange}%$$$M
+\paragraph{\texttt{+ removeChange(metadata: JSON, category: String) : Boolean}}\label{AP_Changes_removeChange}%$$$M
 \paragraph*{Beschreibung}
 Entferne eine Änderung.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item action : ChangeAction = Instanz der Klasse \verb#ChangeAction#, die die zu entfernende Änderungsaktion repräsentiert.
+    \item metadata: JSON = Metadaten der entsprechenden Änderungen.
+    \item category: String = Kategorie der Änderung.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Wahr, wenn erfolgreich, falsch sonst
+Wahr, wenn erfolgreich, falsch sonst.
