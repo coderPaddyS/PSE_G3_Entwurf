@@ -6,11 +6,11 @@ umgesetzt.
 \subsubsection*{Ziele}\label{App_Navigation_Ziele}
 Der Wechsel in eine bestimmte Ansicht kann durch folgende Ziele durchgeführt werden:
 \begin{itemize}
-    \item \texttt{Kartenansicht}: 
+    \item \Gls{Kartenansicht}: 
     \begin{itemize}
-        \item \texttt{map}: Wechsel in die \texttt{Kartenansicht}, ohne ein bestimmtes Kartenobjekt zu fokussieren.
-        \item \texttt{map/\{mapId\}}: Wechsel in die \texttt{Kartenansicht}, das durch seine MapId gegebene Kartenobjekt wird fokussiert.
-        \item \texttt{map/\{mapId\}/\{number\}}: Wechsel in die \texttt{Kartenansicht}, das durch seine MapId gegebene Gebäude wird fokussiert. 
+        \item \hyperref[App_Map]{map}: Wechsel in die \Gls{Kartenansicht}, ohne ein bestimmtes Kartenobjekt zu fokussieren.
+        \item \hyperref[App_Map]{map}/\texttt{\{mapId\}}: Wechsel in die \Gls{Kartenansicht}, das durch seine MapId gegebene Kartenobjekt wird fokussiert.
+        \item \hyperref[App_Map]{map}/\texttt{\{mapId\}/\{number\}}: Wechsel in die \Gls{Kartenansicht}, das durch seine MapId gegebene Gebäude wird fokussiert. 
         Über den durch seine Raumnummer gegebene, in der App nicht existierende Raum wird eine Vermutung zum Stockwerk angezeigt.
     \end{itemize}
     \item \texttt{Alias-Hinzufügen-Ansicht}:
@@ -18,23 +18,23 @@ Der Wechsel in eine bestimmte Ansicht kann durch folgende Ziele durchgeführt we
         \item \texttt{addalias/\{mapId\}}: Wechsel in die \texttt{Alias-Hinzufügen-Ansicht}. 
         Der Alias soll für ein durch seine MapId gegebenes Kartenobjekt hinzugefügt werden.
     \end{itemize}
-    \item \texttt{Suche}: 
+    \item \hyperref[App_Search]{Suche}: 
     \begin{itemize}
-        \item \texttt{search}: Wechsel in die \texttt{Suche}
+        \item \texttt{search}: Wechsel in die \hyperref[App_Search]{Suche}
     \end{itemize}
-    \item \texttt{Anmeldung}: \begin{itemize}
-        \item \texttt{signin/new}: Wechsel in die \texttt{Anmeldung}.
-        \item \texttt{signin/funktion}: Wechsel in die \texttt{Anmeldung} mit dem Hinweis, dass die gewünschte Funktion nur angemeldeten Benutzern zur Verfügung steht.
-        \item \texttt{signin/again}: Wechsel in die \texttt{Anmeldung} mit dem Hinweis, dass die Anmeldung des Benutzers abgelaufen ist und er sich erneut anmelden muss.
+    \item \hyperref[App_SignUp]{Anmeldung}: \begin{itemize}
+        \item \texttt{signin/new}: Wechsel in die \hyperref[App_SignUp]{Anmeldung}.
+        \item \texttt{signin/funktion}: Wechsel in die \hyperref[App_SignUp]{Anmeldung} mit dem Hinweis, dass die gewünschte Funktion nur angemeldeten Benutzern zur Verfügung steht.
+        \item \texttt{signin/again}: Wechsel in die \hyperref[App_SignUp]{Anmeldung} mit dem Hinweis, dass die Anmeldung des Benutzers abgelaufen ist und er sich erneut anmelden muss.
     \end{itemize}
-    \item \texttt{Einstellungen}: 
+    \item \hyperref[App_Settings]{Einstellungen}: 
     \begin{itemize}
-        \item \texttt{settings}: Wechsel in die \texttt{Einstellungen}
+        \item \texttt{settings}: Wechsel in die \hyperref[App_Settings]{Einstellungen}
     \end{itemize}
-    \item \texttt{Dokumentenanzeige}: 
+    \item \hyperref[App_DocumentViewer]{Dokumentenanzeige}: 
     \begin{itemize}
-        \item \texttt{documentview/\{documentId\}}: Wechsel in die \texttt{Dokumentenanzeige}. 
-        Es wird das durch seine ID gegebene Dokument angezeigt. Die IDs sind dem \texttt{Enum DocumentType} zu entnehmen.
+        \item \texttt{documentview/\{documentId\}}: Wechsel in die \hyperref[App_DocumentViewer]{Dokumentenanzeige}. 
+        Es wird das durch seine ID gegebene Dokument angezeigt. Die IDs sind dem \hyperref[App_DocumentViewer_DocumentType]{Enum DocumentType} zu entnehmen.
     \end{itemize}
 \end{itemize}
 Zusätzlich erlaubt die Navigation das zurückgehen zur vorherigen Ansicht.
