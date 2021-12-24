@@ -1,11 +1,11 @@
 \subsubsection*{Klassenbeschreibung}%$$$M
 \paragraph*{Kurzbeschreibung}
-Zugriff auf die Datenhaltung über die gelöschten Aliasse. Diese wird benötigt, wenn das Frontend die getUpdates-Methode der AliasQuery-Klasse aufruft, 
+Interface zum Zugriff auf die Datenhaltung über die gelöschten Aliasse. Diese wird benötigt, wenn das Frontend die getUpdates-Methode der AliasQuery-Klasse aufruft, 
 denn es muss mitgeteilt werden, welche Aliasse in der Zwischenzeit gelöscht worden sind.
 
 \paragraph*{Enthaltene Methoden}
 \begin{itemize}
-    \item \texttt{addDeletedAlias(name : String)}
-    \item \texttt{getDeletedAlias(version : int) : List<name : String, mapID : int>}
-    \item \texttt{removeDeletedAlias(alias : Strin, mapID : int)}
+    \item \texttt{addDeletedAlias(deletedAlias : String, mapID : int) : Boolean}
+    \item \texttt{getDeletedAlias(version : int) : Iterable<deletedAlias : String, mapID : int>}
+    \item \texttt{removeDeletedAlias(deletedAlias : String, mapID : int) : Boolean}
 \end{itemize}
