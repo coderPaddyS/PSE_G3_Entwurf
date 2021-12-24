@@ -1,0 +1,16 @@
+\paragraph{\texttt{deleteByName(blacklistedToRem : String) : boolean}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Entfernt eine Zeichenkette, die in der Blacklist hinterlegt ist, von der Blacklist.
+\paragraph*{Beschreibung}
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Services} aufgerufen.
+Die Methode ermöglicht, dass eine bestimmte Zeichenkette aus der Blacklist entfernt werden kann.
+Hierfür wird die Zeichenkette übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item blacklistedToRem : String
+    		\paragraph*{Beschreibung}
+    		Die von der Blacklist zu entfernende Zeichenkette.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Wahr, wenn die übergebene Zeichenkette aus der Blacklist entfernt werden konnte oder wenn die Zeichenkette nicht in der Blacklist hinterlegt war, ansonsten falsch.
