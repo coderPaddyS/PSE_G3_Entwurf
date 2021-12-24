@@ -1,0 +1,20 @@
+\paragraph*{\texttt{+findByIDandName(mapID : int, aliasSuggestion : String) : AliasSuggestion}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt das Entity-Objekt \texttt{AliasSuggestion}, das für das übergebene Kartenobjekt als Bezeichner dient und den übergebenen Namen hat.
+\paragraph*{Beschreibung}
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Services} aufgerufen.
+Die Methode ermöglicht, dass das Entity-Objekt \texttt{AliasSuggestion} angefragt und zurückgegeben werden kann, das für das übergebene Kartenobjekt als Bezeichner dient und den übergebenen Namen hat.
+Dementsprechend wird die ID des Kartenobjekts und der Alias-Vorschlag als Zeichenkette übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapID : int
+    		\paragraph*{Beschreibung}
+    		Die ID des Kartenobjekts, für das die Alias-Vorschläge als Bezeichner dienen sollen
+    	\item aliasSuggestion : String
+    		\paragraph*{Beschreibung}
+    		Der als Zeichenkette angegebene Alias-Vorschlag.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Das Entity-Objekt \texttt{AliasSuggestion}, das für das übergebene Kartenobjekt als Bezeichner dient und den übergebenen Namen hat, sofern die übergebene ID des Kartenobjekts und der Name des Alias-Vorschlags gültig sind.
+Im Fall, dass die übergebene ID des Kartenobjekts und der Name des Alias-Vorschlags ungültig sind, wird \texttt{null} zurückgegeben.
