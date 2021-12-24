@@ -5,12 +5,12 @@ Gibt die ID eines bestimmten in der Datenbank hinterlegten Benutzers zurück.
 Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
 Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Services} aufgerufen.
 Die Methode ermöglicht, dass die ID eines bestimmten Benutzers durch Angabe der entsprechenden Zeichenkette, d.h. des vom Access-Token abgeleitete Benutzeridentifikators, angefragt und zurückgegeben werden kann.
-Hierfür wird das Kartenobjekt als Zeichenkette übergeben.
+Hierfür wird der vom Access-Token abgeleitete Benutzeridentifikator als Zeichenkette übergeben.
 \paragraph*{Parameter}
 \begin{itemize}
     \item user : String
     		\paragraph*{Beschreibung}
-    		Das vom Access-Token abgeleitete Benutzeridentifikator.
+    		Der vom Access-Token abgeleitete Benutzeridentifikator.
 \end{itemize}
 \paragraph*{Rückgabewert}
 Die ID des als Zeichenkette übergebenen Benutzers, sofern die übergebene Zeichenkette gültig ist.
