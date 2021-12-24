@@ -1,10 +1,10 @@
 \subsubsection*{Klassenbeschreibung}%$$$M
 \paragraph*{Kurzbeschreibung}
-Zugriff auf zugrundeliegende Datenhaltung der Aliasvorschlägge.
+Interface zum Zugriff auf zugrundeliegende Datenhaltung der Aliasvorschlägge.
 \paragraph*{Enthaltene Methoden}
 \begin{itemize}
-    \item \texttt{addAliasSuggestion(name :String, username : String, mapID : int)}
-    \item \texttt{removeAliasSuggestion(mapID : int, name : String)}
-    \item \texttt{voteForAlias(mapID : int, alias : String, vote : boolean, user : String)}
-    \item \texttt{getAliasSuggestions(posAmount : int, negAmount : int) : (List<(alias : String, mapID : int, rating : int)>, List<(alias : String, mapID : int, rating : int)>)}
+    \item \texttt{addAliasSuggestion(aliasSuggestion : String, mapID : int, user : String) : Boolean}
+    \item \texttt{removeAliasSuggestion(aliasSuggestion : String, mapID : int) : Boolean} 
+    \item \texttt{voteForAlias(aliasSuggestion : String, mapID : int, user : String, vote : boolean) : Boolean}
+    \item \texttt{getAliasSuggestions(minValToShowPos : int, minValToShowNeg : int) : Iterable<AliasSuggestion>}
 \end{itemize}
