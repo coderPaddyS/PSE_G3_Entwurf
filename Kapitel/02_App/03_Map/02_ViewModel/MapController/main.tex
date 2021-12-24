@@ -5,8 +5,11 @@ Implementiert MapDisplayDataProvider.
 Diese Klasse steuert die Karte im Allgemeinen. Das heißt: Diese Klasse stellt die Karte (Straßenkarte) bereit 
 und stellt die benötigten Daten zum Verschieben der Karte bereit (wie Position zu der sie verschoben werden soll).\\
 Diese Klasse ist insbesondere für die Verarbeitung und Steuerung des Fokus der Karte beim Betreten der 
-Kartenansicht verantwortlich (z.B. wenn ein Gebäude über die Suche gefunden wurde und angezeigt werden muss).
-Diese Information ist durch den Wechsel zwischen Ansichten durch NavHost und NavGraph verfügbar.
+Kartenansicht verantwortlich (z.B. wenn ein Gebäude über die Suche gefunden wurde und angezeigt werden muss).\\
+Insbesondere muss diese Klasse Eintritte in die Kartenansicht verarbeiten, bei denen ein Raum vom Benutzer angefordert wurde, 
+der nicht in der App existiert (aber das zugehörige Gebäude existiert). In diesem Fall soll \texttt{getRoomError()} gesetzt 
+werden und das Gebäude fokussiert werden.\\
+Diese Information, was fokussiert werden soll, ist durch den Wechsel zwischen Ansichten durch den NavHost und NavGraph verfügbar (siehe Navigation).
 
 \subsubsection*{\texttt{+ <<create>> MapController(dataProvider : IMapDataProvider)}}%$$$M
 \paragraph*{Kurzbeschreibung}

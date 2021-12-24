@@ -1,0 +1,16 @@
+\paragraph{\texttt{findNewerThanVersion(version : int) : (List<(deletedAlias : String, mapID : int), version : int)>}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt eine Liste aller entfernten Aliasse, die eine neuere als eine bestimmte Version haben, zurück.
+\paragraph*{Beschreibung}
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Services} aufgerufen.
+Die Methode ermöglicht, dass eine Liste aller entfernten Aliasse, die eine neuere als eine bestimmte Version haben, angefragt und zurückgegeben werden kann.
+Dabei wird die gewünschte Version übergeben und auch die neue Version zurückgegeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item version : int
+    		\paragraph*{Beschreibung}
+    		Die Version, ab der entfernte Aliasse zur Liste hinzugefügt werden sollen.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Die Liste der entfernten Aliasse, die eine neuere als die übergebene Version haben, und die neue Version.

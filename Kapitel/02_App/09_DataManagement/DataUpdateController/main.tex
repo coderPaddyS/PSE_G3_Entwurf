@@ -1,4 +1,4 @@
-\section{IDataUpdateController}
+\subsubsection{IDataUpdateController}
 \paragraph*{Typ}
 Interface.
 \paragraph*{Beschreibung}
@@ -9,7 +9,7 @@ Es gibt eine Warteschlange von DataUpdatern, in der die Priorität der Schlüsse
 die Priorität, desto früher kommt ein DataUpdater dran). Initial ist die Warteschlange leer.\\
 
 
-\subsubsection{\texttt{+ resumeUpdate() : boolean}}%$$$M
+\subsubsection*{\texttt{+ resumeUpdate() : boolean}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Führt die Aktualiserung fort.
 \paragraph*{Beschreibung}
@@ -24,7 +24,7 @@ Keine.
 \paragraph*{Rückgabewert}
 boolean, ob die Aktualisierung erfolgreich war.
 
-\subsubsection{\texttt{+ updateDatabase() : boolean}}%$$$M
+\subsubsection*{\texttt{+ updateDatabase() : boolean}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Aktualisiert die lokale Datenbank komplett.
 \paragraph*{Beschreibung}
@@ -41,7 +41,7 @@ Keine.
 boolean, ob die Aktualisierung erfolgreich war.
 
 %---------------------------------------------------------
-\section{DataUpdateController}
+\subsubsection{DataUpdateController}
 \paragraph*{Typ}
 Implementiert IDataUpdateController.
 \paragraph*{Beschreibung}
