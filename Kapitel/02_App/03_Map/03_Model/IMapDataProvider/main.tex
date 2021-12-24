@@ -1,11 +1,11 @@
-\subsubsection{IMapDataProvider}
+\subsubsection{IMapDataProvider}\label{App_Map_Model_IMapDataProvider}
 \paragraph*{Typ}
 \texttt{Interface}.
 \paragraph*{Beschreibung}
 Dieses Interface beschreibt die Schnittstelle von Model um Kartendaten anzufordern und zu speichern.
 Dieses Interface ist eine Fassade für die Model-Schicht der Karte.
 
-\subsubsection*{\texttt{+ getRoomDisplayData(mapId : int, level : int) : LiveData<List<DisplayData>>}}%$$$M
+\subsubsection*{\texttt{+ getRoomDisplayData(mapId : int, level : int) : LiveData<List<DisplayData>>}}\label{App_Map_Model_getRoomDisplayData_IMap}%$$$M
 \paragraph*{Kurzbeschreibung}
 Gibt die Anzeigedaten für Räume einer Etage zurück.
 \paragraph*{Beschreibung}
@@ -20,7 +20,7 @@ Die Liste ist leer, wenn es keine hinterlegten Räume gibt.
 \texttt{LiveData<List<DisplayData>>}, DisplayData für Räume einer Etage.
 
 \subsubsection*{\texttt{+ getFloorMapTileSource(mapId : int, level : int) : \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
-{ITileSource}}}%$$$M
+{ITileSource}}}\label{App_Map_Model_getFloorMapTileSource_IMap}%$$$M
 \paragraph*{Beschreibung}
 Gibt eine \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
 {ITileSource} mit den Kartendaten für das Stockwerk eines Gebäudes zurück.\\
@@ -34,7 +34,7 @@ Existiert die angeforderte Etagenkarte nicht auf dem Gerät, wird \texttt{null} 
 \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
 {ITileSource} mit den Kartendaten für die Etage oder \texttt{null}.
 
-\subsubsection*{\texttt{+ getBuildingDisplayData() : LiveData<List<DisplayData>>}}%$$$M
+\subsubsection*{\texttt{+ getBuildingDisplayData() : LiveData<List<DisplayData>>}}\label{App_Map_Model_getBuildingDisplayData_IMap}%$$$M
 \paragraph*{Beschreibung}
 Gibt die Anzeigedaten für alle Gebäude zurück.
 \paragraph*{Parameter}
@@ -43,7 +43,7 @@ Keine.
 \texttt{LiveData<List<DisplayData>>}, DisplayData für alle Gebäude.
 
 \subsubsection*{\texttt{+ getBuildingTileSource() : \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
-{ITileSource}}}%$$$M
+{ITileSource}}}\label{App_Map_Model_getBuildingTileSource_IMap}%$$$M
 \paragraph*{Beschreibung}
 Gibt eine \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
 {ITileSource} mit den Kartendaten für alle Gebäude zurück.
@@ -56,7 +56,7 @@ Gibt eine \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tile
 \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
 {ITileSource} mit den Kartendaten für alle Gebäude.
 
-\subsubsection*{\texttt{+ getLastSavedPosition() : IGeoPoint}}%$$$M
+\subsubsection*{\texttt{+ getLastSavedPosition() : IGeoPoint}}\label{App_Map_Model_getLastSavedPosition_IMap}%$$$M
 \paragraph*{Kurzbeschreibung}
 Gibt die letzte gespeicherte Position zurück.
 \paragraph*{Beschreibung}
@@ -67,7 +67,7 @@ Keine.
 \paragraph*{Rückgabewert}
 \texttt{IGeoPoint} mit letzter gespeicherter Position (oder Default-Wert), ist nie \texttt{null}.
 
-\subsubsection*{\texttt{+ savePosition(pos : IGeoPoint)}}%$$$M
+\subsubsection*{\texttt{+ savePosition(pos : IGeoPoint)}}\label{App_Map_Model_savePosition_IMap}%$$$M
 \paragraph*{Beschreibung}
 Speichert eine Position als letzte Position.
 \paragraph*{Parameter}
@@ -77,7 +77,7 @@ Speichert eine Position als letzte Position.
 \paragraph*{Rückgabewert}
 \texttt{Void}.
 
-\subsubsection*{\texttt{+ getBuildingAddress(mapId : int) : String}}%$$$M
+\subsubsection*{\texttt{+ getBuildingAddress(mapId : int) : String}}\label{App_Map_Model_getBuildingAddress_IMap}%$$$M
 \paragraph*{Beschreibung}
 Gibt die Adresse eines Gebäudes zurück.
 \paragraph*{Parameter}
@@ -87,7 +87,7 @@ Gibt die Adresse eines Gebäudes zurück.
 \paragraph*{Rückgabewert}
 \texttt{String} mit Adresse, oder \texttt{null}, wenn MapId kein Gebäude ist.
 
-\subsubsection*{\texttt{+ getRoomData(mapId : int) : (RoomType, String, int)}}%$$$M
+\subsubsection*{\texttt{+ getRoomData(mapId : int) : (RoomType, String, int)}}\label{App_Map_Model_getRoomData_IMap}%$$$M
 \paragraph*{Kurzbeschreibung}
 Gibt Daten zu einem Raum zurück.
 \paragraph*{Beschreibung}
@@ -105,7 +105,7 @@ Ist die gegebene MapId ungültig oder kein Raum, wird \texttt{null} zurückgegeb
 \paragraph*{Rückgabewert}
 \texttt{(RoomType, String, int, List<String>)} Raumdaten oder \texttt{null}.
 
-\subsubsection*{\texttt{+ getPersons(mapId : int) : List<String>}}%$$$M
+\subsubsection*{\texttt{+ getPersons(mapId : int) : List<String>}}\label{App_Map_Model_getPersons_IMap}%$$$M
 \paragraph*{Kurzbeschreibung}
 Gibt die Namen der Personen zurück, die zu einem Kartenobjekt gehören.
 \paragraph*{Beschreibung}

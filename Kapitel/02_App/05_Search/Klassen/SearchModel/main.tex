@@ -1,4 +1,4 @@
-\subsubsection{ISearchModel}
+\subsubsection{ISearchModel}\label{App_Search_ISearchModel}
 \paragraph*{Typ}
 \texttt{Interface}.
 \paragraph*{Beschreibung}
@@ -7,7 +7,7 @@ Es ermöglicht die Bestimmung der MapId zu einem gültigen Suchbegriff,
 dieser kann eine Gebäudenummer, Gebäudenummer und Raumnummer, Gebäudenummer und Alias eines Raumes, ein Alias eines Gebäudes oder eine Person sein.
 Es ermöglicht die Speicherung und Ausgabe von zuletzt gesuchten Suchbegriffen.
 
- \subsubsection*{\texttt{+ getSuggestions(input : String, amount : int) : List<String>}}%$$$M
+ \subsubsection*{\texttt{+ getSuggestions(input : String, amount : int) : List<String>}}\label{App_Search_ISearchModel_getSuggestions}%$$$M
 \paragraph*{Kurzbeschreibung}
 Gibt Suchvorschläge zu dem übergebenen String zurück.
 \paragraph*{Beschreibung}
@@ -25,7 +25,7 @@ Somit werden auch Vorschläge für falsch geschriebene Suchbegriffe angezeigt.
 \paragraph*{Rückgabewert}
 \texttt{List<String>}, Suchvorschläge, die die Datenbank zurückgegeben hat.
 
- \subsubsection*{\texttt{+ getLastSearches(amount : int) : List<String>}}%$$$M
+ \subsubsection*{\texttt{+ getLastSearches(amount : int) : List<String>}}\label{App_Search_ISearchModel_getLastSearches}%$$$M
 \paragraph*{Kurzbeschreibung}
 Gibt eine Liste der zuletzt gesuchten Suchbegriffe zurück.
 \paragraph*{Beschreibung}
@@ -37,7 +37,7 @@ Diese Methode gibt eine Liste der zuletzt gesuchten Suchbegriffe, nach ihrer let
 \paragraph*{Rückgabewert}
 \texttt{List<String>}, zuletzt gesuchte Suchbegriffe.
 
- \subsubsection*{\texttt{+ storeSearchKey(searchKey : String)}}%$$$M
+ \subsubsection*{\texttt{+ storeSearchKey(searchKey : String)}}\label{App_Search_ISearchModel_storeSearchKey}%$$$M
 \paragraph*{Beschreibung}
 Speichert den gegebenen Suchbegriff mit dem aktuellen Datum im Suchverlauf.
 \paragraph*{Parameter}
@@ -47,7 +47,7 @@ Speichert den gegebenen Suchbegriff mit dem aktuellen Datum im Suchverlauf.
 \paragraph*{Rückgabewert}
 \texttt{Void}.
 
- \subsubsection*{\texttt{+ getMapIdBySearchKey(searchKey : String) : int}}%$$$M
+ \subsubsection*{\texttt{+ getMapIdBySearchKey(searchKey : String) : int}}\label{App_Search_ISearchModel_getMapIdBySearchKey}%$$$M
 \paragraph*{Kurzbeschreibung}
 Gibt die MapId des zum Suchbegriff gehörenden Kartenobjekts zurück.
 \paragraph*{Beschreibung}
@@ -60,7 +60,7 @@ Diese Methode ermittelt das zu den Suchbegriffen gehörenden Kartenobjekt in der
 \texttt{int}, MapId zum Suchbegriff.
 
 
-\subsubsection{SearchModel}
+\subsubsection{SearchModel}\label{App_Search_SearchModel}
 \paragraph*{Typ}
 Implementiert \texttt{ISearchModel}.
 \paragraph*{Beschreibung}
