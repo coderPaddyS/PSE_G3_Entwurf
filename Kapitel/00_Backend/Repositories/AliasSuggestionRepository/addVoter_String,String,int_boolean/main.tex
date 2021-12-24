@@ -1,0 +1,22 @@
+\paragraph{\texttt{addVoter(user : String, aliasSuggestion : String, mapID : int) : boolean}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Fügt einen Benutzer als Bewerter für einen bestimmten Alias-Vorschlag zur entsprechenden Datenbank hinzu.
+\paragraph*{Beschreibung}
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Services} aufgerufen.
+Die Methode ermöglicht, dass ein Benutzer als Bewerter für den übergebenen Alias-Vorschlag zur entsprechenden Datenbank hinzugefügt werden kann.
+Hierfür wird der Benutzer als Zeichenkette, der Alias-Vorschlag als Zeichenkette und die ID des dazugehörigen Kartenobjekts übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+	\item user
+		\paragraph*{Beschreibung}
+		Der Benutzer, der als Bewerter hinzugefügt werden soll.
+    \item aliasSuggestion : String
+    		\paragraph*{Beschreibung}
+    		Der als Zeichenkette angegebene Alias-Vorschlag.
+    	\item mapID : int
+    		\paragraph*{Beschreibung}
+    		Die ID des Kartenobjekts, für das der Alias-Vorschlag als Bezeichner dienen soll.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Wahr, wenn der Benutzer für den übergebenen Alias-Vorschlag erfolgreich hinzugefügt werden konnte oder wenn er bereits für den übergebenen Alias-Vorschlag als Bewerter in der Datenbank hinterlegt war, ansonsten falsch.

@@ -1,0 +1,32 @@
+\subsubsection{MapDataProvider}
+\paragraph*{Typ}
+Implementiert IMapDataProvider.
+\paragraph*{Beschreibung}
+Diese Klasse implementiert die Fassade IMapDataProvider für die Model-Schicht der Karte.\\
+Ein MapDataProvider besitzt eine Instanz der Klassen 
+TileSourceProvider, DisplayDataProvider, MapObjectInformationProvider, PositionDataManager.
+
+\paragraph*{Methoden, die an TileSourceProvider delegiert werden}
+\begin{itemize}
+    \item \texttt{+ getFloorMapTileSource(mapId : int, level : int) : \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}{ITileSource}}
+    \item \texttt{+ getBuildingTileSource() : \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}{ITileSource}}
+\end{itemize}
+
+\paragraph*{Methoden, die an DisplayDataProvider delegiert werden}
+\begin{itemize}
+    \item \texttt{+ getRoomDisplayData(mapId : int, level : int) : LiveData<List<DisplayData>>}
+    \item \texttt{+ getBuildingDisplayData() : LiveData<List<DisplayData>>}
+\end{itemize}
+
+\paragraph*{Methoden, die an MapObjectInformationProvider delegiert werden}
+\begin{itemize}
+    \item \texttt{+ getBuildingAddress(mapId : int) : String}
+    \item \texttt{+ getRoomData(mapId : int) : (RoomType, String, int)}
+    \item \texttt{+ getPersons(mapId : int) : List<String>}
+\end{itemize}
+
+\paragraph*{Methoden, die an PositionDataManager delegiert werden}
+\begin{itemize}
+    \item \texttt{+ getLastSavedPosition() : IGeoPoint}
+    \item \texttt{+ savePosition(pos : IGeoPoint)}
+\end{itemize}

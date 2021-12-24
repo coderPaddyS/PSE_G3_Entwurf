@@ -1,0 +1,47 @@
+\subsubsection{DataUpdater}
+\paragraph*{Typ}
+Interface.
+\paragraph*{Beschreibung}
+Ein DataUpdater aktualisiert lokal gespeicherte Daten durch Kommunikation mit dem Server.\\
+Ein DataUpdater hat eine Priorität, mit der er ausgeführt werden soll. Dabei müssen 
+DataUpdater mit einer kleineren Priorität vor DataUpdatern mit einer größeren Priorität 
+ausgeführt werden. DataUpdater mit gleicher Priorität sind voneinander unabhängig und
+die Reihenfolge ihrer Ausführung ist egal.\\
+Da sich die Aktualisierung je nach Datentyp unterscheidet, wird hier eine Strategie benutzt.
+
+\subsubsection*{\texttt{+ getPriority() : int}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt die Priorität zurück.
+\paragraph*{Beschreibung}
+Gibt die Priorität des DataUpdaters als int zurück. Ein DataUpdater mit einer kleineren
+Priorität muss vor einem DataUpdater mit größerer Priorität ausgeführt werden.
+Für DataUpdater mit gleicher Priorität ist die Reihenfolge der Ausführung egal.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+int, Priorität des DataUpdaters.
+
+\subsubsection*{\texttt{+ updateData() : boolean}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Führt die Aktualisierung der Daten durch.
+\paragraph*{Beschreibung}
+Diese Methode führt die Aktualisierung der Daten durch.\\
+Wurde die Aktualisierung erfolgreich abgeschlossen, wird true zurückgegeben. 
+Die betreffenden Daten in der Datenbank wurden aktualisiert.\\
+Schlägt die Aktualisierung fehl oder ist nicht möglich, wird false zurückgegeben.
+In diesem Fall dürfen keine Inkonsistenzen in der Datenbank entstehen.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+boolean, ob die Aktualisierung erfolgreich war.
+
+%-----------------------------------------------
+\subsubsection{GlobalAliasUpdater}
+\paragraph*{Typ}
+Implementiert DataUpdater.
+\paragraph*{Beschreibung}
+Der GlobalAliasUpdater ist ein DataUpdater. Er aktualisiert die lokale Kopie der globalen
+Alias-Datenbank des Servers. \\
+Dazu teilt er dem Server mit, welche Version der Datenbank gerade auf dem Gerät 
+gespeichert ist. Der Server sendet alle relevanten Änderungen seit dieser Version. 
+Der GlobalAliasUpdater aktualisiert damit die lokale Kopie der globalen Alias-Datenbank.
