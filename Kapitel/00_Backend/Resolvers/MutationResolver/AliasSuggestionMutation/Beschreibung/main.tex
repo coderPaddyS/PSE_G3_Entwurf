@@ -3,9 +3,14 @@
 Nimmt HTTP-Requests mit dem Ziel, Aliaseinträge zu verändern, entgegen.
 \paragraph*{Enthaltene Methoden}
 \begin{itemize}
-    \item \texttt{blacklistAlias(toBlacklist : String) : boolean}
-    \item \texttt{removeAlias(alias : String)}
-    \item \texttt{removeFromBlacklist(blacklistedToRem : String)}
+    \item \texttt{+approveAliasSuggestion(aliasSuggestion : String, mapID : int) : Boolean}
+    \item \texttt{+disapproveAliasSuggestion(aliasSuggestion : String, mapID : int) : Boolean}
+    \item \texttt{+voteForAliasSuggestion(aliasSuggestion : String, mapID : int, user : String, vote : Boolean) : Boolean}
+    \item \texttt{+approveAliasSuggestion(aliasSuggestion : String, mapID : int) : Boolean}
+    \item \texttt{+removeAliasSuggestion(aliasSuggestion : String, mapID : int) : Boolean}
+    \item \texttt{+suggestAlias(aliasSuggestion : String, mapID : int, user : String) : Boolean}
+
+
 \end{itemize}
 \paragraph*{Genutzte Klassen}
 \begin{itemize}

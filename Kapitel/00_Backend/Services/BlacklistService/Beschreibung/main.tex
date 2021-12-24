@@ -1,10 +1,10 @@
 \subsubsection*{Klassenbeschreibung}%$$$M
 \paragraph*{Kurzbeschreibung}
-Zugriff auf zugrundeliegende Datenhaltung der Blacklisteinträge.
+Interface zum Zugriff auf zugrundeliegende Datenhaltung der Blacklisteinträge.
 \paragraph*{Enthaltene Methoden}
 \begin{itemize}
-    \item \texttt{addToBlacklist(name : String)}
-    \item \texttt{removeFromBlackllist(name : String)}
-    \item \texttt{isBlacklisted(name : String)}
-    \item \texttt{getBlacklist() : List<alias : String>}
+    \item \texttt{+addToBlacklist(toBlacklist : String) : Boolean}
+    \item \texttt{+removeFromBlacklist(blacklistedToRem : String) : Boolean}
+    \item \texttt{+isBlacklisted(word : String) : Boolean}
+    \item \texttt{+getBlacklist() : Iterable<blacklisted : String>}
 \end{itemize}

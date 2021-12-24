@@ -1,4 +1,4 @@
-\paragraph{\texttt{addUser(accessToken : String) : UserID}}%$$$M
+\paragraph*{\texttt{+addUser(accessToken : String) : String}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Definiert das Aufnehmen eines Benutzers, der sich authentifiziert hat und noch nicht in die Datenbank aufgenommen wurde, in die Datenbank.
 \paragraph*{Beschreibung}
@@ -14,4 +14,4 @@ Hierfür wird der Access-Token des gewünschten Benutzers übergeben.
     		Der Access-Token des gewünschten Benutzers, der sich bereits authentifiziert hat und den man in die Datenbank aufnehmen möchte.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Die ID des in die Datenbank aufgenommenen Benutzers.
+Der vom Access-Token generierte Identifikator des in die Datenbank aufgenommenen Benutzers.

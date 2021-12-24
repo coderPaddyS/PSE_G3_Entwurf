@@ -4,10 +4,10 @@ Nimmt HTTP-Requests zur Abfrage von Informationen über die hinterlegten Aliasse
 Dafür empfehlen wir, dass alle Klassen dieses Paketes von der Libraryklasse \dq GraphQLQueryResolver \dq erben sollten.
 \paragraph*{Enthaltene Methoden}
 \begin{itemize}
-    \item \texttt{getAlias(mapID : int) : List<Alias> aliases}
-    \item \texttt{getAlias(mapID : int, userID : String) : List<Alias> aliases}
-    \item \texttt{getUpdates(version : int) : (toAdd : List<Alias>, toDelete : List<Alias>, newVersion : int)}
-    \item \texttt{getBlacklist() : List<alias : String>}
+    \item \texttt{+getAlias(mapID : int) : Iterable<Alias>}
+    \item \texttt{+getAlias(mapID : int, user : String) : Iterable<Alias>}
+    \item \texttt{+getUpdates(version : int) : (toAdd : Iterable<(alias : String, mapID : int)>, toDelete : List<(alias : String, mapID : int)>, newVersion : int)}
+    \item \texttt{+getBlacklist() : Iterable<alias : String>}
 \end{itemize}
 \paragraph*{Genutzte Klassen}
 \begin{itemize}

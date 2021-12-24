@@ -1,13 +1,13 @@
-\subsection{Paketbeschreibung}%$$$M
+\subsection*{Paketbeschreibung}%$$$M
 \paragraph*{Kurzbeschreibung}
 Beinhaltet alle Klassen und Konfigurationen, die zur Authentifizierung und Authorisierung des Nutzers nötig sind.
 \paragraph*{Beschreibung}
 Bestimmte Methoden auf Resolverebene sollen nur angemeldeten Nutzern oder teilweise auch nur Nutzern, die bestimmte Authorisierungen
-innehaben, zugänglich sein. Um dies mittels Spring-Security zu realisieren wird in \dq WebSecurityConfig \dq spezifiziert, dass mittels eines vorangeschaltenen Filters vor jedem
+innehaben, zugänglich sein. Um dies mittels Spring-Security zu realisieren, wird in \dq WebSecurityConfig\dq{} spezifiziert, dass mittels eines vorangeschaltenen Filters vor jedem
 Methodenaufruf der Header des zu bearbeitenden Http-Requests auf ein Access-Token überprüft werden soll. Ist ein valider Token enthalten, 
-wird diesem die Nutzeridentifikation entnommen. Mit diesem eindeutigen Kennzeichner wird die entsprechende User-Entitys
-wenn noch nicht vorhanden erstellt und geladen. Dieser werden dann  die Nutzerauthoritäten entnommen und in ein JWTPreAuthenticationToken gewrapped in den Security-Kontext abgelegt. Dadurch kann vor der Methodenausführung
-im Resolver überprüft werden, ob der Security-Context die benötigte Authorität enthält.
+wird diesem die Nutzeridentifikation entnommen. Mit diesem eindeutigen Kennzeichner wird die entsprechende User-Entity
+wenn noch nicht vorhanden erstellt und geladen. Dieser werden dann  die Nutzerauthoritäten entnommen und in ein JWTPreAuthenticationToken gewrapped in den SecurityContext abgelegt. Dadurch kann vor der Methodenausführung
+im Resolver überprüft werden, ob der SecurityContext die benötigte Authorität enthält.
 
 \paragraph*{Enthaltene Klasse}
 \begin{itemize}
@@ -21,7 +21,7 @@ im Resolver überprüft werden, ob der Security-Context die benötigte Authorit�
     		Überprüft HttpRequest auf ein gültiges Token und fügt gegebenfalls ein JWTPreAuthenticationToken mit den entsprechenden Authoritäten in den Security-Context ein.
 	\item SecurityConfig
 			\paragraph*{Beschreibung}
-			Klasse, in der der Algorithmus und mittels diesem auch der Verifizier für die Signatur gegebener Access-Token definiert werden.		
+			Klasse, in der der Algorithmus und mittels diesem auch der Verifizierer für die Signatur gegebener Access-Token definiert werden.		
 	\item JWTPreAuthenticationToken
     		\paragraph*{Beschreibung}
 			Wrapper-Klasse für gegebene Authoritäten.

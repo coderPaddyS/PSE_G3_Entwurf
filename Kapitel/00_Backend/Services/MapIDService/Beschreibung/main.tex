@@ -1,13 +1,11 @@
 \subsubsection*{Klassenbeschreibung}%$$$M
 \paragraph*{Kurzbeschreibung}
-Zugriff auf die Datenhaltung über die MapID-einträge. Diese wird benötigt, wenn alle vorhanden MapIDs angezeigt werden sollen oder
+Interface zum Zugriff auf die Datenhaltung über die MapID-einträge. Diese wird benötigt, wenn alle vorhanden MapIDs angezeigt werden sollen oder
 mittels einer bestimmten der Name des jeweiligen Kartenobjekts bzw. andersrum erhalten werden soll.
 
 \paragraph*{Enthaltene Methoden}
 \begin{itemize}
-    \item \texttt{addMapID(ID : int, location : String)}
-    \item \texttt{removeMapID(ID : int)}
-    \item \texttt{getLocation(mapID : int) : String}
-    \item \texttt{getByName(name : String) : int}
-    \item \texttt{getAll() : List<mapID : int>}
+    \item \texttt{+getMapObject(mapID : int) : String}
+    \item \texttt{+getMapIDByName(mapObject : String) : int}
+    \item \texttt{+getAllMapIDs() : Iterable<mapID : int>}
 \end{itemize}
