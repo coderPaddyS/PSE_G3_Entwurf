@@ -1,4 +1,4 @@
-\subsubsection{ISearchController}
+\subsubsection{ISearchController}\label{App_Search_ISearchController}
 \paragraph*{Typ}
 \texttt{Interface}.
 \paragraph*{Beschreibung}
@@ -9,7 +9,7 @@ Dies macht sie, indem sie die Daten bei SearchModel anfordert.
 Das Kartenobjekt mit der MapId wird nach abgeschlossener Suche auf der Karte mit Hilfe des NavController angezeigt.
 
 
-\subsubsection*{\texttt{+ getSuggestions() : LiveData<List<String>>}}%$$$M
+\subsubsection*{\texttt{+ getSuggestions() : LiveData<List<String>>}}\label{App_Search_ISearchController_getSuggestions}%$$$M
 \paragraph*{Beschreibung}
 Gibt Suchvorschläge zu der aktuellen Eingabe zurück.
 Wenn die Eingabe leer ist werden stattdessen die letzten Suchbegriffe angefordert und zurückgegeben.
@@ -18,7 +18,7 @@ Keine.
 \paragraph*{Rückgabewert}
 \texttt{LiveData<List<String>>}, Suchvorschläge zur Eingabe, die eine Klasse, die ISearchModel implementiert, zurückgegeben hat.
 
-\subsubsection*{\texttt{+ setInput(input : String)}}%$$$M
+\subsubsection*{\texttt{+ setInput(input : String)}}\label{App_Search_ISearchController_setInput}%$$$M
 \paragraph*{Beschreibung}
 Nimmt den aktuellen Input-String entgegen und aktualisiert damit die Suchvorschläge.
 \paragraph*{Parameter}
@@ -28,7 +28,7 @@ Nimmt den aktuellen Input-String entgegen und aktualisiert damit die Suchvorschl
 \paragraph*{Rückgabewert}
 \texttt{Void}.
 
-\subsubsection*{\texttt{+ confirmInput()}}%$$$M
+\subsubsection*{\texttt{+ confirmInput()}}\label{App_Search_ISearchController_confirmInput}%$$$M
 \paragraph*{Beschreibung}
 Zeigt das Kartenobjekts zu dem Suchvorschlag mit der höchsten Übereinstimmung an und wechselt dazu in den Kartenmodus.
 Fordert die Speicherung des Suchvorschlags von einer Klasse, die ISearchModel implementiert.
@@ -37,7 +37,7 @@ Keine.
 \paragraph*{Rückgabewert}
 \texttt{Void}.
 
-\subsubsection*{\texttt{+ selectSuggestion(suggestion : String)}}%$$$M
+\subsubsection*{\texttt{+ selectSuggestion(suggestion : String)}}\label{App_Search_ISearchController_selectSuggestion}%$$$M
 \paragraph*{Beschreibung}
 Zeigt das Kartenobjekt zu dem ausgewählten Suchvorschlag an und wechselt dazu in den Kartenmodus.
 Fordert die Speicherung des ausgewählten Suchvorschlags von einer Klasse, die ISearchModel implementiert.
@@ -49,7 +49,7 @@ Fordert die Speicherung des ausgewählten Suchvorschlags von einer Klasse, die I
 \texttt{Void}.
 
 
-\subsubsection{SearchController}
+\subsubsection{SearchController}\label{App_Search_SearchController}
 \paragraph*{Typ}
 Implementiert \texttt{ISearchController}.
 \paragraph*{Beschreibung}
