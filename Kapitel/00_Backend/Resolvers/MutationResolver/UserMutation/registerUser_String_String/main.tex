@@ -1,0 +1,20 @@
+\paragraph*{\texttt{registerUser(accessToken : String) : String}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Registriert einen neuen Nutzer, indem sie aus dem eindeutigen Identifikator im Access-Token einen 
+eindeutigen, systeminternen Identifikator generiert, den Nutzer unter diesem abspeichert und im Anschluss den
+Identifikator zurückgibt.
+\paragraph*{Beschreibung}
+Die Methode kann von jedem Nutzer aufgerufen werden.
+Mittels des mitgelieferten Access-Tokens wird ein eindeutiger Identifikator für den Nutzer generiert.
+Ist der Nutzer noch nicht im System hinterlegt, so wird er unter diesem abgespeichert.
+Im Anschluss wird dieser Identifikator zurückgegeben und somit der App mitgeteilt.
+Ist der Nutzer bereits vorhanden, so muss er nicht erneut hinzugefügt werden und es wird
+direkt der Identifikator zurückgegeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item accessToken : String
+    		\paragraph*{Beschreibung}
+    		Vom Nutzer mitgesendeter Token, den der nach erfolgreicher Anmeldung bei dem genutzten Authentifizierungsprovider erhalten hat.
+\end{itemize}
+\paragraph*{Rückgabewert}
+String, der dem aus dem Access-Token generierten Identifikator entspricht.
