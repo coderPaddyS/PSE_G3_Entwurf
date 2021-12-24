@@ -30,7 +30,7 @@ keine.
 \paragraph*{Rückgabewert}
 Livedata<boolean>, ob der Benutzer den Datenschutz akzeptiert hat.
 
-\subsubsection{\texttt{+ signIn(provider : String)}}%$$$M
+\subsubsection{\texttt{+ signIn(provider : String) : boolean}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Leitet den Benutzer zur Eingabe seiner Daten weiter.
 \paragraph*{Beschreibung}
@@ -41,7 +41,7 @@ Der Aufruf wird an das Model weitergegeben.
     \item provider : String ausgewählter Anmeldedienst.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Void.
+boolean, ob die Anmeldung erfolgreich war.
 
 %----------------------------------------------------------
 \subsubsection{SignInController}
