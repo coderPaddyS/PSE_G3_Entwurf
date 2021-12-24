@@ -9,12 +9,12 @@ wird in die Subklassen ausgelagert, da dies je nach Kartenobjekttyp variiert.
 
 \subsubsection*{\texttt{+ <<create>> MapObjectMarker(mapView : MapView, data : DisplayData, tileMarkerOverlay : TileMarkerOverlay)}}%$$$M
 \paragraph*{Beschreibung}
-Erstellt eine neue MapObjectMarker-Instanz.
+Erstellt eine neue \hyperref[App_Map_View_MapObjectMarker]{MapObjectMarker}-Instanz.
 \paragraph*{Parameter}
 \begin{itemize}
     \item \texttt{mapView : MapView} MapView auf der der Marker angezeigt wird.
     \item \texttt{data : DisplayData} Alle Daten, die zur Erstellung des Markers benötigt werden.
-    \item \texttt{tileMarkerOverlay : TileMarkerOverlay} TileMarkerOverlay-Instanz, der ein Klick 
+    \item \texttt{tileMarkerOverlay : \hyperref[App_Map_View_TileMarkerOverlay]{TileMarkerOverlay}} \hyperref[App_Map_View_TileMarkerOverlay]{TileMarkerOverlay}-Instanz, der ein Klick 
     auf diesen Marker mitgeteilt wird. Darf \texttt{null} sein.
 \end{itemize}
 
@@ -28,7 +28,7 @@ Keine.
 
 \subsubsection*{\texttt{+ onSingleTapConfirmed(e : MotionEvent, mapView : MapView) : boolean}}%$$$M
 \paragraph*{Beschreibung}
-Das Anklicken dieses Markers wird der TileMarkerOverlay-Instanz mitgeteilt.
+Das Anklicken dieses Markers wird der \hyperref[App_Map_View_TileMarkerOverlay]{TileMarkerOverlay}-Instanz mitgeteilt.
 \paragraph*{Parameter}
 Für die Verarbeitung werden beide Parameter nicht benutzt. Diese sind durch Overlay vorgegeben.
 \begin{itemize}
@@ -57,7 +57,7 @@ Keine.
 \texttt{Void}.
 
 %-------------------------------------------------------------
-\subsubsection{BuildingMarker}
+\subsubsection{BuildingMarker}\label{App_Map_View_BuildingMarker}
 \paragraph*{Typ} 
 Erbt von MapObjectMarker.
 \paragraph*{Beschreibung}
@@ -77,15 +77,15 @@ Gibt es keine Etagenkarte, wird der Marker als großer Standort-Pfeil angezeigt.
 \texttt{Void}.
 
 \subsubsection*{Weitere Implementierungen}
-Diese Klasse implementiert ebenfalls die abstrakte Methode resetFocus von MapObjectMarker 
+Diese Klasse implementiert ebenfalls die abstrakte Methode resetFocus von \hyperref[App_Map_View_MapObjectMarker]{MapObjectMarker} 
 und benutzt den gleichen (geerbten) Konstruktor.
 
 %-------------------------------------------------------------
-\subsubsection{RoomMarker}
+\subsubsection{RoomMarker}\label{App_Map_View_RoomMarker}
 \paragraph*{Typ} 
-Erbt von MapObjectMarker.
+Erbt von \hyperref[App_Map_View_MapObjectMarker]{MapObjectMarker}.
 \paragraph*{Beschreibung}
-MapObjectMarker für Räume.
+\hyperref[App_Map_View_MapObjectMarker]{MapObjectMarker} für Räume.
 
 \subsubsection*{\texttt{+ focusMarkerObject(floorMapExists : boolean)}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -100,5 +100,5 @@ Der Marker als großer Standort-Pfeil angezeigt.
 \texttt{Void}.
 
 \subsection*{Weitere Implementierungen}
-Diese Klasse implementiert ebenfalls die abstrakte Methode resetFocus von MapObjectMarker 
+Diese Klasse implementiert ebenfalls die abstrakte Methode resetFocus von \hyperref[App_Map_View_MapObjectMarker]{MapObjectMarker} 
 und benutzt den gleichen (geerbten) Konstruktor.

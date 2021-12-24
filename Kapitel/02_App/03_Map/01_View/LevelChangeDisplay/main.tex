@@ -10,9 +10,9 @@ Die Schaltfläche besteht aus:
     (z.B. \dq 1. OG\dq, \dq EG\dq, \dq 1. UG\dq. usw.)
     \item Einem Button zum Wechseln der Etage nach unten.
 \end{itemize}
-Die Klasse ist ein Beobachter eines LevelChangeControllers. Dadurch erhält das 
+Die Klasse ist ein Beobachter eines \hyperref[App_Map_ViewModel_LevelChangeController]{LevelChangeController}. Dadurch erhält das 
 LevelChangeDisplay die Informationen zur aktuellen Etage. Wird einer der Buttons zum 
-Wechseln der Etage betätigt, meldet diese Klasse dies dem LevelChangeController, 
+Wechseln der Etage betätigt, meldet diese Klasse dies dem \hyperref[App_Map_ViewModel_LevelChangeController]{LevelChangeController}, 
 die sich um den Etagenwechsel kümmert.
 
 \subsubsection*{\texttt{+ onClickUp()}}%$$$M
@@ -22,7 +22,7 @@ Veranlasst den Etagenwechsel nach oben.
 Diese Methode wird aufgerufen, wenn der Button nach oben geklickt wurde. \\
 Wenn bereits die oberste Etage angezeigt wird passiert nichts. 
 Wird nicht die oberste Etage angezeigt, wird der Wechsel nach oben veranlasst.
-Dazu wird dies dem LevelChangeController mitgeteilt.
+Dazu wird dies dem \hyperref[App_Map_ViewModel_LevelChangeController]{LevelChangeController} mitgeteilt.
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
@@ -35,14 +35,14 @@ Veranlasst den Etagenwechsel nach unten.
 Diese Methode wird aufgerufen, wenn der Button nach unten geklickt wurde. \\
 Wenn bereits die unterste Etage angezeigt wird passiert nichts. 
 Wird nicht die unterste Etage angezeigt, wird der Wechsel nach unten veranlasst.
-Dazu wird dies dem LevelChangeController mitgeteilt.
+Dazu wird dies dem \hyperref[App_Map_ViewModel_LevelChangeController]{LevelChangeController} mitgeteilt.
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
 \texttt{Void}.
 
 \subsubsection*{Weitere private Funktionalität}%$$$M
-Beobachtete Daten von LevelChangeController und Funktionalität:
+Beobachtete Daten von \hyperref[App_Map_ViewModel_LevelChangeController]{LevelChangeController} und Funktionalität:
 \begin{itemize}
     \item \texttt{isHighestLevel}: Wird die oberste Etage angezeigt, wird der Button nach oben ausgegraut 
     und hat keine Funktion. Wird nicht die oberste Etage angezeigt, ist er nicht ausgegraut und funktioniert.

@@ -10,11 +10,11 @@ Dazu ist folgendes nötig:
         \begin{itemize}
             \item der \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/views/MapView.html}
             {MapView} selbst, die u.a. die Straßenkarte anzeigt,
-            \item einem TileMarkerOverlay, das die Gebäude anzeigt,
-            \item einem TileMarkerOverlay, das wenn die App im Etagenmodus ist, die Etagenkarte anzeigt.
+            \item einem \hyperref[App_Map_View_TileMarkerOverlay]{TileMarkerOverlay}, das die Gebäude anzeigt,
+            \item einem \hyperref[App_Map_View_TileMarkerOverlay]{TileMarkerOverlay}, das wenn die App im Etagenmodus ist, die Etagenkarte anzeigt.
         \end{itemize}
         Die Karte befindet sich hinter allen weiteren Elementen.
-    \item Anzeigen des LevelChangeDisplays. Damit kann der Benutzer, wenn die App im Etagenmodus 
+    \item Anzeigen des \hyperref[App_Map_View_LevelChangeDisplay]{LevelChangeDisplays}. Damit kann der Benutzer, wenn die App im Etagenmodus 
     ist, die Etage wechseln.
     \item Anzeigen des Buttons zur Ortung.
     \item Anzeigen eines Kompasses, der die Himmelsrichtungen auf der Karte zeigt.
@@ -45,8 +45,8 @@ Folgende Interaktionen mit der Karte müssen aktiviert beziehungsweise sicherges
     nichts).\\
     Wird der Standort bereits angezeigt, wird die Karte so verschoben, dass sich die eigene Position 
     in der Mitte des Bildschirms befindet. \\
-    \item Wird ein Kartenobjekt fokussiert werden die Informationen dazu mithilfe eines MapObjectInfoDisplays angezeigt. 
-    Wird erneut auf die Karte geklickt, verschwindet das MapObjectInfoDisplays wieder.
+    \item Wird ein Kartenobjekt fokussiert werden die Informationen dazu mithilfe eines \hyperref[App_Map_View_MapObjectInfoDisplay]{MapObjectInfoDisplays} angezeigt. 
+    Wird erneut auf die Karte geklickt, verschwindet das \hyperref[App_Map_View_MapObjectInfoDisplay]{MapObjectInfoDisplays} wieder.
 
 \end{itemize}
 
@@ -59,12 +59,12 @@ Die Startposition der Karte ist beim Öffnen der App wie folgt definiert:
 \end{itemize}
 Um dieses Verhalten zu ermöglichen, muss dafür gesorgt werden, dass die letzte Position beim Verlassen 
 der App gespeichert wird.\\
-Ist die App geöffnet und der Benutzer kehrt aus einer anderen Ansicht in die Kartenansicht zurück,
+Ist die App geöffnet und der Benutzer kehrt aus einer anderen Ansicht in die \Gls{Kartenansicht} zurück,
 wird die letzte Position angezeigt, sofern nicht eine bestimmte Position angezeigt werden muss 
 (siehe Beobachtete Daten: \texttt{getFocusedPos}).
 
 \paragraph*{Beobachtete Daten}
-Dieses \texttt{Composable} beobachtet einen MapDisplayDataProvider. 
+Dieses \texttt{Composable} beobachtet einen \hyperref[App_Map_ViewModel_MapDisplayDataProvider]{MapDisplayDataProvider}. 
 Eine Änderung der Daten wirkt sich wie folgt aus:
 \begin{itemize}
     \item \texttt{getTileSource}: Die Karte, die von der MapView angezeigt wird, wird mit den neuen 

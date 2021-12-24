@@ -8,24 +8,24 @@ Die Abwandlung besteht darin, dass das Objekt, an das delegiert wird nicht ein
 beliebiges Overlay, sondern ein FolderOverlay ist. Außerdem werden die neuen 
 Methoden direkt in dieser Klasse hinzugefügt.\\
 \subparagraph*{Beobachter}
-Diese Klasse ist ein Beobachter. Das beobachtete Subjekt ist hier ein MapLayerDataController.
+Diese Klasse ist ein Beobachter. Das beobachtete Subjekt ist hier ein \hyperref[App_Map_ViewModel_MapLayerDataController]{MapLayerDataController}.
 Die Beobachtung geschieht über die LiveData Mechanismen.
 \paragraph*{Beschreibung}
 Dieses Overlay besitzt ein TileOverlay (also eine Kartenebene) und eine 
-Liste von MapObjectMarkern. Diese werden über dem TileOverlay angezeigt.
+Liste von \hyperref[App_Map_View_MapObjectMarker]{MapObjectMarkern}. Diese werden über dem TileOverlay angezeigt.
 Für die Verwaltung dieser Overlays wird das FolderOverlay eingesetzt.\\
-Diese Klasse verwaltet die MapObjectMarker, die Aktion beim Klicken auf diese Marker, 
+Diese Klasse verwaltet die \hyperref[App_Map_View_MapObjectMarker]{MapObjectMarkern}, die Aktion beim Klicken auf diese Marker, 
 und das Fokussieren eines dieser Marker.
 
-\subsubsection*{\texttt{+ <<create>> TileMarkerOverlay(controller : MapLayerDataController, mapView : MapView)}}%$$$M
+\subsubsection*{\texttt{+ <<create>> \hyperref[App_Map_View_TileMarkerOverlay]{TileMarkerOverlay}(controller : \hyperref[App_Map_ViewModel_MapLayerDataController]{MapLayerDataController}, mapView : MapView)}}%$$$M
 \paragraph*{Kurzbeschreibung}
-Erstellt eine TileMarkerOverlay-Instanz.
+Erstellt eine \hyperref[App_Map_View_TileMarkerOverlay]{TileMarkerOverlay}-Instanz.
 \paragraph*{Beschreibung}
 Beginnt die von controller bereitgestellten Daten zu beobachten. Erzeugt das TileOverlay.
-Erzeugt die MapObjectMarker über die Fabrikmethode createMarker.
+Erzeugt die \hyperref[App_Map_View_MapObjectMarker]{MapObjectMarkern} über die Fabrikmethode createMarker.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item \texttt{controller : MapLayerDataController} MapLayerDataController der die Daten bereitstellt.
+    \item \texttt{controller : \hyperref[App_Map_ViewModel_MapLayerDataController]{MapLayerDataController}} \hyperref[App_Map_ViewModel_MapLayerDataController]{MapLayerDataController} der die Daten bereitstellt.
     \item \texttt{mapView : MapView} MapView auf der sich das Overlay befindet.
 \end{itemize}
 
@@ -44,7 +44,7 @@ an die FolderOverlay-Instanz delegiert:
 
 \subsubsection*{\texttt{+ onMarkerTap(mapId : int)}}%$$$M
 \paragraph*{Beschreibung}
-Teilt dem MapLayerDataController mit, dass ein bestimmtes Kartenobjekt ausgewählt wurde.
+Teilt dem \hyperref[App_Map_ViewModel_MapLayerDataController]{MapLayerDataController} mit, dass ein bestimmtes Kartenobjekt ausgewählt wurde.
 \paragraph*{Parameter}
 \begin{itemize}
     \item \texttt{mapId : int} MapId des Kartenobjekts, auf das ausgewählt wurde.
@@ -52,16 +52,16 @@ Teilt dem MapLayerDataController mit, dass ein bestimmtes Kartenobjekt ausgewäh
 \paragraph*{Rückgabewert}
 \texttt{Void}.
 
-\subsubsection*{\texttt{\# createMarker(data : DisplayData, mapView : MapView) : MapObjectMarker $\lbrace$abstract$\rbrace$}}%$$$M
+\subsubsection*{\texttt{\# createMarker(data : \hyperref[App_Map_Util_DisplayData]{DisplayData}, mapView : MapView) : \hyperref[App_Map_View_MapObjectMarker]{MapObjectMarkern} $\lbrace$abstract$\rbrace$}}%$$$M
 \paragraph*{Beschreibung}
-Dies ist eine Fabrikmethode zur Erzeugung eines MapObjectMarker.
+Dies ist eine Fabrikmethode zur Erzeugung eines \hyperref[App_Map_View_MapObjectMarker]{MapObjectMarkern}.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item \texttt{data : DisplayData} DisplayData mit den Anzeige-Daten für den Marker.
+    \item \texttt{data : DisplayData} \hyperref[App_Map_Util_DisplayData]{DisplayData} mit den Anzeige-Daten für den Marker.
     \item \texttt{mapView : MapView} MapView auf der der Marker angezeigt wird.
 \end{itemize}
 \paragraph*{Rückgabewert}
-\texttt{MapObjectMarker}.
+\hyperref[App_Map_View_MapObjectMarker]{MapObjectMarkern}.
 
 
 \subsubsection*{Weitere private Funktionalität des Beobachters}
@@ -77,45 +77,45 @@ Dies ist eine Fabrikmethode zur Erzeugung eines MapObjectMarker.
 %-------------------------------------------------------------
 \subsubsection{BuildingOverlay}
 \paragraph*{Typ}
-Erbt von TileMarkerOverlay.
+Erbt von \hyperref[App_Map_View_TileMarkerOverlay]{TileMarkerOverlay}.
 \paragraph*{Beschreibung}
-Diese Klasse ist ein TileMarkerOverlay für die Gebäudeebene auf der Karte.
+Diese Klasse ist ein \hyperref[App_Map_View_TileMarkerOverlay]{TileMarkerOverlay} für die Gebäudeebene auf der Karte.
 
-\subsubsection*{\texttt{\# createMarker(data : DisplayData) : MapObjectMarker}}%$$$M
+\subsubsection*{\texttt{\# createMarker(data : \hyperref[App_Map_Util_DisplayData]{DisplayData}) : \hyperref[App_Map_View_MapObjectMarker]{MapObjectMarkern}}}%$$$M
 \paragraph*{Kurzbeschreibung}
-Erzeugt einen BuildingMarker mit den gegeben Daten.
+Erzeugt einen \hyperref[App_Map_View_BuildingMarker]{BuildingMarker} mit den gegeben Daten.
 \paragraph*{Beschreibung}
-Die Fabrikmethode zur Erzeugung eines Markers wird hier mit einem BuildingMarker implementiert.
+Die Fabrikmethode zur Erzeugung eines Markers wird hier mit einem \hyperref[App_Map_View_BuildingMarker]{BuildingMarker} implementiert.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item \texttt{data : DisplayData} DisplayData mit den Anzeige-Daten für den Marker.
+    \item \texttt{data : \hyperref[App_Map_Util_DisplayData]{DisplayData}} \hyperref[App_Map_Util_DisplayData]{DisplayData} mit den Anzeige-Daten für den Marker.
     \item \texttt{mapView : MapView} MapView auf der der Marker angezeigt wird.
 \end{itemize}
 \paragraph*{Rückgabewert}
-\texttt{MapObjectMarker}, erzeugter MapObjectMarker.
+\hyperref[App_Map_View_MapObjectMarker]{MapObjectMarkern}, erzeugter \hyperref[App_Map_View_MapObjectMarker]{MapObjectMarkern}.
 
 \subsubsection*{\texttt{Weitere Implementierungen}}%$$$M
-Benutzt den von TileMarkerOverlay geerbten Konstruktor.
+Benutzt den von \hyperref[App_Map_View_TileMarkerOverlay]{TileMarkerOverlay} geerbten Konstruktor.
 
 %-------------------------------------------------------------
 \subsubsection{FloorOverlay}
 \paragraph*{Typ}
-Erbt von TileMarkerOverlay.
+Erbt von \hyperref[App_Map_View_TileMarkerOverlay]{TileMarkerOverlay}.
 \paragraph*{Beschreibung}
-Diese Klasse ist ein TileMarkerOverlay für die Etagenebene auf der Karte.
+Diese Klasse ist ein \hyperref[App_Map_View_TileMarkerOverlay]{TileMarkerOverlay} für die Etagenebene auf der Karte.
 
-\subsubsection*{\texttt{\# createMarker(data : DisplayData) : MapObjectMarker}}%$$$M
+\subsubsection*{\texttt{\# createMarker(data : \hyperref[App_Map_Util_DisplayData]{DisplayData}) : \hyperref[App_Map_View_MapObjectMarker]{MapObjectMarkern}}}%$$$M
 \paragraph*{Kurzbeschreibung}
-Erzeugt einen RoomMarker mit den gegeben Daten.
+Erzeugt einen \hyperref[App_Map_View_RoomMarker]{RoomMarker} mit den gegeben Daten.
 \paragraph*{Beschreibung}
-Die Fabrikmethode zur Erzeugung eines Markers wird hier mit einem RoomMarker implementiert.
+Die Fabrikmethode zur Erzeugung eines Markers wird hier mit einem \hyperref[App_Map_View_RoomMarker]{RoomMarker} implementiert.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item \texttt{data : DisplayData} DisplayData mit den Anzeige-Daten für den Marker.
+    \item \texttt{data : \hyperref[App_Map_Util_DisplayData]{DisplayData}} \hyperref[App_Map_Util_DisplayData]{DisplayData} mit den Anzeige-Daten für den Marker.
     \item \texttt{mapView : MapView} MapView auf der der Marker angezeigt wird.
 \end{itemize}
 \paragraph*{Rückgabewert}
-\texttt{MapObjectMarker}, erzeugter MapObjectMarker.
+\hyperref[App_Map_View_MapObjectMarker]{MapObjectMarkern}, erzeugter \hyperref[App_Map_View_MapObjectMarker]{MapObjectMarkern}.
 
 \subsubsection*{Weitere Implementierungen}%$$$M
-Benutzt den von TileMarkerOverlay geerbten Konstruktor.
+Benutzt den von \hyperref[App_Map_View_TileMarkerOverlay]{TileMarkerOverlay} geerbten Konstruktor.
