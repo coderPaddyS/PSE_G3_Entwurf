@@ -1,0 +1,21 @@
+\paragraph*{\texttt{+getAlias(mapID : int, amount : int) : Iterable<String>}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt eine Liste der Aliasse des gewünschten Kartenobjekts, wobei die Liste insgesamt maximal eine bestimmte Anzahl an Aliasse hat, zurück.
+\paragraph*{Beschreibung}
+Die Methode implementiert die gleichnamige Methode der Schnittstelle \texttt{AliasService}.
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Resolvers} aufgerufen.
+Gibt die Anweisung an die Schnittstelle \texttt{AliasRepository}, eine Liste der Aliasse des gewünschten Kartenobjekts zurückzugeben, und gibt diese wiederum zurück.
+Dabei hat die Liste insgesamt maximal so viele Aliasse wie übergeben.
+Hierfür wird die ID des gewünschten Kartenobjekts und die Maximalanzahl an Aliassen, die zur Liste hinzugefügt werden sollen, übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapID : int
+    		\paragraph*{Beschreibung}
+    		Die ID des Kartenobjekts, dessen Aliasse man zurückgegeben haben möchte.
+    	\item amount : int
+    		\paragraph*{Beschreibung}
+    		Die Maximalanzahl an Aliassen, die zur Liste hinzugefügt werden sollen.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Die Liste mit den Aliassen des gewünschten Kartenobjekts, wobei die Liste maximal so viele Aliasse hat wie übergeben.
