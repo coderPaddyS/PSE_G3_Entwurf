@@ -1,11 +1,11 @@
-\subsubsection{IAliasDataProvider}
+\subsubsection{IAliasDataProvider}\label{App_AddAlias_IAliasDataProvider}
 \paragraph*{Typ}
 \texttt{Interface}.
 \paragraph*{Beschreibung}
 Der IAliasDataProvider ist eine Schnittstelle, die eine Fassade des Models ist. 
 Dahinter verbirgt er Funktionalität zum Lesen, Modifizieren, Vorschlagen und Löschen von Aliassen.
 
-\subsubsection*{\texttt{+ addLocalAlias(mapId : int, alias : String)}}%$$$M
+\subsubsection*{\texttt{+ addLocalAlias(mapId : int, alias : String)}}\label{App_AddAlias_IAliasDataProvider_addLocalAlias}%$$$M
 \paragraph*{Beschreibung}
 Erstellt und speichert einen neuen lokalen Alias.
 \paragraph*{Parameter}
@@ -16,7 +16,7 @@ Erstellt und speichert einen neuen lokalen Alias.
 \paragraph*{Rückgabewert}
 \texttt{Void}.
 
-\subsubsection*{\texttt{+ suggestGlobalAlias(mapId : int, alias : String) : boolean}}%$$$M
+\subsubsection*{\texttt{+ suggestGlobalAlias(mapId : int, alias : String) : boolean}}\label{App_AddAlias_IAliasDataProvider_suggestGlobalAlias}%$$$M
 \paragraph*{Exceptions}
 Wirft eine ConnectionFailedException, wenn die Verbindung mit dem Server nicht möglich ist.\\
 Wirft eine NotAuthenticatedException, wenn der Benutzer sich anmelden muss.
@@ -30,7 +30,7 @@ Reicht einen Alias-Vorschlag beim Server ein.
 \paragraph*{Rückgabewert}
 \texttt{Void}.
 
-\subsubsection*{\texttt{+ getGlobalAliases(mapId : int) : List<String>}}%$$$M
+\subsubsection*{\texttt{+ getGlobalAliases(mapId : int) : List<String>}}\label{App_AddAlias_IAliasDataProvider_getGlobalAliases}%$$$M
 \paragraph*{Beschreibung}
 Gibt eine Liste aller globalen Aliasse eines Kartenobjekts zurück.
 \paragraph*{Parameter}
@@ -40,7 +40,7 @@ Gibt eine Liste aller globalen Aliasse eines Kartenobjekts zurück.
 \paragraph*{Rückgabewert}
 \texttt{List<String>}, Liste der globalen Aliasse.
 
-\subsubsection*{\texttt{+ getLocalAliases(mapId : int) : LiveData<List<String>>}}%$$$M
+\subsubsection*{\texttt{+ getLocalAliases(mapId : int) : LiveData<List<String>>}}\label{App_AddAlias_IAliasDataProvider_getLocalAliases}%$$$M
 \paragraph*{Beschreibung}
 Gibt eine Liste aller lokalen Aliasse eines Kartenobjekts zurück.
 \paragraph*{Parameter}
@@ -50,7 +50,7 @@ Gibt eine Liste aller lokalen Aliasse eines Kartenobjekts zurück.
 \paragraph*{Rückgabewert}
 \texttt{LiveData<List<String>>}, Liste der lokalen Aliasse.
 
-\subsubsection*{\texttt{+ deleteLocalAlias(mapId : int, alias : String)}}%$$$M
+\subsubsection*{\texttt{+ deleteLocalAlias(mapId : int, alias : String)}}\label{App_AddAlias_IAliasDataProvider_deleteLocalAlias}%$$$M
 \paragraph*{Beschreibung}
 Löscht einen lokalen Alias. Existiert er nicht, passiert nichts.
 \paragraph*{Parameter}
@@ -61,7 +61,7 @@ Löscht einen lokalen Alias. Existiert er nicht, passiert nichts.
 \paragraph*{Rückgabewert}
 \texttt{Void}.
 
-\subsubsection*{\texttt{+ getAliasSuggestions(mapId : int) : List<String>}}%$$$M
+\subsubsection*{\texttt{+ getAliasSuggestions(mapId : int) : List<String>}}\label{App_AddAlias_IAliasDataProvider_getAliasSuggestions}%$$$M
 \paragraph*{Kurzbeschreibung}
 Gibt eine Liste mit bewertbaren Alias-Vorschlägen zurück.
 \paragraph*{Beschreibung}
@@ -74,7 +74,7 @@ die vom Benutzer noch bewertet werden dürfen.
 \paragraph*{Rückgabewert}
 \texttt{List<String>}, Liste der Alias-Vorschläge.
 
-\subsubsection*{\texttt{+ sendAliasFeedback(mapId : int, suggestion : String, feedback : SuggestionFeedback)}}%$$$M
+\subsubsection*{\texttt{+ sendAliasFeedback(mapId : int, suggestion : String, feedback : SuggestionFeedback)}}\label{App_AddAlias_IAliasDataProvider_sendAliasFeedback}%$$$M
 \paragraph*{Exceptions}
 Wirft eine ConnectionFailedException, wenn die Verbindung mit dem Server nicht möglich ist.\\
 Wirft eine NotAuthenticatedException, wenn der Benutzer sich anmelden muss.
