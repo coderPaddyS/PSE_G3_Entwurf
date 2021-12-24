@@ -1,13 +1,14 @@
-\paragraph{\texttt{+ logout() : boolean}}\label{AP_Framework_logout}%$$$M
+\paragraph{\texttt{+ logout() : Boolean}}\label{AP_Framework_logout}%$$$M
 \paragraph*{Kurzbeschreibung}
 Ermöglicht einem Benutzer sich abzumelden.
 \paragraph*{Beschreibung}
 Ermöglicht einem Benutzer sich abzumelden.
-Hierfür wird ein OpenIDConnect-Provider (OIDC-Provider) verwendet, der zuvor durch die Methode \verb#Framework::configure# konfiguriert wird.
+Hierfür wird ein OpenIDConnect-Provider (OIDC-Provider) verwendet, der zuvor durch die Methode \hyperref[AP_Framework_configure]{\texttt{Framework::configure}} konfiguriert wird.
 Dazu wird der Benutzer auf die Logout-Seite des OIDC-Providers geleitet, falls der OIDC-Provider eine Rückleitung unterstützt, wird der Benutzer wieder zurück zur Startseite geleitet.
-Der Access-Token wird dabei invalidiert.
+Die Access-, ID- und Refresh-Token werden dabei invalidiert.
+Die Benutzerdaten werden ebenfalls invalidiert.
 Bei Erfolg wird wahr zurückgegeben, andernfalls wird falsch zurückgegeben.
 \paragraph*{Parameter}
-Keine
+Keine.
 \paragraph*{Rückgabewert}
-Wahr, wenn erfolgreich, falsch sonst
+Wahr, wenn erfolgreich, falsch sonst.
