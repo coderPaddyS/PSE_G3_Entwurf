@@ -1,0 +1,25 @@
+\subsubsection{AddAliasScreen}
+\paragraph*{Typ}
+Composable.
+\paragraph*{Beschreibung}
+Dieses Composable stellt eine grafische Benutzerschnittstelle bereit.
+Mit dieser kann der Benutzer einen neuen Alias lokal hinzufügen oder global vorschlagen.\\
+Beim Erstellen eines AddAliasScreens durch die Navigation erhält dieser die MapId 
+des ausgewählten Kartenobjekts, zu dem ein Alias erstellt werden soll (siehe Navigation).\\
+Für die Speicherung der neuen Aliasse bez. Alias-Vorschläge und den Erhalt der Aliasse benutzt 
+der AddAliasScreen einen IAddAliasController.
+
+\paragraph*{Aufbau}
+\begin{itemize}
+    \item In der Kopfzeile befindet sich ein Zurück-Button. Wird auf diesen geklickt, oder die Zurück-Funktion des Endgeräts benutzt, 
+    kehrt die App zur vorherigen Ansicht zurück. Eingetippte Aliasse, die noch nicht gespeichert oder vorgeschlagen wurden verfallen.
+    \item Es wird die Gebäudenummer des ausgewählten Gebäudes, bez. die des Gebäudes, in dem sich der Raum befindet angezeigt.
+    \item Ist das ausgewählte Kartenobjekt ein Raum, wird unter der Gebäudenummer ebenfalls die Raumnummer angezeigt.
+    \item Darunter wird ein Text angezeigt, der den Benutzer dazu auffordert einen neuen Alias einzugeben.
+    \item Darunter befindet sich ein Textfeld. Klickt der Benutzer auf dieses Textfeld, öffnet sich die Tastatur. 
+    Der Benutzer kann einen Text in das Textfeld eingeben.
+    \item Darunter befinden sich nebeneinander zwei Buttons. Einer zum lokalen Speichern und einer zum globalen Vorschlagen. 
+    Beim Klick auf einen der beiden Buttons wird die jeweilige Aktion ausgeführt. War die Aktion erfolgreich, wird die Eingabe 
+    aus dem Textfeld gelöscht. Der Screen zeigt in jedem Fall eine Meldung zum Erfolg bez. Misserfolg der Aktion an.
+    \item Darunter werden für dieses Kartenobjekt bereits existierende globale Aliasse angezeigt.
+\end{itemize}

@@ -1,0 +1,90 @@
+\subsubsection{IAliasDataProvider}
+\paragraph*{Typ}
+Interface.
+\paragraph*{Beschreibung}
+Der IAliasDataProvider ist eine Schnittstelle, die eine Fassade des Models ist. 
+Dahinter verbirgt er Funktionalität zum Lesen, Modifizieren, Vorschlagen und Löschen von Aliassen.
+
+\subsubsection*{\texttt{+ addLocalAlias(mapId : int, alias : String)}}%$$$M
+\paragraph*{Beschreibung}
+Erstellt und speichert einen neuen lokalen Alias.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Kartenobjekts.
+    \item alias : String Alias.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Void.
+
+\subsubsection*{\texttt{+ suggestGlobalAlias(mapId : int, alias : String) : boolean}}%$$$M
+\paragraph*{Exceptions}
+Wirft eine ConnectionFailedException, wenn die Verbindung mit dem Server nicht möglich ist.\\
+Wirft eine NotAuthenticatedException, wenn der Benutzer sich anmelden muss.
+\paragraph*{Beschreibung}
+Reicht einen Alias-Vorschlag beim Server ein.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Kartenobjekts.
+    \item alias : String Bezeichner.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Void.
+
+\subsubsection*{\texttt{+ getGlobalAliases(mapId : int) : List<String>}}%$$$M
+\paragraph*{Beschreibung}
+Gibt eine Liste aller globalen Aliasse eines Kartenobjekts zurück.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Kartenobjekts.
+\end{itemize}
+\paragraph*{Rückgabewert}
+List<String>, Liste der globalen Aliasse.
+
+\subsubsection*{\texttt{+ getLocalAliases(mapId : int) : LiveData<List<String>>}}%$$$M
+\paragraph*{Beschreibung}
+Gibt eine Liste aller lokalen Aliasse eines Kartenobjekts zurück.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Kartenobjekts.
+\end{itemize}
+\paragraph*{Rückgabewert}
+LiveData<List<String>>, Liste der lokalen Aliasse.
+
+\subsubsection*{\texttt{+ deleteLocalAlias(mapId : int, alias : String)}}%$$$M
+\paragraph*{Beschreibung}
+Löscht einen lokalen Alias. Existiert er nicht, passiert nichts.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Kartenobjekts.
+    \item alias : String Alias der zu löschen ist.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Void.
+
+\subsubsection*{\texttt{+ getAliasSuggestions(mapId : int) : List<String>}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Gibt eine Liste mit bewertbaren Alias-Vorschlägen zurück.
+\paragraph*{Beschreibung}
+Gibt eine Liste mit relevanten Alias-Vorschlägen für das Kartenobjekt zurück, 
+die vom Benutzer noch bewertet werden dürfen.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Kartenobjekts.
+\end{itemize}
+\paragraph*{Rückgabewert}
+List<String>, Liste der Alias-Vorschläge.
+
+\subsubsection*{\texttt{+ sendAliasFeedback(mapId : int, suggestion : String, feedback : SuggestionFeedback)}}%$$$M
+\paragraph*{Exceptions}
+Wirft eine ConnectionFailedException, wenn die Verbindung mit dem Server nicht möglich ist.\\
+Wirft eine NotAuthenticatedException, wenn der Benutzer sich anmelden muss.
+\paragraph*{Beschreibung}
+Diese Methode sendet das Feedback zu einem Alias-Vorschlag an den Server.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item mapId : int MapId des Kartenobjekts.
+    \item suggestion : String Vorschlag. 
+    \item feedback : SuggestionFeedback Feedback.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Void.
