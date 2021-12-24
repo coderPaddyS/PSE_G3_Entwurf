@@ -5,7 +5,7 @@ Beinhaltet alle Klassen und Konfigurationen, die zur Authentifizierung und Autho
 Bestimmte Methoden auf Resolverebene sollen nur angemeldeten Nutzern oder teilweise auch nur Nutzern, die bestimmte Authorisierungen
 innehaben, zugänglich sein. Um dies mittels Spring-Security zu realisieren wird in \dq WebSecurityConfig \dq spezifiziert, dass mittels eines vorangeschaltenen Filters vor jedem
 Methodenaufruf der Header des zu bearbeitenden Http-Requests auf ein Access-Token überprüft werden soll. Ist ein valider Token enthalten, 
-wird diesem die Nutzeridentifikation entnommen. Mit diesem eindeutigen KKennzeichner wird die entsprechende User-Entitys
+wird diesem die Nutzeridentifikation entnommen. Mit diesem eindeutigen Kennzeichner wird die entsprechende User-Entitys
 wenn noch nicht vorhanden erstellt und geladen. Dieser werden dann  die Nutzerauthoritäten entnommen und in ein JWTPreAuthenticationToken gewrapped in den Security-Kontext abgelegt. Dadurch kann vor der Methodenausführung
 im Resolver überprüft werden, ob der Security-Context die benötigte Authorität enthält.
 
