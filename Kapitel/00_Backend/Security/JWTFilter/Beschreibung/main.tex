@@ -2,7 +2,7 @@
 \paragraph*{Kurzbeschreibung}
 Vorangeschaltener Filter, der Authentifizierung und Authorisierung verwaltet.
 \paragraph*{Beschreibung}
-Erbt von \dq OnccePerRequestFilter \dq. Überprüft bei jedem eingehenden Http-Request ob der Header ein Access-Token enthält und wenn ja, ob dieser valide ist. 
+Erbt von \dq OncePerRequestFilter \dq. Überprüft bei jedem eingehenden Http-Request ob der Header ein Access-Token enthält und wenn ja, ob dieser valide ist. 
 Ist der Token valide so wird diesem der Nutzeridentifizierer entnommen und mittels diesem und dem UserService der entsprechende
 User aus der Datenhaltung geladen. Diesem werden wiederum seine Authoritäten entnommen und in einem JWTPreAuthenticationToken gewrapped
 in den Security-Context geschrieben. Zum Schluss wird mittels der \dq doFilter \dq Methode der Filter beendet und der Http-Response weitergeleitet.
