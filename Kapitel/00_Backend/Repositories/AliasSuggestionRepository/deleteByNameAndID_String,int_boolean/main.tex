@@ -1,0 +1,19 @@
+\paragraph{\texttt{deleteByNameAndID(aliasSuggestion : String, mapID : int) : boolean}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Entfernt einen Alias-Vorschlag von der Datenbank der Alias-Vorschläge.
+\paragraph*{Beschreibung}
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Services} aufgerufen.
+Die Methode ermöglicht, dass ein bestimmter Alias-Vorschlag durch Angabe der entsprechenden Zeichenkette und der ID des dazugehörigen Kartenobjekts entfernt werden kann.
+Hierfür wird der Alias als Zeichenkette und die ID des dazugehörigen Kartenobjekts übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item aliasSuggestion : String
+    		\paragraph*{Beschreibung}
+    		Der als Zeichenkette angegebene Alias.
+    	\item mapID : int
+    		\paragraph*{Beschreibung}
+    		Die ID des Kartenobjekts, für das der übergebene Alias-Vorschlag als Bezeichner dienen soll.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Wahr, wenn der übergebene Alias-Vorschlag aus der Datenbank der Alias-Vorschläge entfernt werden konnte oder wenn der Alias-Vorschlag bereits nicht in der Datenbank hinterlegt war, ansonsten falsch.
