@@ -28,38 +28,34 @@ Das Dashboard ist in zwei übereinanderliegende horizontale Boxen aufgeteilt.
 In der oberen Box steht eine Begrüßung.
 Die untere Box ist in weitere Abschnitte aufgeteilt, einen Abschnitt pro angezeigter Information.
 
-\begin{center}
-    \captionsetup[figure]{labelformat=empty}
-    \inprelimg[width=0.7\textwidth]{dashboard_desktop.png}
-    \captionof{figure}{Desktop Ansicht}
-    \captionsetup[figure]{labelformat=default}
-\end{center}
-
-\vspace{0.5em}
-\begin{minipage}{\textwidth}
-    \begin{minipage}{.5\textwidth}
-        \subparagraph*{Mobil}
-        Das Dashboard ist in zwei übereinanderliegende horizontale Boxen aufgeteilt. Diese Boxen nehmen die komplette Horizontale ein.
-        In der oberen Box steht eine Begrüßung.
-        Die untere Box ist in weitere Abschnitte aufgeteilt, einen Abschnitt pro angezeigter Information.
-        Diese Informationsabschnitte sind untereinander.
-        Jeder Informationsabschnitt nimmt die komplette Breite der Box ein.
-    \end{minipage}
-    \begin{minipage}{.5\textwidth}
-        \hspace{.2\textwidth}
-        \captionsetup[figure]{labelformat=empty}
-        \inprelimg[height=0.8\textwidth]{dashboard_mobil.png}    
-        \captionof{figure}{Mobile Ansicht}
-        \captionsetup[figure]{labelformat=default}
-    \end{minipage}
-\end{minipage}
-\vspace{0.5em}
+\subparagraph*{Mobil}
+Das Dashboard ist in zwei übereinanderliegende horizontale Boxen aufgeteilt. Diese Boxen nehmen die komplette Horizontale ein.
+In der oberen Box steht eine Begrüßung.
+Die untere Box ist in weitere Abschnitte aufgeteilt, einen Abschnitt pro angezeigter Information.
+Diese Informationsabschnitte sind untereinander.
+Jeder Informationsabschnitt nimmt die komplette Breite der Box ein.
 
 \paragraph*{Allgemeines dynamisches Verhalten}
 Die Begrüßung zeigt den hinterlegten Namen des angemeldeten Administrators an und begrüßt diesen.
 Die Abschnitte für die Informationen werden zum Seitenaufruf bestimmt. 
 Informationen in Form von konkreten Zahlen werden hochgezählt, bis diese ihren Wert erreicht haben.
 
-
 \paragraph*{Initialer Zustand}
 Die Informationen werden vom Backend angefragt und anschließend dargestellt.
+
+\subsubsection*{Bilder}
+\begin{minipage}{\linewidth}
+    \centering
+    \begin{minipage}{.69\textwidth}
+        \captionsetup[figure]{labelformat=empty}
+        \inprelimg[width=\textwidth]{dashboard_desktop.png}
+        \captionof{figure}{Desktop Ansicht}
+        \captionsetup[figure]{labelformat=default}
+    \end{minipage}
+    \begin{minipage}{.3\textwidth}
+        \captionsetup[figure]{labelformat=empty}
+        \inprelimg[width=\textwidth]{dashboard_mobil.png}    
+        \captionof{figure}{Mobile Ansicht}
+        \captionsetup[figure]{labelformat=default}
+    \end{minipage}
+\end{minipage}
