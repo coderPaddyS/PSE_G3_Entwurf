@@ -11,39 +11,39 @@ globalen Alias-Tabelle lokal gespeichert ist, sind auch Getter auf globale Alias
 Erstellt und speichert einen neuen lokalen Alias.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapId : int MapId des Kartenobjekts.
-    \item alias : String Alias.
+    \item \texttt{mapId : int} MapId des Kartenobjekts.
+    \item \texttt{alias : String} Alias.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Void.
+\texttt{Void}.
 
 \subsubsection*{\texttt{+ deleteLocalAlias(mapId : int, alias : String)}}%$$$M
 \paragraph*{Beschreibung}
 Löscht einen lokalen Alias. Existiert er nicht, passiert nichts.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapId : int MapId des Kartenobjekts.
-    \item alias : String Alias der zu löschen ist.
+    \item \texttt{mapId : int} MapId des Kartenobjekts.
+    \item \texttt{alias : String} Alias der zu löschen ist.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Void.
+\texttt{Void}.
 
 \subsubsection*{\texttt{+ getLocalAliases(mapId : int) : LiveData<List<String>>}}%$$$M
 \paragraph*{Beschreibung}
 Gibt eine Liste aller lokalen Aliasse eines Kartenobjekts zurück.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapId : int MapId des Kartenobjekts.
+    \item \texttt{mapId : int} MapId des Kartenobjekts.
 \end{itemize}
 \paragraph*{Rückgabewert}
-LiveData<List<String>>, Liste der lokalen Aliasse.
+\texttt{LiveData<List<String>>}, Liste der lokalen Aliasse.
 
 \subsubsection*{\texttt{+ getGlobalAliases(mapId : int) : List<String>}}%$$$M
 \paragraph*{Beschreibung}
 Gibt eine Liste aller globalen Aliasse eines Kartenobjekts zurück. 
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapId : int MapId des Kartenobjekts.
+    \item \texttt{mapId : int} MapId des Kartenobjekts.
 \end{itemize}
 \paragraph*{Rückgabewert}
-List<String>, Liste der globalen Aliasse.
+\texttt{List<String>}, Liste der globalen Aliasse.

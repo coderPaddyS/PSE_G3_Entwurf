@@ -1,6 +1,6 @@
 \subsubsection{ISignInController}
 \paragraph*{Typ}
-Interface.
+\texttt{Interface}.
 \paragraph*{Beschreibung}
 Stellt Daten für das Anzeigen der Anmeldung bereit und verarbeitet die Interaktionen.
 
@@ -10,25 +10,25 @@ Gibt eine Liste aller unterstützen Anmeldediensten zurück.
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
-List<String> mit den Namen aller unterstützen Anmeldediensten.
+\texttt{List<String>} mit den Namen aller unterstützen Anmeldediensten.
 
 \subsubsection{\texttt{+ setAcceptPrivacyPolicy(value : boolean)}}%$$$M
 \paragraph*{Beschreibung}
 Speichert, ob der Benutzer den Datenschutz akzeptiert hat.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item value : boolean Wert, ob der Benutzer den Datenschutz akzeptiert hat.
+    \item \texttt{value : boolean} Wert, ob der Benutzer den Datenschutz akzeptiert hat.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Void.
+\texttt{Void}.
 
 \subsubsection{\texttt{+ isPrivacyAccepted() : Livedata<boolean>}}%$$$M
 \paragraph*{Beschreibung}
 Gibt den Wert zurück, ob der Benutzer den Datenschutz akzeptiert hat.
 \paragraph*{Parameter}
-keine.
+Keine.
 \paragraph*{Rückgabewert}
-Livedata<boolean>, ob der Benutzer den Datenschutz akzeptiert hat.
+\texttt{Livedata<boolean>}, ob der Benutzer den Datenschutz akzeptiert hat.
 
 \subsubsection{\texttt{+ signIn(provider : String) : boolean}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -38,15 +38,15 @@ Ausgelöst, wenn der Benutzer einen Anmeldedienst auswählt.
 Der Aufruf wird an das Model weitergegeben.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item provider : String ausgewählter Anmeldedienst.
+    \item \texttt{provider : String} ausgewählter Anmeldedienst.
 \end{itemize}
 \paragraph*{Rückgabewert}
-boolean, ob die Anmeldung erfolgreich war.
+\texttt{boolean}, ob die Anmeldung erfolgreich war.
 
 %----------------------------------------------------------
 \subsubsection{SignInController}
 \paragraph*{Typ}
-Implementiert ISignInController.
+Implementiert \texttt{ISignInController}.
 \paragraph*{Beschreibung}
 Stellt Daten für das Anzeigen der Anmeldung bereit und verarbeitet die Interaktionen.\\
 Besitzt für die Datenbeschaffung und die Ausführung der Anmeldung einen SignInModel.

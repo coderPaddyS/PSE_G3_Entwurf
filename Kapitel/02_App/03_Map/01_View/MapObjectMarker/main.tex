@@ -12,10 +12,10 @@ wird in die Subklassen ausgelagert, da dies je nach Kartenobjekttyp variiert.
 Erstellt eine neue MapObjectMarker-Instanz.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapView : MapView MapView auf der der Marker angezeigt wird.
-    \item data : DisplayData Alle Daten, die zur Erstellung des Markers benötigt werden.
-    \item tileMarkerOverlay : TileMarkerOverlay TileMarkerOverlay-Instanz, der ein Klick 
-    auf diesen Marker mitgeteilt wird. Darf null sein.
+    \item \texttt{mapView : MapView} MapView auf der der Marker angezeigt wird.
+    \item \texttt{data : DisplayData} Alle Daten, die zur Erstellung des Markers benötigt werden.
+    \item \texttt{tileMarkerOverlay : TileMarkerOverlay} TileMarkerOverlay-Instanz, der ein Klick 
+    auf diesen Marker mitgeteilt wird. Darf \texttt{null} sein.
 \end{itemize}
 
 \subsubsection*{\texttt{+ getMapId() : int}}%$$$M
@@ -24,7 +24,7 @@ Gibt MapId des KartenObjekts des Markers zurück.
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
-int, MapId des Kartenobjekt des Markers.
+\texttt{int}, MapId des Kartenobjekt des Markers.
 
 \subsubsection*{\texttt{+ onSingleTapConfirmed(e : MotionEvent, mapView : MapView) : boolean}}%$$$M
 \paragraph*{Beschreibung}
@@ -32,21 +32,21 @@ Das Anklicken dieses Markers wird der TileMarkerOverlay-Instanz mitgeteilt.
 \paragraph*{Parameter}
 Für die Verarbeitung werden beide Parameter nicht benutzt. Diese sind durch Overlay vorgegeben.
 \begin{itemize}
-    \item e : MotionEvent MotionEvent
-    \item mapView : MapView MapView auf der der Marker ist.
+    \item \texttt{e : MotionEvent} MotionEvent
+    \item \texttt{mapView : MapView} MapView auf der der Marker ist.
 \end{itemize}
 \paragraph*{Rückgabewert}
-boolean, gibt true zurück, da das MotionEvent verarbeitet wurde.
+\texttt{boolean}, gibt true zurück, da das MotionEvent verarbeitet wurde.
 
 \subsubsection*{\texttt{+ focusMarkerObject(floorMapExists : boolean) $\lbrace$abstract$\rbrace$}}%$$$M
 \paragraph*{Beschreibung}
 Beschreibt das (graphische) Verhalten des Markers, wenn das zugehörige Objekt fokussiert wird.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item floorMapExists : boolean Genau dann wahr, wenn es zum (evtl. indirekt) ausgewählten Gebäude eine Etagenkarte gibt.
+    \item \texttt{floorMapExists : boolean} Genau dann wahr, wenn es zum (evtl. indirekt) ausgewählten Gebäude eine Etagenkarte gibt.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Void.
+\texttt{Void}.
 
 \subsubsection*{\texttt{+ resetFocus() $\lbrace$abstract$\rbrace$}}%$$$M
 \paragraph*{Beschreibung}
@@ -54,7 +54,7 @@ Setzt das Aussehen des Markers zurück, wenn er nicht mehr fokussiert wird.
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
-Void.
+\texttt{Void}.
 
 %-------------------------------------------------------------
 \subsubsection{BuildingMarker}
@@ -71,10 +71,10 @@ Gibt es für das Gebäude eine Etagenkarte, wird der Marker nicht weiter angezei
 Gibt es keine Etagenkarte, wird der Marker als großer Standort-Pfeil angezeigt.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item floorMapExists : boolean Genau dann wahr, wenn es zum (evtl. indirekt) ausgewählten Gebäude eine Etagenkarte gibt.
+    \item \texttt{floorMapExists : boolean} Genau dann wahr, wenn es zum (evtl. indirekt) ausgewählten Gebäude eine Etagenkarte gibt.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Void.
+\texttt{Void}.
 
 \subsubsection*{Weitere Implementierungen}
 Diese Klasse implementiert ebenfalls die abstrakte Methode resetFocus von MapObjectMarker 
@@ -94,10 +94,10 @@ Beschreibt das (graphische) Verhalten des Markers, wenn der zugehörige Raum fok
 Der Marker als großer Standort-Pfeil angezeigt.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item floorMapExists : boolean Genau dann wahr, wenn es zum (evtl. indirekt) ausgewählten Gebäude eine Etagenkarte gibt.
+    \item \texttt{floorMapExists : boolean} Genau dann wahr, wenn es zum (evtl. indirekt) ausgewählten Gebäude eine Etagenkarte gibt.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Void.
+\texttt{Void}.
 
 \subsection*{Weitere Implementierungen}
 Diese Klasse implementiert ebenfalls die abstrakte Methode resetFocus von MapObjectMarker 

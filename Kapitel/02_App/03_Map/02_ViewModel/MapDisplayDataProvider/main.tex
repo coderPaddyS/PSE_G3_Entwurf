@@ -1,6 +1,6 @@
 \subsubsection{MapDisplayDataProvider}
 \paragraph*{Typ}
-Interface.
+\texttt{Interface}.
 \paragraph*{Beschreibung}
 Dieses Interface ist eine Schnittstelle für Lade- und Speicheroperationen zur angezeigten Karte.\\
 Klassen dieses Interfaces können von einem Beobachter beobachtet werden. Dazu werden 
@@ -12,17 +12,17 @@ Gibt die ITileSource mit den Kartendaten zurück.
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
-LiveData<TileSource> mit den Kartendaten.
+\texttt{LiveData<TileSource>} mit den Kartendaten.
 
 \subsubsection*{\texttt{+ saveLastPos(pos : IGeoPoint)}}%$$$M
 \paragraph*{Beschreibung}
 Speichert eine gegebene Position als letzte Position.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item pos : IGeoPoint zu speichernde Position.
+    \item \texttt{pos : IGeoPoint} zu speichernde Position.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Void.
+\texttt{Void}.
 
 \subsubsection*{\texttt{+ getLastPos() : IGeoPoint}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -34,7 +34,7 @@ Dies wird benötigt, damit die Karte beim Neuladen die gleiche Stelle zeigen kan
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
-IGeoPoint, letzte Position.
+\texttt{IGeoPoint}, letzte Position.
 
 \subsubsection*{\texttt{+ getFocusedPos() : LiveData<IGeoPoint>}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -42,11 +42,11 @@ Gibt die Position zurück, die mittig auf der Karte angezeigt werden muss.
 \paragraph*{Beschreibung}
 Wird ein Objekt auf der Karte fokussiert, und die Karte muss diese Position mittig auf dem 
 Bildschirm anzeigen (z.B. um ein Suchergebnis anzuzeigen), so wird dieser IGeoPoint aktualisiert.\\
-Darf null sein, wenn keine bestimmte Position fokussiert werden muss.
+Darf \texttt{null} sein, wenn keine bestimmte Position fokussiert werden muss.
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
-LiveData<IGeoPoint>, Position, die mittig angezeigt werden soll.
+\texttt{LiveData<IGeoPoint>}, Position, die mittig angezeigt werden soll.
 
 \subsubsection*{\texttt{+ getBuildingController() : MapLayerDataController}}%$$$M
 \paragraph*{Beschreibung}
@@ -54,7 +54,7 @@ Gibt den MapLayerDataController für die Gebäude-Ebene der Karte zurück.
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
-MapLayerDataController für die Gebäude-Ebene der Karte.
+\texttt{MapLayerDataController} für die Gebäude-Ebene der Karte.
 
 \subsubsection*{\texttt{+ getLevelController() : MapLayerDataController}}%$$$M
 \paragraph*{Beschreibung}
@@ -62,7 +62,7 @@ Gibt den MapLayerDataController für die Etagen-Ebene auf der Karte zurück.
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
-MapLayerDataController für die Etagen-Ebene auf der Karte.
+\texttt{MapLayerDataController} für die Etagen-Ebene auf der Karte.
 
 \subsubsection*{\texttt{+ getLevelChangeController() : LevelChangeController}}%$$$M
 \paragraph*{Beschreibung}
@@ -70,7 +70,7 @@ Gibt den LevelChangeControllers für den Etagenwechsel zurück.
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
-LevelChangeController für den Etagenwechsel.
+\texttt{LevelChangeController} für den Etagenwechsel.
 
 \subsubsection*{\texttt{+ getMapObjectInfoController() : IMapObjectInfoController}}%$$$M
 \paragraph*{Beschreibung}
@@ -78,7 +78,7 @@ Gibt den IMapObjectInfoController zurück.
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
-IMapObjectInfoController.
+\texttt{IMapObjectInfoController}.
 
 \subsubsection*{\texttt{+ getRoomError() : LiveData<(String, String, String)>}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -88,8 +88,8 @@ Wird das Anzeigen eines Raums angefordert, der in der App nicht existiert (das G
 muss eine Fehlermeldung erscheinen. Die Daten für diese Fehlermeldung liefert diese Methode.\\
 Es werden Gebäude Nummer, angeforderter Raum und vermutetes Stockwerk, in dem sich der Raum befindet, 
 falls er existiert, in dieser Reihenfolge zurückgegeben.\\
-Gibt es keine Fehlerdaten, da es keinen Fehler gibt, wird LiveData<null> zurückgegeben.
+Gibt es keine Fehlerdaten, da es keinen Fehler gibt, wird \texttt{LiveData<null>} zurückgegeben.
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
-LiveData<(String, String, String)> aus Gebäudenummer, Raumnummer, Stockwerk.
+\texttt{LiveData<(String, String, String)>} aus Gebäudenummer, Raumnummer, Stockwerk.

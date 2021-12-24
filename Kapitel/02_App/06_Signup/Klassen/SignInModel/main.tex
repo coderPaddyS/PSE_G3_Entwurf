@@ -1,6 +1,6 @@
 \subsubsection{ISignInModel}
 \paragraph*{Typ}
-Interface.
+\texttt{Interface}.
 \paragraph*{Beschreibung}
 Dieses Interface stellt die Daten zur Anmeldung bereit und führt die Anmeldung aus.
 
@@ -10,7 +10,7 @@ Gibt eine Liste aller unterstützen Anmeldediensten zurück.
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
-List<String> mit den Namen aller unterstützen Anmeldediensten.
+\texttt{List<String>} mit den Namen aller unterstützen Anmeldediensten.
 
 \subsubsection{\texttt{+ signIn(provider : String) : boolean}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -21,14 +21,14 @@ Diese öffnet sich im Browser. Nach der Anmeldung werden die erhaltenen Access-,
 Dem Server wird die Anmeldung mitgeteilt. Der Server sendet eine UserId für den Benutzer, die in der App gespeichert wird.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item provider : String ausgewählter Anmeldedienst.
+    \item \texttt{provider : String} ausgewählter Anmeldedienst.
 \end{itemize}
 \paragraph*{Rückgabewert}
-boolean, ob die Anmeldung erfolgreich war.
+\texttt{boolean}, ob die Anmeldung erfolgreich war.
 
 %-------------------------------------------------
 \subsubsection{SignInModel}
 \paragraph*{Typ}
-Implementiert ISignInModel.
+Implementiert \texttt{ISignInModel}.
 \paragraph*{Beschreibung}
 Diese Klasse stellt die Daten zur Anmeldung bereit und führt die Anmeldung aus.

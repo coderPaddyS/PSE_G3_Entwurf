@@ -1,6 +1,6 @@
 \subsubsection{IAddAliasController}
 \paragraph*{Typ}
-Interface.
+\texttt{Interface}.
 \paragraph*{Beschreibung}
 Der IAddAliasController stellt Methoden bereit um einen Alias bez. Alias-Vorschlag hinzuzufügen. 
 Außerdem stellt er existierende Aliasse bereit.
@@ -10,11 +10,11 @@ Außerdem stellt er existierende Aliasse bereit.
 Speichert einen neuen lokalen Alias.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapId : int MapId des Kartenobjekts.
-    \item alias : String Alias.
+    \item \texttt{mapId : int} MapId des Kartenobjekts.
+    \item \texttt{alias : String} Alias.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Void.
+\texttt{Void}.
 
 \subsubsection*{\texttt{+ suggestGlobalAlias(mapId : int, alias : String) : boolean}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -24,11 +24,11 @@ Ist der Benutzer nicht angemeldet oder muss sich erneut anmelden, wird der Anmel
 Konnte der Alias-Vorschlag eingereicht werden, wird \texttt{true} zurückgegeben, sonst \texttt{false}.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapId : int MapId des Kartenobjekts.
-    \item alias : String Bezeichner.
+    \item \texttt{mapId : int} MapId des Kartenobjekts.
+    \item \texttt{alias : String} Bezeichner.
 \end{itemize}
 \paragraph*{Rückgabewert}
-boolean, ob das Einreichen erfolgreich war.
+\texttt{boolean}, ob das Einreichen erfolgreich war.
 
 \subsubsection*{\texttt{+ getMapObjectData(mapId : int) : (String, String))}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -41,25 +41,25 @@ in dem sich der Raum befindet und der zweite die Raumnummer.\\
 Ist die MapId ungültig, wird ein leerer String und \texttt{null} zurückgegeben.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapId : int MapId des Kartenobjekts.
+    \item \texttt{mapId : int} MapId des Kartenobjekts.
 \end{itemize}
 \paragraph*{Rückgabewert}
-(String, String) aus Gebäudenummer und Raumnummer (kann \texttt{null} sein).
+\texttt{(String, String)} aus Gebäudenummer und Raumnummer (kann \texttt{null} sein).
 
 \subsubsection*{\texttt{+ getGlobalAliases(mapId : int) : List<String>}}%$$$M
 \paragraph*{Beschreibung}
 Gibt eine Liste aller globalen Aliasse eines Kartenobjekts zurück.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapId : int MapId des Kartenobjekts.
+    \item \texttt{mapId : int} MapId des Kartenobjekts.
 \end{itemize}
 \paragraph*{Rückgabewert}
-List<String>, Liste der globalen Aliasse.
+\texttt{List<String>}, Liste der globalen Aliasse.
 
 %-----------------------------------------------
 \subsubsection{AddAliasController}
 \paragraph*{Typ}
-Implementiert IAddAliasController.
+Implementiert \texttt{IAddAliasController}.
 \paragraph*{Beschreibung}
 Der AddAliasController stellt Methoden bereit um einen Alias bez. Alias-Vorschlag hinzuzufügen. 
 Außerdem stellt er existierende Aliasse bereit.\\
