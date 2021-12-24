@@ -9,7 +9,7 @@ Dieses Interface ist eine Fassade für die Model-Schicht der Karte.
 \paragraph*{Kurzbeschreibung}
 Gibt die Anzeigedaten für Räume einer Etage zurück.
 \paragraph*{Beschreibung}
-Gibt DisplayData-Objekte zu allen Räumen einer Etage eines Gebäudes zurück.\\
+Gibt \hyperref[App_Map_Util_DisplayData]{DisplayData}-Objekte zu allen Räumen einer Etage eines Gebäudes zurück.\\
 Die Liste ist leer, wenn es keine hinterlegten Räume gibt.
 \paragraph*{Parameter}
 \begin{itemize}
@@ -17,7 +17,7 @@ Die Liste ist leer, wenn es keine hinterlegten Räume gibt.
     \item \texttt{level : int} Stockwerk.
 \end{itemize}
 \paragraph*{Rückgabewert}
-\texttt{LiveData<List<DisplayData>>}, DisplayData für Räume einer Etage.
+\texttt{LiveData<List<DisplayData>>}, \hyperref[App_Map_Util_DisplayData]{DisplayData} für Räume einer Etage.
 
 \subsubsection*{\texttt{+ getFloorMapTileSource(mapId : int, level : int) : \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
 {ITileSource}}}\label{App_Map_Model_getFloorMapTileSource_IMap}%$$$M
@@ -40,7 +40,7 @@ Gibt die Anzeigedaten für alle Gebäude zurück.
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
-\texttt{LiveData<List<DisplayData>>}, DisplayData für alle Gebäude.
+\texttt{LiveData<List<DisplayData>>}, \hyperref[App_Map_Util_DisplayData]{DisplayData} für alle Gebäude.
 
 \subsubsection*{\texttt{+ getBuildingTileSource() : \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
 {ITileSource}}}\label{App_Map_Model_getBuildingTileSource_IMap}%$$$M

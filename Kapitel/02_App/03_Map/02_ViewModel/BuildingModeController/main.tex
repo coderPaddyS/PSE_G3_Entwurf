@@ -4,13 +4,13 @@ Implementiert \texttt{MapLayerDataController}.
 \paragraph*{Beschreibung}
 Diese Klasse steuert die Gebäudeebene auf der Karte. Sie stellt alle benötigten Daten bereit, um die Gebäude anzuzeigen. 
 Sie stellt alle benötigten Aufrufe bereit, um Interaktionen mit Gebäuden zu verarbeiten.\\
-Diese Klasse beobachtet den Wert \texttt{+ isLevelMode() : LiveData<boolean>} des LevelModeControllers.
+Diese Klasse beobachtet den Wert \texttt{+ isLevelMode() : LiveData<boolean>} des \hyperref[App_Map_ViewModel_LevelModeController]{LevelModeControllers}.
 
 \subsubsection*{\texttt{+ <<create>> BuildingModeController(dataProvider : IMapDataProvider, levelController : LevelModeController)}}%$$$M
 \paragraph*{Beschreibung}
 Erstellt einen neuen BuildingModeController.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item \texttt{dataProvider : IMapDataProvider} IMapDataProvider von dem diese Klasse die Kartendaten bezieht.
-    \item \texttt{levelController : LevelModeController} LevelModeController der Karte.
+    \item \texttt{dataProvider : IMapDataProvider} \hyperref[App_Map_Model_IMapDataProvider]{IMapDataProvider} von dem diese Klasse die Kartendaten bezieht.
+    \item \texttt{levelController : LevelModeController} \hyperref[App_Map_ViewModel_LevelModeController]{LevelModeController} der Karte.
 \end{itemize}

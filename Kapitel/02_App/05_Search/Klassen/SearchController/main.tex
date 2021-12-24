@@ -16,7 +16,7 @@ Wenn die Eingabe leer ist werden stattdessen die letzten Suchbegriffe angeforder
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
-\texttt{LiveData<List<String>>}, Suchvorschläge zur Eingabe, die eine Klasse, die ISearchModel implementiert, zurückgegeben hat.
+\texttt{LiveData<List<String>>}, Suchvorschläge zur Eingabe, die eine Klasse, die \hyperref[App_Search_ISearchModel]{ISearchModel} implementiert, zurückgegeben hat.
 
 \subsubsection*{\texttt{+ setInput(input : String)}}\label{App_Search_ISearchController_setInput}%$$$M
 \paragraph*{Beschreibung}
@@ -31,7 +31,7 @@ Nimmt den aktuellen Input-String entgegen und aktualisiert damit die Suchvorschl
 \subsubsection*{\texttt{+ confirmInput()}}\label{App_Search_ISearchController_confirmInput}%$$$M
 \paragraph*{Beschreibung}
 Zeigt das Kartenobjekts zu dem Suchvorschlag mit der höchsten Übereinstimmung an und wechselt dazu in den Kartenmodus.
-Fordert die Speicherung des Suchvorschlags von einer Klasse, die ISearchModel implementiert.
+Fordert die Speicherung des Suchvorschlags von einer Klasse, die \hyperref[App_Search_ISearchModel]{ISearchModel} implementiert.
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
@@ -40,7 +40,7 @@ Keine.
 \subsubsection*{\texttt{+ selectSuggestion(suggestion : String)}}\label{App_Search_ISearchController_selectSuggestion}%$$$M
 \paragraph*{Beschreibung}
 Zeigt das Kartenobjekt zu dem ausgewählten Suchvorschlag an und wechselt dazu in den Kartenmodus.
-Fordert die Speicherung des ausgewählten Suchvorschlags von einer Klasse, die ISearchModel implementiert.
+Fordert die Speicherung des ausgewählten Suchvorschlags von einer Klasse, die \hyperref[App_Search_ISearchModel]{ISearchModel} implementiert.
 \paragraph*{Parameter}
 \begin{itemize}
     \item \texttt{suggestion : String} Der ausgewählte Suchvorschlag.

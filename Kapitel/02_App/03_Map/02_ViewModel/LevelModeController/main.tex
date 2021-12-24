@@ -1,6 +1,6 @@
 \subsubsection{LevelModeController}\label{App_Map_ViewModel_LevelModeController}
 \paragraph*{Typ}
-Implementiert MapLayerDataController, LevelChangeController.
+Implementiert \hyperref[App_Map_ViewModel_MapLayerDataController]{MapLayerDataController}, \hyperref[App_Map_ViewModel_LevelChangeController]{LevelChangeController}.
 \paragraph*{Beschreibung}
 Diese Klasse steuert den Etagenmodus. Sie stellt alle benötigten Daten bereit, um die aktuelle Etage anzuzeigen. 
 Sie stellt alle benötigten Aufrufe bereit, um Interaktionen mit der Etagenkarte zu verarbeiten.
@@ -10,7 +10,7 @@ Sie stellt alle benötigten Aufrufe bereit, um Interaktionen mit der Etagenkarte
 Erstellt einen neuen LevelModeController.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item \texttt{dataProvider : IMapDataProvider} IMapDataProvider von dem diese Klasse die Kartendaten bezieht.
+    \item \texttt{dataProvider : IMapDataProvider} \hyperref[App_Map_Model_IMapDataProvider]{IMapDataProvider} von dem diese Klasse die Kartendaten bezieht.
 \end{itemize}
 
 \subsubsection*{\texttt{+ startLevelMode(mapId : int)}}\label{App_Map_ViewModel_startLevelMode}%$$$M
@@ -19,7 +19,7 @@ Startet die Etagenansicht eines Gebäudes.
 \paragraph*{Beschreibung}
 Diese Methode startet für die Etagenansicht für ein gegebenes Gebäude.\\
 Existiert die Etagenansicht für das Gebäude nicht, passiert nichts.\\
-Existiert die Etagenansicht für das Gebäude werden alle durch das MapLayerDataController-Interface beobachtbaren 
+Existiert die Etagenansicht für das Gebäude werden alle durch das \hyperref[App_Map_ViewModel_MapLayerDataController]{MapLayerDataController}-Interface beobachtbaren 
 Kartendaten zur Etagen-Layer aktualisiert. Insbesondere ist isLevelMode() \texttt{wahr}.\\
 Ist dieses Gebäude das letzte, von dem die Etagenansicht in dieser Kartenmodus-Session geladen wurde, wird die 
 Etage geladen, die zuletzt von diesem Gebäude betrachtet wurde.
