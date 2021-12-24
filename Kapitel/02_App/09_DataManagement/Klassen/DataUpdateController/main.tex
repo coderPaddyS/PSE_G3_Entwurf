@@ -4,9 +4,9 @@
 \paragraph*{Beschreibung}
 Ein DataUpdateController aktualisiert die lokale Datenbank. Das Aktualisieren geschieht im 
 Hintergrund. Daher wird er parallel zur eigentlichen Programmausführung aufgerufen.\\
-Ein DataUpdateController besitzt eine Liste von DataUpdatern.
-Es gibt eine Warteschlange von DataUpdatern, in der die Priorität der Schlüssel ist (je kleiner 
-die Priorität, desto früher kommt ein DataUpdater dran). Initial ist die Warteschlange leer.\\
+Ein DataUpdateController besitzt eine Liste von \hyperref[App_DocumentViewer_DataUpdater]{DataUpdatern}.
+Es gibt eine Warteschlange von \hyperref[App_DocumentViewer_DataUpdater]{DataUpdatern}, in der die Priorität der Schlüssel ist (je kleiner 
+die Priorität, desto früher kommt ein \hyperref[App_DocumentViewer_DataUpdater]{DataUpdater} dran). Initial ist die Warteschlange leer.\\
 
 
 \subsubsection*{\texttt{+ resumeUpdate() : boolean}}\label{App_DocumentViewer_IDataupdateController_resumeUpdate}%$$$M
@@ -14,9 +14,9 @@ die Priorität, desto früher kommt ein DataUpdater dran). Initial ist die Warte
 Führt die Aktualiserung fort.
 \paragraph*{Beschreibung}
 Diese Methode kann dazu verwendet werden, eine fehlgeschlagene Aktualisierung fortzusetzen.\\
-Diese Methode führt alle DataUpdater in der Warteschlange aus.\\
-War das Aktualsieren eines DataUpdaters erfolgreich, wird er aus der Warteschlange entfernt.\\
-Schlägt ein DataUpdater fehl, werden nur noch alle DataUpdater mit gleicher Priorität 
+Diese Methode führt alle \hyperref[App_DocumentViewer_DataUpdater]{DataUpdater} in der Warteschlange aus.\\
+War das Aktualsieren eines \hyperref[App_DocumentViewer_DataUpdater]{DataUpdaters} erfolgreich, wird er aus der Warteschlange entfernt.\\
+Schlägt ein DataUpdater fehl, werden nur noch alle \hyperref[App_DocumentViewer_DataUpdater]{DataUpdater} mit gleicher Priorität 
 ausgeführt. Danach wird false zurückgegeben.\\
 Ist die Warteschlange leer, wird true zurückgegeben.\\
 \paragraph*{Parameter}
@@ -30,11 +30,11 @@ Aktualisiert die lokale Datenbank komplett.
 \paragraph*{Beschreibung}
 Diese Methode aktualisiert die lokale Datenbank komplett. 
 Dazu wird die Warteschlange geleert und alle DataUpdater hinzugefügt.\\
-Danach werden alle DataUpdater in der Warteschlange ausgeführt.\\
-War das Aktualisieren eines DataUpdaters erfolgreich, wird er aus der Warteschlange entfernt.\\
-Schlägt ein DataUpdater fehl, werden nur noch alle DataUpdater mit gleicher Priorität 
+Danach werden alle \hyperref[App_DocumentViewer_DataUpdater]{DataUpdater} in der Warteschlange ausgeführt.\\
+War das Aktualisieren eines \hyperref[App_DocumentViewer_DataUpdater]{DataUpdaters} erfolgreich, wird er aus der Warteschlange entfernt.\\
+Schlägt ein \hyperref[App_DocumentViewer_DataUpdater]{DataUpdater} fehl, werden nur noch alle \hyperref[App_DocumentViewer_DataUpdater]{DataUpdater} mit gleicher Priorität 
 ausgeführt. Danach wird false zurückgegeben.\\
-Konnten alle DataUpdater ausgeführt werden, wird true zurückgegeben.
+Konnten alle \hyperref[App_DocumentViewer_DataUpdater]{DataUpdater} ausgeführt werden, wird true zurückgegeben.
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
@@ -45,5 +45,5 @@ Keine.
 \paragraph*{Typ}
 Implementiert \texttt{IDataUpdateController}.
 \paragraph*{Beschreibung}
-Diese Klasse implementiert einen IDataUpdateController.\\
-Die Liste an zu aktualisierenden DataUpdatern enthält einen GlobalAliasUpdater.
+Diese Klasse implementiert einen \href{App_DocumentViewer_IDataupdateController}{IDataUpdateController}.\\
+Die Liste an zu aktualisierenden \hyperref[App_DocumentViewer_DataUpdater]{DataUpdatern} enthält einen GlobalAliasUpdater.
