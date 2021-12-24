@@ -3,7 +3,7 @@
 Definiert das Laden eines gewünschten Benutzers durch einen Access-Token und das anschließende Zurückgeben des entsprechenden Benutzers.
 \paragraph*{Beschreibung}
 Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
-Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Resolvers} aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Resolvers} und von dem vorangegangenen Filter \texttt{JWTFilter} aufgerufen.
 Die Methode ermöglicht, dass durch Angabe des Access-Tokens der gewünschten Benutzer erhalten werden kann. 
 Ist der Access-Token ungültig, d.h. nicht von einem Benutzer, wird \texttt{null} zurückgegeben.
 \paragraph*{Parameter}
