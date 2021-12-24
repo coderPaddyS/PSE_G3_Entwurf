@@ -5,7 +5,10 @@ Dazu gehören das Finden aller Vorschläge zu einer bestimmten MapID, das Finden
 seines Namens und der zugehörigen MapID sowie das Löschen und Speichern von Aliasvorschlägen.
 \paragraph*{Enthaltene Methoden}
 \begin{itemize}
-    \item findByMapID(mapID : int) : List<alias : String>
-    \item deleteByNameAndMapID(alias : String, mapID : int) 
-    \item findByNameAndMapID(alias : String, mapID : int) 
+    \item \texttt{findByMapID(mapID : int) : Iterable<alias : String>}
+    \item \texttt{deleteByNameAndMapID(alias : String, mapID : int) : Boolean}
+    \item \texttt{deleteByName(aliasSuggestion : String) : Boolean}
+    \item \texttt{findByVotes(minVotesNeg : int, minVotesPos : int) : Iterable<AliasSuggestion>}
+    \item \texttt{findAmountByMapID(mapID : int, amount : int) : Iterable<aliasSuggestion : String>}
+    \item \texttt{updateVotes(aliasSuggestion : String, mapID : int, vote : Boolean) : Boolean}
 \end{itemize}
