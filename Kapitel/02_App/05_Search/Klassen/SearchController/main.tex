@@ -16,7 +16,7 @@ Wenn die Eingabe leer ist werden stattdessen die letzten Suchbegriffe angeforder
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
-LiveData<List<String>>, Suchvorschläge zur Eingabe, die eine Klasse, die ISearchModel implementiert, zurückgegeben hat.
+\texttt{LiveData<List<String>>}, Suchvorschläge zur Eingabe, die eine Klasse, die ISearchModel implementiert, zurückgegeben hat.
 
 \subsubsection*{\texttt{+ setInput(input : String)}}%$$$M
 \paragraph*{Beschreibung}
@@ -26,7 +26,7 @@ Nimmt den aktuellen Input-String entgegen und aktualisiert damit die Suchvorschl
     \item \texttt{input : String} Die Eingabe, den der Benutzer zur Suche eingegeben hat.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Void.
+\texttt{Void}.
 
 \subsubsection*{\texttt{+ confirmInput()}}%$$$M
 \paragraph*{Beschreibung}
@@ -35,7 +35,7 @@ Fordert die Speicherung des Suchvorschlags von einer Klasse, die ISearchModel im
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
-Void.
+\texttt{Void}.
 
 \subsubsection*{\texttt{+ selectSuggestion(suggestion : String)}}%$$$M
 \paragraph*{Beschreibung}
@@ -46,7 +46,7 @@ Fordert die Speicherung des ausgewählten Suchvorschlags von einer Klasse, die I
     \item \texttt{suggestion : String} Der ausgewählte Suchvorschlag.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Void.
+\texttt{Void}.
 
 
 \subsubsection{SearchController}

@@ -21,19 +21,19 @@ aus oder in die Etagenansicht gewechselt werden.
     \item \texttt{mapId : int} MapId des ausgewählten Kartenobjekts.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Void.
+\texttt{Void}.
 
 \subsubsection*{\texttt{+ getTileSource() : LiveData<\href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}{ITileSource}>}}%$$$M
 \paragraph*{Kurzbeschreibung}
 Gibt die \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
 {ITileSource} mit den Daten für eine Kartenebene zurück.
 \paragraph*{Beschreibung}
-Gibt null zurück, wenn gar nichts angezeigt werden soll.
+Gibt \texttt{null} zurück, wenn gar nichts angezeigt werden soll.
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
-LiveData<\href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
-{ITileSource}> mit den Kartendaten, darf null sein.
+\texttt{LiveData<\href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
+{ITileSource}>} mit den Kartendaten, darf \texttt{null} sein.
 
 \subsubsection*{\texttt{+ getMapObjectData() : LiveData<List<DisplayData>>}}%$$$M
 \paragraph*{Beschreibung}
@@ -41,7 +41,7 @@ Gibt die Anzeige-Daten der Kartenobjekte zurück.
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
-LiveData<List<DisplayData>> mit den Daten der Kartenobjekte.
+\texttt{LiveData<List<DisplayData>>} mit den Daten der Kartenobjekte.
 
 \subsubsection*{\texttt{+ getFocusedMapId() : LiveData<int>}}%$$$M
 \paragraph*{Beschreibung}
@@ -49,7 +49,7 @@ Gibt die MapId des fokussierten Kartenobjekts zurück.
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
-LiveData<int> MapId des fokussierten Kartenobjekts.
+\texttt{LiveData<int>} MapId des fokussierten Kartenobjekts.
 
 \subsubsection*{\texttt{+ isLevelMode() : LiveData<boolean>}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -60,4 +60,4 @@ angezeigt wird. Sonst wird false zurückgegeben.
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
-LiveData<boolean> ob das fokussierte Kartenobjekt auf einer Etage ist.
+\texttt{LiveData<boolean>} ob das fokussierte Kartenobjekt auf einer Etage ist.

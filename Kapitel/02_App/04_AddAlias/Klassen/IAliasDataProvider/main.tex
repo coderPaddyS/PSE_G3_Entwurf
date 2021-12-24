@@ -14,7 +14,7 @@ Erstellt und speichert einen neuen lokalen Alias.
     \item \texttt{alias : String} Alias.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Void.
+\texttt{Void}.
 
 \subsubsection*{\texttt{+ suggestGlobalAlias(mapId : int, alias : String) : boolean}}%$$$M
 \paragraph*{Exceptions}
@@ -28,7 +28,7 @@ Reicht einen Alias-Vorschlag beim Server ein.
     \item \texttt{alias : String} Bezeichner.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Void.
+\texttt{Void}.
 
 \subsubsection*{\texttt{+ getGlobalAliases(mapId : int) : List<String>}}%$$$M
 \paragraph*{Beschreibung}
@@ -38,7 +38,7 @@ Gibt eine Liste aller globalen Aliasse eines Kartenobjekts zurück.
     \item \texttt{mapId : int} MapId des Kartenobjekts.
 \end{itemize}
 \paragraph*{Rückgabewert}
-List<String>, Liste der globalen Aliasse.
+\texttt{List<String>}, Liste der globalen Aliasse.
 
 \subsubsection*{\texttt{+ getLocalAliases(mapId : int) : LiveData<List<String>>}}%$$$M
 \paragraph*{Beschreibung}
@@ -48,7 +48,7 @@ Gibt eine Liste aller lokalen Aliasse eines Kartenobjekts zurück.
     \item \texttt{mapId : int} MapId des Kartenobjekts.
 \end{itemize}
 \paragraph*{Rückgabewert}
-LiveData<List<String>>, Liste der lokalen Aliasse.
+\texttt{LiveData<List<String>>}, Liste der lokalen Aliasse.
 
 \subsubsection*{\texttt{+ deleteLocalAlias(mapId : int, alias : String)}}%$$$M
 \paragraph*{Beschreibung}
@@ -59,7 +59,7 @@ Löscht einen lokalen Alias. Existiert er nicht, passiert nichts.
     \item \texttt{alias : String} Alias der zu löschen ist.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Void.
+\texttt{Void}.
 
 \subsubsection*{\texttt{+ getAliasSuggestions(mapId : int) : List<String>}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -72,7 +72,7 @@ die vom Benutzer noch bewertet werden dürfen.
     \item \texttt{mapId : int} MapId des Kartenobjekts.
 \end{itemize}
 \paragraph*{Rückgabewert}
-List<String>, Liste der Alias-Vorschläge.
+\texttt{List<String>}, Liste der Alias-Vorschläge.
 
 \subsubsection*{\texttt{+ sendAliasFeedback(mapId : int, suggestion : String, feedback : SuggestionFeedback)}}%$$$M
 \paragraph*{Exceptions}
@@ -87,4 +87,4 @@ Diese Methode sendet das Feedback zu einem Alias-Vorschlag an den Server.
     \item \texttt{feedback : SuggestionFeedback} Feedback.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Void.
+\texttt{Void}.

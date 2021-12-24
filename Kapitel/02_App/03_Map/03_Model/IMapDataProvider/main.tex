@@ -17,14 +17,14 @@ Die Liste ist leer, wenn es keine hinterlegten Räume gibt.
     \item \texttt{level : int} Stockwerk.
 \end{itemize}
 \paragraph*{Rückgabewert}
-LiveData<List<DisplayData>>, DisplayData für Räume einer Etage.
+\texttt{LiveData<List<DisplayData>>}, DisplayData für Räume einer Etage.
 
 \subsubsection*{\texttt{+ getFloorMapTileSource(mapId : int, level : int) : \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
 {ITileSource}}}%$$$M
 \paragraph*{Beschreibung}
 Gibt eine \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
 {ITileSource} mit den Kartendaten für das Stockwerk eines Gebäudes zurück.\\
-Existiert die angeforderte Etagenkarte nicht auf dem Gerät, wird null zurückgegeben.
+Existiert die angeforderte Etagenkarte nicht auf dem Gerät, wird \texttt{null} zurückgegeben.
 \paragraph*{Parameter}
 \begin{itemize}
     \item \texttt{mapId : int} MapId des Gebäudes.
@@ -32,7 +32,7 @@ Existiert die angeforderte Etagenkarte nicht auf dem Gerät, wird null zurückge
 \end{itemize}
 \paragraph*{Rückgabewert}
 \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
-{ITileSource} mit den Kartendaten für die Etage oder null.
+{ITileSource} mit den Kartendaten für die Etage oder \texttt{null}.
 
 \subsubsection*{\texttt{+ getBuildingDisplayData() : LiveData<List<DisplayData>>}}%$$$M
 \paragraph*{Beschreibung}
@@ -40,7 +40,7 @@ Gibt die Anzeigedaten für alle Gebäude zurück.
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
-LiveData<List<DisplayData>>, DisplayData für alle Gebäude.
+\texttt{LiveData<List<DisplayData>>}, DisplayData für alle Gebäude.
 
 \subsubsection*{\texttt{+ getBuildingTileSource() : \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tileprovider/tilesource/ITileSource.html}
 {ITileSource}}}%$$$M
@@ -61,11 +61,11 @@ Gibt eine \href{https://osmdroid.github.io/osmdroid/javadocAll/org/osmdroid/tile
 Gibt die letzte gespeicherte Position zurück.
 \paragraph*{Beschreibung}
 Diese Methode gibt die letzte gespeicherte Position zurück. Wurde noch keine Position gespeichert,
-wird eine Default-Position zurückgegeben. Es wird nie null zurückgegeben.
+wird eine Default-Position zurückgegeben. Es wird nie \texttt{null} zurückgegeben.
 \paragraph*{Parameter}
 Keine.
 \paragraph*{Rückgabewert}
-IGeoPoint mit letzter gespeicherter Position (oder Default-Wert), ist nie null.
+\texttt{IGeoPoint} mit letzter gespeicherter Position (oder Default-Wert), ist nie \texttt{null}.
 
 \subsubsection*{\texttt{+ savePosition(pos : IGeoPoint)}}%$$$M
 \paragraph*{Beschreibung}
@@ -75,7 +75,7 @@ Speichert eine Position als letzte Position.
     \item \texttt{pos : IGeoPoint} zu speichernde Position.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Void.
+\texttt{Void}.
 
 \subsubsection*{\texttt{+ getBuildingAddress(mapId : int) : String}}%$$$M
 \paragraph*{Beschreibung}
@@ -85,7 +85,7 @@ Gibt die Adresse eines Gebäudes zurück.
     \item \texttt{mapId : int} MapId des Gebäudes.
 \end{itemize}
 \paragraph*{Rückgabewert}
-String mit Adresse, oder \texttt{null}, wenn MapId kein Gebäude ist.
+\texttt{String} mit Adresse, oder \texttt{null}, wenn MapId kein Gebäude ist.
 
 \subsubsection*{\texttt{+ getRoomData(mapId : int) : (RoomType, String, int)}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -103,7 +103,7 @@ Ist die gegebene MapId ungültig oder kein Raum, wird \texttt{null} zurückgegeb
     \item \texttt{mapId : int} MapId des Raums.
 \end{itemize}
 \paragraph*{Rückgabewert}
-(RoomType, String, int, List<String>) Raumdaten oder \texttt{null}.
+\texttt{(RoomType, String, int, List<String>)} Raumdaten oder \texttt{null}.
 
 \subsubsection*{\texttt{+ getPersons(mapId : int) : List<String>}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -117,4 +117,4 @@ Ist die gegebene MapId ungültig ist sie ebenfalls leer.
     \item \texttt{mapId : int} MapId des Kartenobjekts.
 \end{itemize}
 \paragraph*{Rückgabewert}
-List<String> mit den Namen aller zugeordneten Personen.
+\texttt{List<String>} mit den Namen aller zugeordneten Personen.

@@ -50,7 +50,7 @@ Teilt dem MapLayerDataController mit, dass ein bestimmtes Kartenobjekt ausgewäh
     \item \texttt{mapId : int} MapId des Kartenobjekts, auf das ausgewählt wurde.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Void.
+\texttt{Void}.
 
 \subsubsection*{\texttt{\# createMarker(data : DisplayData, mapView : MapView) : MapObjectMarker $\lbrace$abstract$\rbrace$}}%$$$M
 \paragraph*{Beschreibung}
@@ -61,14 +61,14 @@ Dies ist eine Fabrikmethode zur Erzeugung eines MapObjectMarker.
     \item \texttt{mapView : MapView} MapView auf der der Marker angezeigt wird.
 \end{itemize}
 \paragraph*{Rückgabewert}
-MapObjectMarker.
+\texttt{MapObjectMarker}.
 
 
 \subsubsection*{Weitere private Funktionalität des Beobachters}
 Ändern sich die beobachteten Daten aktualisieren sich die Overlays wie folgt:
 \begin{itemize}
     \item TileSource: Das TileOverlay wird mit den neuen Kartendaten aktualisiert.
-    Ist TileSource null, wird gar nichts angezeigt (also auch keine Marker).
+    Ist TileSource \texttt{null}, wird gar nichts angezeigt (also auch keine Marker).
     \item MapObjectData: Alle Marker werden verworfen und mit den neuen Daten neu erzeugt (über createMarker).
     \item FocusedMapId und FloorFocus: Der aktuell fokussierte Marker wird zurückgesetzt.
     Dem Marker mit der MapId FocusedMapId wird über seine focusMarkerObject-Methode FloorFocus übergeben.
@@ -92,7 +92,7 @@ Die Fabrikmethode zur Erzeugung eines Markers wird hier mit einem BuildingMarker
     \item \texttt{mapView : MapView} MapView auf der der Marker angezeigt wird.
 \end{itemize}
 \paragraph*{Rückgabewert}
-MapObjectMarker, erzeugter MapObjectMarker.
+\texttt{MapObjectMarker}, erzeugter MapObjectMarker.
 
 \subsubsection*{\texttt{Weitere Implementierungen}}%$$$M
 Benutzt den von TileMarkerOverlay geerbten Konstruktor.
@@ -115,7 +115,7 @@ Die Fabrikmethode zur Erzeugung eines Markers wird hier mit einem RoomMarker imp
     \item \texttt{mapView : MapView} MapView auf der der Marker angezeigt wird.
 \end{itemize}
 \paragraph*{Rückgabewert}
-MapObjectMarker, erzeugter MapObjectMarker.
+\texttt{MapObjectMarker}, erzeugter MapObjectMarker.
 
 \subsubsection*{Weitere Implementierungen}%$$$M
 Benutzt den von TileMarkerOverlay geerbten Konstruktor.

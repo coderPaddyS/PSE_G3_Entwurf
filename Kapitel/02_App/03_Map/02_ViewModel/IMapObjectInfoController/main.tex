@@ -14,7 +14,7 @@ Gibt die Adresse eines Gebäudes zurück.
     \item \texttt{mapId : int} MapId des Gebäudes.
 \end{itemize}
 \paragraph*{Rückgabewert}
-String mit Adresse, \texttt{null}, wenn MapId ungültig.
+\texttt{String} mit Adresse, \texttt{null}, wenn MapId ungültig.
 
 \subsubsection*{\texttt{+ getRoomInfo(mapId : int) : (RoomType, String, int, List<String>)}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -33,7 +33,7 @@ Ist die gegebene MapId ungültig, wird \texttt{null} zurückgegeben.
     \item \texttt{mapId : int} MapId des Raums.
 \end{itemize}
 \paragraph*{Rückgabewert}
-(RoomType, String, int, List<String>), 4-Tupel aus Typ des Raums, Nummer des Gebäudes, Stockwerk, Personen. Kann \texttt{null} sein.
+\texttt{(RoomType, String, int, List<String>)}, 4-Tupel aus Typ des Raums, Nummer des Gebäudes, Stockwerk, Personen. Kann \texttt{null} sein.
 
 \subsubsection*{\texttt{+ getGlobalAliases(mapId : int) : List<String>}}%$$$M
 \paragraph*{Beschreibung}
@@ -43,7 +43,7 @@ Gibt eine Liste aller globalen Aliasse eines Kartenobjekts zurück.
     \item \texttt{mapId : int} MapId des Kartenobjekts.
 \end{itemize}
 \paragraph*{Rückgabewert}
-List<String>, Liste der globalen Aliasse.
+\texttt{List<String>}, Liste der globalen Aliasse.
 
 \subsubsection*{\texttt{+ getLocalAliases(mapId : int) : LiveData<List<String>>}}%$$$M
 \paragraph*{Beschreibung}
@@ -53,7 +53,7 @@ Gibt eine Liste aller lokalen Aliasse eines Kartenobjekts zurück.
     \item \texttt{mapId : int} MapId des Kartenobjekts.
 \end{itemize}
 \paragraph*{Rückgabewert}
-LiveData<List<String>>, Liste der lokalen Aliasse.
+\texttt{LiveData<List<String>>}, Liste der lokalen Aliasse.
 
 \subsubsection*{\texttt{+ deleteLocalAlias(mapId : int, alias : String)}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -66,7 +66,7 @@ Sind die Parameter ungültig, passiert nichts.
     \item \texttt{alias : String} Alias der zu löschen ist.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Void.
+\texttt{Void}.
 
 \subsubsection*{\texttt{+ getAliasSuggestions(mapId : int) : LiveData<List<String>>}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -79,7 +79,7 @@ die vom Benutzer noch bewertet werden dürfen.
     \item \texttt{mapId : int} MapId des Kartenobjekts.
 \end{itemize}
 \paragraph*{Rückgabewert}
-LiveData<List<String>>, Liste der Alias-Vorschläge.
+\texttt{LiveData<List<String>>}, Liste der Alias-Vorschläge.
 
 \subsubsection*{\texttt{+ giveAliasFeedback(mapId : int, suggestion : String, feedback : SuggestionFeedback) : boolean}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -96,4 +96,4 @@ Das Feedback wird an das Model gegeben, um es an den Server zu senden.
     \item \texttt{feedback : SuggestionFeedback} Feedback.
 \end{itemize}
 \paragraph*{Rückgabewert}
-boolean, ob das Senden erfolgreich war.
+\texttt{boolean}, ob das Senden erfolgreich war.

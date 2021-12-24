@@ -14,7 +14,7 @@ Speichert einen neuen lokalen Alias.
     \item \texttt{alias : String} Alias.
 \end{itemize}
 \paragraph*{Rückgabewert}
-Void.
+\texttt{Void}.
 
 \subsubsection*{\texttt{+ suggestGlobalAlias(mapId : int, alias : String) : boolean}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -28,7 +28,7 @@ Konnte der Alias-Vorschlag eingereicht werden, wird \texttt{true} zurückgegeben
     \item \texttt{alias : String} Bezeichner.
 \end{itemize}
 \paragraph*{Rückgabewert}
-boolean, ob das Einreichen erfolgreich war.
+\texttt{boolean}, ob das Einreichen erfolgreich war.
 
 \subsubsection*{\texttt{+ getMapObjectData(mapId : int) : (String, String))}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -44,7 +44,7 @@ Ist die MapId ungültig, wird ein leerer String und \texttt{null} zurückgegeben
     \item \texttt{mapId : int} MapId des Kartenobjekts.
 \end{itemize}
 \paragraph*{Rückgabewert}
-(String, String) aus Gebäudenummer und Raumnummer (kann \texttt{null} sein).
+\texttt{(String, String)} aus Gebäudenummer und Raumnummer (kann \texttt{null} sein).
 
 \subsubsection*{\texttt{+ getGlobalAliases(mapId : int) : List<String>}}%$$$M
 \paragraph*{Beschreibung}
@@ -54,7 +54,7 @@ Gibt eine Liste aller globalen Aliasse eines Kartenobjekts zurück.
     \item \texttt{mapId : int} MapId des Kartenobjekts.
 \end{itemize}
 \paragraph*{Rückgabewert}
-List<String>, Liste der globalen Aliasse.
+\texttt{List<String>}, Liste der globalen Aliasse.
 
 %-----------------------------------------------
 \subsubsection{AddAliasController}

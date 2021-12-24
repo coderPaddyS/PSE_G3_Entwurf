@@ -12,7 +12,7 @@ Gibt die Adresse eines Gebäudes zurück.
     \item \texttt{mapId : int} MapId des Gebäudes.
 \end{itemize}
 \paragraph*{Rückgabewert}
-String mit Adresse, oder \texttt{null}, wenn MapId kein Gebäude ist.
+\texttt{String} mit Adresse, oder \texttt{null}, wenn MapId kein Gebäude ist.
 
 \subsubsection*{\texttt{+ getRoomData(mapId : int) : (RoomType, String, int)}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -30,7 +30,7 @@ Ist die gegebene MapId ungültig oder kein Raum, wird \texttt{null} zurückgegeb
     \item \texttt{mapId : int} MapId des Raums.
 \end{itemize}
 \paragraph*{Rückgabewert}
-(RoomType, String, int, List<String>) Raumdaten oder \texttt{null}.
+\texttt{(RoomType, String, int, List<String>)} Raumdaten oder \texttt{null}.
 
 \subsubsection*{\texttt{+ getPersons(mapId : int) : List<String>}}%$$$M
 \paragraph*{Kurzbeschreibung}
@@ -44,5 +44,5 @@ Ist die gegebene MapId ungültig ist sie ebenfalls leer.
     \item \texttt{mapId : int} MapId des Kartenobjekts.
 \end{itemize}
 \paragraph*{Rückgabewert}
-List<String> mit den Namen aller zugeordneten Personen.
+\texttt{List<String>} mit den Namen aller zugeordneten Personen.
 
