@@ -25,8 +25,8 @@ Beginnt die von controller bereitgestellten Daten zu beobachten. Erzeugt das Til
 Erzeugt die MapObjectMarker über die Fabrikmethode createMarker.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item controller : MapLayerDataController MapLayerDataController der die Daten bereitstellt.
-    \item mapView : MapView MapView auf der sich das Overlay befindet.
+    \item \texttt{controller : MapLayerDataController} MapLayerDataController der die Daten bereitstellt.
+    \item \texttt{mapView : MapView} MapView auf der sich das Overlay befindet.
 \end{itemize}
 
 \subsubsection*{Delegierte Methoden}
@@ -47,7 +47,7 @@ an die FolderOverlay-Instanz delegiert:
 Teilt dem MapLayerDataController mit, dass ein bestimmtes Kartenobjekt ausgewählt wurde.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapId : int MapId des Kartenobjekts, auf das ausgewählt wurde.
+    \item \texttt{mapId : int} MapId des Kartenobjekts, auf das ausgewählt wurde.
 \end{itemize}
 \paragraph*{Rückgabewert}
 Void.
@@ -57,8 +57,8 @@ Void.
 Dies ist eine Fabrikmethode zur Erzeugung eines MapObjectMarker.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item data : DisplayData DisplayData mit den Anzeige-Daten für den Marker.
-    \item mapView : MapView MapView auf der der Marker angezeigt wird.
+    \item \texttt{data : DisplayData} DisplayData mit den Anzeige-Daten für den Marker.
+    \item \texttt{mapView : MapView} MapView auf der der Marker angezeigt wird.
 \end{itemize}
 \paragraph*{Rückgabewert}
 MapObjectMarker.
@@ -88,8 +88,8 @@ Erzeugt einen BuildingMarker mit den gegeben Daten.
 Die Fabrikmethode zur Erzeugung eines Markers wird hier mit einem BuildingMarker implementiert.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item data : DisplayData DisplayData mit den Anzeige-Daten für den Marker.
-    \item mapView : MapView MapView auf der der Marker angezeigt wird.
+    \item \texttt{data : DisplayData} DisplayData mit den Anzeige-Daten für den Marker.
+    \item \texttt{mapView : MapView} MapView auf der der Marker angezeigt wird.
 \end{itemize}
 \paragraph*{Rückgabewert}
 MapObjectMarker, erzeugter MapObjectMarker.
@@ -111,8 +111,8 @@ Erzeugt einen RoomMarker mit den gegeben Daten.
 Die Fabrikmethode zur Erzeugung eines Markers wird hier mit einem RoomMarker implementiert.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item data : DisplayData DisplayData mit den Anzeige-Daten für den Marker.
-    \item mapView : MapView MapView auf der der Marker angezeigt wird.
+    \item \texttt{data : DisplayData} DisplayData mit den Anzeige-Daten für den Marker.
+    \item \texttt{mapView : MapView} MapView auf der der Marker angezeigt wird.
 \end{itemize}
 \paragraph*{Rückgabewert}
 MapObjectMarker, erzeugter MapObjectMarker.

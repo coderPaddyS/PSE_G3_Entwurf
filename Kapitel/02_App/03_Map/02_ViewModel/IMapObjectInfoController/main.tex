@@ -11,7 +11,7 @@ Außerdem bietet es Methoden an, um einige dieser Daten zu ändern.
 Gibt die Adresse eines Gebäudes zurück.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapId : int MapId des Gebäudes.
+    \item \texttt{mapId : int} MapId des Gebäudes.
 \end{itemize}
 \paragraph*{Rückgabewert}
 String mit Adresse, \texttt{null}, wenn MapId ungültig.
@@ -30,7 +30,7 @@ Diese Methode gibt zu einem, durch seine MapId gegebenen, Raum folgende Informat
 Ist die gegebene MapId ungültig, wird \texttt{null} zurückgegeben.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapId : int MapId des Raums.
+    \item \texttt{mapId : int} MapId des Raums.
 \end{itemize}
 \paragraph*{Rückgabewert}
 (RoomType, String, int, List<String>), 4-Tupel aus Typ des Raums, Nummer des Gebäudes, Stockwerk, Personen. Kann \texttt{null} sein.
@@ -40,7 +40,7 @@ Ist die gegebene MapId ungültig, wird \texttt{null} zurückgegeben.
 Gibt eine Liste aller globalen Aliasse eines Kartenobjekts zurück.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapId : int MapId des Kartenobjekts.
+    \item \texttt{mapId : int} MapId des Kartenobjekts.
 \end{itemize}
 \paragraph*{Rückgabewert}
 List<String>, Liste der globalen Aliasse.
@@ -50,7 +50,7 @@ List<String>, Liste der globalen Aliasse.
 Gibt eine Liste aller lokalen Aliasse eines Kartenobjekts zurück.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapId : int MapId des Kartenobjekts.
+    \item \texttt{mapId : int} MapId des Kartenobjekts.
 \end{itemize}
 \paragraph*{Rückgabewert}
 LiveData<List<String>>, Liste der lokalen Aliasse.
@@ -62,8 +62,8 @@ Sorgt dafür, dass ein gegebener lokaler Alias gelöscht wird.
 Sind die Parameter ungültig, passiert nichts.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapId : int MapId des Kartenobjekts.
-    \item alias : String Alias der zu löschen ist.
+    \item \texttt{mapId : int} MapId des Kartenobjekts.
+    \item \texttt{alias : String} Alias der zu löschen ist.
 \end{itemize}
 \paragraph*{Rückgabewert}
 Void.
@@ -76,7 +76,7 @@ Gibt eine Liste mit relevanten Alias-Vorschlägen für das Kartenobjekt zurück,
 die vom Benutzer noch bewertet werden dürfen.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapId : int MapId des Kartenobjekts.
+    \item \texttt{mapId : int} MapId des Kartenobjekts.
 \end{itemize}
 \paragraph*{Rückgabewert}
 LiveData<List<String>>, Liste der Alias-Vorschläge.
@@ -91,9 +91,9 @@ Muss der Benutzer sich für diese Aktion erst erneut anmelden, wird in den Anmel
 Das Feedback wird an das Model gegeben, um es an den Server zu senden.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item mapId : int MapId des Kartenobjekts.
-    \item suggestion : String Vorschlag. 
-    \item feedback : SuggestionFeedback Feedback.
+    \item \texttt{mapId : int} MapId des Kartenobjekts.
+    \item \texttt{suggestion : String} Vorschlag. 
+    \item \texttt{feedback : SuggestionFeedback} Feedback.
 \end{itemize}
 \paragraph*{Rückgabewert}
 boolean, ob das Senden erfolgreich war.

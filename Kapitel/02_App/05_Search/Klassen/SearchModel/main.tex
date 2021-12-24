@@ -19,8 +19,8 @@ Die Suchvorschläge mit der höchsten Übereinstimmung sind die ersten Elemente 
 Somit werden auch Vorschläge für falsch geschriebene Suchbegriffe angezeigt.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item input : String Der Suchbegriff den der Benutzer eingegeben hat.
-    \item amount : int Die maximale Anzahl der Elemente der Liste an Suchvorschlägen, nicht negativ.
+    \item \texttt{input : String} Der Suchbegriff den der Benutzer eingegeben hat.
+    \item \texttt{amount : int} Die maximale Anzahl der Elemente der Liste an Suchvorschlägen, nicht negativ.
 \end{itemize}
 \paragraph*{Rückgabewert}
 List<String>, Suchvorschläge, die die Datenbank zurückgegeben hat.
@@ -32,7 +32,7 @@ Gibt eine Liste der zuletzt gesuchten Suchbegriffe zurück.
 Diese Methode gibt eine Liste der zuletzt gesuchten Suchbegriffe, nach ihrer letzten Benutzung sortiert (zuletzt gesuchten zuerst), zurück.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item amount : int Die maximale Anzahl der Elemente der Liste an letzten Suchbegriffen.
+    \item \texttt{amount : int} Die maximale Anzahl der Elemente der Liste an letzten Suchbegriffen.
 \end{itemize}
 \paragraph*{Rückgabewert}
 List<String>, zuletzt gesuchte Suchbegriffe.
@@ -42,7 +42,7 @@ List<String>, zuletzt gesuchte Suchbegriffe.
 Speichert den gegebenen Suchbegriff mit dem aktuellen Datum im Suchverlauf.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item searchKey : String Suchbegriff, der gespeichert werden soll.
+    \item \texttt{searchKey : String} Suchbegriff, der gespeichert werden soll.
 \end{itemize}
 \paragraph*{Rückgabewert}
 Void.
@@ -54,7 +54,7 @@ Gibt die MapId des zum Suchbegriff gehörenden Kartenobjekts zurück.
 Diese Methode ermittelt das zu den Suchbegriffen gehörenden Kartenobjekt in der Datenbank und gibt die MapId dieses zurück.
 \paragraph*{Parameter}
 \begin{itemize}
-    \item searchKey : String Suchbegriff, dessen MapId bestimmt werden soll.
+    \item \texttt{searchKey : String} Suchbegriff, dessen MapId bestimmt werden soll.
 \end{itemize}
 \paragraph*{Rückgabewert}
 int, MapId zum Suchbegriff.
