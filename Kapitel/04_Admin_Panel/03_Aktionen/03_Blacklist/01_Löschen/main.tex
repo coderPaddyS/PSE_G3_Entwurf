@@ -1,10 +1,10 @@
-\subsubsection{Löschen}\label{AP_Aktionen_Blacklist_Löschen}
+\subsubsection{Löschen}\label{AP_Aktionen_Blacklist_Loschen}
 
 Die Aktion die ausgeführt wird, um einen Blacklisteintrag zu löschen.
 
 \paragraph*{Ziel}
 Der Blacklisteneintrag, der diese Aktion ausgelöst hat, wird zur Löschung markiert und vorbereitet.
-Der zugehörige Blacklisteneintrag wird nicht mehr in der Blacklist-Seite angezeigt.
+Der zugehörige Blacklisteneintrag wird nicht mehr in der \hyperref[AP_Blacklist]{Blacklist-Seite} angezeigt.
 
 \paragraph*{Vorbedingung}
 Blacklisteintrag ist vorhanden und wird angezeigt.
@@ -14,15 +14,14 @@ Blacklisteintrag wird nicht mehr angezeigt. Der Blacklisteintrag ist zur Löschu
 
 \paragraph*{Durchführung}
 \begin{enumerate}
-    \item Das Interface \verb#Change# wird durch implementierung der \\ 
-          Methode \verb#Change::perform# instanziiert.
-          Dabei ruft die Methode \verb#Change::perform# dieser Instanz die Methode \verb#Backend::deleteBlacklistEntry# mit folgenden Parametern auf \begin{enumerate}
-              \item entry: Der zu löschende Blacklisteintrag
-          \end{enumerate}
-    \item Die erzeugte Instanz wird den Changes durch die Methode \verb#Changes::addChange# mit folgenden Parametern übergeben: \begin{enumerate}
-        \item action : Change
-        \item metadata : JSON mit folgenden Werten: \begin{enumerate}
-            \item entry : String = Blacklisteintrag
+    \item Das Interface \hyperref[AP_Change]{\texttt{Change}} wird durch implementierung der Methode \hyperref[AP_Change_perform]{\texttt{Change::perform}} instanziiert. \\
+          Dabei ruft die Methode \hyperref[AP_Change_perform]{\texttt{Change::perform}} dieser Instanz die Methode \\
+          \hyperref[AP_Framework_deleteBlacklistEntry]{\texttt{Framework::deleteBlacklistEntry}} auf.
+    \item Die erzeugte Instanz wird den \hyperref[AP_Changes]{Änderungen} durch die Methode \hyperref[AP_Framework_addChange]{\texttt{Framework::addChange}} mit folgenden Parametern übergeben: \begin{enumerate}
+        \item action: Change
+        \item metadata: JSON mit folgenden Werten: \begin{enumerate}
+            \item entry: String = Blacklisteintrag.
         \end{enumerate}
+        \item \dq Blacklist \dq: String
     \end{enumerate}
 \end{enumerate}
