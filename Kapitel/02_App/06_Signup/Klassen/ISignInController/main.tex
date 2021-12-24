@@ -1,0 +1,52 @@
+\subsubsection{ISignInController}
+\paragraph*{Typ}
+Interface.
+\paragraph*{Beschreibung}
+Stellt Daten für das Anzeigen der Anmeldung bereit und verarbeitet die Interaktionen.
+
+\subsubsection{\texttt{+ getSupportedProviders() : List<String>}}%$$$M
+\paragraph*{Beschreibung}
+Gibt eine Liste aller unterstützen Anmeldediensten zurück.
+\paragraph*{Parameter}
+Keine.
+\paragraph*{Rückgabewert}
+List<String> mit den Namen aller unterstützen Anmeldediensten.
+
+\subsubsection{\texttt{+ setAcceptPrivacyPolicy(value : boolean)}}%$$$M
+\paragraph*{Beschreibung}
+Speichert, ob der Benutzer den Datenschutz akzeptiert hat.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item value : boolean Wert, ob der Benutzer den Datenschutz akzeptiert hat.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Void.
+
+\subsubsection{\texttt{+ isPrivacyAccepted() : Livedata<boolean>}}%$$$M
+\paragraph*{Beschreibung}
+Gibt den Wert zurück, ob der Benutzer den Datenschutz akzeptiert hat.
+\paragraph*{Parameter}
+keine.
+\paragraph*{Rückgabewert}
+Livedata<boolean>, ob der Benutzer den Datenschutz akzeptiert hat.
+
+\subsubsection{\texttt{+ signIn(provider : String)}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Leitet den Benutzer zur Eingabe seiner Daten weiter.
+\paragraph*{Beschreibung}
+Ausgelöst, wenn der Benutzer einen Anmeldedienst auswählt. 
+Der Aufruf wird an das Model weitergegeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item provider : String ausgewählter Anmeldedienst.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Void.
+
+%----------------------------------------------------------
+\subsubsection{SignInController}
+\paragraph*{Typ}
+Implementiert ISignInController.
+\paragraph*{Beschreibung}
+Stellt Daten für das Anzeigen der Anmeldung bereit und verarbeitet die Interaktionen.\\
+Besitzt für die Datenbeschaffung und die Ausführung der Anmeldung einen SignInModel.

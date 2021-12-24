@@ -1,0 +1,27 @@
+\subsubsection{SignInScreen}
+\paragraph*{Typ}
+Composable.
+\paragraph*{Beschreibung}
+Dieses Composable zeigt die Anmeldung an.\\
+Diese Klasse besitzt zum Erhalt der Daten und zur Ausführung der Interaktionen einen ISignInController.
+
+\paragraph*{Aufbau}
+Der SignInScreen ist folgendermaßen aufgebaut:
+\begin{itemize}
+    \item In der Kopfzeile befindet sich links ein Zurück-Button. Wird dieser geklickt oder die Zurückfunktion 
+    des Endgeräts betätigt, kehrt die App in die vorherige Ansicht zurück.
+    \item Je nach dem, durch die Navigation übergebenen, Parameter wird ein Text angezeigt:
+    \begin{itemize}
+        \item \texttt{signin/new}: Der Text weist den Benutzer darauf hin, dass er sich hier anmelden kann.
+        \item \texttt{signin/funktion}: Der Text weist den Benutzer darauf hin, dass die gewünschte Funktion nur angemeldeten Benutzern zur Verfügung steht 
+        und er sich hier anmelden kann.
+        \item \texttt{signin/again}: Der Text weist den Benutzer darauf hin, dass seine Anmeldung abgelaufen ist und er sich hier erneut anmelden muss.
+    \end{itemize}
+    \item Darunter befindet sich ein Button, durch dessen Klicken die Datenschutzerklärung in der Dokumentenanzeige angezeigt wird.
+    \item Darunter befindet sich ein Feld, das man durch Klicken abhaken kann. Daneben steht, dass der Benutzer die Datenschutzerklärung akzeptiert.
+    \item Darunter befindet sich ein Text, der den Benutzer darauf hinweist, dass er einen der aufgeführten Anmeldedienste auswählen muss.
+    \item Darunter werden alle unterstützen Anmeldedienste angezeigt. Hat der Benutzer die Datenschutzerklärung noch nicht akzeptiert, 
+    sind sie ausgegraut und ohne Funktion. Hat der Benutzer die Datenschutzerklärung noch akzeptiert, sind sie nicht ausgegraut. 
+    Klickt der Benutzer einen an, wird er zur Anmeldung mit diesem Anmeldedienst weitergeleitet.
+\end{itemize}
+
