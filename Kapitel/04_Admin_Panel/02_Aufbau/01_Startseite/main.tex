@@ -4,7 +4,7 @@ Die Startseite ist die erste Seite des Admin-Panels und somit der Index.
 Auf der Startseite wird der Name des PSE-Projektes angezeigt sowie eine Kurzbeschreibung.
 
 \paragraph*{Layout}
-Die Startseite nutzt das Public-Layout.
+Die Startseite nutzt das \hyperref[AP_Public_Layout]{Public-Layout}.
 
 \paragraph*{Erreichbarkeit}
 Die Startseite ist unter \href{https://pse.itermori.de/admin}{https://pse.itermori.de/admin} aufrufbar.
@@ -14,33 +14,31 @@ Jeder kann die Startseite aufrufen und verwenden.
 
 \paragraph{Aufgabe}
 Die Startseite hat die folgenden Aufgaben:
-
-\begin{minipage}{\textwidth}
-    \begin{minipage}{.69\textwidth}
-        \begin{itemize}
-            \item Anzeigen des Webseitentitels
-            \item Anzeigen der Beschreibung
-            \item Authentifizierungsstelle für Benutzer
-            \item Überprüfung des Berechtigungslevels für Benutzer
-            \item Automatische Weiterleitung von Administratoren zum Dashboard
-            \item Anzeigen von Verlinkungen zu Projektressourcen
-        \end{itemize}
-    \end{minipage}
-    \begin{minipage}{.29\textwidth}
-        \hspace{2em}
-        \captionsetup[figure]{labelformat=empty}
-        \inprelimg[height=\textwidth]{startseite_mobil.png}
-        \captionof{figure}{Mobile Ansicht}
-        \captionsetup[figure]{labelformat=default}
-    \end{minipage}
-\end{minipage}
+\begin{itemize}
+    \item Anzeigen des Webseitentitels
+    \item Anzeigen der Beschreibung
+    \item Authentifizierungsstelle für Benutzer
+    \item Überprüfung des Berechtigungslevels für Benutzer
+    \item Automatische Weiterleitung von Administratoren zum \hyperref[AP_Dashboard]{Dashboard}
+    \item Anzeigen von Verlinkungen zu Projektressourcen
+\end{itemize}
 
 \paragraph*{Statischer Aufbau}
 Der spezifische Inhalt dieser Seite besteht ausschließlich aus einem Titel und der zugehörigen Beschreibung.
 
-\begin{center}
-    \captionsetup[figure]{labelformat=empty}
-    \inprelimg[width=.45\textwidth]{startseite_desktop.png}
-    \captionof{figure}{Desktop Ansicht}
-    \captionsetup[figure]{labelformat=default}
-\end{center}
+\subsubsection*{Bilder}
+\begin{minipage}{\linewidth}
+    \centering
+    \begin{minipage}{.69\textwidth}
+        \captionsetup[figure]{labelformat=empty}
+        \inprelimg[width=\textwidth]{startseite_desktop.png}
+        \captionof{figure}{Desktop Ansicht}
+        \captionsetup[figure]{labelformat=default}
+    \end{minipage}
+    \begin{minipage}{.3\textwidth}
+        \captionsetup[figure]{labelformat=empty}
+        \inprelimg[width=\textwidth]{startseite_mobil.png}
+        \captionof{figure}{Mobile Ansicht}
+        \captionsetup[figure]{labelformat=default}
+    \end{minipage}
+\end{minipage}

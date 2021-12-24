@@ -1,4 +1,4 @@
-\subsection{Public-Layout}\label{AP_Public-Layout}
+\subsection{Public-Layout}\label{AP_Public_Layout}
 
 \paragraph*{Statischer Aufbau}
 \subparagraph*{Desktop}
@@ -11,11 +11,11 @@ Die Felder 7 bis 9 sind zusammengefasst und beinhaltend die Verlinkungen.
 \subparagraph*{Mobil}
 Das Public-Layout besteht aus 3 horizontalen übereinanderliegende Segmente, die die ihnen zur Verfügung stehende Horizontale füllen.
 Segment 1 beinhaltet den Inhalt der Seite, die das Public-Layout nutzt. 
-Segment 2 beinhaltet die Anmeldung.
-Segment 3 beinhaltet die Verlinkungen.
+Segment 2 beinhaltet die \hyperref[AP_Public_Layout_Anmeldung]{Anmeldung}.
+Segment 3 beinhaltet die \hyperref[AP_Public_Layout_Verlinkungen]{Verlinkungen}.
 
 \paragraph*{Allgemeines dynamisches Verhalten}
-Angemeldete Administratoren werden direkt zum Dashboard weitergeleitet.
+Angemeldete Administratoren werden direkt zum \hyperref[AP_Dashboard]{Dashboard} weitergeleitet.
 Ein Element, über das gehovert oder auf das geklickt wird, ändert seine Hintergrundfarbe zu einer helleren Abwandlung der eigentlichen Hintergrundfarbe.
 
 \paragraph*{Dargestellte Inhalte}
@@ -23,12 +23,12 @@ Ein Element, über das gehovert oder auf das geklickt wird, ändert seine Hinter
 In diesem Feld wird der Inhalt geladen, der durch die Seite definiert wird, die das Public-Layout nutzt.
 Das dynamische Verhalten des Seiteninhalts wird durch die Seite definiert, die das Public-Layout verwendet.
 
-\subparagraph*{Anmeldung}
+\subparagraph*{Anmeldung}\label{AP_Public_Layout_Anmeldung}
 In diesen Feldern existiert ein Element pro Anmeldemöglichkeit.
 Wird ein Anmeldungselement geklickt, so wird der Benutzer auf die Anmeldeseite des entsprechenden Dienstes weitergeleitet, um sich zu authentifizieren.
+Der OpenID-Connect-Provider wird hierbei konfiguriert, siehe \hyperref[AP_Framework_login]{\texttt{Framework::configure}} und \hyperref[AP_Framework_configure]{\texttt{Framework::configure}} für mehr Informationen.
 Anschließend wird er wieder zur vorherigen Seite zurückgeleitet.
 
-\subparagraph*{Verlinkungen}
+\subparagraph*{Verlinkungen}\label{AP_Public_Layout_Verlinkungen}
 In diesen Feldern existieren Verlinkungen zu wichtigen Ressourcen dieses Projektes.
 Wird eine Verlinkung geklickt, so öffnet sich das Verlinkungsziel in einem neuen Browser-Tab.
-
