@@ -10,14 +10,17 @@ Der SettingsScreen besitzt einen ISettingsController, der die Daten bereitstellt
 Der SettingsScreen zeigt folgende Einstellungs-Möglichkeiten untereinander an:
 \begin{itemize}
     \item Anmelde-Schaltfläche: Ist der Benutzer nicht angemeldet, wird angezeigt, dass er sich anmelden kann. 
-    Klickt er dann auf diese Schaltfläche wird der zur Anmeldung weitergeleitet.\\
-    Ist der Benutzer angemeldet, wird angezeigt, dass er angemeldet ist. Außerdem wird TODO
+    Klickt der Benutzer auf diese Schaltfläche zeigt die App die Anmeldung an.\\
+    Ist der Benutzer angemeldet, wird angezeigt, dass er angemeldet ist. Außerdem wird die UserId angezeigt. 
+    Klickt er lange auf diese, wird die UserId in die Zwischenablage kopiert. 
+    Es wird über einen \href{https://developer.android.com/guide/topics/ui/notifiers/toasts}{Toast} angezeigt, dass 
+    die UserId in die Zwischenablage kopiert wurde.
     \item Sprach-Schaltfläche: Klickt der Benutzer auf diese Schaltfläche, bekommt er in einem Untermenü alle verfügbaren Sprachen angezeigt. 
-    Wählt er davon eine aus, kommt er zurück in die Gesamtansicht der Einstellungen und die App wird in der ausgewählten Sprache angezeigt.\\
+    Wählt er davon eine aus, zeigt die App wieder die Gesamtansicht der Einstellungen an. Die App wird in der ausgewählten Sprache angezeigt.\\
     Im Untermenü befindet sich oben links ein Zurück-Button. Wird dieser gedrückt oder die Zurückfunktion des Endgeräts betätigt, 
     wird ebenfalls wieder die Gesamtansicht angezeigt.
     \item Theme-Schaltfläche: Klickt der Benutzer auf diese Schaltfläche, bekommt er in einem Untermenü alle verfügbaren Themes angezeigt. 
-    Wählt er davon eines aus, kommt er zurück in die Gesamtansicht der Einstellungen und die App wird im gewählten Theme angezeigt.\\
+    Wählt er davon eines aus, zeigt die App wieder die Gesamtansicht der Einstellungen an. Die App wird im gewählten Theme angezeigt.\\
     Im Untermenü befindet sich oben links ein Zurück-Button. Wird dieser gedrückt oder die Zurückfunktion des Endgeräts betätigt, 
     wird ebenfalls wieder die Gesamtansicht angezeigt.
     \item Suchverlauf speichern: In dieser Schaltfläche befindet sich ein Schalter. 
