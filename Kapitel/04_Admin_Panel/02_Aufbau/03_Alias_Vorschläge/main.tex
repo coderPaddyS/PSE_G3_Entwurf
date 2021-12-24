@@ -1,10 +1,10 @@
 \newpage
-\subsection{Alias-Vorschläge}\label{AP_Alias-Vorschläge}
+\subsection{Alias-Vorschläge}\label{AP_Alias_Vorschlage}
 
-Die Alias-Vorschläge-Seite repräsentiert die Schnittstelle für sämtliche Aktionen, die mit Alias-Vorschlägen gemacht werden können.
+Die Alias-Vorschläge-Seite repräsentiert die Schnittstelle für sämtliche \hyperref[AP_Aktionen_Alias_Vorschlage]{Aktionen}, die mit Alias-Vorschlägen gemacht werden können.
 
 \paragraph*{Layout}
-Die Alias-Vorschläge-Seite benutzt das Admin-Layout.
+Die Alias-Vorschläge-Seite benutzt das \hyperref[AP_Admin_Layout]{Admin-Layout}.
 
 \paragraph*{Erreichbarkeit}
 Die Alias-Vorschläge-Seite ist unter \href{https://pse.itermori.de/admin/suggestions}{https://pse.itermori.de/admin/suggestions} erreichbar.
@@ -17,9 +17,9 @@ Folgende Aufgaben werden erfüllt:
 
 \begin{itemize}
     \item Anzeigen sämtlicher Alias-Vorschläge
-    \item Annahme von Alias-Vorschlägen
-    \item Ablehnung von Alias-Vorschlägen
-    \item Blacklisten von Alias-Vorschlägen
+    \item \hyperref[AP_Aktionen_Alias_Vorschlage_Annehmen]{Annehmen} von Alias-Vorschlägen
+    \item \hyperref[AP_Aktionen_Alias_Vorschlage_Ablehnen]{Ablehnen} von Alias-Vorschlägen
+    \item \hyperref[AP_Aktionen_Alias_Vorschlage_Blacklisten]{Blacklisten} von Alias-Vorschlägen
     \item Filterung und Sortierung von angezeigten Alias-Vorschlägen nach 
     \begin{itemize}
         \item Alias-Vorschlag
@@ -42,7 +42,7 @@ Die untere Box beinhaltet die Alias-Vorschläge in tabellarischer Form, die Spal
     \item Raumnummer: Der zugehörige Raum des Alias-Vorschlags, \dq - \dq{} falls kein zugehöriger Raum existiert
     \item positive Bewertungen: Die Anzahl an positiven Bewertungen zu einem Alias-Vorschlag
     \item negative Bewertungen: Die Anzahl an negativen Bewertungen zu einem Alias-Vorschlag
-    \item Aktionen: Annehmen, Ablehnen, Blacklisten
+    \item \hyperref[AP_Aktionen_Alias_Vorschlage]{Aktionen}: \hyperref[AP_Aktionen_Alias_Vorschlage_Annehmen]{Annehmen}, \hyperref[AP_Aktionen_Alias_Vorschlage_Ablehnen]{Ablehnen}, \hyperref[AP_Aktionen_Alias_Vorschlage_Blacklisten]{Blacklisten}
 \end{enumerate}
 
 Die Spalten 1 bis 3 beinhalten ein Textfeld zur Anzeige der Informationen. \\
@@ -50,7 +50,7 @@ Die Spalte 4 ist unterteilt in zwei vertikale Boxen, im folgenden von links nach
 4.1 enthält die Anzahl positiver Bewertungen, 4.2 enthält ein Element zur Kennzeichnung dass 4.1 die Anzahl der positiven Bewertungen darstellt, zum Beispiel ein \dq + \dq. \\
 Die Spalte 5 ist unterteilt in zwei vertikale Boxen, im folgenden von links nach rechts mit 5.1 und 5.2 bezeichnet.
 5.1 enthält die Anzahl negativen Bewertungen, 5.2 enthält ein Element zur Kennzeichnung dass 5.1 die Anzahl der negativen Bewertungen darstellt, zum Beispiel ein \dq - \dq. \\
-Spalte 6 ist unterteilt in drei vertikale Boxen. Diese enthalten jeweils ein Element, das eines der Aktionen repräsentiert. 
+Spalte 6 ist unterteilt in drei vertikale Boxen. Diese enthalten jeweils ein Element, das eines der \hyperref[AP_Aktionen_Alias_Vorschlage]{Aktionen} repräsentiert. 
 
 Die Spaltenüberschriften der Spalten 1-5 beinhalten ein Sortierungselement am linken Ende.
 
@@ -72,17 +72,15 @@ Jeder Alias-Vorschlag befindet sich in seinem eigenen Abschnitt, dieser ist wied
     \item Raumnummer: Der zugehörige Raum des Alias-Vorschlags, \dq - \dq{} falls kein zugehöriger Raum existiert
     \item positive Bewertungen: Die Anzahl an positiven Bewertungen zu einem Alias-Vorschlag
     \item negative Bewertungen: Die Anzahl an negativen Bewertungen zu einem Alias-Vorschlag
-    \item Aktionen: Annehmen, Ablehnen, Blacklisten
+    \item \hyperref[AP_Aktionen_Alias_Vorschlage]{Aktionen}: \hyperref[AP_Aktionen_Alias_Vorschlage_Annehmen]{Annehmen}, \hyperref[AP_Aktionen_Alias_Vorschlage_Ablehnen]{Ablehnen}, \hyperref[AP_Aktionen_Alias_Vorschlage_Blacklisten]{Blacklisten}
 \end{enumerate}
 
-\begin{minipage}{.5\textwidth}
-    Segment 1 befindet sich ganz oben im Alias-Vorschlag-Abschnitt. Segmente 2 und 3 folgen untereinander unter Segment 1. \\
-    Segment 4 ist in  zwei vertikale Boxen aufgeteilt (4.1 und 4.2).
-    4.1 enthält die Anzahl positiver Bewertungen, 4.2 enthält ein Element zur Kennzeichnung dass 4.1 die Anzahl der positiven Bewertungen darstellt, zum Beispiel ein \dq + \dq. \\
-    Segment 5 ist in  zwei vertikale Boxen aufgeteilt (5.1 und 5.2). 
-    5.1 enthält die Anzahl negativer Bewertungen, 5.2 enthält ein Element zur Kennzeichnung dass 5.1 die Anzahl der negativen Bewertungen darstellt, zum Beispiel ein \dq - \dq. \\
-    Segment 6 enthält drei vertikale Boxen. Jede Box ist genau einer Aktion zugeordnet und enthält ein Element um diese auszulösen.
-\end{minipage}
+Segment 1 befindet sich ganz oben im Alias-Vorschlag-Abschnitt. Segmente 2 und 3 folgen untereinander unter Segment 1. \\
+Segment 4 ist in  zwei vertikale Boxen aufgeteilt (4.1 und 4.2).
+4.1 enthält die Anzahl positiver Bewertungen, 4.2 enthält ein Element zur Kennzeichnung dass 4.1 die Anzahl der positiven Bewertungen darstellt, zum Beispiel ein \dq + \dq. \\
+Segment 5 ist in  zwei vertikale Boxen aufgeteilt (5.1 und 5.2). 
+5.1 enthält die Anzahl negativer Bewertungen, 5.2 enthält ein Element zur Kennzeichnung dass 5.1 die Anzahl der negativen Bewertungen darstellt, zum Beispiel ein \dq - \dq. \\
+Segment 6 enthält drei vertikale Boxen. Jede Box ist genau einer \hyperref[AP_Aktionen_Alias_Vorschlage]{Aktion} zugeordnet und enthält ein Element um diese auszulösen.
 
 Der Abschnitt selber enthält die eindeutige Identifizierung des Kartenobjektes \verb#mapID# auf dass sich der Alias-Vorschlag bezieht. Dieser wird nicht angezeigt.
 
@@ -101,8 +99,8 @@ Ist \dq Absteigend \dq{} ausgewählt, so werden die Alias-Vorschläge nach der a
 Wird über ein Aktions- oder ein Sortierungselement gehovert oder auf ein solches geklickt, so ändert sich die Hintergrundfarbe auf eine hellere Abwandlung der vorherigen Hintergrundfarbe.
 Wird nicht mehr über das Element gehovert oder wurde etwas anderes angeklickt, so wird die Hintergrundfarbe auf den originalen Wert gesetzt.
 
-Wird auf ein Aktionselement eines zugehörigen Alias-Vorschlags geklickt, so wird die entsprechende Aktion ausgeführt.
-Befindet sich ein Alias-Vorschlag in den Änderungen, so wird dieser nicht angezeigt.
+Wird auf ein Aktionselement eines zugehörigen Alias-Vorschlags geklickt, so wird die entsprechende \hyperref[AP_Aktionen_Alias_Vorschlage]{Aktion} ausgeführt.
+Befindet sich ein Alias-Vorschlag in den \hyperref[AP_Changes]{Änderungen}, so wird dieser nicht angezeigt.
 
 \paragraph*{Initialer Zustand}
 Die Alias-Vorschläge sind absteigend nach dem Gebäude sortiert.
