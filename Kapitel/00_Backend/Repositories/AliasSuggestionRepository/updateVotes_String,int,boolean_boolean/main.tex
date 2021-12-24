@@ -1,0 +1,22 @@
+\paragraph{\texttt{updateVotes(aliasSuggestion : String, mapID : int, vote : boolean) : boolean}}%$$$M
+\paragraph*{Kurzbeschreibung}
+Aktualisiert die Bewertung des übergebenen Alias-Vorschlags wie gewünscht.
+\paragraph*{Beschreibung}
+Die Methode ist serverintern und wird somit nicht explizit vom Administrator aufgerufen.
+Stattdessen wird die Methode von Methoden aus dem Paket \texttt{Services} aufgerufen.
+Die Methode ermöglicht, dass die Bewertung eines Alias-Vorschlags aktualisiert wird.
+Hierfür wird der zu aktualisierende Alias-Vorschlag, die ID des dazugehörigen Kartenobjekts und die Bewertung übergeben.
+\paragraph*{Parameter}
+\begin{itemize}
+    \item aliasSuggestion : String
+    		\paragraph*{Beschreibung}
+    		Der als Zeichenkette angegebene Alias-Vorschlag.
+    	\item mapID : int
+    		\paragraph*{Beschreibung}
+    		Die ID des Kartenobjekts, für das der Alias-Vorschlag als Bezeichner dienen soll.
+    	\item vote : boolean
+    		\paragraph*{Beschreibung}
+    		Die Bewertung.
+\end{itemize}
+\paragraph*{Rückgabewert}
+Wahr, wenn die Bewertung des übergebenen Alias-Vorschlags erfolgreich aktualisiert werden konnte, ansonsten falsch.
