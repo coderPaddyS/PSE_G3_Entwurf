@@ -26,6 +26,10 @@ Weiter werden folgende Schaltflächen angezeigt, durch welche man in andere Ansi
     \item Suchleiste: Oben, neben dem Einstellungsbutton wird eine Suchleiste angezeigt. 
     Wird auf diese geklickt, wird der Suchmodus aufgerufen.
 \end{itemize}
+\paragraph{Kriterien}
+MK70
+\paragraph{Funktionale Anforderungen}
+FA20, FA21, FA22, FA23, FA24
 
 \paragraph*{Parameter}
 \begin{itemize}
@@ -49,6 +53,10 @@ Folgende Interaktionen mit der Karte müssen aktiviert beziehungsweise sicherges
     Wird erneut auf die Karte geklickt, verschwindet das \hyperref[App_Map_View_MapObjectInfoDisplay]{MapObjectInfoDisplays} wieder.
 
 \end{itemize}
+\paragraph{Kriterien}
+MK80
+\paragraph{Funktionale Anforderungen}
+FA10, FA11, FA12, FA13, FA14. FA30, FA31
 
 \paragraph*{Startposition}
 Die Startposition der Karte ist beim Öffnen der App wie folgt definiert:
@@ -62,6 +70,8 @@ der App gespeichert wird.\\
 Ist die App geöffnet und der Benutzer kehrt aus einer anderen Ansicht in die \Gls{Kartenansicht} zurück,
 wird die letzte Position angezeigt, sofern nicht eine bestimmte Position angezeigt werden muss 
 (siehe Beobachtete Daten: \texttt{getFocusedPos}).
+\paragraph{Funktionale Anforderungen}
+FA32
 
 \paragraph*{Beobachtete Daten}
 Dieses \texttt{Composable} beobachtet einen \hyperref[App_Map_ViewModel_MapDisplayDataProvider]{MapDisplayDataProvider}. 
